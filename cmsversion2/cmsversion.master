@@ -1,0 +1,310 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="cmsversion.master.cs" Inherits="cmsversion" %>
+
+<%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
+<%--<%@ Register src="../../UserModal/Company/AddCompany.aspx" TagPrefix="uc1" TagName="CompanyInformation" %>--%>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <link href="styles/base.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/sb-admin.css" rel="stylesheet" />
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" type="image/x-icon" href="Images/emblem.png" />
+    <link href="styles/default.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+
+    <form id="form1" runat="server">
+        <telerik:RadScriptManager runat="server"></telerik:RadScriptManager>
+        <div id="container">
+            <div id="wrapper">
+
+                <!-- Navigation -->
+                <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="position: fixed">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+
+
+                        <ul class="nav navbar-nav">
+                            <li>
+
+                                <img src="../images/logo1.png" style="" />
+                            </li>
+                            <li>
+                                <a href="#">Dashboard</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Maintenance<b class="caret"></b></a>
+                                <ul class="dropdown-menu message-dropdown">
+                                    <li class="message-footer">
+                                     
+                                          <a href="../portal/MainMaintenance.aspx">CMS maintenance</a>
+                               
+                                    </li>
+
+                                      <li class="message-footer">
+                                     
+                                          <a href="../portal/FlightMaintenance.aspx">Flight Information</a>
+                               
+                                    </li>
+                                    <li class="message-footer">
+                                              <a href="../portal/ManageRateMatrix.aspx">Rate Matrix</a>
+                                    </li>
+                                <%--    <li class="message-footer">
+                                        <a href="#">Fuel Surcharge</a>
+                                    </li>--%>
+                                    <li class="message-footer">
+                                        <a href="../portal/ManageTrackAndTrace.aspx">TrackNTrace</a>
+                                    </li>
+                                    <li class="message-footer">
+                                        <a href="#">Truck Area Assignment</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                           
+                                      <a href="../portal/ManageClients.aspx">Customers</a>
+                               
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Corporate<b class="caret"></b></a>
+                                <ul class="dropdown-menu message-dropdown">
+                                    <li class="message-footer">
+                                        <a href="../portal/ManageCompany.aspx">Company</a>
+                                       
+                                    </li>
+                                    <li class="message-footer">
+                                          <a href="../portal/ManageRepresentatives.aspx">Representatives</a>
+                                       
+                                    </li>
+                                    <li class="message-footer">
+                                        <%--<a href="#">Approving Authoriy</a>--%>
+                                          <a href="../portal/ManageApprovingAuthority.aspx">Approving Authority</a>
+                                        
+                                    </li>
+                                    <li class="message-footer">
+                                        <a href="#">Statement of Account</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Shipment<b class="caret"></b></a>
+                                <ul class="dropdown-menu message-dropdown">
+                                    <li class="message-footer">
+                                        <a href="#">AWB Tracking</a>
+                                    </li>
+                                    <li class="message-footer">
+                                        <a href="#">AWB Detailed Tracking</a>
+                                    </li>
+                                    <li class="message-footer">
+                                        <a href="#">View Shipments</a>
+                                    </li>
+                                    <li class="message-footer">
+                                        <a href="#">View Payments</a>
+                                    </li>
+                                    <li class="message-footer">
+                                        <a href="#">View Tracking Entry</a>
+                                    </li>
+                                    <li class="message-footer">
+                                        <a href="#">View Delivery</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Acceptance<b class="caret"></b></a>
+                                <ul class="dropdown-menu message-dropdown">
+                                    <li class="message-footer">
+                                        <a href="#">Pickup Cargo Manifest</a>
+                                    </li>
+                                    <li class="message-footer">
+                                        <a href="#">AWB Detailed Tracking</a>
+                                    </li>
+                                    <li class="message-footer">
+                                        <a href="#">Cargo Transfer</a>
+                                    </li>
+                                    <li class="message-footer">
+                                        <a href="#">Branch Acceptance</a>
+                                    </li>
+                                    <li class="message-footer">
+                                        <a href="#">Gateway Acceptance</a>
+                                    </li>
+                                    <li class="message-footer">
+                                        <a href="#">Gateway Transmital</a>
+                                    </li>
+                                    <li class="message-footer">
+                                        <a href="#">Gateway retrieval (inbound)</a>
+                                    </li>
+                                    <li class="message-footer">
+                                        <a href="#">Distribution</a>
+                                    </li>
+                                    <li class="message-footer">
+                                        <a href="#">Hold Cargo</a>
+                                    </li>
+                                    <li class="message-footer">
+                                        <a href="#">Bundle/Unbundle</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Administration<b class="caret"></b></a>
+                                <ul class="dropdown-menu message-dropdown">
+                                    <li class="message-footer">
+                                        <a href="../portal/ManageUsers.aspx">Manage Users</a>
+                               
+                                    </li>
+                                    <li class="message-footer">
+                                           <a href="../portal/ManageEmployee.aspx">Manage Employee</a>
+                               
+                                    </li>
+                                   
+                                </ul>
+                            </li>
+                          
+                        </ul>
+
+
+
+                        -
+
+                    </div>
+                    <!-- Top Menu Items -->
+                    <ul class="nav navbar-right top-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i><b class="caret"></b></a>
+                            <ul class="dropdown-menu message-dropdown">
+                                <li class="message-preview">
+                                    <a href="#">
+                                        <div class="media">
+                                            <span class="pull-left">
+                                                <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                            </span>
+                                            <div class="media-body">
+                                                <h5 class="media-heading">
+                                                    <strong>John Smith</strong>
+                                                </h5>
+                                                <p class="small text-muted"><i class="fa fa-clock-o"></i>Yesterday at 4:32 PM</p>
+                                                <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="message-preview">
+                                    <a href="#">
+                                        <div class="media">
+                                            <span class="pull-left">
+                                                <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                            </span>
+                                            <div class="media-body">
+                                                <h5 class="media-heading">
+                                                    <strong>John Smith</strong>
+                                                </h5>
+                                                <p class="small text-muted"><i class="fa fa-clock-o"></i>Yesterday at 4:32 PM</p>
+                                                <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="message-preview">
+                                    <a href="#">
+                                        <div class="media">
+                                            <span class="pull-left">
+                                                <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                            </span>
+                                            <div class="media-body">
+                                                <h5 class="media-heading">
+                                                    <strong>John Smith</strong>
+                                                </h5>
+                                                <p class="small text-muted"><i class="fa fa-clock-o"></i>Yesterday at 4:32 PM</p>
+                                                <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="message-footer">
+                                    <a href="#">Read All New Messages</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i><b class="caret"></b></a>
+                            <ul class="dropdown-menu alert-dropdown">
+                                <li>
+                                    <a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>
+                                </li>
+                                <li>
+                                    <a href="#">Alert Name <span class="label label-primary">Alert Badge</span></a>
+                                </li>
+                                <li>
+                                    <a href="#">Alert Name <span class="label label-success">Alert Badge</span></a>
+                                </li>
+                                <li>
+                                    <a href="#">Alert Name <span class="label label-info">Alert Badge</span></a>
+                                </li>
+                                <li>
+                                    <a href="#">Alert Name <span class="label label-warning">Alert Badge</span></a>
+                                </li>
+                                <li>
+                                    <a href="#">Alert Name <span class="label label-danger">Alert Badge</span></a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="#">View All</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>                              
+                                <asp:Label ID="lblUserName" runat="server" Text="Label"></asp:Label>
+                                 <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#"><i class="fa fa-fw fa-user"></i>Profile</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-fw fa-envelope"></i>Inbox</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-fw fa-gear"></i>Settings</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="#"><i class="fa fa-fw fa-power-off"></i>Log Out</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+                    <div class="collapse navbar-collapse navbar-ex1-collapse" style="color: #ffffff">
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </nav>
+
+
+
+            </div>
+            <!-- /#wrapper -->
+
+            <!-- jQuery -->
+            <script src="../js/jquery.js"></script>
+
+            <!-- Bootstrap Core JavaScript -->
+            <script src="../js/bootstrap.min.js"></script>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

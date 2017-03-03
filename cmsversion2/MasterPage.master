@@ -1,0 +1,243 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <link href="styles/base.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/sb-admin.css" rel="stylesheet" />
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <telerik:RadScriptManager runat="server"></telerik:RadScriptManager>
+        <div id="wrapper">
+            <telerik:RadPageLayout runat="server" ID="MasterLayout" GridType="Fluid">
+                <Rows>
+
+                    <%--Main--%>
+                    <telerik:LayoutRow>
+                        <Columns>
+                            <%--Sidebar--%>
+                            <telerik:LayoutColumn Span="2" HiddenMd="true" HiddenSm="true" HiddenXs="true">
+                                <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                                    <!-- Brand and toggle get grouped for better mobile display -->
+                                    <div class="navbar-header">
+                                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                                            <span class="sr-only">Toggle navigation</span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                        </button>
+                                        <a class="navbar-brand" href="index.html">SB Admin</a>
+                                    </div>
+                                    <!-- Top Menu Items -->
+                                    <ul class="nav navbar-right top-nav">
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i><b class="caret"></b></a>
+                                            <ul class="dropdown-menu message-dropdown">
+                                                <li class="message-preview">
+                                                    <a href="#">
+                                                        <div class="media">
+                                                            <span class="pull-left">
+                                                                <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                                            </span>
+                                                            <div class="media-body">
+                                                                <h5 class="media-heading">
+                                                                    <strong>John Smith</strong>
+                                                                </h5>
+                                                                <p class="small text-muted"><i class="fa fa-clock-o"></i>Yesterday at 4:32 PM</p>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="message-preview">
+                                                    <a href="#">
+                                                        <div class="media">
+                                                            <span class="pull-left">
+                                                                <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                                            </span>
+                                                            <div class="media-body">
+                                                                <h5 class="media-heading">
+                                                                    <strong>John Smith</strong>
+                                                                </h5>
+                                                                <p class="small text-muted"><i class="fa fa-clock-o"></i>Yesterday at 4:32 PM</p>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="message-preview">
+                                                    <a href="#">
+                                                        <div class="media">
+                                                            <span class="pull-left">
+                                                                <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                                            </span>
+                                                            <div class="media-body">
+                                                                <h5 class="media-heading">
+                                                                    <strong>John Smith</strong>
+                                                                </h5>
+                                                                <p class="small text-muted"><i class="fa fa-clock-o"></i>Yesterday at 4:32 PM</p>
+                                                                <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li class="message-footer">
+                                                    <a href="#">Read All New Messages</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i><b class="caret"></b></a>
+                                            <ul class="dropdown-menu alert-dropdown">
+                                                <li>
+                                                    <a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Alert Name <span class="label label-primary">Alert Badge</span></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Alert Name <span class="label label-success">Alert Badge</span></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Alert Name <span class="label label-info">Alert Badge</span></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Alert Name <span class="label label-warning">Alert Badge</span></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Alert Name <span class="label label-danger">Alert Badge</span></a>
+                                                </li>
+                                                <li class="divider"></li>
+                                                <li>
+                                                    <a href="#">View All</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>John Smith <b class="caret"></b></a>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <a href="#"><i class="fa fa-fw fa-user"></i>Profile</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="fa fa-fw fa-envelope"></i>Inbox</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><i class="fa fa-fw fa-gear"></i>Settings</a>
+                                                </li>
+                                                <li class="divider"></li>
+                                                <li>
+                                                    <a href="#"><i class="fa fa-fw fa-power-off"></i>Log Out</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+                                    <div class="collapse navbar-collapse navbar-ex1-collapse">
+                                        <ul class="nav navbar-nav side-nav">
+                                            <li>
+                                                <a href="index.html"><i class="fa fa-fw fa-dashboard"></i>Dashboard</a>
+                                            </li>
+                                            <li>
+                                                <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i>Charts</a>
+                                            </li>
+                                            <li>
+                                                <a href="tables.html"><i class="fa fa-fw fa-table"></i>Tables</a>
+                                            </li>
+                                            <li>
+                                                <a href="forms.html"><i class="fa fa-fw fa-edit"></i>Forms</a>
+                                            </li>
+                                            <li>
+                                                <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i>Bootstrap Elements</a>
+                                            </li>
+                                            <li>
+                                                <a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i>Bootstrap Grid</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i>Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
+                                                <ul id="demo" class="collapse">
+                                                    <li>
+                                                        <a href="#">Dropdown Item</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Dropdown Item</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="active">
+                                                <a href="blank-page.html"><i class="fa fa-fw fa-file"></i>Blank Page</a>
+                                            </li>
+                                            <li>
+                                                <a href="index-rtl.html"><i class="fa fa-fw fa-dashboard"></i>RTL Dashboard</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- /.navbar-collapse -->
+                                </nav>
+
+                            </telerik:LayoutColumn>
+
+                            <%--Content--%>
+                            <telerik:CompositeLayoutColumn>
+                                <Content>
+                                    <div id="page-wrapper">
+
+                                        <div class="container-fluid">
+
+                                            <!-- Page Heading -->
+                                            <div class="row">
+                                                <div class="col-lg-12">
+
+                                                    <ol class="breadcrumb">
+                                                        <li>
+                                                            <i class="fa fa-dashboard"></i><a href="index.html">Dashboard</a>
+                                                        </li>
+                                                        <li class="active">
+                                                            <i class="fa fa-file"></i>Blank Page
+                            </li>
+                                                    </ol>
+                                                </div>
+
+                                                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                                </asp:ContentPlaceHolder>
+                                                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                                                </asp:ContentPlaceHolder>
+                                            </div>
+                                            <!-- /.row -->
+
+                                        </div>
+                                        <!-- /.container-fluid -->
+
+                                    </div>
+
+                                </Content>
+                            </telerik:CompositeLayoutColumn>
+                        </Columns>
+                    </telerik:LayoutRow>
+
+                    <%--Footer--%>
+                    <telerik:LayoutRow>
+                        <Columns>
+                            <telerik:LayoutColumn CssClass="footer">
+                                <hr />
+                                (c) www.apcargo.ph | 2016
+                            </telerik:LayoutColumn>
+                        </Columns>
+                    </telerik:LayoutRow>
+                </Rows>
+
+
+            </telerik:RadPageLayout>
+        </div>
+    </form>
+</body>
+</html>
