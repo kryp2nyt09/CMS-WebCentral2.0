@@ -1,22 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/xsl" href="_UpgradeWizard_Files\UpgradeWizardLog.xslt"?>
 <log>
-  <event action="Analyze" type="Success" name="Assembly References" path="E:\AP CARGO Web Central Local Repository\BusinessLogic\BusinessLogic.csproj" />
-  <event action="Analyze" type="Success" name="BusinessLogic" path="E:\AP CARGO Web Central Local Repository\BusinessLogic\BusinessLogic.csproj" />
-  <event action="Analyze" type="Success" name="Assembly References" path="E:\AP CARGO Web Central Local Repository\DataAccess\DataAccess.csproj" />
-  <event action="Analyze" type="Success" name="DataAccess" path="E:\AP CARGO Web Central Local Repository\DataAccess\DataAccess.csproj" />
-  <event action="Analyze" type="Success" name="Assembly References" path="E:\AP CARGO Web Central Local Repository\Utilities\Utilities.csproj" />
-  <event action="Analyze" type="Success" name="Utilities" path="E:\AP CARGO Web Central Local Repository\Utilities\Utilities.csproj" />
-  <event action="Analyze" type="Success" name="Binary References" path="E:\AP CARGO Web Central Local Repository\cmsversion2\Bin\" />
+  <event action="Analyze" type="Success" name="Assembly References" path="D:\CMS Client Repository\CMS-WebCentral2.0\BusinessLogic\BusinessLogic.csproj" />
+  <event action="Analyze" type="Success" name="BusinessLogic" path="D:\CMS Client Repository\CMS-WebCentral2.0\BusinessLogic\BusinessLogic.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="D:\CMS Client Repository\CMS-WebCentral2.0\DataAccess\DataAccess.csproj" />
+  <event action="Analyze" type="Success" name="DataAccess" path="D:\CMS Client Repository\CMS-WebCentral2.0\DataAccess\DataAccess.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="D:\CMS Client Repository\CMS-WebCentral2.0\Utilities\Utilities.csproj" />
+  <event action="Analyze" type="Success" name="Utilities" path="D:\CMS Client Repository\CMS-WebCentral2.0\Utilities\Utilities.csproj" />
+  <event action="Analyze" type="Success" name="Binary References" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\Bin\" />
   <event action="Analyze" type="Success" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\blank-page.html" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\blank-page.html" />
-  <event action="Analyze" type="Success" name="blank-page.html" path="E:\AP CARGO Web Central Local Repository\cmsversion2\blank-page.html" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\cmsversion.master" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\cmsversion.master" />
-  <event action="Analyze" type="Success" name="cmsversion.master" path="E:\AP CARGO Web Central Local Repository\cmsversion2\cmsversion.master" />
-  <event action="Analyze" type="Success" />
-  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\blank-page.html" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\blank-page.html" />
+  <event action="Analyze" type="Success" name="blank-page.html" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\blank-page.html" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\cmsversion.master" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\cmsversion.master" />
+  <event action="Analyze" type="Success" name="cmsversion.master" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\cmsversion.master" />
   <event action="Analyze" type="Success" />
   <event action="Analyze" type="Success" />
   <event action="Analyze" type="Success" />
@@ -26,9 +24,11 @@
   <event action="Analyze" type="Success" />
   <event action="Analyze" type="Success" />
   <event action="Analyze" type="Success" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\index.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\index.aspx" />
-  <event action="Analyze" type="Success" name="index.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\index.aspx" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\index.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\index.aspx" />
+  <event action="Analyze" type="Success" name="index.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\index.aspx" />
   <event action="Analyze" type="Success" />
   <event action="Analyze" type="Success" />
   <event action="Analyze" type="Success" />
@@ -408,13 +408,13 @@
   <event action="Analyze" type="Success" />
   <event action="Analyze" type="Success" />
   <event action="Analyze" type="Success" />
-  <event action="Analyze" type="Success" name="Assembly References" path="E:\AP CARGO Web Central Local Repository\cmsversion2\web.config" />
-  <event action="Analyze" type="Success" name="Http Handlers" path="E:\AP CARGO Web Central Local Repository\cmsversion2\web.config" />
-  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="E:\AP CARGO Web Central Local Repository\cmsversion2\web.config" />
-  <event action="Analyze" type="Success" name="Config Sections" path="E:\AP CARGO Web Central Local Repository\cmsversion2\web.config" />
-  <event action="Analyze" type="Success" name="Render Extensions" path="E:\AP CARGO Web Central Local Repository\cmsversion2\web.config" />
-  <event action="Analyze" type="Success" name="Session State Providers" path="E:\AP CARGO Web Central Local Repository\cmsversion2\web.config" />
-  <event action="Analyze" type="Success" name="web.config" path="E:\AP CARGO Web Central Local Repository\cmsversion2\web.config" />
-  <event action="Analyze" type="Success" name="E:\...\cmsversion2\" path="E:\AP CARGO Web Central Local Repository\cmsversion2" />
-  <event action="Analyze" type="Success" name="CMSversion2.1" path="E:\AP CARGO Web Central Local Repository\CMSversion2.1.sln" />
+  <event action="Analyze" type="Success" name="Assembly References" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\web.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\web.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\web.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\web.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\web.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\web.config" />
+  <event action="Analyze" type="Success" name="web.config" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\web.config" />
+  <event action="Analyze" type="Success" name="D:\...\cmsversion2\" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2" />
+  <event action="Analyze" type="Success" name="CMSversion2.1" path="D:\CMS Client Repository\CMS-WebCentral2.0\CMSversion2.1.sln" />
 </log>

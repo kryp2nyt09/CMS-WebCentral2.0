@@ -166,7 +166,7 @@
                                     Modal="true" Behaviors="Close,Move">
                                 </telerik:RadWindow>
 
-                                <telerik:RadWindow RenderMode="Mobile" ID="AddCompany" runat="server" Title="Adding record" Height="550px"
+                                <telerik:RadWindow RenderMode="Mobile" ID="AddCompany" runat="server" Title="Adding record" Height="600px"
                                     Width="880px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false" VisibleStatusbar="false" AutoSize="false"
                                     Modal="true" Behaviors="Close,Move">
                                 </telerik:RadWindow>

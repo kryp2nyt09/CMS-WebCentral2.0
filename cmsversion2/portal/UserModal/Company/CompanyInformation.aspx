@@ -156,7 +156,7 @@
                         </div>
 
                         <div class="col-xs-3">
-                            <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtCompInfoAccountNo" Enabled="True" runat="server"></telerik:RadTextBox>
+                            <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtCompInfoAccountNo" Enabled="false" runat="server"></telerik:RadTextBox>
                             <br />
                             <br />
                              <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtCompInfoCompanyName" TextMode="MultiLine" Enabled ="True" runat="server"></telerik:RadTextBox>
@@ -169,13 +169,18 @@
                             <br />
                             <br />
                             <telerik:RadComboBox ID="rcbCompInfoCity" Width="230px" Height="200px" AutoPostBack="true" runat="server"></telerik:RadComboBox>
-                         
-                         
+
+
                          </div>
                     </div>
 
                     <div class="col-xs-6">
                         <div class="col-xs-3">
+                            <asp:Label ID="Label7" runat="server" Text="Industry Type"></asp:Label>
+                          
+
+                            <br />
+                            <br />
                             <asp:Label ID="Label2" runat="server" Text="Contact Info"></asp:Label>
                           
 
@@ -198,6 +203,9 @@
                         </div>
 
                         <div class="col-xs-3">
+                             <telerik:RadComboBox ID="rcbCompInfoIndustry" Width="230px" Height="200px" AutoPostBack="true" runat="server"></telerik:RadComboBox>
+                          <br />
+                            <br />
                              <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtContactNo" Enabled="True" runat="server"></telerik:RadTextBox>
                             <br />
                             <br />
@@ -216,6 +224,7 @@
                          </div>
 
                 </div>
+                    </div>
             </form>
 
 

@@ -172,7 +172,7 @@
                              <br />
                             <telerik:RadComboBox ID="rcbAcctInfoOrganizationType" Width="230px" Height="200px" runat="server" AutoPostBack="true" OnSelectedIndexChanged="rcbOrganizationType_SelectedIndexChanged"></telerik:RadComboBox>                            
                             <br />
-                             <br />
+                            <br />
                             <telerik:RadComboBox ID="rcbAcctInfoMotherCompany" Width="230px" Height="200px" runat="server"></telerik:RadComboBox>                            
                              <br />
                             <br />
@@ -185,13 +185,17 @@
                            <telerik:RadComboBox ID="rcbPaymentTerm" Width="230px" Height="200px" runat="server"></telerik:RadComboBox>
                            
                             <%-- <telerik:RadDateTimePicker RenderMode="Lightweight" ID="RadDateTimePicker1" Width="100%" runat="server" DateInput-CssClass="radPreventDecorate"></telerik:RadDateTimePicker>--%>
-                             
+                            
                          </div>
                     </div>
 
                     <div class="col-xs-6">
                         <div class="col-xs-3">
-                             <asp:Label ID="Label13" runat="server" Text="Date Approve"></asp:Label>
+                           
+                             <asp:Label ID="Label15" runat="server" Text="Payment Mode"></asp:Label>
+                              <br />
+                            <br /> 
+                            <asp:Label ID="Label13" runat="server" Text="Date Approve"></asp:Label>
                             <br />
                             <br />
                             <asp:Label ID="Label2" runat="server" Text="Approved By"></asp:Label>
@@ -217,6 +221,10 @@
                         </div>
 
                         <div class="col-xs-3">
+                            
+                           <telerik:RadComboBox ID="rcbPaymentMode" Width="230px" Height="200px" runat="server"></telerik:RadComboBox>
+                            <br />
+                            <br />
                              <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="RadTextBox1" Enabled="True" runat="server"></telerik:RadTextBox>
                             <br />
                             <br />
