@@ -65,6 +65,7 @@
     <Compile Include="RateMatrix.cs" />
     <Compile Include="Reason.cs" />
     <Compile Include="Remarks.cs" />
+    <Compile Include="Report\Shipment.cs" />
     <Compile Include="ShipMode.cs" />
     <Compile Include="PaymentTerm.cs" />
     <Compile Include="PaymentMode.cs" />

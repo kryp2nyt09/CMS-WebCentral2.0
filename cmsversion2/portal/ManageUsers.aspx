@@ -51,9 +51,9 @@
             </DropDownSettings>
                     </telerik:RadSearchBox>
                     
-                 </div><br />
-                          <telerik:LayoutColumn HiddenMd="true" HiddenSm="true" HiddenXs="true">
-
+                 </div>
+                <br />
+                        <telerik:LayoutColumn HiddenMd="true" HiddenSm="true" HiddenXs="true">
                         <telerik:RadAjaxPanel ID="RadAjaxPanel2" ClientEvents-OnRequestStart="onRequestStart" runat="server" CssClass="gridwrapper">
 
 

@@ -26,7 +26,7 @@ public partial class _CompanyInformation : System.Web.UI.Page
     private void InitLoad()
     {
         LoadCity();
-        LoadMotherCompany();
+       // LoadMotherCompany();
     }
     #endregion
 
@@ -39,13 +39,13 @@ public partial class _CompanyInformation : System.Web.UI.Page
         rcbCompInfoCity.DataBind();
     }
 
-    private void LoadMotherCompany()
-    {
-        rcbCompInfoMotherCompany.DataSource = BLL.Company.GetCompanies(getConstr.ConStrCMS);
-        rcbCompInfoMotherCompany.DataValueField = "CompanyId";
-        rcbCompInfoMotherCompany.DataTextField = "CompanyName";
-        rcbCompInfoMotherCompany.DataBind();
-    }
+    //private void LoadMotherCompany()
+    //{
+    //    rcbCompInfoMotherCompany.DataSource = BLL.Company.GetCompanies(getConstr.ConStrCMS);
+    //    rcbCompInfoMotherCompany.DataValueField = "CompanyId";
+    //    rcbCompInfoMotherCompany.DataTextField = "CompanyName";
+    //    rcbCompInfoMotherCompany.DataBind();
+    //}
     #endregion
 
 

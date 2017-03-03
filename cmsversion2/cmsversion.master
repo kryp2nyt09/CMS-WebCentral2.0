@@ -123,38 +123,15 @@
 
 
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Acceptance<b class="caret"></b></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reports<b class="caret"></b></a>
                                 <ul class="dropdown-menu message-dropdown">
-                                    <li class="message-footer">
-                                        <a href="#">Pickup Cargo Manifest</a>
-                                    </li>
-                                    <li class="message-footer">
-                                        <a href="#">AWB Detailed Tracking</a>
-                                    </li>
-                                    <li class="message-footer">
-                                        <a href="#">Cargo Transfer</a>
-                                    </li>
-                                    <li class="message-footer">
-                                        <a href="#">Branch Acceptance</a>
-                                    </li>
-                                    <li class="message-footer">
-                                        <a href="#">Gateway Acceptance</a>
-                                    </li>
-                                    <li class="message-footer">
-                                        <a href="#">Gateway Transmital</a>
-                                    </li>
-                                    <li class="message-footer">
-                                        <a href="#">Gateway retrieval (inbound)</a>
-                                    </li>
-                                    <li class="message-footer">
-                                        <a href="#">Distribution</a>
-                                    </li>
-                                    <li class="message-footer">
-                                        <a href="#">Hold Cargo</a>
-                                    </li>
-                                    <li class="message-footer">
-                                        <a href="#">Bundle/Unbundle</a>
-                                    </li>
+                                    <li class="message-footer"> <a href="../portal/Operation/Operation.aspx">Operation</a> </li>
+                                    <li class="message-footer"> <a href="#">Finance</a> </li> 
+                                    <li class="message-footer"> <a href="#">Marketing</a> </li> 
+                                    <li class="message-footer"> <a href="#">Courier</a> </li> 
+                                    <li class="message-footer"> <a href="#">AWB Series</a> </li> 
+                                    <li class="message-footer"> <a href="#">OR Series</a> </li> 
+                                    <li class="message-footer"> <a href="#">Booking Summary</a> </li>  
                                 </ul>
                             </li>
                             

@@ -34,6 +34,7 @@ public partial class _AccountInformation : System.Web.UI.Page
         LoadApprovedBy();
         LoadBCO();
         LoadAllRevenueUnit();
+        loadDataMotherCompany();
     }
     #endregion
 
@@ -56,10 +57,10 @@ public partial class _AccountInformation : System.Web.UI.Page
 
     private void LoadOrganizationType()
     {
-        rcbOrganizationType.DataSource = BLL.OrganizationType.GetOrganizationType(getConstr.ConStrCMS);
-        rcbOrganizationType.DataValueField = "OrganizationTypeId";
-        rcbOrganizationType.DataTextField = "OrganizationTypeName";
-        rcbOrganizationType.DataBind();
+        rcbAcctInfoOrganizationType.DataSource = BLL.OrganizationType.GetOrganizationType(getConstr.ConStrCMS);
+        rcbAcctInfoOrganizationType.DataValueField = "OrganizationTypeId";
+        rcbAcctInfoOrganizationType.DataTextField = "OrganizationTypeName";
+        rcbAcctInfoOrganizationType.DataBind();
     }
 
     private void LoadBusinessType()
@@ -118,12 +119,51 @@ public partial class _AccountInformation : System.Web.UI.Page
         rcbArea.DataTextField = "RevenueUnitName";
         rcbArea.DataBind();
     }
+
+    private void LoadMotherCompany()
+    {
+        rcbAcctInfoMotherCompany.DataSource = BLL.Company.GetCompanies(getConstr.ConStrCMS);
+        rcbAcctInfoMotherCompany.DataValueField = "CompanyId";
+        rcbAcctInfoMotherCompany.DataTextField = "CompanyName";
+        rcbAcctInfoMotherCompany.DataBind();
+    }
+
+    private void loadDataMotherCompany()
+    {
+        if(rcbAcctInfoOrganizationType.SelectedIndex >=0)
+        {
+            string organizationType = rcbAcctInfoOrganizationType.SelectedItem.ToString();
+            if (organizationType.Equals("Head Office"))
+            {
+                rcbAcctInfoMotherCompany.Enabled = false;
+                rcbAcctInfoMotherCompany.Items.Clear();
+            }
+            else if(organizationType.Equals("Branch Office"))
+            {
+                rcbAcctInfoMotherCompany.Enabled = true;
+                LoadMotherCompany();
+            }
+        }
+        
+    }
     #endregion
 
     #region Events
     protected void rcbBCO_SelectedIndexChanged(object sender, Telerik.Web.UI.RadComboBoxSelectedIndexChangedEventArgs e)
     {
         populateRevenueUnitNameByBCOId();
+    }
+
+    protected void rcbOrganizationType_SelectedIndexChanged(object sender, Telerik.Web.UI.RadComboBoxSelectedIndexChangedEventArgs e)
+    {
+        if(rcbAcctInfoOrganizationType.Text.Equals("Head Office"))
+        {
+            rcbAcctInfoMotherCompany.Enabled = false;
+        }else
+        {
+            rcbAcctInfoMotherCompany.Enabled = true;
+            LoadMotherCompany();
+        }
     }
     #endregion
 

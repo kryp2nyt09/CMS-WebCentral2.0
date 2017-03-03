@@ -50,6 +50,7 @@
     <Compile Include="Position.cs" />
     <Compile Include="Reason.cs" />
     <Compile Include="Remarks.cs" />
+    <Compile Include="Reports\Shipment.cs" />
     <Compile Include="Status.cs" />
     <Compile Include="Tracking_BatchName.cs" />
     <Compile Include="BillingPeriod.cs" />
@@ -95,6 +96,7 @@
     <Compile Include="Client.cs" />
     <Compile Include="Users.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -145,16 +145,14 @@
 
                             <br />
                             <br />
+                             <br />
                              <asp:Label ID="Label5" runat="server" Text="Address 2"></asp:Label>
 
                             <br />
                              <br />
                              <br />
                             <asp:Label ID="Label6" runat="server" Text="City"></asp:Label>
-                            <br />
-                              <br />
-                            <br />
-                             <asp:Label ID="Label7" runat="server" Text="Contact No"></asp:Label>
+                            
                         </div>
 
                         <div class="col-xs-3">
@@ -171,20 +169,15 @@
                             <br />
                             <br />
                             <telerik:RadComboBox ID="rcbCompInfoCity" Width="230px" Height="200px" AutoPostBack="true" runat="server"></telerik:RadComboBox>
-                            <br />
-                            <br />
-                               <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtContactNo" Enabled="True" runat="server"></telerik:RadTextBox>
-
-
+                         
+                         
                          </div>
                     </div>
 
                     <div class="col-xs-6">
                         <div class="col-xs-3">
-                            <asp:Label ID="Label2" runat="server" Text="Mother Company"></asp:Label>
-                            <br />
-                            <br />
-                             <asp:Label ID="Label8" runat="server" Text=""></asp:Label>
+                            <asp:Label ID="Label2" runat="server" Text="Contact Info"></asp:Label>
+                          
 
                             <br />
                             <br />
@@ -205,9 +198,7 @@
                         </div>
 
                         <div class="col-xs-3">
-                           <telerik:RadComboBox ID="rcbCompInfoMotherCompany" runat="server" Width="230px" Height="200px" AutoPostBack="true"></telerik:RadComboBox> <br />
-                            <br />
-                             <telerik:RadTextBox RenderMode="Mobile" ID="RadTextBox2" Width="230px" Enabled ="True" runat="server" Visible="false"></telerik:RadTextBox>
+                             <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtContactNo" Enabled="True" runat="server"></telerik:RadTextBox>
                             <br />
                             <br />
                             <telerik:RadTextBox RenderMode="Mobile" ID="txtCompInfoTin" Enabled="True" Width="230px" runat="server"></telerik:RadTextBox>
