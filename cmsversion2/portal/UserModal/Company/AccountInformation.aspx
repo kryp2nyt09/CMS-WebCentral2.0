@@ -142,6 +142,9 @@
                             <br />
                             <br />
                               <asp:Label ID="Label4" runat="server" Text="Organization Type"></asp:Label>
+                             <br />
+                            <br />
+                             <asp:Label ID="Label14" runat="server" Text="Mother Company"></asp:Label>
 
                             <br />
                             <br />
@@ -155,10 +158,9 @@
                               <br />
                             <br />
                              <asp:Label ID="Label7" runat="server" Text="Payment Term"></asp:Label>
+                            
 
-                             <br />
-                            <br />
-                             <asp:Label ID="Label13" runat="server" Text="Date Approve"></asp:Label>
+                            
                         </div>
 
                         <div class="col-xs-3">
@@ -169,9 +171,11 @@
                             <br />
                             <br />
                              <br />
-                            <telerik:RadComboBox ID="rcbOrganizationType" Width="230px" Height="200px" runat="server"></telerik:RadComboBox>                            
-                           
+                            <telerik:RadComboBox ID="rcbAcctInfoOrganizationType" Width="230px" Height="200px" runat="server" AutoPostBack="true" OnSelectedIndexChanged="rcbOrganizationType_SelectedIndexChanged"></telerik:RadComboBox>                            
                             <br />
+                             <br />
+                            <telerik:RadComboBox ID="rcbAcctInfoMotherCompany" Width="230px" Height="200px" runat="server"></telerik:RadComboBox>                            
+                             <br />
                             <br />
                             <telerik:RadComboBox ID="rcbBusinessType" Width="230px" Height="200px" runat="server"></telerik:RadComboBox>     
                             <br />
@@ -180,16 +184,21 @@
                             <br />
                             <br />
                            <telerik:RadComboBox ID="rcbPaymentTerm" Width="230px" Height="200px" runat="server"></telerik:RadComboBox>
-                            <br />
-                            <br />
+                           
                             <%-- <telerik:RadDateTimePicker RenderMode="Lightweight" ID="RadDateTimePicker1" Width="100%" runat="server" DateInput-CssClass="radPreventDecorate"></telerik:RadDateTimePicker>--%>
-                              <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="RadTextBox1" Enabled="True" runat="server"></telerik:RadTextBox>
-                            
+                             
                          </div>
                     </div>
 
                     <div class="col-xs-6">
                         <div class="col-xs-3">
+                           
+                             <asp:Label ID="Label15" runat="server" Text="Payment Mode"></asp:Label>
+                              <br />
+                            <br /> 
+                            <asp:Label ID="Label13" runat="server" Text="Date Approve"></asp:Label>
+                            <br />
+                            <br />
                             <asp:Label ID="Label2" runat="server" Text="Approved By"></asp:Label>
                             <br />
                             <br />
@@ -198,8 +207,6 @@
                             <br />
                             <br />
                               <asp:Label ID="Label9" runat="server" Text="Area"></asp:Label>
-
-                            <br />
                             <br />
                               <br />
                              <asp:Label ID="Label10" runat="server" Text="Discount"></asp:Label>
@@ -208,13 +215,20 @@
                              <br />
                              <br />
                             <asp:Label ID="Label11" runat="server" Text="Tax"></asp:Label>
-                            <br />
+                         
                               <br />
                             <br />
                              <asp:Label ID="Label12" runat="server" Text="Credit Limit"></asp:Label>
                         </div>
 
                         <div class="col-xs-3">
+                            
+                           <telerik:RadComboBox ID="rcbPaymentMode" Width="230px" Height="200px" runat="server"></telerik:RadComboBox>
+                            <br />
+                            <br />
+                             <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="RadTextBox1" Enabled="True" runat="server"></telerik:RadTextBox>
+                            <br />
+                            <br />
                             <telerik:RadComboBox ID="rcbApprovedBy" Width="230px" Height="200px" runat="server"></telerik:RadComboBox><br />
                             <br />
                             <telerik:RadComboBox ID="rcbBCO" Width="230px" Height="200px" runat="server" AutoPostBack="true" OnSelectedIndexChanged="rcbBCO_SelectedIndexChanged"></telerik:RadComboBox><br />
@@ -222,11 +236,11 @@
                             <telerik:RadComboBox ID="rcbArea" Width="230px" Height="200px" runat="server"></telerik:RadComboBox><br />
                             <br />
                             <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtAcctDiscount" Enabled="True" runat="server"></telerik:RadTextBox>
-                            <br />
+                           
                             <br />
                              <br />
                            <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtAcctTax" Enabled="True" runat="server"></telerik:RadTextBox>
-                            <br />
+                         
                             <br />
                                 <br />
                             <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtAcctCreditLimit" Enabled="True" runat="server"></telerik:RadTextBox>
