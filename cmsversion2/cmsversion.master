@@ -125,7 +125,7 @@
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reports<b class="caret"></b></a>
                                 <ul class="dropdown-menu message-dropdown">
-                                    <li class="message-footer"> <a href="../portal/Operation/Operation.aspx">Operation</a> </li>
+                                    <li class="message-footer"> <a href="../portal/Operation/Manifest/Manifest.aspx">Operation</a> </li>
                                     <li class="message-footer"> <a href="#">Finance</a> </li> 
                                     <li class="message-footer"> <a href="#">Marketing</a> </li> 
                                     <li class="message-footer"> <a href="#">Courier</a> </li> 

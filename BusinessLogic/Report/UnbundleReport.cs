@@ -8,11 +8,11 @@ using DAL = DataAccess;
 
 namespace BusinessLogic.Report
 {
-    public class Shipment
+    public class UnbundleReport
     {
-        public static DataSet GetShipment(string conSTR)
+        public static DataSet GetBundle(string conSTR)
         {
-            return DAL.Reports.Shipment.GetShipment(conSTR);
+            return DAL.Reports.Unbundle.GetUnbundle(conSTR);
         }
     }
 }

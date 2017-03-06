@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Reports
 {
-    public class Shipment
+    public class PickupCargoManifest
     {
-        public static DataSet GetShipment(string conSTR)
+        public static DataSet GetPickupCargoManifest(string conSTR)
         {
             using (SqlConnection con = new SqlConnection(conSTR))
             {
-                SqlDataAdapter da = new SqlDataAdapter("sp_view_Shipment", con);
+                SqlDataAdapter da = new SqlDataAdapter("sp_view_Reports_PickupCargoManifest", con);
                 da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                //da.SelectCommand.Parameters.Add("@ShipmentBasicFeeID", SqlDbType.UniqueIdentifier).Value = ID;
+                //da.SelectCommand.Parameters.Add("@Area", SqlDbType.VarChar).Value = strArea;
                 DataSet ds = new DataSet();
                 da.Fill(ds);
                 return ds;

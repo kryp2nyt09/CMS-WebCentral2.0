@@ -39,6 +39,8 @@
                 </telerik:RadTabStrip>
                 <telerik:RadMultiPage ID="RadMultiPage1" runat="server" SelectedIndex="0" Height="500px">
                     <telerik:RadPageView ID="RadPageView1" runat="server" ContentUrl="PickupCargoManifestReport.aspx"></telerik:RadPageView>
+                    <telerik:RadPageView ID="RadPageView2" runat="server" ContentUrl="PickupCargoManifestReport.aspx"></telerik:RadPageView>
+                    <telerik:RadPageView ID="RadPageView3" runat="server" ContentUrl="BundleReport.aspx"></telerik:RadPageView>
                 </telerik:RadMultiPage>
             </div>
          </div>
