@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AddCompany.aspx.cs" EnableEventValidation="false"  Inherits="_AddCompany" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="EditCompany.aspx.cs" EnableEventValidation="false"  Inherits="_EditCompany" %>
 
 <%--<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Editform_csharp.aspx.cs" Inherits="Telerik.Web.Examples.Grid.Integration.GridAndWindow.EditFormCS" %>--%>
 
@@ -155,7 +155,7 @@
         <%--<asp:Button runat="server" Text="Close" ID="CloseButton"     OnClick="CloseButton_Click1"/>--%>
         <div>
         <div>
-
+            <asp:Label ID="lblCompanyID" runat="server" Text="" Visible="false"></asp:Label>
       
         <div class="demo-container no-bg">
             <div>
@@ -455,9 +455,12 @@
                            <telerik:RadComboBox ID="rcbPaymentMode" Width="230px" Height="200px" runat="server"></telerik:RadComboBox>
                             <br />
                             <br />
-                             <telerik:RadDatePicker ID="dateApproved" Width="230px" MinDate="1950/1/1" ZIndex="11000"  runat="server"></telerik:RadDatePicker>
+                            <%-- <telerik:RadDatePicker ID="dateApproved" Width="230px" MinDate="1950/1/1" ZIndex="11000"  runat="server"></telerik:RadDatePicker>--%>
                             <%-- <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="RadTextBox1" Enabled="True" runat="server"></telerik:RadTextBox>
-                          --%>  <br />
+                          --%>  
+                             <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="dateApproved" Enabled="True" runat="server"></telerik:RadTextBox>
+
+                            <br />
                             <br />
                             <telerik:RadComboBox ID="rcbApprovedBy" Width="230px" Height="200px" runat="server"></telerik:RadComboBox><br />
                             <br />
@@ -540,7 +543,7 @@
             <telerik:RadPageView runat="server" ID="RadPageView5">
            <div>
             <form class="form-horizontal" method="post" action="#">
-
+                
                 <div>
                     <div class="col-xs-6">
                         <div class="col-xs-3">

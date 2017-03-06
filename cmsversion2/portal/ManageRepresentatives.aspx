@@ -119,6 +119,12 @@
                                     <CommandItemTemplate>
 
                             |
+                                        <a href="#" onclick="return ShowInsertForm();">
+                                             <img src="../images/emblem.png" alt="Add Company" width="20px">
+                                             Add Representatives
+                                         </a>
+
+                                        |
                                         
                                         <a href="#"  onclick="return ShowExportForm();">
                                             <img src="../images/emblem.png" alt="Print Preview" width="20px">
@@ -146,13 +152,13 @@
                             <br />
                             <telerik:RadWindowManager RenderMode="Mobile" ID="RadWindowManager1" runat="server" EnableShadow="true">
                                 <Windows>
-                                    <telerik:RadWindow RenderMode="Mobile" ID="UserListDialog" runat="server" Title="Editing record" Height="520px"
-                                        Width="380px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false"
+                                    <telerik:RadWindow RenderMode="Mobile" ID="RepresentativeListDialog" runat="server" Title="Editing record" Height="620px"
+                                        Width="800px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false"
                                         Modal="true" Behaviors="Close,Move">
                                     </telerik:RadWindow>
 
-                                     <telerik:RadWindow RenderMode="Mobile" ID="AddUser" runat="server" Title="Adding record" Height="600px"
-                                        Width="380px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false" VisibleStatusbar ="false" AutoSize="false"
+                                     <telerik:RadWindow RenderMode="Mobile" ID="AddRepresentatives" runat="server" Title="Adding record" Height="600px"
+                                        Width="800px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false" VisibleStatusbar ="false" AutoSize="false"
                                         Modal="true" Behaviors="Close,Move"  >
                                     </telerik:RadWindow>
 
@@ -181,11 +187,11 @@
                                     var rowControl = grid.get_masterTableView().get_dataItems()[rowIndex].get_element();
                                     grid.get_masterTableView().selectItem(rowControl, true);
 
-                                    window.radopen("UserModal/EditForm_csharp.aspx?UserId=" + id, "UserListDialog");
+                                    window.radopen("UserModal/Representatives/EditRepresentatives.aspx?ClientId=" + id, "RepresentativeListDialog");
                                     return false;
                                 }
                                 function ShowInsertForm() {
-                                    //window.radopen("AddNewUser.aspx", "AddUser");
+                                    window.radopen("UserModal/Representatives/AddRepresentatives.aspx", "AddRepresentatives");
                                     return false;
                                 }
 
@@ -214,7 +220,7 @@
                                     MasterTable.fireCommand("MyClick2",ID);        
                                 --%>
                                     //ShowEditForm();
-                                    window.radopen("EditForm_csharp.aspx?UserID=" + eventArgs.getDataKeyValue("UserId"), "UserListDialog");
+                                    window.radopen("UserModal/Representatives/EditRepresentatives.aspx?ClientId=" + eventArgs.getDataKeyValue("ClientId"), "RepresentativeListDialog");
                                 }
                             </script>
 

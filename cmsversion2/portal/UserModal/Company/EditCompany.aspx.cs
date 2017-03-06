@@ -11,23 +11,270 @@ using BLL = BusinessLogic;
 using Tools = utilities;
 
 
-public partial class _AddCompany : System.Web.UI.Page
+public partial class _EditCompany : System.Web.UI.Page
 {
     Tools.DataAccessProperties getConstr = new Tools.DataAccessProperties();
     protected void Page_Load(object sender, EventArgs e)
     {
-        //string urlWithSessionID = Response.ApplyAppPathModifier(Request.Url.PathAndQuery);
-        //RadTab tab = RadTabStrip1.FindTabByUrl(urlWithSessionID);
-        //if (tab != null)
-        //{
-        //    tab.SelectParents();
-        //    tab.PageView.Selected = true;
-        //}
-
-
         if (!IsPostBack)
         {
             InitLoad();
+            if (Request.QueryString["CompanyId"] == null)
+            {
+
+            }
+            else
+            {
+                string companyId = Request.QueryString["CompanyId"].ToString();
+
+
+                DataTable Data = GetCompanyInfo(new Guid(companyId));
+                int counter = 0;
+                foreach (DataRow row in Data.Rows)
+                {
+                    if (counter == 0)
+                    {
+                        lblCompanyID.Text = row["CompanyId"].ToString();
+                        #region Comp info
+                        // Comp info
+                        RadComboBoxItem compinfoCityId = rcbCompInfoCity.FindItemByValue(row["CityId"].ToString());
+                        compinfoCityId.Selected = true;
+                        RadComboBoxItem compinfoIndustryId = rcbCompInfoIndustry.FindItemByValue(row["IndustryId"].ToString());
+                        compinfoIndustryId.Selected = true;
+
+                        txtCompInfoCompanyName.Text = row["CompanyName"].ToString();
+                        txtCompInfoAddress1.Text = row["Address1"].ToString();
+                        txtCompInfoAdress2.Text = row["Address2"].ToString();
+                        txtCompInfozipCode.Text = row["ZipCode"].ToString();
+                        txtContactNo.Text = row["ContactNo"].ToString();
+                        txtCompInfoTin.Text = row["TinNo"].ToString();
+                        txtCompInfoWebsite.Text = row["Website"].ToString();
+                        txtCompInfoEmail.Text = row["Email"].ToString();
+                        txtCompInfoPresident.Text = row["President"].ToString();
+
+                        #endregion
+
+                        #region Contact Information
+                        //Contact Information
+                        txtContactInContacPerson.Text = row["ContactPerson"].ToString();
+                        txtContactInfoPostion.Text = row["ContactPosition"].ToString();
+                        txtContactInfoDept.Text = row["ContactDepartment"].ToString();
+                        txtContactInfoMobile.Text = row["ContactMobile"].ToString();
+                        txtContactInfoTelNo.Text = row["ContactTelNo"].ToString();
+                        txtContactInfoEmail.Text = row["ContactEmail"].ToString();
+                        txtContactInfoFax.Text = row["ContactFax"].ToString();
+                        #endregion
+
+
+
+                        #region Account Info 1
+
+                        //Account Info 1
+                        RadComboBoxItem accttypeId = rcbAccountType.FindItemByValue(row["AccountTypeId"].ToString());
+                        accttypeId.Selected = true;
+                        RadComboBoxItem acctStatusId = rcbAccountStatus.FindItemByValue(row["AccountStatusId"].ToString());
+                        acctStatusId.Selected = true;
+                        RadComboBoxItem orgTypeId = rcbAcctInfoOrganizationType.FindItemByValue(row["OrganizationTypeId"].ToString());
+                        orgTypeId.Selected = true;
+                        //RadComboBoxItem motherCompId = rcbAcctInfoMotherCompany.FindItemByValue(row["MotherCompanyId"].ToString());
+                        //motherCompId.Selected = true;
+                        RadComboBoxItem bussinessTypeId = rcbBusinessType.FindItemByValue(row["BusinessTypeId"].ToString());
+                        bussinessTypeId.Selected = true;
+                        RadComboBoxItem billingPeriodId = rcbBillingPeriod.FindItemByValue(row["BillingPeriodId"].ToString());
+                        billingPeriodId.Selected = true;
+                        RadComboBoxItem paymentTermId = rcbPaymentTerm.FindItemByValue(row["PaymentTermId"].ToString());
+                        paymentTermId.Selected = true;
+
+                        RadComboBoxItem paymentModeId = rcbPaymentMode.FindItemByValue(row["PaymentModeId"].ToString());
+                        paymentModeId.Selected = true;
+                        RadComboBoxItem approvedById = rcbApprovedBy.FindItemByValue(row["ApprovedById"].ToString());
+                        approvedById.Selected = true;
+                        RadComboBoxItem areaId = rcbArea.FindItemByValue(row["AreaId"].ToString());
+                        areaId.Selected = true;
+
+                        dateApproved.Text = row["ApprovedDate"].ToString();
+                        txtAcctDiscount.Text = row["Discount"].ToString();
+                        txtAcctCreditLimit.Text = row["CreditLimit"].ToString();
+
+                        #endregion
+
+                        #region Account Info 2
+                        //Account Info 2
+                        string HasAwbFee = row["HasAwbFee"].ToString();
+                        string HasValuationCharge = row["HasValuationCharge"].ToString();
+                        string HasInsurance = row["HasInsurance"].ToString();
+                        string HasChargeInvoice = row["HasChargeInvoice"].ToString();
+                        string IsVatable = row["IsVatable"].ToString();
+                        string ApplyEvm = row["ApplyEvm"].ToString();
+
+                        string ApplyWeight = row["ApplyWeight"].ToString();
+                        string HasFreightCollectCharge = row["HasFreightCollectCharge"].ToString();
+                        string HasFuelCharge = row["HasFuelCharge"].ToString();
+                        string HasDeliveryFee = row["HasDeliveryFee"].ToString();
+                        string HasPerishableFee = row["HasPerishableFee"].ToString();
+                        string HasDangerousFee = row["HasDangerousFee"].ToString();
+
+                        #region Checkboxes - ACCOUNT INFORMATION 2
+                        //AWB FEE
+                        if (HasAwbFee == "True" || (HasAwbFee == "1"))
+                        {
+                            chkAWBFee.Checked = true;
+                        }else
+                        {
+                            chkAWBFee.Checked = false;
+                        }
+
+                        //VALUATION CHARGE
+                        if (HasValuationCharge == "True" || (HasValuationCharge == "1"))
+                        {
+                            chkHasValuationCharge.Checked = true;
+                        }
+                        else
+                        {
+                            chkHasValuationCharge.Checked = false;
+                        }
+
+                        //HAS INSURANCE
+                        if (HasInsurance == "True" || (HasInsurance == "1"))
+                        {
+                            chkHasInsurance.Checked = true;
+                        }
+                        else
+                        {
+                            chkHasInsurance.Checked = false;
+                        }
+
+                        //HAS CHARGE INVOICE
+                        if (HasChargeInvoice == "True" || (HasChargeInvoice == "1"))
+                        {
+                            chkHasChargeInvoice.Checked = true;
+                        }
+                        else
+                        {
+                            chkHasChargeInvoice.Checked = false;
+                        }
+
+                        //IS VATABLE
+                        if (IsVatable == "True" || (IsVatable == "1"))
+                        {
+                            chkhasVat.Checked = true;
+                        }
+                        else
+                        {
+                            chkhasVat.Checked = false;
+                        }
+
+                        //APPLY EVM
+                        if (ApplyEvm == "True" || (ApplyEvm == "1"))
+                        {
+                            chkEVM.Checked = true;
+                        }
+                        else
+                        {
+                            chkEVM.Checked = false;
+                        }
+
+                        //APPLY WEIGHT
+                        if (ApplyWeight == "True" || (ApplyWeight == "1"))
+                        {
+                            chkHasweightCharge.Checked = true;
+                        }
+                        else
+                        {
+                            chkHasweightCharge.Checked = false;
+                        }
+
+                        //HAS FREIGHT COLLECT
+                        if (HasFreightCollectCharge == "True" || (HasFreightCollectCharge == "1"))
+                        {
+                            chkFC.Checked = true;
+                            chkCC.Checked = true;
+                        }
+                        else
+                        {
+                            chkFC.Checked = false;
+                            chkCC.Checked = false;
+                        }
+
+                        //HAS FUEL CHARGE
+                        if (HasFuelCharge == "True" || (HasFuelCharge == "1"))
+                        {
+                            chkHasFuelCharge.Checked = true;
+                            
+                        }
+                        else
+                        {
+                            chkHasFuelCharge.Checked = false;
+                           
+                        }
+
+                        //HAS DELIVERY FEE
+                        if (HasDeliveryFee == "True" || (HasDeliveryFee == "1"))
+                        {
+                            chkHasDevFee.Checked = true;
+
+                        }
+                        else
+                        {
+                            chkHasDevFee.Checked = false;
+
+                        }
+
+                        //HAS PERISHABLE FEE
+                        if (HasPerishableFee == "True" || (HasPerishableFee == "1"))
+                        {
+                            chkHasPerishableFee.Checked = true;
+
+                        }
+                        else
+                        {
+                            chkHasPerishableFee.Checked = false;
+
+                        }
+
+                        //HAS DANGEROUS FEE
+                        if (HasDangerousFee == "True" || (HasDangerousFee == "1"))
+                        {
+                            chkHasDangerousFee.Checked = true;
+
+                        }
+                        else
+                        {
+                            chkHasDangerousFee.Checked = false;
+
+                        }
+                        #endregion
+
+                        #endregion
+
+                        #region BillingInfo
+                        //BillingInfo
+                        RadComboBoxItem billInfoCityId = rcbBillingInfoCity.FindItemByValue(row["BillingCityId"].ToString());
+                        billInfoCityId.Selected = true;
+
+                        txtBillingInfoAdd1.Text = row["BillingAddress1"].ToString();
+                        txtBillingInfoAdd2.Text = row["BillingAddress2"].ToString();
+                        txtBillingInfoZipCode.Text = row["BillingZipCode"].ToString();
+                        txtBillingInfoContactPerson.Text = row["BillingContactPerson"].ToString();
+
+                        txtBillingInfoPosition.Text = row["BillingContactPosition"].ToString();
+                        txtBillingInfoDept.Text = row["BillingContactDepartment"].ToString();
+                        txtBillingInfoContactNo.Text = row["BillingContactTelNo"].ToString();
+                        txtBillingInfoMobileNo.Text = row["BillingContactMobile"].ToString();
+                        txtBillingInfoEmail.Text = row["BillingContactEmail"].ToString();
+                        txtBillingInfoFax.Text = row["BillingContactFax"].ToString();
+
+                        #endregion
+
+
+
+
+
+                        counter++;
+                    }
+                }
+
+            }
         }
     }
 
@@ -64,6 +311,14 @@ public partial class _AddCompany : System.Web.UI.Page
         LoadAllRevenueUnit();
         loadDataMotherCompany();
         LoadPaymentMode();
+    }
+
+    public DataTable GetCompanyInfo(Guid ID)
+    {
+        DataSet data = BLL.Company.GetCompanyByCompanyId(ID, getConstr.ConStrCMS);
+        DataTable convertdata = new DataTable();
+        convertdata = data.Tables[0];
+        return convertdata;
     }
     #endregion
 
@@ -266,7 +521,8 @@ public partial class _AddCompany : System.Web.UI.Page
         Guid PaymentModeId = new Guid();
         Guid ApproveById = new Guid();
         Guid AreaId = new Guid();
-        DateTime dateApprove = dateApproved.SelectedDate.Value;
+        //DateTime dateApprove = dateApproved.SelectedDate.Value;
+        DateTime dateApprove = Convert.ToDateTime(dateApproved.Text);
         decimal Discount = 0;
         decimal CreditLimit = 0;
 
@@ -296,7 +552,6 @@ public partial class _AddCompany : System.Web.UI.Page
         if(rcbAcctInfoMotherCompany.Items.Count == 0)
         {
             compInfo.MotherCompId = null;
-           // compInfo.MotherCompId = (MotherCompId == null) ? (Guid?)null : MotherCompId;
         }
         else
         {
@@ -477,7 +732,7 @@ public partial class _AddCompany : System.Web.UI.Page
 
         Guid ID = new Guid("11111111-1111-1111-1111-111111111111");
 
-        BLL.Company.InsertCompanyInfo(compInfo.CompanyName, compInfo.ContactInfo, compInfo.ContactInfoFax, compInfo.Email, compInfo.Address1, 
+        BLL.Company.UpdateCompanyInfo(new Guid(lblCompanyID.Text), compInfo.CompanyName, compInfo.ContactInfo, compInfo.ContactInfoFax, compInfo.Email, compInfo.Address1, 
                                     compInfo.Address2, compInfo.CityId, compInfo.CompanyInfoZipCode, compInfo.Website, compInfo.President, 
                                     compInfo.Tin, compInfo.MotherCompId, compInfo.ContactPerson, compInfo.Position, compInfo.Department,
                                 compInfo.ContactInfoTelNo, compInfo.MobileNo, compInfo.ContactInfoEmail,"" , compInfo.billInfoAddress1, 

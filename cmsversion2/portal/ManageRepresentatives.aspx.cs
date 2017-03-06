@@ -28,7 +28,7 @@ public partial class _ManageRepresentatives : System.Web.UI.Page
         {
             HyperLink editLink = (HyperLink)e.Item.FindControl("EditLink");
             editLink.Attributes["href"] = "javascript:void(0);";
-            editLink.Attributes["onclick"] = String.Format("return ShowEditForm('{0}','{1}');", e.Item.OwnerTableView.DataKeyValues[e.Item.ItemIndex]["EmployeeId"], e.Item.ItemIndex);
+            editLink.Attributes["onclick"] = String.Format("return ShowEditForm('{0}','{1}');", e.Item.OwnerTableView.DataKeyValues[e.Item.ItemIndex]["ClientId"], e.Item.ItemIndex);
         }
     }
 

@@ -116,14 +116,6 @@ public partial class _ManageCompany : System.Web.UI.Page
 
     }
 
-    protected void RadGrid2_ItemCreated1(object sender, GridItemEventArgs e)
-    {
-
-    }
-
- 
-
-
     protected void RadGrid2_ItemCommand1(object sender, GridCommandEventArgs e)
     {
         if (e.CommandName == "Delete")
