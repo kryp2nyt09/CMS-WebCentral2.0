@@ -158,7 +158,6 @@
                               <br />
                             <br />
                              <asp:Label ID="Label7" runat="server" Text="Payment Term"></asp:Label>
-                            
 
                             
                         </div>
@@ -173,7 +172,7 @@
                              <br />
                             <telerik:RadComboBox ID="rcbAcctInfoOrganizationType" Width="230px" Height="200px" runat="server" AutoPostBack="true" OnSelectedIndexChanged="rcbOrganizationType_SelectedIndexChanged"></telerik:RadComboBox>                            
                             <br />
-                             <br />
+                            <br />
                             <telerik:RadComboBox ID="rcbAcctInfoMotherCompany" Width="230px" Height="200px" runat="server"></telerik:RadComboBox>                            
                              <br />
                             <br />
@@ -186,7 +185,7 @@
                            <telerik:RadComboBox ID="rcbPaymentTerm" Width="230px" Height="200px" runat="server"></telerik:RadComboBox>
                            
                             <%-- <telerik:RadDateTimePicker RenderMode="Lightweight" ID="RadDateTimePicker1" Width="100%" runat="server" DateInput-CssClass="radPreventDecorate"></telerik:RadDateTimePicker>--%>
-                             
+                            
                          </div>
                     </div>
 
