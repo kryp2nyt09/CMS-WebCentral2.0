@@ -21,6 +21,20 @@ public partial class _ViewRepresentative : System.Web.UI.Page
             string usersession = Session["UsernameSession"].ToString();
         }
 
+        if (!IsPostBack)
+        {
+            if (Request.QueryString["CompanyId"] == null)
+            {
+
+            }
+            else
+            {
+                string companyId = Request.QueryString["CompanyId"].ToString();
+                lblCompanyID.Value = companyId;
+            }
+        }
+
+
     }
 
     protected override void OnInit(EventArgs e)

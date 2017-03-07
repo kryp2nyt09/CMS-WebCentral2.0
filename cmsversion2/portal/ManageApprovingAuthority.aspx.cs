@@ -6,6 +6,7 @@ using System.Data.OleDb;
 using System.Web.UI.WebControls;
 using Telerik.Web.UI;
 using BLL = BusinessLogic;
+using DAL = DataAccess;
 using Tools = utilities;
 public partial class _ManageApprovingAuthority : System.Web.UI.Page
 {
@@ -13,6 +14,11 @@ public partial class _ManageApprovingAuthority : System.Web.UI.Page
     Tools.DataAccessProperties getConstr = new Tools.DataAccessProperties();
     protected void Page_Load(object sender, EventArgs e)
     {
+
+        radSearchApprovingAuthority.DataSource = GetApprovingAutority();
+        radSearchApprovingAuthority.DataTextField = "Name";
+        radSearchApprovingAuthority.DataValueField = "ApprovingAuthorityId";
+
         RadGrid2.MasterTableView.CommandItemSettings.ShowAddNewRecordButton = false;
       
         if (!string.IsNullOrEmpty(Session["UsernameSession"] as string))
@@ -20,6 +26,14 @@ public partial class _ManageApprovingAuthority : System.Web.UI.Page
             string usersession = Session["UsernameSession"].ToString();
         }
 
+    }
+
+    public DataTable GetApprovingAuthorityById(Guid appId)
+    {
+        DataSet data = DAL.ApprovingAuthority.GetApprovingAuthorityDetailsByID(getConstr.ConStrCMS, appId);
+        DataTable convertdata = new DataTable();
+        convertdata = data.Tables[0];
+        return convertdata;
     }
 
     protected void RadGrid2_ItemCreated(object sender, GridItemEventArgs e)
@@ -102,9 +116,36 @@ public partial class _ManageApprovingAuthority : System.Web.UI.Page
         if (e.CommandName == "Delete")
         {
             string ClientId = e.Item.OwnerTableView.DataKeyValues[e.Item.ItemIndex]["ApprovingAuthorityId"].ToString();
-            BLL.ApprovingAuthority.UpdateApprovingAuthority(new Guid(ClientId), 3, getConstr.ConStrCMS);
+            BLL.ApprovingAuthority.DeleteApprovingAuthority(new Guid(ClientId), 3, getConstr.ConStrCMS);
             
             //3 for delete flagging
+        }
+    }
+
+    protected void radSearchApprovingAuthority_Search(object sender, SearchBoxEventArgs e)
+    {
+        RadSearchBox searchBox = (RadSearchBox)sender;
+
+        string appId = string.Empty;
+        string likeCondition;
+        Guid id = new Guid();
+
+        if (e.DataItem != null)
+        {
+            appId = ((Dictionary<string, object>)e.DataItem)["ApprovingAuthorityId"].ToString();
+            id = Guid.Parse(appId);
+            if (!string.IsNullOrEmpty(appId))
+            {
+                likeCondition = string.Format("'{0}{1}%'", searchBox.Filter == SearchBoxFilter.Contains ? "%" : "", ((Dictionary<string, object>)e.DataItem)["ApprovingAuthorityId"].ToString());
+                RadGrid2.DataSource = GetApprovingAuthorityById(id);
+                RadGrid2.DataBind();
+            }
+
+        }
+        else
+        {
+            RadGrid2.DataSource = GetApprovingAutority();
+            RadGrid2.DataBind();
         }
     }
 }

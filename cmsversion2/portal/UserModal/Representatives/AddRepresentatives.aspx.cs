@@ -18,7 +18,28 @@ public partial class _AddRepresentatives : System.Web.UI.Page
         if (!IsPostBack)
         {
             InitLoad();
-           
+            if (Request.QueryString["CompanyId"] == null)
+            {
+
+            }
+            else
+            {
+                string companyId = Request.QueryString["CompanyId"].ToString();
+                DataTable GroupInfo = GetCompanyDetails(new Guid(companyId));
+                int counter = 0;
+                foreach (DataRow row in GroupInfo.Rows)
+                {
+                    if (counter == 0)
+                    {
+                        string company = row["CompanyName"].ToString();
+                        rcbRepCompany.SelectedItem.Text = company;
+                        rcbRepCompany.SelectedItem.Value = companyId;
+                        rcbRepCompany.Enabled = false;
+                    }
+                }
+
+            }
+
         }
     }
 
@@ -57,6 +78,15 @@ public partial class _AddRepresentatives : System.Web.UI.Page
         rcbRepCompany.DataTextField = "CompanyName";
         rcbRepCompany.DataBind();
     }
+
+    public DataTable GetCompanyDetails(Guid ID)
+    {
+        DataSet data = BLL.Company.GetCompanyByCompanyId(ID, getConstr.ConStrCMS);
+        DataTable convertdata = new DataTable();
+        convertdata = data.Tables[0];
+        return convertdata;
+    }
+
     #endregion
 
 

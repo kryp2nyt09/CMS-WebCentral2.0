@@ -232,6 +232,22 @@ namespace DataAccess
             }
         }
 
+        public static DataSet GetCompanyById(Guid companyId, string conStr)
+        {
+            using (SqlConnection con = new SqlConnection(conStr))
+            {
+                using (SqlCommand cmd = new SqlCommand("sp_view_CompanybyId", con))
+                {
+                    SqlDataAdapter da = new SqlDataAdapter("sp_view_CompanybyId", con);
+                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                    da.SelectCommand.Parameters.Add("@CompanyId", SqlDbType.UniqueIdentifier).Value = companyId;
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+                    return ds;
+                }
+            }
+        }
+
 
     }
 }

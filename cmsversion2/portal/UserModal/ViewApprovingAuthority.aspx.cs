@@ -21,6 +21,19 @@ public partial class _ViewApprovingAuthority : System.Web.UI.Page
             string usersession = Session["UsernameSession"].ToString();
         }
 
+        if (!IsPostBack)
+        {
+            if (Request.QueryString["CompanyId"] == null)
+            {
+
+            }
+            else
+            {
+                string companyId = Request.QueryString["CompanyId"].ToString();
+                lblCompanyID.Value = companyId;
+            }
+        }
+
     }
 
     protected override void OnInit(EventArgs e)
@@ -28,7 +41,7 @@ public partial class _ViewApprovingAuthority : System.Web.UI.Page
         base.OnInit(e);
 
        
-        this.Page.Title = "Viewing/Adding Representatives";
+        this.Page.Title = "Viewing/Adding Approving Authority";
     }
 
     protected void RadGrid2_ItemCreated(object sender, GridItemEventArgs e)

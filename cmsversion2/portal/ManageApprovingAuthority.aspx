@@ -34,6 +34,18 @@
                     </div>
                 </div>
                 <!-- /.row -->
+                 <div class="size-wide">
+                    <telerik:RadSearchBox RenderMode="Lightweight" runat="server" ID="radSearchApprovingAuthority" EmptyMessage="Search Approving Authority"
+                          OnSearch="radSearchApprovingAuthority_Search" Width="300"
+                        DataKeyNames="ApprovingAuthorityId"
+                        DataTextField="Name"
+                        DataValueField="ApprovingAuthorityId"
+                        ShowSearchButton="false">
+                        <DropDownSettings Width="300" />
+                    </telerik:RadSearchBox>
+                    
+                 </div>
+                <br />
                           <telerik:LayoutColumn HiddenMd="true" HiddenSm="true" HiddenXs="true">
 
                         <telerik:RadAjaxPanel ID="RadAjaxPanel2" ClientEvents-OnRequestStart="onRequestStart" runat="server" CssClass="gridwrapper">
@@ -129,7 +141,7 @@
                                         |
 
                                          <a href="#"  onclick="return ShowInsertForm();">
-                                            <img src="../images/emblem.png" alt="Add New User" width="20px">
+                                            <img src="../images/emblem.png" alt="Add Approver" width="20px">
                                             Add Approver
                                             </a>
                                     
@@ -162,7 +174,7 @@
                             <br />
                             <telerik:RadWindowManager RenderMode="Mobile" ID="RadWindowManager1" runat="server" EnableShadow="true">
                                 <Windows>
-                                    <telerik:RadWindow RenderMode="Mobile" ID="UserListDialog" runat="server" Title="Editing record" Height="520px"
+                                    <telerik:RadWindow RenderMode="Mobile" ID="ApprovingAuthorityListDialog" runat="server" Title="Editing record" Height="520px"
                                         Width="380px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false"
                                         Modal="true" Behaviors="Close,Move">
                                     </telerik:RadWindow>
@@ -197,11 +209,11 @@
                                     var rowControl = grid.get_masterTableView().get_dataItems()[rowIndex].get_element();
                                     grid.get_masterTableView().selectItem(rowControl, true);
 
-                                    window.radopen("ApprovingAuthority/EditApprovingAuthority.aspx?ID=" + id, "UserListDialog");
+                                    window.radopen("UserModal/ApprovingAuthority/EditApprovingAuthority.aspx?ID=" + id, "ApprovingAuthorityListDialog");
                                     return false;
                                 }
                                 function ShowInsertForm() {
-                                    window.radopen("ApprovingAuthority/AddApprovingAuthority.aspx", "AddUser");
+                                    window.radopen("UserModal/ApprovingAuthority/AddApprovingAuthority.aspx", "AddUser");
                                     
                                     return false;
                                 }
@@ -232,7 +244,7 @@
                                     MasterTable.fireCommand("MyClick2",ID);        
                                 --%>
                                     //ShowEditForm();
-                                    window.radopen("ApprovingAuthority/EditApprovingAuthority.aspx?ID=" + eventArgs.getDataKeyValue("ApprovingAuthorityId"), "UserListDialog");
+                                    window.radopen("ApprovingAuthority/EditApprovingAuthority.aspx?ID=" + eventArgs.getDataKeyValue("ApprovingAuthorityId"), "ApprovingAuthorityListDialog");
                                 }
                             </script>
 

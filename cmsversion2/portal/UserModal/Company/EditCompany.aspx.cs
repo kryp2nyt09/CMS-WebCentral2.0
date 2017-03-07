@@ -514,7 +514,7 @@ public partial class _EditCompany : System.Web.UI.Page
         Guid acctStatusId = new Guid();
         Guid OrgTypeId = new Guid();
 
-        Guid MotherCompId = new Guid();
+        Guid? MotherCompId = new Guid();
         Guid BusinessTypeId = new Guid();
         Guid BillingPeriodId = new Guid();
         Guid PaymentTermId = new Guid();
@@ -551,7 +551,7 @@ public partial class _EditCompany : System.Web.UI.Page
          
         if(rcbAcctInfoMotherCompany.Items.Count == 0)
         {
-            compInfo.MotherCompId = null;
+            MotherCompId = null;
         }
         else
         {

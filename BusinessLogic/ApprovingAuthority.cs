@@ -30,18 +30,21 @@ namespace BusinessLogic
         {
             return DAL.ApprovingAuthority.GetApprovingAuthorityDetailsByID(conSTR, AuthorityID);
         }
-        public static void UpdateApprovingAuthority(Guid ClientID, int Flag, string conStr)
+        public static void DeleteApprovingAuthority(Guid ApprovingAuthorityId, int Flag, string conStr)
         {
-            DAL.ApprovingAuthority.UpdateApprovingAuthority(ClientID, Flag, conStr);
+            DAL.ApprovingAuthority.DeleteApprovingAuthority(ApprovingAuthorityId, Flag, conStr);
         }
-        public static void UpdateApprovingAuthorityDetails(Guid ApprovingAuthorityId, String FirstName, String Lastname, String title, String position, String department, String ContactNo, String Mobile, String Fax, String Email, Guid CompanyId, Guid ModifiedBy, int Flag, string conStr)
+        public static void UpdateApprovingAuthorityDetails(Guid ApprovingAuthorityId, string FirstName, string Lastname, string title, string position,
+            string department, string ContactNo, string Mobile, string Fax, string Email, 
+            Guid CompanyId, Guid ModifiedBy, string conStr)
         {
-            DAL.ApprovingAuthority.UpdateApprovingAuthorityDetails(ApprovingAuthorityId, FirstName, Lastname, title, position, department, ContactNo, Mobile, Fax, Email, CompanyId, ModifiedBy, Flag, conStr);
+            DAL.ApprovingAuthority.UpdateApprovingAuthorityDetails(ApprovingAuthorityId, FirstName, Lastname, title, position, department, ContactNo, Mobile, Fax, Email, CompanyId, ModifiedBy, conStr);
         }
 
-        public static void  InsertApprovingAuthorityDetails(String FirstName, String Lastname, String title, String position, String department, String ContactNo, String Mobile, String Fax, String Email, Guid CompanyId, Guid ModifiedBy, int Flag, string conStr)
+        public static void  InsertApprovingAuthorityDetails(string FirstName, string Lastname, string title, string position, string department, 
+                                        string ContactNo, string Mobile, string Fax, string Email, Guid CompanyId, Guid CreatedBy, string conStr)
         {
-            DAL.ApprovingAuthority.InsertApprovingAuthorityDetails(FirstName, Lastname, title, position, department, ContactNo, Mobile, Fax, Email, CompanyId, ModifiedBy, Flag, conStr);
+            DAL.ApprovingAuthority.InsertApprovingAuthorityDetails(FirstName, Lastname, title, position, department, ContactNo, Mobile, Fax, Email, CompanyId, CreatedBy, conStr);
         }
 
 

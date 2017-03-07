@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AddApprovingAuthority.aspx.cs" EnableEventValidation="false" Inherits="_AddApprovingAuthority" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="EditApprovingAuthority.aspx.cs" EnableEventValidation="false" Inherits="_EditApprovingAuthority" %>
 
 <%--<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Editform_csharp.aspx.cs" Inherits="Telerik.Web.Examples.Grid.Integration.GridAndWindow.EditFormCS" %>--%>
 
@@ -305,9 +305,9 @@
 
                             <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
                             <%--<input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" style="width: 175px" required />--%>
-                            <asp:Label ID="lblCompanyID" runat="server" Text="" Visible="false"></asp:Label>
+                            <asp:Label ID="lblApprovingID" runat="server" Text="" Visible="false"></asp:Label>
                             
-                            <telerik:RadComboBox ID="rcbComapny" runat="server"></telerik:RadComboBox>
+                            <telerik:RadComboBox ID="rcbComapny" runat="server" Width="190"></telerik:RadComboBox>
 
                             <%--<telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtIslandGroup" Enabled="True" runat="server"></telerik:RadTextBox>--%>
 

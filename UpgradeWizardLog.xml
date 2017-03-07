@@ -53,12 +53,6 @@
   <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\MasterPageSingleMenu.master" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\MasterPageSingleMenu.master" />
   <event action="Analyze" type="Success" name="MasterPageSingleMenu.master" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\MasterPageSingleMenu.master" />
-  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ApprovingAuthority\AddApprovingAuthority.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ApprovingAuthority\AddApprovingAuthority.aspx" />
-  <event action="Analyze" type="Success" name="AddApprovingAuthority.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ApprovingAuthority\AddApprovingAuthority.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ApprovingAuthority\EditApprovingAuthority.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ApprovingAuthority\EditApprovingAuthority.aspx" />
-  <event action="Analyze" type="Success" name="EditApprovingAuthority.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ApprovingAuthority\EditApprovingAuthority.aspx" />
   <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\AWBSeriesManagement.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\AWBSeriesManagement.aspx" />
   <event action="Analyze" type="Success" name="AWBSeriesManagement.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\AWBSeriesManagement.aspx" />
@@ -146,6 +140,12 @@
   <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ApplicableRate\EditApplicableRate.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ApplicableRate\EditApplicableRate.aspx" />
   <event action="Analyze" type="Success" name="EditApplicableRate.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ApplicableRate\EditApplicableRate.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ApprovingAuthority\AddApprovingAuthority.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ApprovingAuthority\AddApprovingAuthority.aspx" />
+  <event action="Analyze" type="Success" name="AddApprovingAuthority.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ApprovingAuthority\AddApprovingAuthority.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ApprovingAuthority\EditApprovingAuthority.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ApprovingAuthority\EditApprovingAuthority.aspx" />
+  <event action="Analyze" type="Success" name="EditApprovingAuthority.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ApprovingAuthority\EditApprovingAuthority.aspx" />
   <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Area\AddArea.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Area\AddArea.aspx" />
   <event action="Analyze" type="Success" name="AddArea.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Area\AddArea.aspx" />
@@ -239,6 +239,9 @@
   <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Company\ContactInformation.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Company\ContactInformation.aspx" />
   <event action="Analyze" type="Success" name="ContactInformation.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Company\ContactInformation.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Company\EditCompany.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Company\EditCompany.aspx" />
+  <event action="Analyze" type="Success" name="EditCompany.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Company\EditCompany.aspx" />
   <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Crating\AddCrating.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Crating\AddCrating.aspx" />
   <event action="Analyze" type="Success" name="AddCrating.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Crating\AddCrating.aspx" />
@@ -344,6 +347,12 @@
   <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Remarks\EditRemarks.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Remarks\EditRemarks.aspx" />
   <event action="Analyze" type="Success" name="EditRemarks.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Remarks\EditRemarks.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Representatives\AddRepresentatives.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Representatives\AddRepresentatives.aspx" />
+  <event action="Analyze" type="Success" name="AddRepresentatives.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Representatives\AddRepresentatives.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Representatives\EditRepresentatives.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Representatives\EditRepresentatives.aspx" />
+  <event action="Analyze" type="Success" name="EditRepresentatives.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Representatives\EditRepresentatives.aspx" />
   <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\RevenueTypeMaintenance\AddRUT.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\RevenueTypeMaintenance\AddRUT.aspx" />
   <event action="Analyze" type="Success" name="AddRUT.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\RevenueTypeMaintenance\AddRUT.aspx" />

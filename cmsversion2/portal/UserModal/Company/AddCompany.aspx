@@ -181,22 +181,24 @@
                             <br />
                             <br />
                              <asp:Label ID="Label3" runat="server" Text="Company Name"></asp:Label>
-
                             <br />
                             <br />
-                              <asp:Label ID="Label4" runat="server" Text="Address 1"></asp:Label>
-                              <br />
                             <br />
                             <br />
-                             <br />
-                             <asp:Label ID="Label5" runat="server" Text="Address 2"></asp:Label>
-                              <br />
+                            <asp:Label ID="Label4" runat="server" Text="Address 1"></asp:Label>
                             <br />
-                             <br />
-                             <br />
+                            <br />
+                            <br />
+                            <br />
+                            <asp:Label ID="Label5" runat="server" Text="Address 2"></asp:Label>
+                            <br />
+                            <br />
+                            <br />
+                            <br />
                             <asp:Label ID="Label6" runat="server" Text="City"></asp:Label>
                             <br />
-                             <br />
+                            <br />
+                            <br>
                              <asp:Label ID="Label46" runat="server" Text="Zip Code"></asp:Label>
                             
                         </div>
@@ -206,9 +208,19 @@
                             <br />
                             <br />
                              <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtCompInfoCompanyName" TextMode="MultiLine" Enabled ="True" runat="server"></telerik:RadTextBox>
+                            <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"
+                                    ControlToValidate="txtCompInfoCompanyName"
+                                    ErrorMessage="*"
+                                    ForeColor="Red">
+                            </asp:RequiredFieldValidator>--%>
                             <br />
                             <br />
                             <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtCompInfoAddress1" TextMode="MultiLine" Enabled="True" runat="server"></telerik:RadTextBox>
+                            <%-- <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server"
+                                    ControlToValidate="txtCompInfoAddress1"
+                                    ErrorMessage="*"
+                                    ForeColor="Red">
+                            </asp:RequiredFieldValidator>--%>
                             <br />
                             <br />
                             <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtCompInfoAdress2" TextMode="MultiLine" Enabled="True" runat="server"></telerik:RadTextBox>
@@ -226,21 +238,16 @@
                     <div class="col-xs-6">
                         <div class="col-xs-3">
                             <asp:Label ID="Label7" runat="server" Text="Industry Type"></asp:Label>
-                          
-
                             <br />
                             <br />
                             <asp:Label ID="Label2" runat="server" Text="Contact Info"></asp:Label>
-                          
-
                             <br />
                             <br />
-                              <asp:Label ID="Label9" runat="server" Text="TIN"></asp:Label>
-
+                            <br />
+                            <asp:Label ID="Label9" runat="server" Text="TIN"></asp:Label>
                             <br />
                             <br />
-                             <asp:Label ID="Label10" runat="server" Text="Website"></asp:Label>
-
+                            <asp:Label ID="Label10" runat="server" Text="Website"></asp:Label>
                             <br />
                              <br />
                              <br />
@@ -256,6 +263,11 @@
                           <br />
                             <br />
                              <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtContactNo" Enabled="True" runat="server"></telerik:RadTextBox>
+                           <%--  <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server"
+                                    ControlToValidate="txtContactNo"
+                                    ErrorMessage="*"
+                                    ForeColor="Red">
+                            </asp:RequiredFieldValidator>--%>
                             <br />
                             <br />
                             <telerik:RadTextBox RenderMode="Mobile" ID="txtCompInfoTin" Enabled="True" Width="230px" runat="server"></telerik:RadTextBox>
@@ -394,7 +406,9 @@
 
                         <div class="col-xs-3">
                             <telerik:RadComboBox ID="rcbAccountType" Width="230px" Height="200px" runat="server"></telerik:RadComboBox>
-                            <br />
+                          <%-- <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="rcbAccountType"
+                             ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>--%>
+                             <br />
                             <br />
                               <telerik:RadComboBox ID="rcbAccountStatus" Width="230px" Height="200px" runat="server"></telerik:RadComboBox>
                             <br />
@@ -580,7 +594,9 @@
                             <br />
                             <br />
                              <telerik:RadComboBox ID="rcbBillingInfoCity" Width="230px" Height="200px" runat="server"></telerik:RadComboBox>
-                           <br />
+                        <%--   <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="rcbBillingInfoCity"
+                            ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>--%>
+                            <br />
                             <br />
                             <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtBillingInfoZipCode" Enabled="True" runat="server"></telerik:RadTextBox>
                             <br />
