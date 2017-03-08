@@ -132,7 +132,7 @@ public partial class _AddApprovingAuthority : System.Web.UI.Page
         Guid CompanyIDguid = new Guid(CompanyId);
         Guid ModifiedBy = new Guid("11111111-1111-1111-1111-111111111111");
 
-        BLL.ApprovingAuthority.InsertApprovingAuthorityDetails(txtFname.Text, txtLname.Text, txtTitle.Text, txtPosition.Text, txtDepartment.Text, txtContactNumber.Text, txtMobile.Text, txtFax.Text, txtEmail.Text, CompanyIDguid, ModifiedBy, 1, getConstr.ConStrCMS);
+        BLL.ApprovingAuthority.InsertApprovingAuthorityDetails(txtFname.Text, txtLname.Text, txtTitle.Text, txtPosition.Text, txtDepartment.Text, txtContactNumber.Text, txtMobile.Text, txtFax.Text, txtEmail.Text, CompanyIDguid, ModifiedBy, getConstr.ConStrCMS);
 
 
         RefreshPage();

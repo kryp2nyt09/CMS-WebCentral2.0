@@ -29,7 +29,7 @@ public partial class portal_Operation_Manifest_BundleReport : System.Web.UI.Page
     public DataTable getBundle()
     {
        
-        DataSet data = BLL.Report.BundeReport.GetBundle(getConstr.ConStrCMS );
+        DataSet data = BLL.Report.BundleReport.GetBundle(getConstr.ConStrCMS );
         DataTable dt = new DataTable();
         dt = data.Tables[0];
 
@@ -126,7 +126,7 @@ public partial class portal_Operation_Manifest_BundleReport : System.Web.UI.Page
     protected void dropDown_Bundle_Branch_SelectedIndexChanged(object sender, Telerik.Web.UI.DropDownListEventArgs e)
     {
         dropDown_Bundle_BCO_BSO.Enabled = true;
-        DataSet data = BLL.Report.BundeReport.GetBundle(getConstr.ConStrCMS);
+        DataSet data = BLL.Report.BundleReport.GetBundle(getConstr.ConStrCMS);
         DataTable dt = new DataTable();
         dt = data.Tables[0];
         DataView view = new DataView(dt);

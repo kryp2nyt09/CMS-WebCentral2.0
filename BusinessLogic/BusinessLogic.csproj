@@ -65,7 +65,7 @@
     <Compile Include="RateMatrix.cs" />
     <Compile Include="Reason.cs" />
     <Compile Include="Remarks.cs" />
-    <Compile Include="Report\BundeReport.cs" />
+    <Compile Include="Report\BundleReport.cs" />
     <Compile Include="Report\DailyTripReport.cs" />
     <Compile Include="Report\PickupCargoManifestReport.cs" />
     <Compile Include="Report\SegregationReport.cs" />
