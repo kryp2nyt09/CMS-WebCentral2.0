@@ -1,22 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/xsl" href="_UpgradeWizard_Files\UpgradeWizardLog.xslt"?>
 <log>
-  <event action="Analyze" type="Success" name="Assembly References" path="E:\AP CARGO Web Central Local Repository\BusinessLogic\BusinessLogic.csproj" />
-  <event action="Analyze" type="Success" name="BusinessLogic" path="E:\AP CARGO Web Central Local Repository\BusinessLogic\BusinessLogic.csproj" />
-  <event action="Analyze" type="Success" name="Assembly References" path="E:\AP CARGO Web Central Local Repository\DataAccess\DataAccess.csproj" />
-  <event action="Analyze" type="Success" name="DataAccess" path="E:\AP CARGO Web Central Local Repository\DataAccess\DataAccess.csproj" />
-  <event action="Analyze" type="Success" name="Assembly References" path="E:\AP CARGO Web Central Local Repository\Utilities\Utilities.csproj" />
-  <event action="Analyze" type="Success" name="Utilities" path="E:\AP CARGO Web Central Local Repository\Utilities\Utilities.csproj" />
-  <event action="Analyze" type="Success" name="Binary References" path="E:\AP CARGO Web Central Local Repository\cmsversion2\Bin\" />
+  <event action="Analyze" type="Success" name="Assembly References" path="D:\CMS Client Repository\CMS-WebCentral2.0\BusinessLogic\BusinessLogic.csproj" />
+  <event action="Analyze" type="Success" name="BusinessLogic" path="D:\CMS Client Repository\CMS-WebCentral2.0\BusinessLogic\BusinessLogic.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="D:\CMS Client Repository\CMS-WebCentral2.0\DataAccess\DataAccess.csproj" />
+  <event action="Analyze" type="Success" name="DataAccess" path="D:\CMS Client Repository\CMS-WebCentral2.0\DataAccess\DataAccess.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="D:\CMS Client Repository\CMS-WebCentral2.0\Utilities\Utilities.csproj" />
+  <event action="Analyze" type="Success" name="Utilities" path="D:\CMS Client Repository\CMS-WebCentral2.0\Utilities\Utilities.csproj" />
+  <event action="Analyze" type="Success" name="Binary References" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\Bin\" />
   <event action="Analyze" type="Success" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\blank-page.html" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\blank-page.html" />
-  <event action="Analyze" type="Success" name="blank-page.html" path="E:\AP CARGO Web Central Local Repository\cmsversion2\blank-page.html" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\cmsversion.master" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\cmsversion.master" />
-  <event action="Analyze" type="Success" name="cmsversion.master" path="E:\AP CARGO Web Central Local Repository\cmsversion2\cmsversion.master" />
-  <event action="Analyze" type="Success" />
-  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\blank-page.html" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\blank-page.html" />
+  <event action="Analyze" type="Success" name="blank-page.html" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\blank-page.html" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\cmsversion.master" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\cmsversion.master" />
+  <event action="Analyze" type="Success" name="cmsversion.master" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\cmsversion.master" />
   <event action="Analyze" type="Success" />
   <event action="Analyze" type="Success" />
   <event action="Analyze" type="Success" />
@@ -26,11 +24,11 @@
   <event action="Analyze" type="Success" />
   <event action="Analyze" type="Success" />
   <event action="Analyze" type="Success" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\index.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\index.aspx" />
-  <event action="Analyze" type="Success" name="index.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\index.aspx" />
   <event action="Analyze" type="Success" />
   <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\index.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\index.aspx" />
+  <event action="Analyze" type="Success" name="index.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\index.aspx" />
   <event action="Analyze" type="Success" />
   <event action="Analyze" type="Success" />
   <event action="Analyze" type="Success" />
@@ -44,381 +42,386 @@
   <event action="Analyze" type="Success" />
   <event action="Analyze" type="Success" />
   <event action="Analyze" type="Success" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\ListView.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\ListView.aspx" />
-  <event action="Analyze" type="Success" name="ListView.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\ListView.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\MasterPage.master" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\MasterPage.master" />
-  <event action="Analyze" type="Success" name="MasterPage.master" path="E:\AP CARGO Web Central Local Repository\cmsversion2\MasterPage.master" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\MasterPageSingleMenu.master" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\MasterPageSingleMenu.master" />
-  <event action="Analyze" type="Success" name="MasterPageSingleMenu.master" path="E:\AP CARGO Web Central Local Repository\cmsversion2\MasterPageSingleMenu.master" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ApprovingAuthority\AddApprovingAuthority.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ApprovingAuthority\AddApprovingAuthority.aspx" />
-  <event action="Analyze" type="Success" name="AddApprovingAuthority.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ApprovingAuthority\AddApprovingAuthority.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ApprovingAuthority\EditApprovingAuthority.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ApprovingAuthority\EditApprovingAuthority.aspx" />
-  <event action="Analyze" type="Success" name="EditApprovingAuthority.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ApprovingAuthority\EditApprovingAuthority.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\AWBSeriesManagement.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\AWBSeriesManagement.aspx" />
-  <event action="Analyze" type="Success" name="AWBSeriesManagement.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\AWBSeriesManagement.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\FlightMaintenance.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\FlightMaintenance.aspx" />
-  <event action="Analyze" type="Success" name="FlightMaintenance.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\FlightMaintenance.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Gridsample.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Gridsample.aspx" />
-  <event action="Analyze" type="Success" name="Gridsample.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Gridsample.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\MainMaintenance.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\MainMaintenance.aspx" />
-  <event action="Analyze" type="Success" name="MainMaintenance.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\MainMaintenance.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ManageApprovingAuthority.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ManageApprovingAuthority.aspx" />
-  <event action="Analyze" type="Success" name="ManageApprovingAuthority.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ManageApprovingAuthority.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ManageAwbIssuance.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ManageAwbIssuance.aspx" />
-  <event action="Analyze" type="Success" name="ManageAwbIssuance.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ManageAwbIssuance.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ManageClients.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ManageClients.aspx" />
-  <event action="Analyze" type="Success" name="ManageClients.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ManageClients.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ManageCompany.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ManageCompany.aspx" />
-  <event action="Analyze" type="Success" name="ManageCompany.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ManageCompany.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ManageEmployee.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ManageEmployee.aspx" />
-  <event action="Analyze" type="Success" name="ManageEmployee.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ManageEmployee.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ManageRateMatrix.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ManageRateMatrix.aspx" />
-  <event action="Analyze" type="Success" name="ManageRateMatrix.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ManageRateMatrix.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ManageRateMatrixImport.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ManageRateMatrixImport.aspx" />
-  <event action="Analyze" type="Success" name="ManageRateMatrixImport.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ManageRateMatrixImport.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ManageRepresentatives.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ManageRepresentatives.aspx" />
-  <event action="Analyze" type="Success" name="ManageRepresentatives.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ManageRepresentatives.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ManageTrackAndTrace.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ManageTrackAndTrace.aspx" />
-  <event action="Analyze" type="Success" name="ManageTrackAndTrace.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ManageTrackAndTrace.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ManageUsers.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ManageUsers.aspx" />
-  <event action="Analyze" type="Success" name="ManageUsers.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ManageUsers.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Operation\Manifest\BundleReport.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Operation\Manifest\BundleReport.aspx" />
-  <event action="Analyze" type="Success" name="BundleReport.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Operation\Manifest\BundleReport.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Operation\Manifest\Manifest.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Operation\Manifest\Manifest.aspx" />
-  <event action="Analyze" type="Success" name="Manifest.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Operation\Manifest\Manifest.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Operation\Manifest\PickupCargoManifestReport.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Operation\Manifest\PickupCargoManifestReport.aspx" />
-  <event action="Analyze" type="Success" name="PickupCargoManifestReport.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Operation\Manifest\PickupCargoManifestReport.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Operation\Manifest\SegregationReport.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Operation\Manifest\SegregationReport.aspx" />
-  <event action="Analyze" type="Success" name="SegregationReport.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Operation\Manifest\SegregationReport.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Operation\Manifest\UnbundleReport.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Operation\Manifest\UnbundleReport.aspx" />
-  <event action="Analyze" type="Success" name="UnbundleReport.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Operation\Manifest\UnbundleReport.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Operation\Operation.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Operation\Operation.aspx" />
-  <event action="Analyze" type="Success" name="Operation.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Operation\Operation.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Reports\ApprovingAuthorityExportReport.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Reports\ApprovingAuthorityExportReport.aspx" />
-  <event action="Analyze" type="Success" name="ApprovingAuthorityExportReport.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Reports\ApprovingAuthorityExportReport.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Reports\ClientExportReport.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Reports\ClientExportReport.aspx" />
-  <event action="Analyze" type="Success" name="ClientExportReport.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Reports\ClientExportReport.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Reports\CompanyExportPreview.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Reports\CompanyExportPreview.aspx" />
-  <event action="Analyze" type="Success" name="CompanyExportPreview.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Reports\CompanyExportPreview.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Reports\EmployeeExportPreview.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Reports\EmployeeExportPreview.aspx" />
-  <event action="Analyze" type="Success" name="EmployeeExportPreview.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Reports\EmployeeExportPreview.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Reports\RepresentativesExportReport.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Reports\RepresentativesExportReport.aspx" />
-  <event action="Analyze" type="Success" name="RepresentativesExportReport.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Reports\RepresentativesExportReport.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Reports\UserExportPreview.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Reports\UserExportPreview.aspx" />
-  <event action="Analyze" type="Success" name="UserExportPreview.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Reports\UserExportPreview.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\AccountStatus\AddAccountStatus.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\AccountStatus\AddAccountStatus.aspx" />
-  <event action="Analyze" type="Success" name="AddAccountStatus.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\AccountStatus\AddAccountStatus.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\AccountStatus\EditAccountStatus.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\AccountStatus\EditAccountStatus.aspx" />
-  <event action="Analyze" type="Success" name="EditAccountStatus.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\AccountStatus\EditAccountStatus.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\AccountType\AddAccountType.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\AccountType\AddAccountType.aspx" />
-  <event action="Analyze" type="Success" name="AddAccountType.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\AccountType\AddAccountType.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\AccountType\EditAccountType.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\AccountType\EditAccountType.aspx" />
-  <event action="Analyze" type="Success" name="EditAccountType.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\AccountType\EditAccountType.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\AddNewUser.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\AddNewUser.aspx" />
-  <event action="Analyze" type="Success" name="AddNewUser.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\AddNewUser.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Airlines\AddAirlines.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Airlines\AddAirlines.aspx" />
-  <event action="Analyze" type="Success" name="AddAirlines.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Airlines\AddAirlines.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Airlines\EditAirlines.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Airlines\EditAirlines.aspx" />
-  <event action="Analyze" type="Success" name="EditAirlines.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Airlines\EditAirlines.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\ApplicableRate\AddApplicableRate.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\ApplicableRate\AddApplicableRate.aspx" />
-  <event action="Analyze" type="Success" name="AddApplicableRate.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\ApplicableRate\AddApplicableRate.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\ApplicableRate\EditApplicableRate.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\ApplicableRate\EditApplicableRate.aspx" />
-  <event action="Analyze" type="Success" name="EditApplicableRate.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\ApplicableRate\EditApplicableRate.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Area\AddArea.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Area\AddArea.aspx" />
-  <event action="Analyze" type="Success" name="AddArea.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Area\AddArea.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Area\EditArea.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Area\EditArea.aspx" />
-  <event action="Analyze" type="Success" name="EditArea.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Area\EditArea.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\AwbIssuance\AddAwbSeries.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\AwbIssuance\AddAwbSeries.aspx" />
-  <event action="Analyze" type="Success" name="AddAwbSeries.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\AwbIssuance\AddAwbSeries.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Batch\AddBatch.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Batch\AddBatch.aspx" />
-  <event action="Analyze" type="Success" name="AddBatch.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Batch\AddBatch.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Batch\EditBatch.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Batch\EditBatch.aspx" />
-  <event action="Analyze" type="Success" name="EditBatch.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Batch\EditBatch.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\BookingRemark\AddBookingRemark.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\BookingRemark\AddBookingRemark.aspx" />
-  <event action="Analyze" type="Success" name="AddBookingRemark.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\BookingRemark\AddBookingRemark.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\BookingRemark\EditBookingRemark.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\BookingRemark\EditBookingRemark.aspx" />
-  <event action="Analyze" type="Success" name="EditBookingRemark.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\BookingRemark\EditBookingRemark.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\BookingStatus\AddBookingStatus.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\BookingStatus\AddBookingStatus.aspx" />
-  <event action="Analyze" type="Success" name="AddBookingStatus.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\BookingStatus\AddBookingStatus.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\BookingStatus\EditBookingStatus.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\BookingStatus\EditBookingStatus.aspx" />
-  <event action="Analyze" type="Success" name="EditBookingStatus.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\BookingStatus\EditBookingStatus.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\BranchCorpOffice\AddBranchCorp.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\BranchCorpOffice\AddBranchCorp.aspx" />
-  <event action="Analyze" type="Success" name="AddBranchCorp.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\BranchCorpOffice\AddBranchCorp.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\BranchCorpOffice\EditBranchCorp.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\BranchCorpOffice\EditBranchCorp.aspx" />
-  <event action="Analyze" type="Success" name="EditBranchCorp.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\BranchCorpOffice\EditBranchCorp.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\BranchGateway\AddGateway.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\BranchGateway\AddGateway.aspx" />
-  <event action="Analyze" type="Success" name="AddGateway.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\BranchGateway\AddGateway.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\BranchGateway\EditGateway.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\BranchGateway\EditGateway.aspx" />
-  <event action="Analyze" type="Success" name="EditGateway.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\BranchGateway\EditGateway.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\BranchSatelliteOfficeMaintenance\AddBSO.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\BranchSatelliteOfficeMaintenance\AddBSO.aspx" />
-  <event action="Analyze" type="Success" name="AddBSO.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\BranchSatelliteOfficeMaintenance\AddBSO.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\BranchSatelliteOfficeMaintenance\EditBSO.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\BranchSatelliteOfficeMaintenance\EditBSO.aspx" />
-  <event action="Analyze" type="Success" name="EditBSO.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\BranchSatelliteOfficeMaintenance\EditBSO.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\BusinessType\AddBusinessType.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\BusinessType\AddBusinessType.aspx" />
-  <event action="Analyze" type="Success" name="AddBusinessType.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\BusinessType\AddBusinessType.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\BusinessType\EditBusinessType.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\BusinessType\EditBusinessType.aspx" />
-  <event action="Analyze" type="Success" name="EditBusinessType.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\BusinessType\EditBusinessType.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\City\AddCity.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\City\AddCity.aspx" />
-  <event action="Analyze" type="Success" name="AddCity.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\City\AddCity.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\City\EditCity.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\City\EditCity.aspx" />
-  <event action="Analyze" type="Success" name="EditCity.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\City\EditCity.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Cluster\AddCluster.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Cluster\AddCluster.aspx" />
-  <event action="Analyze" type="Success" name="AddCluster.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Cluster\AddCluster.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Cluster\EditCluster.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Cluster\EditCluster.aspx" />
-  <event action="Analyze" type="Success" name="EditCluster.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Cluster\EditCluster.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Commodity\AddCommodity.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Commodity\AddCommodity.aspx" />
-  <event action="Analyze" type="Success" name="AddCommodity.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Commodity\AddCommodity.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Commodity\EditCommodity.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Commodity\EditCommodity.aspx" />
-  <event action="Analyze" type="Success" name="EditCommodity.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Commodity\EditCommodity.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\CommodityType\AddCommodityType.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\CommodityType\AddCommodityType.aspx" />
-  <event action="Analyze" type="Success" name="AddCommodityType.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\CommodityType\AddCommodityType.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\CommodityType\EditCommodityType.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\CommodityType\EditCommodityType.aspx" />
-  <event action="Analyze" type="Success" name="EditCommodityType.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\CommodityType\EditCommodityType.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Company\AccountInformation.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Company\AccountInformation.aspx" />
-  <event action="Analyze" type="Success" name="AccountInformation.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Company\AccountInformation.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Company\AccountInformation2.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Company\AccountInformation2.aspx" />
-  <event action="Analyze" type="Success" name="AccountInformation2.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Company\AccountInformation2.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Company\AddCompany.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Company\AddCompany.aspx" />
-  <event action="Analyze" type="Success" name="AddCompany.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Company\AddCompany.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Company\BillingInformation.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Company\BillingInformation.aspx" />
-  <event action="Analyze" type="Success" name="BillingInformation.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Company\BillingInformation.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Company\CompanyInformation.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Company\CompanyInformation.aspx" />
-  <event action="Analyze" type="Success" name="CompanyInformation.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Company\CompanyInformation.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Company\ContactInformation.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Company\ContactInformation.aspx" />
-  <event action="Analyze" type="Success" name="ContactInformation.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Company\ContactInformation.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Company\EditCompany.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Company\EditCompany.aspx" />
-  <event action="Analyze" type="Success" name="EditCompany.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Company\EditCompany.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Crating\AddCrating.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Crating\AddCrating.aspx" />
-  <event action="Analyze" type="Success" name="AddCrating.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Crating\AddCrating.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Crating\EditCrating.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Crating\EditCrating.aspx" />
-  <event action="Analyze" type="Success" name="EditCrating.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Crating\EditCrating.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\DeliveryRemark\AddDeliveryRemark.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\DeliveryRemark\AddDeliveryRemark.aspx" />
-  <event action="Analyze" type="Success" name="AddDeliveryRemark.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\DeliveryRemark\AddDeliveryRemark.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\DeliveryRemark\EditDeliveryRemark.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\DeliveryRemark\EditDeliveryRemark.aspx" />
-  <event action="Analyze" type="Success" name="EditDeliveryRemark.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\DeliveryRemark\EditDeliveryRemark.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\DeliveryStatus\AddDeliveryStatus.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\DeliveryStatus\AddDeliveryStatus.aspx" />
-  <event action="Analyze" type="Success" name="AddDeliveryStatus.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\DeliveryStatus\AddDeliveryStatus.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\DeliveryStatus\EditDeliveryStatus.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\DeliveryStatus\EditDeliveryStatus.aspx" />
-  <event action="Analyze" type="Success" name="EditDeliveryStatus.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\DeliveryStatus\EditDeliveryStatus.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Editform_csharp.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Editform_csharp.aspx" />
-  <event action="Analyze" type="Success" name="Editform_csharp.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Editform_csharp.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Employee\AddEmployee.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Employee\AddEmployee.aspx" />
-  <event action="Analyze" type="Success" name="AddEmployee.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Employee\AddEmployee.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Employee\EditEmployee.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Employee\EditEmployee.aspx" />
-  <event action="Analyze" type="Success" name="EditEmployee.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Employee\EditEmployee.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Flight\AddFlight.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Flight\AddFlight.aspx" />
-  <event action="Analyze" type="Success" name="AddFlight.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Flight\AddFlight.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Flight\EditFlight.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Flight\EditFlight.aspx" />
-  <event action="Analyze" type="Success" name="EditFlight.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Flight\EditFlight.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\GoodsDescription\AddGoodsDesc.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\GoodsDescription\AddGoodsDesc.aspx" />
-  <event action="Analyze" type="Success" name="AddGoodsDesc.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\GoodsDescription\AddGoodsDesc.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\GoodsDescription\EditGoodsDesc.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\GoodsDescription\EditGoodsDesc.aspx" />
-  <event action="Analyze" type="Success" name="EditGoodsDesc.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\GoodsDescription\EditGoodsDesc.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\GroupIslandMaintenance\AddGroupIsland.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\GroupIslandMaintenance\AddGroupIsland.aspx" />
-  <event action="Analyze" type="Success" name="AddGroupIsland.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\GroupIslandMaintenance\AddGroupIsland.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\GroupIslandMaintenance\EditGroupIsland.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\GroupIslandMaintenance\EditGroupIsland.aspx" />
-  <event action="Analyze" type="Success" name="EditGroupIsland.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\GroupIslandMaintenance\EditGroupIsland.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Industry\AddIndustry.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Industry\AddIndustry.aspx" />
-  <event action="Analyze" type="Success" name="AddIndustry.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Industry\AddIndustry.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Industry\EditIndustry.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Industry\EditIndustry.aspx" />
-  <event action="Analyze" type="Success" name="EditIndustry.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Industry\EditIndustry.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\OrganizationType\AddOrganizationType.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\OrganizationType\AddOrganizationType.aspx" />
-  <event action="Analyze" type="Success" name="AddOrganizationType.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\OrganizationType\AddOrganizationType.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\OrganizationType\EditOrganizationType.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\OrganizationType\EditOrganizationType.aspx" />
-  <event action="Analyze" type="Success" name="EditOrganizationType.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\OrganizationType\EditOrganizationType.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Packaging\AddPackaging.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Packaging\AddPackaging.aspx" />
-  <event action="Analyze" type="Success" name="AddPackaging.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Packaging\AddPackaging.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Packaging\EditPackaging.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Packaging\EditPackaging.aspx" />
-  <event action="Analyze" type="Success" name="EditPackaging.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Packaging\EditPackaging.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\PaymentMode\AddPaymentMode.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\PaymentMode\AddPaymentMode.aspx" />
-  <event action="Analyze" type="Success" name="AddPaymentMode.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\PaymentMode\AddPaymentMode.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\PaymentMode\EditPaymentMode.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\PaymentMode\EditPaymentMode.aspx" />
-  <event action="Analyze" type="Success" name="EditPaymentMode.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\PaymentMode\EditPaymentMode.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\PaymentTerm\AddPaymentTerm.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\PaymentTerm\AddPaymentTerm.aspx" />
-  <event action="Analyze" type="Success" name="AddPaymentTerm.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\PaymentTerm\AddPaymentTerm.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\PaymentTerm\EditPaymentTerm.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\PaymentTerm\EditPaymentTerm.aspx" />
-  <event action="Analyze" type="Success" name="EditPaymentTerm.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\PaymentTerm\EditPaymentTerm.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\ProvinceMaintenance\AddProvince.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\ProvinceMaintenance\AddProvince.aspx" />
-  <event action="Analyze" type="Success" name="AddProvince.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\ProvinceMaintenance\AddProvince.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\ProvinceMaintenance\EditProvince.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\ProvinceMaintenance\EditProvince.aspx" />
-  <event action="Analyze" type="Success" name="EditProvince.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\ProvinceMaintenance\EditProvince.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\RateMatrix\AddRateMatrix.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\RateMatrix\AddRateMatrix.aspx" />
-  <event action="Analyze" type="Success" name="AddRateMatrix.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\RateMatrix\AddRateMatrix.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\RateMatrix\EditRateMatrix.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\RateMatrix\EditRateMatrix.aspx" />
-  <event action="Analyze" type="Success" name="EditRateMatrix.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\RateMatrix\EditRateMatrix.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Reason\AddReason.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Reason\AddReason.aspx" />
-  <event action="Analyze" type="Success" name="AddReason.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Reason\AddReason.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Reason\EditReason.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Reason\EditReason.aspx" />
-  <event action="Analyze" type="Success" name="EditReason.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Reason\EditReason.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\RegionMaintenance\AddRegion.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\RegionMaintenance\AddRegion.aspx" />
-  <event action="Analyze" type="Success" name="AddRegion.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\RegionMaintenance\AddRegion.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\RegionMaintenance\EditRegion.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\RegionMaintenance\EditRegion.aspx" />
-  <event action="Analyze" type="Success" name="EditRegion.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\RegionMaintenance\EditRegion.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Remarks\AddRemarks.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Remarks\AddRemarks.aspx" />
-  <event action="Analyze" type="Success" name="AddRemarks.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Remarks\AddRemarks.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Remarks\EditRemarks.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Remarks\EditRemarks.aspx" />
-  <event action="Analyze" type="Success" name="EditRemarks.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Remarks\EditRemarks.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Representatives\AddRepresentatives.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Representatives\AddRepresentatives.aspx" />
-  <event action="Analyze" type="Success" name="AddRepresentatives.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Representatives\AddRepresentatives.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Representatives\EditRepresentatives.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Representatives\EditRepresentatives.aspx" />
-  <event action="Analyze" type="Success" name="EditRepresentatives.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Representatives\EditRepresentatives.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\RevenueTypeMaintenance\AddRUT.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\RevenueTypeMaintenance\AddRUT.aspx" />
-  <event action="Analyze" type="Success" name="AddRUT.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\RevenueTypeMaintenance\AddRUT.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\RevenueTypeMaintenance\EditRUT.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\RevenueTypeMaintenance\EditRUT.aspx" />
-  <event action="Analyze" type="Success" name="EditRUT.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\RevenueTypeMaintenance\EditRUT.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\SBF\AddSBF.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\SBF\AddSBF.aspx" />
-  <event action="Analyze" type="Success" name="AddSBF.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\SBF\AddSBF.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\SBF\EditSBF.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\SBF\EditSBF.aspx" />
-  <event action="Analyze" type="Success" name="EditSBF.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\SBF\EditSBF.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\ServiceMode\AddServiceMode.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\ServiceMode\AddServiceMode.aspx" />
-  <event action="Analyze" type="Success" name="AddServiceMode.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\ServiceMode\AddServiceMode.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\ServiceMode\EditServiceMode.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\ServiceMode\EditServiceMode.aspx" />
-  <event action="Analyze" type="Success" name="EditServiceMode.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\ServiceMode\EditServiceMode.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\ServiceType\AddServiceType.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\ServiceType\AddServiceType.aspx" />
-  <event action="Analyze" type="Success" name="AddServiceType.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\ServiceType\AddServiceType.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\ServiceType\EditServicesType.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\ServiceType\EditServicesType.aspx" />
-  <event action="Analyze" type="Success" name="EditServicesType.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\ServiceType\EditServicesType.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\ShipMode\AddShipMode.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\ShipMode\AddShipMode.aspx" />
-  <event action="Analyze" type="Success" name="AddShipMode.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\ShipMode\AddShipMode.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\ShipMode\EditShipMode.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\ShipMode\EditShipMode.aspx" />
-  <event action="Analyze" type="Success" name="EditShipMode.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\ShipMode\EditShipMode.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Status\AddStatus.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Status\AddStatus.aspx" />
-  <event action="Analyze" type="Success" name="AddStatus.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Status\AddStatus.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Status\EditStatus.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Status\EditStatus.aspx" />
-  <event action="Analyze" type="Success" name="EditStatus.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Status\EditStatus.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\ViewApprovingAuthority.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\ViewApprovingAuthority.aspx" />
-  <event action="Analyze" type="Success" name="ViewApprovingAuthority.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\ViewApprovingAuthority.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\ViewRepresentative.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\ViewRepresentative.aspx" />
-  <event action="Analyze" type="Success" name="ViewRepresentative.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\ViewRepresentative.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\WeightBreak\RMWeightBreak.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\WeightBreak\RMWeightBreak.aspx" />
-  <event action="Analyze" type="Success" name="RMWeightBreak.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\WeightBreak\RMWeightBreak.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\Sample.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\Sample.aspx" />
-  <event action="Analyze" type="Success" name="Sample.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\Sample.aspx" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\ListView.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\ListView.aspx" />
+  <event action="Analyze" type="Success" name="ListView.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\ListView.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\MasterPage.master" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\MasterPage.master" />
+  <event action="Analyze" type="Success" name="MasterPage.master" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\MasterPage.master" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\MasterPageSingleMenu.master" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\MasterPageSingleMenu.master" />
+  <event action="Analyze" type="Success" name="MasterPageSingleMenu.master" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\MasterPageSingleMenu.master" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ApprovingAuthority\AddApprovingAuthority.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ApprovingAuthority\AddApprovingAuthority.aspx" />
+  <event action="Analyze" type="Success" name="AddApprovingAuthority.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ApprovingAuthority\AddApprovingAuthority.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ApprovingAuthority\EditApprovingAuthority.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ApprovingAuthority\EditApprovingAuthority.aspx" />
+  <event action="Analyze" type="Success" name="EditApprovingAuthority.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ApprovingAuthority\EditApprovingAuthority.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\AWBSeriesManagement.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\AWBSeriesManagement.aspx" />
+  <event action="Analyze" type="Success" name="AWBSeriesManagement.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\AWBSeriesManagement.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\FlightMaintenance.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\FlightMaintenance.aspx" />
+  <event action="Analyze" type="Success" name="FlightMaintenance.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\FlightMaintenance.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Gridsample.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Gridsample.aspx" />
+  <event action="Analyze" type="Success" name="Gridsample.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Gridsample.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\MainMaintenance.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\MainMaintenance.aspx" />
+  <event action="Analyze" type="Success" name="MainMaintenance.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\MainMaintenance.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ManageApprovingAuthority.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ManageApprovingAuthority.aspx" />
+  <event action="Analyze" type="Success" name="ManageApprovingAuthority.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ManageApprovingAuthority.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ManageAwbIssuance.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ManageAwbIssuance.aspx" />
+  <event action="Analyze" type="Success" name="ManageAwbIssuance.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ManageAwbIssuance.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ManageClients.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ManageClients.aspx" />
+  <event action="Analyze" type="Success" name="ManageClients.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ManageClients.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ManageCompany.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ManageCompany.aspx" />
+  <event action="Analyze" type="Success" name="ManageCompany.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ManageCompany.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ManageEmployee.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ManageEmployee.aspx" />
+  <event action="Analyze" type="Success" name="ManageEmployee.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ManageEmployee.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ManageRateMatrix.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ManageRateMatrix.aspx" />
+  <event action="Analyze" type="Success" name="ManageRateMatrix.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ManageRateMatrix.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ManageRateMatrixImport.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ManageRateMatrixImport.aspx" />
+  <event action="Analyze" type="Success" name="ManageRateMatrixImport.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ManageRateMatrixImport.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ManageRepresentatives.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ManageRepresentatives.aspx" />
+  <event action="Analyze" type="Success" name="ManageRepresentatives.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ManageRepresentatives.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ManageTrackAndTrace.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ManageTrackAndTrace.aspx" />
+  <event action="Analyze" type="Success" name="ManageTrackAndTrace.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ManageTrackAndTrace.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ManageUsers.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ManageUsers.aspx" />
+  <event action="Analyze" type="Success" name="ManageUsers.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ManageUsers.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Operation\Manifest\BundleReport.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Operation\Manifest\BundleReport.aspx" />
+  <event action="Analyze" type="Success" name="BundleReport.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Operation\Manifest\BundleReport.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Operation\Manifest\Manifest.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Operation\Manifest\Manifest.aspx" />
+  <event action="Analyze" type="Success" name="Manifest.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Operation\Manifest\Manifest.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Operation\Manifest\PickupCargoManifestReport.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Operation\Manifest\PickupCargoManifestReport.aspx" />
+  <event action="Analyze" type="Success" name="PickupCargoManifestReport.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Operation\Manifest\PickupCargoManifestReport.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Operation\Manifest\UnbundleReport.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Operation\Manifest\UnbundleReport.aspx" />
+  <event action="Analyze" type="Success" name="UnbundleReport.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Operation\Manifest\UnbundleReport.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Operation\Operation.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Operation\Operation.aspx" />
+  <event action="Analyze" type="Success" name="Operation.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Operation\Operation.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Reports\ApprovingAuthorityExportReport.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Reports\ApprovingAuthorityExportReport.aspx" />
+  <event action="Analyze" type="Success" name="ApprovingAuthorityExportReport.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Reports\ApprovingAuthorityExportReport.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Reports\ClientExportReport.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Reports\ClientExportReport.aspx" />
+  <event action="Analyze" type="Success" name="ClientExportReport.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Reports\ClientExportReport.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Reports\CompanyExportPreview.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Reports\CompanyExportPreview.aspx" />
+  <event action="Analyze" type="Success" name="CompanyExportPreview.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Reports\CompanyExportPreview.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Reports\EmployeeExportPreview.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Reports\EmployeeExportPreview.aspx" />
+  <event action="Analyze" type="Success" name="EmployeeExportPreview.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Reports\EmployeeExportPreview.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Reports\RepresentativesExportReport.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Reports\RepresentativesExportReport.aspx" />
+  <event action="Analyze" type="Success" name="RepresentativesExportReport.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Reports\RepresentativesExportReport.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Reports\UserExportPreview.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Reports\UserExportPreview.aspx" />
+  <event action="Analyze" type="Success" name="UserExportPreview.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Reports\UserExportPreview.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\AccountStatus\AddAccountStatus.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\AccountStatus\AddAccountStatus.aspx" />
+  <event action="Analyze" type="Success" name="AddAccountStatus.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\AccountStatus\AddAccountStatus.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\AccountStatus\EditAccountStatus.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\AccountStatus\EditAccountStatus.aspx" />
+  <event action="Analyze" type="Success" name="EditAccountStatus.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\AccountStatus\EditAccountStatus.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\AccountType\AddAccountType.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\AccountType\AddAccountType.aspx" />
+  <event action="Analyze" type="Success" name="AddAccountType.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\AccountType\AddAccountType.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\AccountType\EditAccountType.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\AccountType\EditAccountType.aspx" />
+  <event action="Analyze" type="Success" name="EditAccountType.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\AccountType\EditAccountType.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\AddNewUser.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\AddNewUser.aspx" />
+  <event action="Analyze" type="Success" name="AddNewUser.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\AddNewUser.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Airlines\AddAirlines.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Airlines\AddAirlines.aspx" />
+  <event action="Analyze" type="Success" name="AddAirlines.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Airlines\AddAirlines.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Airlines\EditAirlines.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Airlines\EditAirlines.aspx" />
+  <event action="Analyze" type="Success" name="EditAirlines.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Airlines\EditAirlines.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ApplicableRate\AddApplicableRate.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ApplicableRate\AddApplicableRate.aspx" />
+  <event action="Analyze" type="Success" name="AddApplicableRate.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ApplicableRate\AddApplicableRate.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ApplicableRate\EditApplicableRate.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ApplicableRate\EditApplicableRate.aspx" />
+  <event action="Analyze" type="Success" name="EditApplicableRate.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ApplicableRate\EditApplicableRate.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ApprovingAuthority\AddApprovingAuthority.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ApprovingAuthority\AddApprovingAuthority.aspx" />
+  <event action="Analyze" type="Success" name="AddApprovingAuthority.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ApprovingAuthority\AddApprovingAuthority.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ApprovingAuthority\EditApprovingAuthority.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ApprovingAuthority\EditApprovingAuthority.aspx" />
+  <event action="Analyze" type="Success" name="EditApprovingAuthority.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ApprovingAuthority\EditApprovingAuthority.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Area\AddArea.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Area\AddArea.aspx" />
+  <event action="Analyze" type="Success" name="AddArea.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Area\AddArea.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Area\EditArea.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Area\EditArea.aspx" />
+  <event action="Analyze" type="Success" name="EditArea.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Area\EditArea.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\AwbIssuance\AddAwbSeries.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\AwbIssuance\AddAwbSeries.aspx" />
+  <event action="Analyze" type="Success" name="AddAwbSeries.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\AwbIssuance\AddAwbSeries.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Batch\AddBatch.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Batch\AddBatch.aspx" />
+  <event action="Analyze" type="Success" name="AddBatch.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Batch\AddBatch.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Batch\EditBatch.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Batch\EditBatch.aspx" />
+  <event action="Analyze" type="Success" name="EditBatch.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Batch\EditBatch.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\BookingRemark\AddBookingRemark.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\BookingRemark\AddBookingRemark.aspx" />
+  <event action="Analyze" type="Success" name="AddBookingRemark.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\BookingRemark\AddBookingRemark.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\BookingRemark\EditBookingRemark.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\BookingRemark\EditBookingRemark.aspx" />
+  <event action="Analyze" type="Success" name="EditBookingRemark.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\BookingRemark\EditBookingRemark.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\BookingStatus\AddBookingStatus.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\BookingStatus\AddBookingStatus.aspx" />
+  <event action="Analyze" type="Success" name="AddBookingStatus.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\BookingStatus\AddBookingStatus.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\BookingStatus\EditBookingStatus.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\BookingStatus\EditBookingStatus.aspx" />
+  <event action="Analyze" type="Success" name="EditBookingStatus.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\BookingStatus\EditBookingStatus.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\BranchCorpOffice\AddBranchCorp.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\BranchCorpOffice\AddBranchCorp.aspx" />
+  <event action="Analyze" type="Success" name="AddBranchCorp.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\BranchCorpOffice\AddBranchCorp.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\BranchCorpOffice\EditBranchCorp.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\BranchCorpOffice\EditBranchCorp.aspx" />
+  <event action="Analyze" type="Success" name="EditBranchCorp.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\BranchCorpOffice\EditBranchCorp.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\BranchGateway\AddGateway.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\BranchGateway\AddGateway.aspx" />
+  <event action="Analyze" type="Success" name="AddGateway.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\BranchGateway\AddGateway.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\BranchGateway\EditGateway.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\BranchGateway\EditGateway.aspx" />
+  <event action="Analyze" type="Success" name="EditGateway.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\BranchGateway\EditGateway.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\BranchSatelliteOfficeMaintenance\AddBSO.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\BranchSatelliteOfficeMaintenance\AddBSO.aspx" />
+  <event action="Analyze" type="Success" name="AddBSO.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\BranchSatelliteOfficeMaintenance\AddBSO.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\BranchSatelliteOfficeMaintenance\EditBSO.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\BranchSatelliteOfficeMaintenance\EditBSO.aspx" />
+  <event action="Analyze" type="Success" name="EditBSO.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\BranchSatelliteOfficeMaintenance\EditBSO.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\BusinessType\AddBusinessType.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\BusinessType\AddBusinessType.aspx" />
+  <event action="Analyze" type="Success" name="AddBusinessType.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\BusinessType\AddBusinessType.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\BusinessType\EditBusinessType.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\BusinessType\EditBusinessType.aspx" />
+  <event action="Analyze" type="Success" name="EditBusinessType.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\BusinessType\EditBusinessType.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\City\AddCity.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\City\AddCity.aspx" />
+  <event action="Analyze" type="Success" name="AddCity.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\City\AddCity.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\City\EditCity.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\City\EditCity.aspx" />
+  <event action="Analyze" type="Success" name="EditCity.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\City\EditCity.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Cluster\AddCluster.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Cluster\AddCluster.aspx" />
+  <event action="Analyze" type="Success" name="AddCluster.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Cluster\AddCluster.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Cluster\EditCluster.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Cluster\EditCluster.aspx" />
+  <event action="Analyze" type="Success" name="EditCluster.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Cluster\EditCluster.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Commodity\AddCommodity.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Commodity\AddCommodity.aspx" />
+  <event action="Analyze" type="Success" name="AddCommodity.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Commodity\AddCommodity.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Commodity\EditCommodity.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Commodity\EditCommodity.aspx" />
+  <event action="Analyze" type="Success" name="EditCommodity.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Commodity\EditCommodity.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\CommodityType\AddCommodityType.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\CommodityType\AddCommodityType.aspx" />
+  <event action="Analyze" type="Success" name="AddCommodityType.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\CommodityType\AddCommodityType.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\CommodityType\EditCommodityType.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\CommodityType\EditCommodityType.aspx" />
+  <event action="Analyze" type="Success" name="EditCommodityType.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\CommodityType\EditCommodityType.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Company\AccountInformation.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Company\AccountInformation.aspx" />
+  <event action="Analyze" type="Success" name="AccountInformation.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Company\AccountInformation.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Company\AccountInformation2.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Company\AccountInformation2.aspx" />
+  <event action="Analyze" type="Success" name="AccountInformation2.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Company\AccountInformation2.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Company\AddCompany.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Company\AddCompany.aspx" />
+  <event action="Analyze" type="Success" name="AddCompany.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Company\AddCompany.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Company\BillingInformation.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Company\BillingInformation.aspx" />
+  <event action="Analyze" type="Success" name="BillingInformation.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Company\BillingInformation.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Company\CompanyInformation.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Company\CompanyInformation.aspx" />
+  <event action="Analyze" type="Success" name="CompanyInformation.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Company\CompanyInformation.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Company\ContactInformation.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Company\ContactInformation.aspx" />
+  <event action="Analyze" type="Success" name="ContactInformation.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Company\ContactInformation.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Company\EditCompany.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Company\EditCompany.aspx" />
+  <event action="Analyze" type="Success" name="EditCompany.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Company\EditCompany.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Crating\AddCrating.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Crating\AddCrating.aspx" />
+  <event action="Analyze" type="Success" name="AddCrating.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Crating\AddCrating.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Crating\EditCrating.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Crating\EditCrating.aspx" />
+  <event action="Analyze" type="Success" name="EditCrating.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Crating\EditCrating.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\DeliveryRemark\AddDeliveryRemark.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\DeliveryRemark\AddDeliveryRemark.aspx" />
+  <event action="Analyze" type="Success" name="AddDeliveryRemark.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\DeliveryRemark\AddDeliveryRemark.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\DeliveryRemark\EditDeliveryRemark.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\DeliveryRemark\EditDeliveryRemark.aspx" />
+  <event action="Analyze" type="Success" name="EditDeliveryRemark.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\DeliveryRemark\EditDeliveryRemark.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\DeliveryStatus\AddDeliveryStatus.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\DeliveryStatus\AddDeliveryStatus.aspx" />
+  <event action="Analyze" type="Success" name="AddDeliveryStatus.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\DeliveryStatus\AddDeliveryStatus.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\DeliveryStatus\EditDeliveryStatus.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\DeliveryStatus\EditDeliveryStatus.aspx" />
+  <event action="Analyze" type="Success" name="EditDeliveryStatus.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\DeliveryStatus\EditDeliveryStatus.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Editform_csharp.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Editform_csharp.aspx" />
+  <event action="Analyze" type="Success" name="Editform_csharp.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Editform_csharp.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Employee\AddEmployee.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Employee\AddEmployee.aspx" />
+  <event action="Analyze" type="Success" name="AddEmployee.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Employee\AddEmployee.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Employee\EditEmployee.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Employee\EditEmployee.aspx" />
+  <event action="Analyze" type="Success" name="EditEmployee.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Employee\EditEmployee.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Flight\AddFlight.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Flight\AddFlight.aspx" />
+  <event action="Analyze" type="Success" name="AddFlight.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Flight\AddFlight.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Flight\EditFlight.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Flight\EditFlight.aspx" />
+  <event action="Analyze" type="Success" name="EditFlight.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Flight\EditFlight.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\GoodsDescription\AddGoodsDesc.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\GoodsDescription\AddGoodsDesc.aspx" />
+  <event action="Analyze" type="Success" name="AddGoodsDesc.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\GoodsDescription\AddGoodsDesc.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\GoodsDescription\EditGoodsDesc.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\GoodsDescription\EditGoodsDesc.aspx" />
+  <event action="Analyze" type="Success" name="EditGoodsDesc.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\GoodsDescription\EditGoodsDesc.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\GroupIslandMaintenance\AddGroupIsland.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\GroupIslandMaintenance\AddGroupIsland.aspx" />
+  <event action="Analyze" type="Success" name="AddGroupIsland.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\GroupIslandMaintenance\AddGroupIsland.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\GroupIslandMaintenance\EditGroupIsland.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\GroupIslandMaintenance\EditGroupIsland.aspx" />
+  <event action="Analyze" type="Success" name="EditGroupIsland.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\GroupIslandMaintenance\EditGroupIsland.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Industry\AddIndustry.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Industry\AddIndustry.aspx" />
+  <event action="Analyze" type="Success" name="AddIndustry.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Industry\AddIndustry.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Industry\EditIndustry.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Industry\EditIndustry.aspx" />
+  <event action="Analyze" type="Success" name="EditIndustry.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Industry\EditIndustry.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\OrganizationType\AddOrganizationType.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\OrganizationType\AddOrganizationType.aspx" />
+  <event action="Analyze" type="Success" name="AddOrganizationType.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\OrganizationType\AddOrganizationType.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\OrganizationType\EditOrganizationType.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\OrganizationType\EditOrganizationType.aspx" />
+  <event action="Analyze" type="Success" name="EditOrganizationType.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\OrganizationType\EditOrganizationType.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Packaging\AddPackaging.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Packaging\AddPackaging.aspx" />
+  <event action="Analyze" type="Success" name="AddPackaging.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Packaging\AddPackaging.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Packaging\EditPackaging.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Packaging\EditPackaging.aspx" />
+  <event action="Analyze" type="Success" name="EditPackaging.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Packaging\EditPackaging.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\PaymentMode\AddPaymentMode.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\PaymentMode\AddPaymentMode.aspx" />
+  <event action="Analyze" type="Success" name="AddPaymentMode.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\PaymentMode\AddPaymentMode.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\PaymentMode\EditPaymentMode.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\PaymentMode\EditPaymentMode.aspx" />
+  <event action="Analyze" type="Success" name="EditPaymentMode.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\PaymentMode\EditPaymentMode.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\PaymentTerm\AddPaymentTerm.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\PaymentTerm\AddPaymentTerm.aspx" />
+  <event action="Analyze" type="Success" name="AddPaymentTerm.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\PaymentTerm\AddPaymentTerm.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\PaymentTerm\EditPaymentTerm.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\PaymentTerm\EditPaymentTerm.aspx" />
+  <event action="Analyze" type="Success" name="EditPaymentTerm.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\PaymentTerm\EditPaymentTerm.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ProvinceMaintenance\AddProvince.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ProvinceMaintenance\AddProvince.aspx" />
+  <event action="Analyze" type="Success" name="AddProvince.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ProvinceMaintenance\AddProvince.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ProvinceMaintenance\EditProvince.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ProvinceMaintenance\EditProvince.aspx" />
+  <event action="Analyze" type="Success" name="EditProvince.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ProvinceMaintenance\EditProvince.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\RateMatrix\AddRateMatrix.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\RateMatrix\AddRateMatrix.aspx" />
+  <event action="Analyze" type="Success" name="AddRateMatrix.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\RateMatrix\AddRateMatrix.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\RateMatrix\EditRateMatrix.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\RateMatrix\EditRateMatrix.aspx" />
+  <event action="Analyze" type="Success" name="EditRateMatrix.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\RateMatrix\EditRateMatrix.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Reason\AddReason.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Reason\AddReason.aspx" />
+  <event action="Analyze" type="Success" name="AddReason.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Reason\AddReason.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Reason\EditReason.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Reason\EditReason.aspx" />
+  <event action="Analyze" type="Success" name="EditReason.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Reason\EditReason.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\RegionMaintenance\AddRegion.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\RegionMaintenance\AddRegion.aspx" />
+  <event action="Analyze" type="Success" name="AddRegion.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\RegionMaintenance\AddRegion.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\RegionMaintenance\EditRegion.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\RegionMaintenance\EditRegion.aspx" />
+  <event action="Analyze" type="Success" name="EditRegion.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\RegionMaintenance\EditRegion.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Remarks\AddRemarks.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Remarks\AddRemarks.aspx" />
+  <event action="Analyze" type="Success" name="AddRemarks.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Remarks\AddRemarks.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Remarks\EditRemarks.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Remarks\EditRemarks.aspx" />
+  <event action="Analyze" type="Success" name="EditRemarks.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Remarks\EditRemarks.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Representatives\AddRepresentatives.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Representatives\AddRepresentatives.aspx" />
+  <event action="Analyze" type="Success" name="AddRepresentatives.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Representatives\AddRepresentatives.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Representatives\EditRepresentatives.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Representatives\EditRepresentatives.aspx" />
+  <event action="Analyze" type="Success" name="EditRepresentatives.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Representatives\EditRepresentatives.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\RevenueTypeMaintenance\AddRUT.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\RevenueTypeMaintenance\AddRUT.aspx" />
+  <event action="Analyze" type="Success" name="AddRUT.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\RevenueTypeMaintenance\AddRUT.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\RevenueTypeMaintenance\EditRUT.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\RevenueTypeMaintenance\EditRUT.aspx" />
+  <event action="Analyze" type="Success" name="EditRUT.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\RevenueTypeMaintenance\EditRUT.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\SBF\AddSBF.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\SBF\AddSBF.aspx" />
+  <event action="Analyze" type="Success" name="AddSBF.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\SBF\AddSBF.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\SBF\EditSBF.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\SBF\EditSBF.aspx" />
+  <event action="Analyze" type="Success" name="EditSBF.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\SBF\EditSBF.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ServiceMode\AddServiceMode.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ServiceMode\AddServiceMode.aspx" />
+  <event action="Analyze" type="Success" name="AddServiceMode.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ServiceMode\AddServiceMode.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ServiceMode\EditServiceMode.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ServiceMode\EditServiceMode.aspx" />
+  <event action="Analyze" type="Success" name="EditServiceMode.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ServiceMode\EditServiceMode.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ServiceType\AddServiceType.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ServiceType\AddServiceType.aspx" />
+  <event action="Analyze" type="Success" name="AddServiceType.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ServiceType\AddServiceType.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ServiceType\EditServicesType.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ServiceType\EditServicesType.aspx" />
+  <event action="Analyze" type="Success" name="EditServicesType.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ServiceType\EditServicesType.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ShipMode\AddShipMode.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ShipMode\AddShipMode.aspx" />
+  <event action="Analyze" type="Success" name="AddShipMode.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ShipMode\AddShipMode.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ShipMode\EditShipMode.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ShipMode\EditShipMode.aspx" />
+  <event action="Analyze" type="Success" name="EditShipMode.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ShipMode\EditShipMode.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Status\AddStatus.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Status\AddStatus.aspx" />
+  <event action="Analyze" type="Success" name="AddStatus.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Status\AddStatus.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Status\EditStatus.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Status\EditStatus.aspx" />
+  <event action="Analyze" type="Success" name="EditStatus.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Status\EditStatus.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ViewApprovingAuthority.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ViewApprovingAuthority.aspx" />
+  <event action="Analyze" type="Success" name="ViewApprovingAuthority.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ViewApprovingAuthority.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ViewRepresentative.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ViewRepresentative.aspx" />
+  <event action="Analyze" type="Success" name="ViewRepresentative.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ViewRepresentative.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\WeightBreak\RMWeightBreak.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\WeightBreak\RMWeightBreak.aspx" />
+  <event action="Analyze" type="Success" name="RMWeightBreak.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\WeightBreak\RMWeightBreak.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\Sample.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\Sample.aspx" />
+  <event action="Analyze" type="Success" name="Sample.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\Sample.aspx" />
   <event action="Analyze" type="Success" />
   <event action="Analyze" type="Success" />
   <event action="Analyze" type="Success" />
@@ -426,13 +429,13 @@
   <event action="Analyze" type="Success" />
   <event action="Analyze" type="Success" />
   <event action="Analyze" type="Success" />
-  <event action="Analyze" type="Success" name="Assembly References" path="E:\AP CARGO Web Central Local Repository\cmsversion2\web.config" />
-  <event action="Analyze" type="Success" name="Http Handlers" path="E:\AP CARGO Web Central Local Repository\cmsversion2\web.config" />
-  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="E:\AP CARGO Web Central Local Repository\cmsversion2\web.config" />
-  <event action="Analyze" type="Success" name="Config Sections" path="E:\AP CARGO Web Central Local Repository\cmsversion2\web.config" />
-  <event action="Analyze" type="Success" name="Render Extensions" path="E:\AP CARGO Web Central Local Repository\cmsversion2\web.config" />
-  <event action="Analyze" type="Success" name="Session State Providers" path="E:\AP CARGO Web Central Local Repository\cmsversion2\web.config" />
-  <event action="Analyze" type="Success" name="web.config" path="E:\AP CARGO Web Central Local Repository\cmsversion2\web.config" />
-  <event action="Analyze" type="Success" name="E:\...\cmsversion2\" path="E:\AP CARGO Web Central Local Repository\cmsversion2" />
-  <event action="Analyze" type="Success" name="CMSversion2.1" path="E:\AP CARGO Web Central Local Repository\CMSversion2.1.sln" />
+  <event action="Analyze" type="Success" name="Assembly References" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\web.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\web.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\web.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\web.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\web.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\web.config" />
+  <event action="Analyze" type="Success" name="web.config" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\web.config" />
+  <event action="Analyze" type="Success" name="D:\...\cmsversion2\" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2" />
+  <event action="Analyze" type="Success" name="CMSversion2.1" path="D:\CMS Client Repository\CMS-WebCentral2.0\CMSversion2.1.sln" />
 </log>
