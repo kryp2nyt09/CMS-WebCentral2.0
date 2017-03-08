@@ -41,7 +41,7 @@
                     </telerik:RadDropDownList>
                     
                     <telerik:RadLabel ID="RadLabel4" runat="server" >BCO/BSO:</telerik:RadLabel>
-                    <telerik:RadDropDownList ID="dropDown_Bundle_BCO_BSO" runat="server" DropDownHeight="200"></telerik:RadDropDownList>
+                    <telerik:RadDropDownList ID="dropDown_Bundle_BCO_BSO" runat="server"></telerik:RadDropDownList>
                         
                     <telerik:RadLabel ID="RadLabel3" runat="server" >Sack No:</telerik:RadLabel>
                     <telerik:RadDropDownList ID="dropDown_Bundle_SackNo" runat="server"></telerik:RadDropDownList>
@@ -53,7 +53,7 @@
                 </div>
             </div>
             <div class="row">
-                <telerik:RadGrid ID="grid_Bundle" runat="server" OnNeedDataSource="grid_Bundle_NeedDataSource" Skin="Office2010Black" 
+                <telerik:RadGrid ID="grid_Bundle" runat="server" Skin="Office2010Black" 
                     AllowPaging="True" ExportSettings-Excel-DefaultCellAlignment="Right" AllowSorting="true" Width="100%" PageSize="10" OnPreRender="grid_Bundle_PreRender">
                 <ExportSettings HideStructureColumns="true" ExportOnlyData="true" IgnorePaging="true" UseItemStyles="true"></ExportSettings>          
                     <MasterTableView CommandItemDisplay="Top" Width="100%">
