@@ -53,6 +53,12 @@
   <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\MasterPageSingleMenu.master" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\MasterPageSingleMenu.master" />
   <event action="Analyze" type="Success" name="MasterPageSingleMenu.master" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\MasterPageSingleMenu.master" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ApprovingAuthority\AddApprovingAuthority.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ApprovingAuthority\AddApprovingAuthority.aspx" />
+  <event action="Analyze" type="Success" name="AddApprovingAuthority.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ApprovingAuthority\AddApprovingAuthority.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ApprovingAuthority\EditApprovingAuthority.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ApprovingAuthority\EditApprovingAuthority.aspx" />
+  <event action="Analyze" type="Success" name="EditApprovingAuthority.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ApprovingAuthority\EditApprovingAuthority.aspx" />
   <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\AWBSeriesManagement.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\AWBSeriesManagement.aspx" />
   <event action="Analyze" type="Success" name="AWBSeriesManagement.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\AWBSeriesManagement.aspx" />
@@ -95,6 +101,21 @@
   <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ManageUsers.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ManageUsers.aspx" />
   <event action="Analyze" type="Success" name="ManageUsers.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\ManageUsers.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Operation\Manifest\BundleReport.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Operation\Manifest\BundleReport.aspx" />
+  <event action="Analyze" type="Success" name="BundleReport.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Operation\Manifest\BundleReport.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Operation\Manifest\Manifest.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Operation\Manifest\Manifest.aspx" />
+  <event action="Analyze" type="Success" name="Manifest.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Operation\Manifest\Manifest.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Operation\Manifest\PickupCargoManifestReport.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Operation\Manifest\PickupCargoManifestReport.aspx" />
+  <event action="Analyze" type="Success" name="PickupCargoManifestReport.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Operation\Manifest\PickupCargoManifestReport.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Operation\Manifest\UnbundleReport.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Operation\Manifest\UnbundleReport.aspx" />
+  <event action="Analyze" type="Success" name="UnbundleReport.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Operation\Manifest\UnbundleReport.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Operation\Operation.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Operation\Operation.aspx" />
+  <event action="Analyze" type="Success" name="Operation.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Operation\Operation.aspx" />
   <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Reports\ApprovingAuthorityExportReport.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Reports\ApprovingAuthorityExportReport.aspx" />
   <event action="Analyze" type="Success" name="ApprovingAuthorityExportReport.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Reports\ApprovingAuthorityExportReport.aspx" />
