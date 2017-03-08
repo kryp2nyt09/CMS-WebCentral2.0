@@ -13,6 +13,10 @@ public partial class _ManageRepresentatives : System.Web.UI.Page
     Tools.DataAccessProperties getConstr = new Tools.DataAccessProperties();
     protected void Page_Load(object sender, EventArgs e)
     {
+        radSearchRepresentatives.DataSource = GetRepresentatives();
+        radSearchRepresentatives.DataTextField = "Name";
+        radSearchRepresentatives.DataValueField = "ClientId";
+
         RadGrid2.MasterTableView.CommandItemSettings.ShowAddNewRecordButton = false;
       
         if (!string.IsNullOrEmpty(Session["UsernameSession"] as string))
@@ -60,6 +64,13 @@ public partial class _ManageRepresentatives : System.Web.UI.Page
         return convertdata;
     }
 
+    public DataTable GetRepById(Guid clientId)
+    {
+        DataSet data = BLL.Representatives.GetRepresentativesByClientId(getConstr.ConStrCMS, clientId);
+        DataTable convertdata = new DataTable();
+        convertdata = data.Tables[0];
+        return convertdata;
+    }
 
 
     protected void RadGrid2_NeedDataSource(object sender, Telerik.Web.UI.GridNeedDataSourceEventArgs e)
@@ -105,6 +116,33 @@ public partial class _ManageRepresentatives : System.Web.UI.Page
             BLL.Clients.UpdateClientProfile(new Guid(ClientId), 3, getConstr.ConStrCMS);
             
             //3 for delete flagging
+        }
+    }
+
+    protected void radSearchRepresentatives_Search(object sender, SearchBoxEventArgs e)
+    {
+        RadSearchBox searchBox = (RadSearchBox)sender;
+
+        string clientId = string.Empty;
+        string likeCondition;
+        Guid id = new Guid();
+
+        if (e.DataItem != null)
+        {
+            clientId = ((Dictionary<string, object>)e.DataItem)["ClientId"].ToString();
+            id = Guid.Parse(clientId);
+            if (!string.IsNullOrEmpty(clientId))
+            {
+                likeCondition = string.Format("'{0}{1}%'", searchBox.Filter == SearchBoxFilter.Contains ? "%" : "", ((Dictionary<string, object>)e.DataItem)["ClientId"].ToString());
+                RadGrid2.DataSource = GetRepById(id);
+                RadGrid2.DataBind();
+            }
+
+        }
+        else
+        {
+            RadGrid2.DataSource = GetRepresentatives();
+            RadGrid2.DataBind();
         }
     }
 }

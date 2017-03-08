@@ -13,8 +13,11 @@ public partial class _ManageCompany : System.Web.UI.Page
     Tools.DataAccessProperties getConstr = new Tools.DataAccessProperties();
     protected void Page_Load(object sender, EventArgs e)
     {
-    
-        
+        radSearchCompany.DataSource = GetCompany();
+        radSearchCompany.DataTextField = "CompanyName";
+        radSearchCompany.DataValueField = "CompanyId";
+
+
         RadGrid2.MasterTableView.CommandItemSettings.ShowAddNewRecordButton = false;
       
         if (!string.IsNullOrEmpty(Session["UsernameSession"] as string))
@@ -22,6 +25,7 @@ public partial class _ManageCompany : System.Web.UI.Page
             string usersession = Session["UsernameSession"].ToString();
         }
 
+       
     }
 
     protected void RadGrid2_ItemCreated(object sender, GridItemEventArgs e)
@@ -61,22 +65,7 @@ public partial class _ManageCompany : System.Web.UI.Page
             RadGrid2.Rebind();
         }
     }
-    //public DataTable Sellers
-    //{
-    //    get
-    //    {
-    //        DataTable data = Session["Data"] as DataTable;
-
-    //        if (data == null)
-    //        {
-    //            data = GetUsers();
-    //            Session["Data"] = data;
-    //        }
-
-
-    //        return data;
-    //    }
-    //}
+ 
 
     public DataTable GetCompany()
     {
@@ -87,6 +76,13 @@ public partial class _ManageCompany : System.Web.UI.Page
         return convertdata;
     }
 
+    public DataTable GetCompanyById(Guid companyId)
+    {
+        DataSet data = BLL.Company.GetCompanyById(companyId, getConstr.ConStrCMS);
+        DataTable convertdata = new DataTable();
+        convertdata = data.Tables[0];
+        return convertdata;
+    }
 
 
     protected void RadGrid2_NeedDataSource(object sender, Telerik.Web.UI.GridNeedDataSourceEventArgs e)
@@ -125,4 +121,32 @@ public partial class _ManageCompany : System.Web.UI.Page
             //3 for delete flagging
         }
     }
+
+    protected void radCompany_Search(object sender, SearchBoxEventArgs e)
+    {
+        RadSearchBox searchBox = (RadSearchBox)sender;
+
+        string companyId = string.Empty;
+        string likeCondition;
+        Guid compId = new Guid();
+
+        if (e.DataItem != null)
+        {
+            companyId = ((Dictionary<string, object>)e.DataItem)["CompanyId"].ToString();
+            compId = Guid.Parse(companyId);
+            if (!string.IsNullOrEmpty(companyId))
+            {
+                likeCondition = string.Format("'{0}{1}%'", searchBox.Filter == SearchBoxFilter.Contains ? "%" : "", ((Dictionary<string, object>)e.DataItem)["CompanyId"].ToString());
+                RadGrid2.DataSource = GetCompanyById(compId);
+                RadGrid2.DataBind();
+            }
+
+        }
+        else
+        {
+            RadGrid2.DataSource = GetCompany();
+            RadGrid2.DataBind();
+        }
+    }
+
 }

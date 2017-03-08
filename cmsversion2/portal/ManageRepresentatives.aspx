@@ -34,6 +34,18 @@
                     </div>
                 </div>
                 <!-- /.row -->
+                <div class="size-wide">
+                    <telerik:RadSearchBox RenderMode="Lightweight" runat="server" ID="radSearchRepresentatives" EmptyMessage="Search Representatives"
+                          OnSearch="radSearchRepresentatives_Search" Width="300"
+                        DataKeyNames="ClientId"
+                        DataTextField="Name"
+                        DataValueField="ClientId"
+                        ShowSearchButton="false">
+                        <DropDownSettings Width="300" />
+                    </telerik:RadSearchBox>
+                    
+                 </div>
+                <br />
                           <telerik:LayoutColumn HiddenMd="true" HiddenSm="true" HiddenXs="true">
 
                         <telerik:RadAjaxPanel ID="RadAjaxPanel2" ClientEvents-OnRequestStart="onRequestStart" runat="server" CssClass="gridwrapper">

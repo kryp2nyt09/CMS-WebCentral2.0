@@ -243,7 +243,7 @@
 
                             <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
 
-                            <telerik:RadDatePicker ID="dpBirthDate" MinDate="1950/1/1" ZIndex="11000"  runat="server"></telerik:RadDatePicker>
+                            <telerik:RadDatePicker ID="dpBirthDate" MinDate="1950/1/1" ZIndex="11000"  runat="server" Width="190"></telerik:RadDatePicker>
 
                         </div>
                         <br />
@@ -290,7 +290,7 @@
                     <div class="cols-sm-10">
                         <div class="input-group" style="font-size: 12px">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
-                            <telerik:RadDatePicker ID="dpLicense" MinDate="2017/1/1"  ZIndex="1100000" AutoPostBack ="false" runat="server"></telerik:RadDatePicker>
+                            <telerik:RadDatePicker ID="dpLicense" MinDate="2017/1/1"  ZIndex="1100000" AutoPostBack ="false" runat="server" Width="190"></telerik:RadDatePicker>
                         </div>
                         <br />
                     </div>

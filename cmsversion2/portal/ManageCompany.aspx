@@ -36,6 +36,18 @@
                     </div>
                 </div>
                 <!-- /.row -->
+                 <div class="size-wide">
+                    <telerik:RadSearchBox RenderMode="Lightweight" runat="server" ID="radSearchCompany" EmptyMessage="Search Company Name "
+                          OnSearch="radCompany_Search" Width="300"
+                        DataKeyNames="CompanyId"
+                        DataTextField="CompanyName"
+                        DataValueField="CompanyId"
+                        ShowSearchButton="false">
+                        <DropDownSettings Width="300" />
+                    </telerik:RadSearchBox>
+                    
+                 </div>
+                 <br />
                 <telerik:LayoutColumn HiddenMd="true" HiddenSm="true" HiddenXs="true">
 
                     <telerik:RadAjaxPanel ID="RadAjaxPanel2" ClientEvents-OnRequestStart="onRequestStart" runat="server" CssClass="gridwrapper">
@@ -171,7 +183,12 @@
                                     Modal="true" Behaviors="Close,Move">
                                 </telerik:RadWindow>
 
-                                <telerik:RadWindow RenderMode="Mobile" ID="ViewRepresentative" runat="server" Title="Representatives" Height="590px"
+                                <telerik:RadWindow RenderMode="Mobile" ID="ViewRepresentative" runat="server" Title="Representatives" Height="650px"
+                                    Width="1000px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false" VisibleStatusbar="false" AutoSize="false"
+                                    Modal="true" Behaviors="Close,Move">
+                                </telerik:RadWindow>
+
+                                <telerik:RadWindow RenderMode="Mobile" ID="ViewAppAuthority" runat="server" Title="Approving Authority" Height="650px"
                                     Width="1000px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false" VisibleStatusbar="false" AutoSize="false"
                                     Modal="true" Behaviors="Close,Move">
                                 </telerik:RadWindow>
@@ -219,7 +236,7 @@
                                    var rowControl = grid.get_masterTableView().get_dataItems()[rowIndex].get_element();
                                    grid.get_masterTableView().selectItem(rowControl, true);
 
-                                   window.radopen("UserModal/ViewApprovingAuthority.aspx?CompanyId=" + id, "ViewRepresentative");
+                                   window.radopen("UserModal/ViewApprovingAuthority.aspx?CompanyId=" + id, "ViewAppAuthority");
                                    return false;
                                }
 

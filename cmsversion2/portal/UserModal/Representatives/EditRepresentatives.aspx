@@ -268,7 +268,7 @@
                                <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtRepDept" Enabled="True" runat="server"></telerik:RadTextBox>
                              <br />
                             <br />
-                               <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtRepRemarks" TextMode="MultiLine" Enabled="True" runat="server"></telerik:RadTextBox>
+                               <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtRepRemarks" Enabled="True" runat="server"></telerik:RadTextBox>
 
                          </div>
 

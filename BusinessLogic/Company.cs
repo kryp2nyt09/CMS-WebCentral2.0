@@ -24,6 +24,11 @@ namespace BusinessLogic
             DAL.Client.UpdateClientProfile(ClientID, Flag, conStr);
         }
 
+        public static DataSet GetCompanyById(Guid companyId, string conStr)
+        {
+            return DAL.Company.GetCompanyById(companyId, conStr);
+        }
+
         public static void InsertCompanyInfo(string companyName, string contactNo, string fax, string email, string address1,
                                              string address2, Guid cityId, string zipCode, string website, string president,
                                         string tin, Guid? motherCompanyId, string contactperson, string contactPosition, string contactDept,

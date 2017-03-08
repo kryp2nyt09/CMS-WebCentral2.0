@@ -17,7 +17,7 @@ public partial class _EditApprovingAuthority : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
-
+            Init();
 
             if (Request.QueryString["ID"] == null)
             {
@@ -26,11 +26,7 @@ public partial class _EditApprovingAuthority : System.Web.UI.Page
             else
             {
                 string GroupId = Request.QueryString["ID"].ToString();
-
-                rcbComapny.DataSource = BLL.Company.GetCompanies(getConstr.ConStrCMS);
-                rcbComapny.DataValueField = "CompanyId";
-                rcbComapny.DataTextField = "CompanyName";
-                rcbComapny.DataBind();
+                
                 DataTable GroupInfo = GetApprovingAuthorityDetails(new Guid(GroupId));
                 int counter = 0;
                 foreach (DataRow row in GroupInfo.Rows)
@@ -49,7 +45,7 @@ public partial class _EditApprovingAuthority : System.Web.UI.Page
                         string company = row["CompanyName"].ToString();
                         string AAId = row["ApprovingAuthorityId"].ToString();
 
-                        lblCompanyID.Text = AAId;
+                        lblApprovingID.Text = AAId;
                         txtFname.Text = FirstName;
                         txtLname.Text = LastName;
                         txtTitle.Text = title;
@@ -59,7 +55,7 @@ public partial class _EditApprovingAuthority : System.Web.UI.Page
                         txtMobile.Text = Mobile;
                         txtFax.Text = fax;
                         txtEmail.Text = email;
-                         rcbComapny.SelectedItem.Text = company;
+                        rcbComapny.SelectedItem.Text = company;
                         counter++;
                     }
                 }
@@ -68,6 +64,24 @@ public partial class _EditApprovingAuthority : System.Web.UI.Page
             }
         }
     }
+
+    #region Init Load
+
+    private void Init()
+    {
+        LoadCompany();
+    }
+    #endregion
+
+    #region DataSources
+    private void LoadCompany()
+    {
+        rcbComapny.DataSource = BLL.Company.GetCompanies(getConstr.ConStrCMS);
+        rcbComapny.DataValueField = "CompanyId";
+        rcbComapny.DataTextField = "CompanyName";
+        rcbComapny.DataBind();
+    }
+    #endregion
 
 
 
@@ -128,14 +142,14 @@ public partial class _EditApprovingAuthority : System.Web.UI.Page
     protected void btnSave_Click(object sender, EventArgs e)
     {
 
-        if (lblCompanyID.Text != "")
+        if (lblApprovingID.Text != "")
         {
-            Guid ID = new Guid(lblCompanyID.Text);
+            Guid ID = new Guid(lblApprovingID.Text);
             string CompanyId = this.rcbComapny.SelectedItem.Value.ToString();
             Guid CompanyIDguid = new Guid(CompanyId);
             Guid ModifiedBy = new Guid("11111111-1111-1111-1111-111111111111");
 
-            BLL.ApprovingAuthority.UpdateApprovingAuthorityDetails(ID, txtFname.Text, txtLname.Text, txtTitle.Text, txtPosition.Text, txtDepartment.Text, txtContactNumber.Text, txtMobile.Text, txtFax.Text, txtEmail.Text, CompanyIDguid, ModifiedBy, 1, getConstr.ConStrCMS);
+            BLL.ApprovingAuthority.UpdateApprovingAuthorityDetails(ID, txtFname.Text, txtLname.Text, txtTitle.Text, txtPosition.Text, txtDepartment.Text, txtContactNumber.Text, txtMobile.Text, txtFax.Text, txtEmail.Text, CompanyIDguid, ModifiedBy, getConstr.ConStrCMS);
         }
 
         RefreshPage();

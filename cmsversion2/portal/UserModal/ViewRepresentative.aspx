@@ -71,6 +71,9 @@
                             </telerik:RadAjaxManager>
                             <telerik:RadAjaxLoadingPanel runat="server" ID="gridLoadingPanel"></telerik:RadAjaxLoadingPanel>
                            
+
+                             <asp:HiddenField ID="lblCompanyID" runat="server" Visible="true"></asp:HiddenField>
+
                             <telerik:RadGrid ID="RadGrid2" OnItemCreated="RadGrid2_ItemCreated"
                                 runat="server" AllowPaging="True" ExportSettings-Excel-DefaultCellAlignment="Right"
                                 PageSize="5" Skin="Glow" AllowSorting="true" OnItemCommand="RadGrid2_ItemCommand1"
@@ -136,13 +139,15 @@
 
                                           |
 
-                                         <a href="#"  onclick="return ShowInsertForm();">
+                                         <a href="#"  onclick="return ShowInsertForm(<%= lblCompanyID.ClientID %>);">
                                             <img src="../../images/emblem.png" alt="Add Company" width="20px">
                                             Add Representative
                                             </a>
-                                        
-
-                            |
+                                       
+                                     <%--   <button class="btn btn-link"><img src="../../images/emblem.png" alt="Add Company" width="20px">
+                                             Add Representatives
+                                        </button>
+                            |--%>
                                         
                                         <a href="#"  onclick="return ShowExportForm();">
                                             <img src="../../images/emblem.png" alt="Print Preview" width="20px">
@@ -175,8 +180,8 @@
                                         Modal="true" Behaviors="Close,Move">
                                     </telerik:RadWindow>
 
-                                     <telerik:RadWindow RenderMode="Mobile" ID="AddUser" runat="server" Title="Adding record" Height="600px"
-                                        Width="380px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false" VisibleStatusbar ="false" AutoSize="false"
+                                     <telerik:RadWindow RenderMode="Mobile" ID="AddRepresentatives" runat="server" Title="Adding record" Height="600px"
+                                        Width="800px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false" VisibleStatusbar ="false" AutoSize="false"
                                         Modal="true" Behaviors="Close,Move"  >
                                     </telerik:RadWindow>
 
@@ -205,11 +210,12 @@
                                     var rowControl = grid.get_masterTableView().get_dataItems()[rowIndex].get_element();
                                     grid.get_masterTableView().selectItem(rowControl, true);
 
-                                    window.radopen("UserModal/Representatives/EditRepresentatives.aspx?ClientId=" + id, "RepresentativeListDialog");
+                                    window.radopen("Representatives/EditRepresentatives.aspx?ClientId=" + id, "RepresentativeListDialog");
                                     return false;
                                 }
-                                function ShowInsertForm() {
-                                    //window.radopen("AddNewUser.aspx", "AddUser");
+
+                                function ShowInsertForm(obj) {
+                                    window.radopen("Representatives/AddRepresentatives.aspx?CompanyId=" + obj.value, "AddRepresentatives");
                                     return false;
                                 }
 

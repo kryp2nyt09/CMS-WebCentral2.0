@@ -259,7 +259,7 @@ public partial class _AddCompany : System.Web.UI.Page
         Guid acctStatusId = new Guid();
         Guid OrgTypeId = new Guid();
 
-        Guid MotherCompId = new Guid();
+        Guid? MotherCompId = new Guid();
         Guid BusinessTypeId = new Guid();
         Guid BillingPeriodId = new Guid();
         Guid PaymentTermId = new Guid();
@@ -295,7 +295,7 @@ public partial class _AddCompany : System.Web.UI.Page
          
         if(rcbAcctInfoMotherCompany.Items.Count == 0)
         {
-            compInfo.MotherCompId = null;
+            MotherCompId = null;
            // compInfo.MotherCompId = (MotherCompId == null) ? (Guid?)null : MotherCompId;
         }
         else
@@ -461,6 +461,20 @@ public partial class _AddCompany : System.Web.UI.Page
     }
     #endregion
 
+    #region Validate Data
+    public bool IsDataValid()
+    {
+        bool isValid = true;
+        if (string.IsNullOrEmpty(txtCompInfoCompanyName.Text) || string.IsNullOrEmpty(txtContactNo.Text) || string.IsNullOrEmpty(txtCompInfoAddress1.Text))
+        {
+            isValid = false;
+            
+        }
+
+        return isValid;
+    }
+    #endregion
+
 
 
 
@@ -469,30 +483,41 @@ public partial class _AddCompany : System.Web.UI.Page
     #region Events
     protected void btnSave_Click(object sender, EventArgs e)
     {
-        CompInfo();
-        ContactInfo();
-        AcctInfo1();
-        AccountInfo2();
-        BillingInfo();
+       if(IsDataValid())
+        {
+            CompInfo();
+            ContactInfo();
+            AcctInfo1();
+            AccountInfo2();
+            BillingInfo();
 
-        Guid ID = new Guid("11111111-1111-1111-1111-111111111111");
+            Guid ID = new Guid("11111111-1111-1111-1111-111111111111");
 
-        BLL.Company.InsertCompanyInfo(compInfo.CompanyName, compInfo.ContactInfo, compInfo.ContactInfoFax, compInfo.Email, compInfo.Address1, 
-                                    compInfo.Address2, compInfo.CityId, compInfo.CompanyInfoZipCode, compInfo.Website, compInfo.President, 
+            BLL.Company.InsertCompanyInfo(compInfo.CompanyName, compInfo.ContactInfo, compInfo.ContactInfoFax, compInfo.Email, compInfo.Address1,
+                                    compInfo.Address2, compInfo.CityId, compInfo.CompanyInfoZipCode, compInfo.Website, compInfo.President,
                                     compInfo.Tin, compInfo.MotherCompId, compInfo.ContactPerson, compInfo.Position, compInfo.Department,
-                                compInfo.ContactInfoTelNo, compInfo.MobileNo, compInfo.ContactInfoEmail,"" , compInfo.billInfoAddress1, 
-                                compInfo.billInfoAddress2,compInfo.billInfoCityId, compInfo.billInfozipCode, compInfo.billInfoContactPerson, compInfo.billInfoPosition, 
-                                compInfo.billInfoDepartment, compInfo.billInfoContactNo, compInfo.billInfoMobileNo, compInfo.billInfoEmail, compInfo.billInfoFax, 
-                                compInfo.AccttypeId, compInfo.IndustryId, compInfo.BusinessTypeId, compInfo.OrgTypeId, compInfo.AcctStatusId, 
-                                compInfo.dateApprove, compInfo.ApproveById, compInfo.PaymentTermId, compInfo.PaymentModeId, compInfo.BillingPeriodId, 
-                                compInfo.Discount, compInfo.hasAWBFee, compInfo.hasValuationCharge, compInfo.hasInsurance, compInfo.hasChargeInvoice, 
-                                compInfo.hasVatable, compInfo.appliedEVM, compInfo.hasWeightCharge, compInfo.hasFCFee, compInfo.hasFuelCharge, 
-                                compInfo.hasDeliveryFee, compInfo.hasPerishableFee, compInfo.hasDangerousFee, compInfo.AreaId, 
+                                compInfo.ContactInfoTelNo, compInfo.MobileNo, compInfo.ContactInfoEmail, "", compInfo.billInfoAddress1,
+                                compInfo.billInfoAddress2, compInfo.billInfoCityId, compInfo.billInfozipCode, compInfo.billInfoContactPerson, compInfo.billInfoPosition,
+                                compInfo.billInfoDepartment, compInfo.billInfoContactNo, compInfo.billInfoMobileNo, compInfo.billInfoEmail, compInfo.billInfoFax,
+                                compInfo.AccttypeId, compInfo.IndustryId, compInfo.BusinessTypeId, compInfo.OrgTypeId, compInfo.AcctStatusId,
+                                compInfo.dateApprove, compInfo.ApproveById, compInfo.PaymentTermId, compInfo.PaymentModeId, compInfo.BillingPeriodId,
+                                compInfo.Discount, compInfo.hasAWBFee, compInfo.hasValuationCharge, compInfo.hasInsurance, compInfo.hasChargeInvoice,
+                                compInfo.hasVatable, compInfo.appliedEVM, compInfo.hasWeightCharge, compInfo.hasFCFee, compInfo.hasFuelCharge,
+                                compInfo.hasDeliveryFee, compInfo.hasPerishableFee, compInfo.hasDangerousFee, compInfo.AreaId,
                                 compInfo.CreditLimit, "", ID, getConstr.ConStrCMS);
 
+            string script = "<script>CloseOnReload()</" + "script>";
+            ClientScript.RegisterStartupScript(this.GetType(), "CloseOnReload", script);
+        }else
+        {
+            string alert = "<script>alert('Fill out required fields!.)</" + "script>";
+            ClientScript.RegisterStartupScript(this.GetType(), "Alert", alert);
+        }
 
-        string script = "<script>CloseOnReload()</" + "script>";
-        ClientScript.RegisterStartupScript(this.GetType(), "CloseOnReload", script);
+        
+
+
+       
 
 
 

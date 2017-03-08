@@ -18,8 +18,8 @@
     <link href="../../css/bootstrap.css" rel="stylesheet" />
 
     <!-- Google Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'/>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -68,6 +68,9 @@
                                 </AjaxSettings>
                             </telerik:RadAjaxManager>
                             <telerik:RadAjaxLoadingPanel runat="server" ID="gridLoadingPanel"></telerik:RadAjaxLoadingPanel>
+
+                            <asp:HiddenField ID="lblCompanyID" runat="server" Visible="true"></asp:HiddenField>
+
 
                             <telerik:RadGrid ID="RadGrid2" OnItemCreated="RadGrid2_ItemCreated"
                                 runat="server" AllowPaging="True" ExportSettings-Excel-DefaultCellAlignment="Right"
@@ -144,9 +147,9 @@
                                     <CommandItemTemplate>
                                         |
 
-                                         <a href="#" onclick="return ShowInsertForm();">
-                                             <img src="../../images/emblem.png" alt="Add Company" width="20px">
-                                             Add Representative
+                                         <a href="#" onclick="return ShowInsertForm(<%= lblCompanyID.ClientID %>);" >
+                                             <img src="../../images/emblem.png" alt="Add Approver" width="20px">
+                                             Add Approver
                                          </a>
 
 
@@ -188,6 +191,11 @@
                                         Modal="true" Behaviors="Close,Move">
                                     </telerik:RadWindow>
 
+                                     <telerik:RadWindow RenderMode="Mobile" ID="AddAppAuthority" runat="server" Title="Adding record" Height="600px"
+                                        Width="380px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false" VisibleStatusbar ="false" AutoSize="false"
+                                        Modal="true" Behaviors="Close,Move"  >
+                                    </telerik:RadWindow>
+
 
                                     <telerik:RadWindow RenderMode="Mobile" ID="ShowExport" runat="server" Title="Export Report Preview" Height="590px"
                                         Width="900px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false" VisibleStatusbar="false" AutoSize="false"
@@ -216,8 +224,13 @@
                                     window.radopen("UserModal/EditForm_csharp.aspx?UserId=" + id, "UserListDialog");
                                     return false;
                                 }
-                                function ShowInsertForm() {
+
+                                function ShowInsertForm(obj) {
+                                    //alert(obj.innerText);
+                                    // var start= document.getElementById('Label3').innerHTML;
+
                                     //window.radopen("AddNewUser.aspx", "AddUser");
+                                    window.radopen("ApprovingAuthority/AddApprovingAuthority.aspx?CompanyId=" + obj.value, "AddAppAuthority");
                                     return false;
                                 }
 

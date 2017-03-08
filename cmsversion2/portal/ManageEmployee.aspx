@@ -183,7 +183,7 @@
        &nbsp;|
                    
                                  
-                                        <a href="#"  onclick="location.reload();">
+                                        <a href="#"  onclick="return location.reload();">
                                             <img src="../images/emblem.png" alt="Export to Excel" width="20px">
                                             Refresh Data
                                             </a>
@@ -247,6 +247,11 @@
 
                                 function ShowExportForm() {
                                     window.radopen("Reports/EmployeeExportPreview.aspx", "ShowExport");
+                                    return false;
+                                }
+
+                                 function RefreshData() {
+                                    window.radopen("ManageEmployee.aspx", "ShowExport");
                                     return false;
                                 }
 

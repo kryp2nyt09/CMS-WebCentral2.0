@@ -10,77 +10,76 @@ using BLL = BusinessLogic;
 using Tools = utilities;
 
 
-public partial class _EditApprovingAuthority : System.Web.UI.Page
+public partial class _AddApprovingAuthority : System.Web.UI.Page
 {
     Tools.DataAccessProperties getConstr = new Tools.DataAccessProperties();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
         {
-
-
-            if (Request.QueryString["ID"] == null)
+            Init();
+            if (Request.QueryString["CompanyId"] == null)
             {
 
             }
             else
             {
-                string GroupId = Request.QueryString["ID"].ToString();
-
-                rcbComapny.DataSource = BLL.Company.GetCompanies(getConstr.ConStrCMS);
-                rcbComapny.DataValueField = "CompanyId";
-                rcbComapny.DataTextField = "CompanyName";
-                rcbComapny.DataBind();
-                DataTable GroupInfo = GetApprovingAuthorityDetails(new Guid(GroupId));
+                string companyId = Request.QueryString["CompanyId"].ToString();
+                DataTable GroupInfo = GetCompanyDetails(new Guid(companyId));
                 int counter = 0;
                 foreach (DataRow row in GroupInfo.Rows)
                 {
                     if (counter == 0)
                     {
-                        string FirstName = row["FirstName"].ToString();
-                        string LastName = row["LastName"].ToString();
-                        string title = row["Title"].ToString();
-                        string position = row["Position"].ToString();
-                        string department = row["Department"].ToString();
-                        string contactno = row["ContactNo"].ToString();
-                        string Mobile = row["Mobile"].ToString();
-                        string fax = row["Fax"].ToString();
-                        string email = row["Email"].ToString();
                         string company = row["CompanyName"].ToString();
-                        string AAId = row["ApprovingAuthorityId"].ToString();
-
-                        lblCompanyID.Text = AAId;
-                        txtFname.Text = FirstName;
-                        txtLname.Text = LastName;
-                        txtTitle.Text = title;
-                        txtPosition.Text = position;
-                        txtDepartment.Text = department;
-                        txtContactNumber.Text = contactno;
-                        txtMobile.Text = Mobile;
-                        txtFax.Text = fax;
-                        txtEmail.Text = email;
-                         rcbComapny.SelectedItem.Text = company;
-                        counter++;
+                        rcbComapny.SelectedItem.Text = company;
+                        rcbComapny.SelectedItem.Value = companyId;
+                        rcbComapny.Enabled = false;
                     }
                 }
-                
 
             }
         }
     }
+
+    #region Init Load
+
+    private void Init()
+    {
+        LoadCompany();
+    }
+    #endregion
+
+    #region DataSources
+    private void LoadCompany()
+    {
+        rcbComapny.DataSource = BLL.Company.GetCompanies(getConstr.ConStrCMS);
+        rcbComapny.DataValueField = "CompanyId";
+        rcbComapny.DataTextField = "CompanyName";
+        rcbComapny.DataBind();
+    }
+    #endregion
+
 
 
 
     protected override void OnInit(EventArgs e)
     {
         base.OnInit(e);
-        this.Page.Title = "Edit Approving Authority";
+        this.Page.Title = "Add Approving Authority";
     }
 
     public DataTable GetApprovingAuthorityDetails(Guid ID)
     {
-        //DataTable data = new DataTable();
         DataSet data = BLL.ApprovingAuthority.GetApprovingAuthorityDetailsById(getConstr.ConStrCMS, ID);
+        DataTable convertdata = new DataTable();
+        convertdata = data.Tables[0];
+        return convertdata;
+    }
+
+    public DataTable GetCompanyDetails(Guid ID)
+    {
+        DataSet data = BLL.Company.GetCompanyByCompanyId(ID, getConstr.ConStrCMS);
         DataTable convertdata = new DataTable();
         convertdata = data.Tables[0];
         return convertdata;
@@ -127,18 +126,16 @@ public partial class _EditApprovingAuthority : System.Web.UI.Page
 
     protected void btnSave_Click(object sender, EventArgs e)
     {
+        //Guid ID = new Guid(lblCompanyID.Text);
+        string CompanyId = this.rcbComapny.SelectedItem.Value.ToString();
+        Guid CompanyIDguid = new Guid(CompanyId);
+        Guid CreatedBy = new Guid("11111111-1111-1111-1111-111111111111");
 
-        if (lblCompanyID.Text != "")
-        {
-            Guid ID = new Guid(lblCompanyID.Text);
-            string CompanyId = this.rcbComapny.SelectedItem.Value.ToString();
-            Guid CompanyIDguid = new Guid(CompanyId);
-            Guid ModifiedBy = new Guid("11111111-1111-1111-1111-111111111111");
+        BLL.ApprovingAuthority.InsertApprovingAuthorityDetails(txtFname.Text, txtLname.Text, txtTitle.Text, txtPosition.Text, txtDepartment.Text, txtContactNumber.Text, txtMobile.Text, txtFax.Text, txtEmail.Text, CompanyIDguid, CreatedBy, getConstr.ConStrCMS);
 
-            BLL.ApprovingAuthority.UpdateApprovingAuthorityDetails(ID, txtFname.Text, txtLname.Text, txtTitle.Text, txtPosition.Text, txtDepartment.Text, txtContactNumber.Text, txtMobile.Text, txtFax.Text, txtEmail.Text, CompanyIDguid, ModifiedBy, 1, getConstr.ConStrCMS);
-        }
-
-        RefreshPage();
+        string script = "<script>CloseOnReload()</" + "script>";
+        ClientScript.RegisterStartupScript(this.GetType(), "CloseOnReload", script);
+        //RefreshPage();
     }
 
     private void RefreshPage()
