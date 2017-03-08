@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="PickupCargoManifestReport.aspx.cs" Inherits="portal_Operation_Manifest_PickupCargoManifestReport" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="DailyTripReport.aspx.cs" Inherits="portal_Operation_Manifest_DailyTripReport" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Pickup Cargo</title>
+    <title>Daily Trip</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Website CSS style -->
     <link href="~/styles/default.css" rel="stylesheet" />
@@ -24,27 +24,30 @@
         <div class="container">
             <!--- PAGE HEADER--->
             <div class="row">
-                <h3>PICK UP CARGO</h3>
+                <h3>DAILY TRIP</h3>
             </div>
             <!--- PAGE BODY--->
             <div class="row">
                 <div class="form-group">
                     
                     <telerik:RadLabel ID="RadLabel1" runat="server">Date:</telerik:RadLabel>
-                    <telerik:RadDatePicker ID="dateTimePickupCargo_Date" runat="server"></telerik:RadDatePicker>
+                    <telerik:RadDatePicker ID="dateTime_DailyTrip_Date" runat="server"></telerik:RadDatePicker>
 
                     <telerik:RadLabel ID="RadLabel2" runat="server">BCO:</telerik:RadLabel>
-                    <telerik:RadDropDownList ID="dropDownPickupCargo_BCO" runat="server"></telerik:RadDropDownList>
+                    <telerik:RadDropDownList ID="dropDown_DailyTrip_BCO" runat="server"></telerik:RadDropDownList>
 
                     <telerik:RadLabel ID="RadLabel3" runat="server">Area:</telerik:RadLabel>
-                    <telerik:RadDropDownList ID="dropDownPickupCargo_Area" runat="server" DropDownWidth="200"></telerik:RadDropDownList>
+                    <telerik:RadDropDownList ID="dropDown_DailyTrip_Area" runat="server"></telerik:RadDropDownList>
 
-                    <telerik:RadButton ID="btnPickupCargo_Search" runat="server" Text="Search" CssClass="btn-primary" OnClick="btnPickupCargo_Search_Click"></telerik:RadButton>
+                    <telerik:RadLabel ID="RadLabel4" runat="server">Payment Mode:</telerik:RadLabel>
+                    <telerik:RadDropDownList ID="dropDown_DailyTrip_PaymentMode" runat="server"></telerik:RadDropDownList>
+
+                    <telerik:RadButton ID="btn_DailyTrip_Search" runat="server" Text="Search" CssClass="btn-primary"></telerik:RadButton>
                 </div>
             </div>
             <div class="row">
-                <telerik:RadGrid ID="gridPickupCargo" runat="server"  Skin="Office2010Black"
-                    AllowPaging="True" ExportSettings-Excel-DefaultCellAlignment="Right" AllowSorting="true" Width="100%" PageSize="10" OnPreRender="gridPickupCargo_PreRender">
+                <telerik:RadGrid ID="grid_DailyTripReport" runat="server" Skin="Office2010Black" OnNeedDataSource="grid_DailyTripReport_NeedDataSource"
+                    AllowPaging="True" ExportSettings-Excel-DefaultCellAlignment="Right" AllowSorting="true" Width="100%" PageSize="10">
                 <ExportSettings HideStructureColumns="true" ExportOnlyData="true" IgnorePaging="true" UseItemStyles="true"></ExportSettings>          
                     <MasterTableView CommandItemDisplay="Top" Width="100%">
                         <CommandItemSettings ShowExportToExcelButton="true" ShowExportToPdfButton="true" ShowExportToWordButton="true" ShowExportToCsvButton="true" ShowAddNewRecordButton="false"  ShowRefreshButton="false" />

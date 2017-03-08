@@ -101,12 +101,21 @@
   <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ManageUsers.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ManageUsers.aspx" />
   <event action="Analyze" type="Success" name="ManageUsers.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ManageUsers.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Operation\Manifest\BundleReport.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Operation\Manifest\BundleReport.aspx" />
+  <event action="Analyze" type="Success" name="BundleReport.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Operation\Manifest\BundleReport.aspx" />
   <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Operation\Manifest\Manifest.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Operation\Manifest\Manifest.aspx" />
   <event action="Analyze" type="Success" name="Manifest.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Operation\Manifest\Manifest.aspx" />
   <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Operation\Manifest\PickupCargoManifestReport.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Operation\Manifest\PickupCargoManifestReport.aspx" />
   <event action="Analyze" type="Success" name="PickupCargoManifestReport.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Operation\Manifest\PickupCargoManifestReport.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Operation\Manifest\SegregationReport.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Operation\Manifest\SegregationReport.aspx" />
+  <event action="Analyze" type="Success" name="SegregationReport.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Operation\Manifest\SegregationReport.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Operation\Manifest\UnbundleReport.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Operation\Manifest\UnbundleReport.aspx" />
+  <event action="Analyze" type="Success" name="UnbundleReport.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Operation\Manifest\UnbundleReport.aspx" />
   <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Operation\Operation.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Operation\Operation.aspx" />
   <event action="Analyze" type="Success" name="Operation.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Operation\Operation.aspx" />
@@ -248,6 +257,9 @@
   <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Company\ContactInformation.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Company\ContactInformation.aspx" />
   <event action="Analyze" type="Success" name="ContactInformation.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Company\ContactInformation.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Company\EditCompany.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Company\EditCompany.aspx" />
+  <event action="Analyze" type="Success" name="EditCompany.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Company\EditCompany.aspx" />
   <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Crating\AddCrating.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Crating\AddCrating.aspx" />
   <event action="Analyze" type="Success" name="AddCrating.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Crating\AddCrating.aspx" />
@@ -353,6 +365,12 @@
   <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Remarks\EditRemarks.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Remarks\EditRemarks.aspx" />
   <event action="Analyze" type="Success" name="EditRemarks.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Remarks\EditRemarks.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Representatives\AddRepresentatives.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Representatives\AddRepresentatives.aspx" />
+  <event action="Analyze" type="Success" name="AddRepresentatives.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Representatives\AddRepresentatives.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Representatives\EditRepresentatives.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Representatives\EditRepresentatives.aspx" />
+  <event action="Analyze" type="Success" name="EditRepresentatives.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\Representatives\EditRepresentatives.aspx" />
   <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\RevenueTypeMaintenance\AddRUT.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\RevenueTypeMaintenance\AddRUT.aspx" />
   <event action="Analyze" type="Success" name="AddRUT.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\RevenueTypeMaintenance\AddRUT.aspx" />

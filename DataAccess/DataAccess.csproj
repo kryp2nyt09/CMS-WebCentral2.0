@@ -51,7 +51,9 @@
     <Compile Include="Reason.cs" />
     <Compile Include="Remarks.cs" />
     <Compile Include="Reports\Bundle.cs" />
+    <Compile Include="Reports\DailyTrip.cs" />
     <Compile Include="Reports\PickupCargoManifest.cs" />
+    <Compile Include="Reports\Segregation.cs" />
     <Compile Include="Reports\Unbundle.cs" />
     <Compile Include="Status.cs" />
     <Compile Include="Tracking_BatchName.cs" />

@@ -38,9 +38,17 @@
                     </Tabs>
                 </telerik:RadTabStrip>
                 <telerik:RadMultiPage ID="RadMultiPage1" runat="server" SelectedIndex="0" Height="500px">
-                    <telerik:RadPageView ID="RadPageView1" runat="server" ContentUrl="PickupCargoManifestReport.aspx"></telerik:RadPageView>
-                    <telerik:RadPageView ID="RadPageView2" runat="server" ContentUrl="PickupCargoManifestReport.aspx"></telerik:RadPageView>
-                    <telerik:RadPageView ID="RadPageView3" runat="server" ContentUrl="BundleReport.aspx"></telerik:RadPageView>
+                    <telerik:RadPageView ID="PickupCargo" runat="server" ContentUrl="PickupCargoManifestReport.aspx"></telerik:RadPageView>
+                    <telerik:RadPageView ID="BranchAcceptance" runat="server" ContentUrl="PickupCargoManifestReport.aspx"></telerik:RadPageView>
+                    <telerik:RadPageView ID="Bundle" runat="server" ContentUrl="BundleReport.aspx"></telerik:RadPageView>
+                    <telerik:RadPageView ID="Unbundle" runat="server" ContentUrl="BundleReport.aspx"></telerik:RadPageView>
+                    <telerik:RadPageView ID="GatewayTransmital" runat="server" ContentUrl="BundleReport.aspx"></telerik:RadPageView>
+                    <telerik:RadPageView ID="GatewayOutbound" runat="server" ContentUrl="BundleReport.aspx"></telerik:RadPageView>
+                    <telerik:RadPageView ID="GatewayInbound" runat="server" ContentUrl="BundleReport.aspx"></telerik:RadPageView>
+                    <telerik:RadPageView ID="CargoTransfer" runat="server" ContentUrl="BundleReport.aspx"></telerik:RadPageView>
+                    <telerik:RadPageView ID="Segregation" runat="server" ContentUrl="Segregation.aspx"></telerik:RadPageView>
+                    <telerik:RadPageView ID="DailyTrip" runat="server" ContentUrl="DailyTripReport.aspx"></telerik:RadPageView>
+                    <telerik:RadPageView ID="HoldCargo" runat="server" ContentUrl="BundleReport.aspx"></telerik:RadPageView>
                 </telerik:RadMultiPage>
             </div>
          </div>
