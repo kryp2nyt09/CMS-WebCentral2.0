@@ -9,7 +9,7 @@
     <title></title>
     <meta name="viewport" content="initial-scale=1.0, minimum-scale=1, maximum-scale=1.0, user-scalable=no" />
     <link href="styles/base.css" rel="stylesheet" />
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/sb-admin.css" rel="stylesheet" />
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <link rel="shortcut icon" type="image/x-icon" href="Images/emblem.png" />
@@ -29,7 +29,6 @@
                 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="position: fixed">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
-
 
                         <ul class="nav navbar-nav">
                             <li>
@@ -124,14 +123,36 @@
 
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reports<b class="caret"></b></a>
-                                <ul class="dropdown-menu message-dropdown">
-                                    <li class="message-footer"> <a href="../portal/Operation/Manifest/Manifest.aspx">Operation</a> </li>
-                                    <li class="message-footer"> <a href="#">Finance</a> </li> 
-                                    <li class="message-footer"> <a href="#">Marketing</a> </li> 
-                                    <li class="message-footer"> <a href="#">Courier</a> </li> 
-                                    <li class="message-footer"> <a href="#">AWB Series</a> </li> 
-                                    <li class="message-footer"> <a href="#">OR Series</a> </li> 
-                                    <li class="message-footer"> <a href="#">Booking Summary</a> </li>  
+                                <ul class="dropdown-menu">
+
+                                    <li class="dropdown dropdown-submenu"> 
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Operation</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a runat="server" href="~/portal/Operation/Manifest/Manifest.aspx">Manifest</a></li>
+                                            <li><a runat="server" href="#">Grand Manifest</a></li>
+                                            <li><a href="#">Transport</a></li>
+                                            <li><a href="#">Flight Load Monitoring</a></li>
+                                            <li><a href="#">Offloaded</a></li>
+                                            <li><a href="#">Trans Shipment Monitoring</a></li>
+                                        </ul>
+                                    </li>
+                                   <li class="dropdown dropdown-submenu"> 
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Finance</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Revenue</a></li>
+                                            <li><a runat="server" href="~/portal/Finance/CollectionReport.aspx">Collection</a></li>
+                                            <li><a href="#">Transport</a></li>
+                                            <li><a href="#">Flight Load Monitoring</a></li>
+                                            <li><a href="#">Offloaded</a></li>
+                                            <li><a href="#">Trans Shipment Monitoring</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Marketing</a></li>
+                                    <li><a href="#">Courier</a></li>
+                                    <li><a href="#">AWB Series</a></li>
+                                    <li><a href="#">OR Series</a></li>
+                                    <li><a href="#">Booking</a></li>
+                                   
                                 </ul>
                             </li>
                             
@@ -151,10 +172,6 @@
                             </li>
                           
                         </ul>
-
-
-
-                        -
 
                     </div>
                     <!-- Top Menu Items -->

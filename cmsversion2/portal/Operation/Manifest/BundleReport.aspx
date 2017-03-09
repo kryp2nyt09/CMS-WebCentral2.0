@@ -21,43 +21,91 @@
 <telerik:RadScriptManager ID="RadScriptManager1" runat="server"></telerik:RadScriptManager>
 <div class="wrapper">
     <div id="page-wrapper">
-        <div class="container">
+        <div class="container-fluid">
             <!--- PAGE HEADER--->
             <div class="row">
                 <h3>BUNDLE</h3>
             </div>
             <!--- PAGE BODY--->
             <div class="row">
-                <div class="row form-group" style="font-size:13px;">
-                    <telerik:RadLabel ID="RadLabel1" runat="server">Date:</telerik:RadLabel>
-                    <telerik:RadDatePicker ID="dateTime_Bundle_Date" runat="server" ></telerik:RadDatePicker>
+                <telerik:RadGrid ID="grid_Bundle" runat="server" Skin="Glow"
+                    OnNeedDataSource="grid_Bundle_NeedDataSource"
+                    AllowPaging="True" 
+                    PageSize="10"  
+                    AllowFilteringByColumn="True"
+                    AutoGenerateColumns="false"
+                    AllowSorting="true">
+                    <ExportSettings HideStructureColumns="true" ExportOnlyData="true" IgnorePaging="true" UseItemStyles="true"></ExportSettings>
+                    <MasterTableView CommandItemDisplay="Top" Width="100%" Font-Size="Smaller">
+                        <CommandItemSettings ShowExportToExcelButton="true" ShowExportToPdfButton="true" ShowExportToWordButton="true" ShowExportToCsvButton="true" ShowAddNewRecordButton="false" ShowRefreshButton="false" />
+                        <Columns>
 
-                    <telerik:RadLabel ID="RadLabel2" runat="server">Branch:</telerik:RadLabel>
-                    <telerik:RadDropDownList ID="dropDown_Bundle_Branch" runat="server" AutoPostBack="true" OnSelectedIndexChanged="dropDown_Bundle_Branch_SelectedIndexChanged">
-                        <Items>
-                            <telerik:DropDownListItem  Value="Branch Corporate Office" Text="Branch Corporate Office" Selected="true"/>
-                            <telerik:DropDownListItem Value="Branch Satellire Office" Text="Branch Satellire Office"/>
-                        </Items>
-                    </telerik:RadDropDownList>
-                    
-                    <telerik:RadLabel ID="RadLabel4" runat="server" >BCO/BSO:</telerik:RadLabel>
-                    <telerik:RadDropDownList ID="dropDown_Bundle_BCO_BSO" runat="server"></telerik:RadDropDownList>
-                        
-                    <telerik:RadLabel ID="RadLabel3" runat="server" >Sack No:</telerik:RadLabel>
-                    <telerik:RadDropDownList ID="dropDown_Bundle_SackNo" runat="server"></telerik:RadDropDownList>
+                            <telerik:GridDateTimeColumn
+                                 DataField="CreatedDate" HeaderText="Date" SortExpression="CreatedDate" AllowFiltering="true" FilterListOptions="VaryByDataType"
+                                 PickerType="DatePicker"  DataFormatString="{0:MM/dd/yyyy}" DataType="System.DateTime" UniqueName="CreatedDate" 
+                                 ></telerik:GridDateTimeColumn>
 
-                    <telerik:RadLabel ID="RadLabel5" runat="server">Destination:</telerik:RadLabel>
-                    <telerik:RadDropDownList ID="dropDown_Bundle_Destination" runat="server"></telerik:RadDropDownList>
+                            <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
+                                CurrentFilterFunction="Contains" AutoPostBackOnFilter="false"
+                                DataField="BCO" HeaderText="BCO">
+                            </telerik:GridBoundColumn>
 
-                    <telerik:RadButton ID="btn_Bundle_Search" runat="server" Text="Search" CssClass="btn-primary" AutoPostBack="true" OnClick="btn_Bundle_Search_Click"></telerik:RadButton>
-                </div>
-            </div>
-            <div class="row">
-                <telerik:RadGrid ID="grid_Bundle" runat="server" Skin="Office2010Black" 
-                    AllowPaging="True" ExportSettings-Excel-DefaultCellAlignment="Right" AllowSorting="true" Width="100%" PageSize="10" OnPreRender="grid_Bundle_PreRender">
-                <ExportSettings HideStructureColumns="true" ExportOnlyData="true" IgnorePaging="true" UseItemStyles="true"></ExportSettings>          
-                    <MasterTableView CommandItemDisplay="Top" Width="100%">
-                        <CommandItemSettings ShowExportToExcelButton="true" ShowExportToPdfButton="true" ShowExportToWordButton="true" ShowExportToCsvButton="true" ShowAddNewRecordButton="false"  ShowRefreshButton="false" />
+                            <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
+                                CurrentFilterFunction="Contains" AutoPostBackOnFilter="false"
+                                DataField="BSO" HeaderText="BSO">
+                            </telerik:GridBoundColumn>
+
+                            <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
+                                CurrentFilterFunction="Contains" AutoPostBackOnFilter="false"
+                                DataField="AirwayBillNo" HeaderText="Airway Bill No">
+                            </telerik:GridBoundColumn>
+
+                             <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
+                                CurrentFilterFunction="Contains" AutoPostBackOnFilter="false"
+                                DataField="SackNo" HeaderText="Sack #">
+                            </telerik:GridBoundColumn>
+
+                            <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
+                                CurrentFilterFunction="EqualTo" AutoPostBackOnFilter="false" AllowFiltering="false"
+                                DataField="Shipper" HeaderText="Shipper">
+                            </telerik:GridBoundColumn>
+
+                            <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
+                                CurrentFilterFunction="EqualTo" AutoPostBackOnFilter="false" AllowFiltering="false"
+                                DataField="Consignee" HeaderText="Consignee">
+                            </telerik:GridBoundColumn>
+
+                            <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
+                                CurrentFilterFunction="EqualTo" AutoPostBackOnFilter="false" AllowFiltering="false"
+                                DataField="Consignee Address" HeaderText="Consignee Address">
+                            </telerik:GridBoundColumn>
+
+                            <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
+                                CurrentFilterFunction="EqualTo" AutoPostBackOnFilter="false" AllowFiltering="false"
+                                DataField="CommodityName" HeaderText="Commodity">
+                            </telerik:GridBoundColumn>
+
+                            <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
+                                CurrentFilterFunction="EqualTo" AutoPostBackOnFilter="false" AllowFiltering="false"
+                                DataField="CommodityTypeName" HeaderText="Commodity Type">
+                            </telerik:GridBoundColumn>
+
+                            <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
+                                CurrentFilterFunction="EqualTo" AutoPostBackOnFilter="false" AllowFiltering="false"
+                                DataField="QTY" HeaderText="Qty">
+                            </telerik:GridBoundColumn>
+
+                            <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
+                                CurrentFilterFunction="EqualTo" AutoPostBackOnFilter="false" AllowFiltering="false"
+                                DataField="ServiceModeName" HeaderText="Service Mode">
+                            </telerik:GridBoundColumn>
+
+                            <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
+                                CurrentFilterFunction="EqualTo" AutoPostBackOnFilter="false" AllowFiltering="false"
+                                DataField="PaymentModeName" HeaderText="Payment Mode">
+                            </telerik:GridBoundColumn>
+
+                        </Columns>
                     </MasterTableView>
                 </telerik:RadGrid>
             </div>

@@ -21,17 +21,6 @@ public partial class portal_Operation_Manifest_UnbundleReport : System.Web.UI.Pa
         DataSet data = BLL.Report.UnbundleReport.GetBundle(getConstr.ConStrCMS);
         DataTable dt = new DataTable();
         dt = data.Tables[0];
-        
-        //dropDown_Bundle_SackNo.DataSource = dt;
-        //dropDown_Bundle_SackNo.DataTextField = "SackNo";
-        //dropDown_Bundle_SackNo.DataValueField = "SackNo";
-        //dropDown_Bundle_SackNo.DataBind();
-
-        //dropDown_Bundle_Destination.DataSource = dt;
-        //dropDown_Bundle_Destination.DataTextField = "BranchCorpOfficeName";
-        //dropDown_Bundle_Destination.DataValueField = "BranchCorpOfficeName";
-        //dropDown_Bundle_Destination.DataBind();
-
         return dt;
     }
 

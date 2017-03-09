@@ -1,14 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="SegregationReport.aspx.cs" Inherits="portal_Operation_Manifest_SegregationReport" %>
 
 <!DOCTYPE html>
-<script runat="server">
-
-    protected void btn_Segregation_Search_Click(object sender, EventArgs e)
-    {
-
-    }
-</script>
-
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -29,39 +21,65 @@
 <telerik:RadScriptManager ID="RadScriptManager1" runat="server"></telerik:RadScriptManager>
 <div class="wrapper">
     <div id="page-wrapper">
-        <div class="container">
+        <div class="container-fluid">
             <!--- PAGE HEADER--->
             <div class="row">
                 <h3>SEGREGATION</h3>
             </div>
             <!--- PAGE BODY--->
             <div class="row">
-                <div class="row form-group">
-                    <telerik:RadLabel ID="RadLabel1" runat="server">Date:</telerik:RadLabel>
-                    <telerik:RadDatePicker ID="dateTime_Segregation_Date" runat="server" ></telerik:RadDatePicker>
-                    
-                    <telerik:RadLabel ID="RadLabel4" runat="server" >BCO:</telerik:RadLabel>
-                    <telerik:RadDropDownList ID="dropDown_Segregation_BCO" runat="server"></telerik:RadDropDownList>
-                        
-                    <telerik:RadLabel ID="RadLabel3" runat="server" >Driver:</telerik:RadLabel>
-                    <telerik:RadDropDownList ID="dropDown_Segregation_Driver" runat="server"></telerik:RadDropDownList>
-
-                    <telerik:RadLabel ID="RadLabel2" runat="server" >Plate #:</telerik:RadLabel>
-                    <telerik:RadDropDownList ID="dropDown_Segregation_PlateNo" runat="server"></telerik:RadDropDownList>
-
-                    <telerik:RadLabel ID="RadLabel5" runat="server" >Bacth:</telerik:RadLabel>
-                    <telerik:RadDropDownList ID="dropDown_Segregation_Batch" runat="server"></telerik:RadDropDownList>
-
-                    <telerik:RadButton ID="btn_Segregation_Search" runat="server" Text="Search" CssClass="btn-primary" OnClick="btn_Segregation_Search_Click"></telerik:RadButton>
-                </div>
-            </div>
-            <div class="row">
-                <telerik:RadGrid ID="grid_Segregation" runat="server" Skin="Office2010Black" 
-                    AllowPaging="True" ExportSettings-Excel-DefaultCellAlignment="Right" AllowSorting="true" Width="100%" PageSize="10" OnNeedDataSource="grid_Segregation_NeedDataSource" OnPreRender="grid_Segregation_PreRender">
+                <telerik:RadGrid ID="grid_Segregation" runat="server" Skin="Glow" 
+                    AllowPaging="True" 
+                    AllowFilteringByColumn="True"
+                    AutoGenerateColumns="false"
+                    AllowSorting="true" Width="100%" 
+                    PageSize="10" 
+                    OnNeedDataSource="grid_Segregation_NeedDataSource">
                 <ExportSettings HideStructureColumns="true" ExportOnlyData="true" IgnorePaging="true" UseItemStyles="true"></ExportSettings>          
                     <MasterTableView CommandItemDisplay="Top" Width="100%">
                         <CommandItemSettings ShowExportToExcelButton="true" ShowExportToPdfButton="true" ShowExportToWordButton="true" ShowExportToCsvButton="true" ShowAddNewRecordButton="false"  ShowRefreshButton="false" />
-                        
+                        <Columns>
+                             <telerik:GridDateTimeColumn
+                                 DataField="CreatedDate" HeaderText="Date" SortExpression="CreatedDate" AllowFiltering="true" FilterListOptions="VaryByDataType"
+                                 PickerType="DatePicker"  DataFormatString="{0:MM/dd/yyyy}" DataType="System.DateTime" UniqueName="CreatedDate" 
+                                 ></telerik:GridDateTimeColumn>
+
+                            <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
+                                CurrentFilterFunction="Contains" AutoPostBackOnFilter="false"
+                                DataField="BCO" HeaderText="BCO">
+                            </telerik:GridBoundColumn>
+
+                            
+                             <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
+                                  CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" 
+                                  DataField="AirwayBillNo" HeaderText="Airway Bill No"></telerik:GridBoundColumn>
+
+                              <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
+                                  CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" 
+                                  DataField="Driver" HeaderText="Driver"></telerik:GridBoundColumn>
+
+                            <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
+                                  CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" 
+                                  DataField="Checker" HeaderText="Checker"></telerik:GridBoundColumn>
+
+                            <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
+                                  CurrentFilterFunction="Contains" AutoPostBackOnFilter="false"
+                                  DataField="PlateNo" HeaderText="Plate #"></telerik:GridBoundColumn>
+
+                             <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
+                                  CurrentFilterFunction="Contains" AutoPostBackOnFilter="false"
+                                  DataField="BatchName" HeaderText="Batch"></telerik:GridBoundColumn>
+
+                            
+                             <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
+                                  CurrentFilterFunction="EqualTo" AutoPostBackOnFilter="false" AllowFiltering="false"
+                                  DataField="Qty" HeaderText="Qty"></telerik:GridBoundColumn>
+
+                              <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
+                                  CurrentFilterFunction="EqualTo" AutoPostBackOnFilter="false"  AllowFiltering="false"
+                                  DataField="Area" HeaderText="Area"></telerik:GridBoundColumn>
+
+                        </Columns>
                     </MasterTableView>
                 </telerik:RadGrid>
             </div>

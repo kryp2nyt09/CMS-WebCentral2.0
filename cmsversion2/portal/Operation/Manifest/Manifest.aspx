@@ -1,28 +1,23 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/cmsversion.Master" AutoEventWireup="true" CodeFile="Manifest.aspx.cs" Inherits="portal_Operation_Manifest_Manifest" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/cmsversion.master" AutoEventWireup="true" CodeFile="~/portal/Operation/Manifest/Manifest.aspx.cs" Inherits="portal_Operation_Manifest_Manifest" %>
 
 <%@ MasterType VirtualPath="~/cmsversion.master" %>
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
 
 <asp:Content ID="Content0" ContentPlaceHolderID="head" runat="Server">
-    <link href="../../styles/default.css" rel="stylesheet" />
-
+    <link href="../../../styles/default.css" rel="stylesheet" />
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="Server">
 <div id="wrapper">
-    <div id="page-wrapper">
+    <div id="page-wrapper"> 
          <div class="container-fluid">
              <!--- PAGE HEADER --->
              <div class="row col-lg-12">
                 <h3>MANIFEST</h3>
-                <ol class="breadcrumb">
-                  <li><i class="fa fa-dashboard"></i> Operation </li>
-                  <li><i class="fa fa-file"></i> Manifest </li>
-                </ol>
              </div>
             <!--- PAGE BODY --->
-             <div class="row col-lg-12" style="font-size:12px;">
-                <telerik:RadTabStrip ID="RadTabStrip1" runat="server" MultiPageID="RadMultiPage1" SelectedIndex="0" Skin="Office2010Black">
+             <div class="row col-lg-12" >
+                <telerik:RadTabStrip ID="RadTabStrip1" runat="server" MultiPageID="RadMultiPage1" SelectedIndex="0" Skin="Office2010Black" Font-Size="Small">
                     <Tabs>
                         <telerik:RadTab runat="server" Text="Pickup Cargo" PerTabScrolling="true" ScrollChildren="true" Selected="True"></telerik:RadTab>
                         <telerik:RadTab runat="server" Text="Branch Acceptance" PerTabScrolling="True" ScrollChildren="True" Selected="True"></telerik:RadTab>
@@ -39,16 +34,16 @@
                 </telerik:RadTabStrip>
                 <telerik:RadMultiPage ID="RadMultiPage1" runat="server" SelectedIndex="0" Height="500px">
                     <telerik:RadPageView ID="PickupCargo" runat="server" ContentUrl="PickupCargoManifestReport.aspx"></telerik:RadPageView>
-                    <telerik:RadPageView ID="BranchAcceptance" runat="server" ContentUrl="PickupCargoManifestReport.aspx"></telerik:RadPageView>
+                    <telerik:RadPageView ID="BranchAcceptance" runat="server" ContentUrl="BranchAcceptanceReport.aspx"></telerik:RadPageView>
                     <telerik:RadPageView ID="Bundle" runat="server" ContentUrl="BundleReport.aspx"></telerik:RadPageView>
-                    <telerik:RadPageView ID="Unbundle" runat="server" ContentUrl="BundleReport.aspx"></telerik:RadPageView>
-                    <telerik:RadPageView ID="GatewayTransmital" runat="server" ContentUrl="BundleReport.aspx"></telerik:RadPageView>
-                    <telerik:RadPageView ID="GatewayOutbound" runat="server" ContentUrl="BundleReport.aspx"></telerik:RadPageView>
-                    <telerik:RadPageView ID="GatewayInbound" runat="server" ContentUrl="BundleReport.aspx"></telerik:RadPageView>
-                    <telerik:RadPageView ID="CargoTransfer" runat="server" ContentUrl="BundleReport.aspx"></telerik:RadPageView>
-                    <telerik:RadPageView ID="Segregation" runat="server" ContentUrl="Segregation.aspx"></telerik:RadPageView>
+                    <telerik:RadPageView ID="Unbundle" runat="server" ContentUrl="UnbundleReport.aspx"></telerik:RadPageView>
+                    <telerik:RadPageView ID="GatewayTransmital" runat="server" ContentUrl="~/blank-page.html"></telerik:RadPageView>
+                    <telerik:RadPageView ID="GatewayOutbound" runat="server" ContentUrl="~/blank-page.html"></telerik:RadPageView>
+                    <telerik:RadPageView ID="GatewayInbound" runat="server" ContentUrl="~/blank-page.html"></telerik:RadPageView>
+                    <telerik:RadPageView ID="CargoTransfer" runat="server" ContentUrl="~/blank-page.html"></telerik:RadPageView>
+                    <telerik:RadPageView ID="Segregation" runat="server" ContentUrl="SegregationReport.aspx"></telerik:RadPageView>
                     <telerik:RadPageView ID="DailyTrip" runat="server" ContentUrl="DailyTripReport.aspx"></telerik:RadPageView>
-                    <telerik:RadPageView ID="HoldCargo" runat="server" ContentUrl="BundleReport.aspx"></telerik:RadPageView>
+                    <telerik:RadPageView ID="HoldCargo" runat="server" ContentUrl="~/blank-page.html"></telerik:RadPageView>
                 </telerik:RadMultiPage>
             </div>
          </div>

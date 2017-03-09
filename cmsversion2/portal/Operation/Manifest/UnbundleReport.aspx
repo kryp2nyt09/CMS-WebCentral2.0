@@ -21,32 +21,58 @@
 <telerik:RadScriptManager ID="RadScriptManager1" runat="server"></telerik:RadScriptManager>
 <div class="wrapper">
     <div id="page-wrapper">
-        <div class="container">
+        <div class="container-fluid">
             <!--- PAGE HEADER--->
             <div class="row">
                 <h3>UNBUNDLE</h3>
             </div>
             <!--- PAGE BODY--->
             <div class="row">
-                <div class="row form-group">
-                    <telerik:RadLabel ID="RadLabel1" runat="server">Date:</telerik:RadLabel>
-                    <telerik:RadDatePicker ID="dateTime_Unbundle_Date" runat="server"></telerik:RadDatePicker>
-                    
-                    <telerik:RadLabel ID="RadLabel4" runat="server">BCO:</telerik:RadLabel>
-                    <telerik:RadDropDownList ID="dropDown_Unbundle_BCO_BSO" runat="server" DropDownHeight="200"></telerik:RadDropDownList>
-                        
-                    <telerik:RadLabel ID="RadLabel3" runat="server" >Sack No:</telerik:RadLabel>
-                    <telerik:RadDropDownList ID="dropDown_Unbundle_SackNo" runat="server" ></telerik:RadDropDownList>
-
-                    <telerik:RadButton ID="btn_Bundle_Search" runat="server" Text="Search" CssClass="btn-primary" AutoPostBack="true"></telerik:RadButton>
-                </div>
-            </div>
-            <div class="row">
-                <telerik:RadGrid ID="grid_Unbundle" runat="server" OnNeedDataSource="grid_Unbundle_NeedDataSource" Skin="Office2010Black" 
-                    AllowPaging="True" ExportSettings-Excel-DefaultCellAlignment="Right" AllowSorting="true" Width="100%" PageSize="10">
+                <telerik:RadGrid ID="grid_Unbundle" runat="server"  Skin="Glow"
+                    AllowPaging="True" 
+                    PageSize="10"  
+                    AllowFilteringByColumn="True"
+                    AutoGenerateColumns="false"
+                    AllowSorting="true" 
+                    OnNeedDataSource="grid_Unbundle_NeedDataSource">
                 <ExportSettings HideStructureColumns="true" ExportOnlyData="true" IgnorePaging="true" UseItemStyles="true"></ExportSettings>          
                     <MasterTableView CommandItemDisplay="Top" Width="100%">
                         <CommandItemSettings ShowExportToExcelButton="true" ShowExportToPdfButton="true" ShowExportToWordButton="true" ShowExportToCsvButton="true" ShowAddNewRecordButton="false"  ShowRefreshButton="false" />
+                        <Columns>
+
+                           <telerik:GridDateTimeColumn
+                                 DataField="CreatedDate" HeaderText="Date" SortExpression="CreatedDate" AllowFiltering="true" FilterListOptions="VaryByDataType"
+                                 PickerType="DatePicker"  DataFormatString="{0:MM/dd/yyyy}" DataType="System.DateTime" UniqueName="CreatedDate" 
+                                 ></telerik:GridDateTimeColumn>
+
+                            <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
+                                  CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" 
+                                  DataField="BCO" HeaderText="BCO"></telerik:GridBoundColumn>
+
+                            <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
+                                  CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" 
+                                  DataField="SackNo" HeaderText="Sack #"></telerik:GridBoundColumn>
+
+                             <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
+                                  CurrentFilterFunction="EqualTo" AutoPostBackOnFilter="false" AllowFiltering="false"
+                                  DataField="Scanned Pcs" HeaderText="Scanned Pcs"></telerik:GridBoundColumn>
+
+                            <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
+                                  CurrentFilterFunction="EqualTo" AutoPostBackOnFilter="false" AllowFiltering="false"
+                                  DataField="Discrepency Pcs" HeaderText="Discrepency Pcs"></telerik:GridBoundColumn>
+
+                            <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
+                                  CurrentFilterFunction="EqualTo" AutoPostBackOnFilter="false" AllowFiltering="false"
+                                  DataField="Total Pcs" HeaderText="Total Pcs"></telerik:GridBoundColumn>
+
+                            <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
+                                  CurrentFilterFunction="EqualTo" AutoPostBackOnFilter="false" AllowFiltering="false"
+                                  DataField="Origin" HeaderText="Origin"></telerik:GridBoundColumn>
+
+                            <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
+                                  CurrentFilterFunction="EqualTo" AutoPostBackOnFilter="false" AllowFiltering="false"
+                                  DataField="AGW" HeaderText="AGW"></telerik:GridBoundColumn>   
+                        </Columns>
                     </MasterTableView>
                 </telerik:RadGrid>
             </div>

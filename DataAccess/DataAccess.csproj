@@ -50,7 +50,9 @@
     <Compile Include="Position.cs" />
     <Compile Include="Reason.cs" />
     <Compile Include="Remarks.cs" />
+    <Compile Include="Reports\BranchAcceptance.cs" />
     <Compile Include="Reports\Bundle.cs" />
+    <Compile Include="Reports\Collection.cs" />
     <Compile Include="Reports\DailyTrip.cs" />
     <Compile Include="Reports\PickupCargoManifest.cs" />
     <Compile Include="Reports\Segregation.cs" />
