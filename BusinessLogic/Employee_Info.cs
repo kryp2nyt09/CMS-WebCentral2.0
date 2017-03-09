@@ -51,5 +51,10 @@ namespace BusinessLogic
             DAL.EmployeeInfo.UpdateEmployee(EmployeeId, departmentId, positionId, firstname, lastname, middlename,
                birthday, telno, mobileno, email, license, licenseExpiration, createdby, assignedToAreaId, conStr);
         }
+
+        public static void DeleteEmployee(Guid employeeId, int Flag, string conStr)
+        {
+            DAL.EmployeeInfo.DeleteEmployee(employeeId, Flag, conStr);
+        }
     }
 }

@@ -40,7 +40,7 @@ namespace DataAccess
         }
 
 
-        public static DataSet UpdateBranchCorpOfficeById(Guid ProvinceId, Guid BranchCorpId, string BCOName, Guid modifiedBy, int Flag,string conSTR)
+        public static DataSet UpdateBranchCorpOfficeById(Guid ProvinceId, Guid BranchCorpId, string BCOName, string bcoCode, Guid modifiedBy, int Flag,string conSTR)
         {
             using (SqlConnection con = new SqlConnection(conSTR))
             {
@@ -50,6 +50,7 @@ namespace DataAccess
                 da.SelectCommand.Parameters.Add("@BranchCorpOfficeId", SqlDbType.UniqueIdentifier).Value = BranchCorpId;
                 da.SelectCommand.Parameters.Add("@modifiedBy", SqlDbType.UniqueIdentifier).Value = modifiedBy;
                 da.SelectCommand.Parameters.Add("@BCOname", SqlDbType.VarChar).Value = BCOName;
+                da.SelectCommand.Parameters.Add("@BCOCode", SqlDbType.VarChar).Value = bcoCode;
                 da.SelectCommand.Parameters.Add("@flag", SqlDbType.Int).Value = Flag;
                 DataSet ds = new DataSet();
                 da.Fill(ds);
@@ -58,7 +59,7 @@ namespace DataAccess
 
         }
 
-        public static DataSet InsertBranchCorpOffice(Guid ProvinceId, string BCOName, Guid modifiedBy, int Flag, string conSTR)
+        public static DataSet InsertBranchCorpOffice(Guid ProvinceId, string BCOName, string bcoCode, Guid modifiedBy, int Flag, string conSTR)
         {
             using (SqlConnection con = new SqlConnection(conSTR))
             {
@@ -67,6 +68,7 @@ namespace DataAccess
                 da.SelectCommand.Parameters.Add("@ProvinceId", SqlDbType.UniqueIdentifier).Value = ProvinceId;
                 da.SelectCommand.Parameters.Add("@modifiedBy", SqlDbType.UniqueIdentifier).Value = modifiedBy;
                 da.SelectCommand.Parameters.Add("@BCOname", SqlDbType.VarChar).Value = BCOName;
+                da.SelectCommand.Parameters.Add("@BCOCode", SqlDbType.VarChar).Value = bcoCode;
                 da.SelectCommand.Parameters.Add("@flag", SqlDbType.Int).Value = Flag;
                 DataSet ds = new DataSet();
                 da.Fill(ds);

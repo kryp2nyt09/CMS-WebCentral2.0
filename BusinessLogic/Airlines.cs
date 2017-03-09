@@ -31,6 +31,11 @@ namespace BusinessLogic
         {
             return DAL.Airlines.GetAirlineByAirlineID(conSTR, ID);
         }
+
+        public static DataSet GetAllAirlines(string conSTR)
+        {
+            return DAL.Airlines.GetAllAirlines(conSTR);
+        }
     }
 
 }

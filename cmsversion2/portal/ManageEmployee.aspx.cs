@@ -246,8 +246,8 @@ public partial class _ManageEmployee : System.Web.UI.Page
     {
         if (e.CommandName == "Delete")
         {
-            string userid = e.Item.OwnerTableView.DataKeyValues[e.Item.ItemIndex]["EmployeeId"].ToString();
-            BLL.Users_Info.UpdateUserProfile(new Guid(userid), 3, getConstr.ConStrCMS);
+            string employeeId = e.Item.OwnerTableView.DataKeyValues[e.Item.ItemIndex]["EmployeeId"].ToString();
+            BLL.Employee_Info.DeleteEmployee(new Guid(employeeId), 3, getConstr.ConStrCMS);
             //3 for delete flagging
         }
     }

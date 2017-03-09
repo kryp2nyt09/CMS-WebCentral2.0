@@ -69,7 +69,7 @@
 
         .main-login {
             background-color: #fff;
-             shadows and rounded borders 
+             /*shadows and rounded borders*/ 
             -moz-border-radius: 2px;
             -webkit-border-radius: 2px;
         }
@@ -198,7 +198,7 @@
                             <asp:Label ID="Label6" runat="server" Text="City"></asp:Label>
                             <br />
                             <br />
-                            <br>
+                            <br/>
                              <asp:Label ID="Label46" runat="server" Text="Zip Code"></asp:Label>
                             
                         </div>

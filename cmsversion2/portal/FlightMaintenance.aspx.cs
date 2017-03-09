@@ -1,23 +1,24 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.OleDb;
 using System.Web.UI.WebControls;
 using Telerik.Web.UI;
 using BLL = BusinessLogic;
 using Tools = utilities;
 using DAL = DataAccess;
+using System.IO;
+using System.Text.RegularExpressions;
+using Microsoft.VisualBasic.FileIO;
+
 public partial class _FlightMaintenance : System.Web.UI.Page
 {
-
-    
-
-        Tools.DataAccessProperties getConstr = new Tools.DataAccessProperties();
+    Tools.DataAccessProperties getConstr = new Tools.DataAccessProperties();
     protected void Page_Load(object sender, EventArgs e)
     {
-    
-        
+        FileUploadFlightInfo.Attributes["onchange"] = "UploadFile(this)";
+
+
+
         RadGrid2.MasterTableView.CommandItemSettings.ShowAddNewRecordButton = false;
       
         if (!string.IsNullOrEmpty(Session["UsernameSession"] as string))
@@ -85,7 +86,7 @@ public partial class _FlightMaintenance : System.Web.UI.Page
     public DataTable GetFlightDetails()
     {
         //DataTable data = new DataTable();
-        DataSet data = DAL.Flight.GetFlightInformation(getConstr.ConStrCMS);
+        DataSet data = BLL.Flight.GetFlightInformation(getConstr.ConStrCMS);
         DataTable convertdata = new DataTable();
         convertdata = data.Tables[0];
         return convertdata;
@@ -137,4 +138,116 @@ public partial class _FlightMaintenance : System.Web.UI.Page
            
         }
     }
+
+    //Upload File
+    protected void btnUpload_Click(object sender, EventArgs e)
+    {
+        //StreamReader streamReader;
+        //FileUpload1.SaveAs(Server.MapPath("~/Uploads/" + Path.GetFileName(FileUpload1.FileName)));
+        if (FileUploadFlightInfo.HasFile)
+        {
+            string extension = System.IO.Path.GetExtension(FileUploadFlightInfo.FileName); // extension file
+            //string contentType = FileUploadFlightInfo.PostedFile.ContentType;
+            if (extension.Equals(".csv") || extension.Equals(".xlsx") || extension.Equals(".xls"))
+            {
+                try
+                {
+                    //string fileName = Path.GetFileName(FileUploadFlightInfo.PostedFile.FileName);
+                    //string SaveLocation = Server.MapPath("UploadedFiles") + "\\" + fileName;
+                    // FileInfo fi = new FileInfo(SaveLocation);
+                    //FileUploadFlightInfo.PostedFile.SaveAs(SaveLocation);
+                    //FileUploadFlightInfo.SaveAs(SaveLocation);
+                    string folderPath = Server.MapPath("~/Upload");
+                    
+                    //Check whether Directory (Folder) exists.
+                    if (!Directory.Exists(folderPath))
+                    {
+                        //If Directory (Folder) does not exists. Create it.
+                        Directory.CreateDirectory(folderPath);
+                    }
+
+                    string SaveLocation = folderPath + "\\" + FileUploadFlightInfo.FileName;
+                    //string SaveLocation = folderPath + Path.GetFileName(FileUploadFlightInfo.FileName);
+                    // FileUploadFlightInfo.SaveAs(SaveLocation);
+                    
+                    //Save the File to the Directory (Folder).
+                    FileUploadFlightInfo.SaveAs(SaveLocation);
+
+                    DataTable csvData = GetDataTableFromCSVFile(SaveLocation);
+
+
+                }
+                catch(Exception ex)
+                {
+                    Console.WriteLine(ex);
+                }
+            }
+            else
+            {
+
+            }
+        }
+    }
+
+    static System.Globalization.DateTimeFormatInfo dti = new System.Globalization.DateTimeFormatInfo();
+    static string dateFormat = "yyyyMMddHHmmss";
+
+    public DataTable GetDataTableFromCSVFile(string csvFilePath)
+    {
+        DataTable csvData = new DataTable();
+        try
+        {
+            using (TextFieldParser csvReader = new TextFieldParser(csvFilePath))
+            {
+                csvReader.SetDelimiters(new string[] { "," });
+                csvReader.HasFieldsEnclosedInQuotes = true;
+
+                //read column names  
+                string[] colFields = csvReader.ReadFields();
+                foreach (string column in colFields)
+                {
+                    DataColumn datecolumn = new DataColumn(column);
+                    datecolumn.AllowDBNull = true;
+                    csvData.Columns.Add(datecolumn);
+                }
+
+                while (!csvReader.EndOfData)
+                {
+                    string[] fieldData = csvReader.ReadFields();
+                    string flightNo = fieldData[0];
+                    string airlineName = fieldData[3];
+                    string originCityName = fieldData[4];
+                    string destinationCityName = fieldData[5];
+                    //DateTime ETD = convertStringToDateTime(fieldData[1]);
+                    //DateTime ETA = convertStringToDateTime(fieldData[2]);
+                    DateTime ETD = Convert.ToDateTime(fieldData[1]);
+                    DateTime ETA = Convert.ToDateTime(fieldData[2]);
+
+                    // csvData.Rows.Add(fieldData);
+                }
+            }
+        }
+        catch(Exception ex)
+        {
+            Console.WriteLine(ex);
+        }
+
+        return csvData;
+    }
+
+    //convert DateTime into Formated String
+    public static string convertDateTimeToFormatedString(DateTime dateTime)
+    {
+        return dateTime.ToString(dateFormat, dti);
+    }
+
+    //convert Formatted String into DateTime
+    public static DateTime convertStringToDateTime(string dateTimeInString)
+    {
+        dti.LongTimePattern = dateFormat;
+        return DateTime.ParseExact(dateTimeInString, "T", dti);
+    }
+
+
+
 }

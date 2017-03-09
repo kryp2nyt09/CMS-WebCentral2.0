@@ -132,5 +132,20 @@ namespace DataAccess
                 }
             }
         }
+
+        public static void DeleteEmployee(Guid employeeId, int Flag, string conStr)
+        {
+            using (SqlConnection con = new SqlConnection(conStr))
+            {
+                using (SqlCommand cmd = new SqlCommand("sp_delete_Employee", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@EmployeeId", SqlDbType.UniqueIdentifier).Value = employeeId;
+                    cmd.Parameters.Add("@Flag", SqlDbType.Int).Value = Flag;
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
     }
 }

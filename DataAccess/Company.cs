@@ -248,6 +248,20 @@ namespace DataAccess
             }
         }
 
+        public static void DeleteCompany(Guid companyId, int Flag, string conStr)
+        {
+            using (SqlConnection con = new SqlConnection(conStr))
+            {
+                using (SqlCommand cmd = new SqlCommand("sp_delete_Company", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@CompanyId", SqlDbType.UniqueIdentifier).Value = companyId;
+                    cmd.Parameters.Add("@Flag", SqlDbType.Int).Value = Flag;
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
 
     }
 }

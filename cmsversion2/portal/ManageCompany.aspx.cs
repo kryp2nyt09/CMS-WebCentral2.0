@@ -116,8 +116,8 @@ public partial class _ManageCompany : System.Web.UI.Page
     {
         if (e.CommandName == "Delete")
         {
-            string userid = e.Item.OwnerTableView.DataKeyValues[e.Item.ItemIndex]["CompanyId"].ToString();
-            BLL.Users_Info.UpdateUserProfile(new Guid(userid), 3, getConstr.ConStrCMS);
+            string companyId = e.Item.OwnerTableView.DataKeyValues[e.Item.ItemIndex]["CompanyId"].ToString();
+            BLL.Company.DeleteCompany(new Guid(companyId), 3, getConstr.ConStrCMS);
             //3 for delete flagging
         }
     }

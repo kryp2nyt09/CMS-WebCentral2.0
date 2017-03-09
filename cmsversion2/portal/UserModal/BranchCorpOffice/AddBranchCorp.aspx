@@ -144,13 +144,28 @@
                         <label for="email" class="cols-sm-2 control-label" style="font-style: normal">BCO Name</label>
                         <div class="input-group" style="font-size: 12px">
 
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks"></i></span>
 
                             <asp:Label ID="lblGroupID" runat="server" Text="" Visible="false"></asp:Label>
 
                             <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtRegionName" Enabled="True" runat="server"></telerik:RadTextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"
                                 ControlToValidate="txtRegionName"
+                                ErrorMessage="*"
+                                ForeColor="Red">
+                            </asp:RequiredFieldValidator>
+                        </div>
+
+                        <label for="email" class="cols-sm-2 control-label" style="font-style: normal">BCO Code</label>
+                        <div class="input-group" style="font-size: 12px">
+
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks"></i></span>
+
+                            <asp:Label ID="Label1" runat="server" Text="" Visible="false"></asp:Label>
+
+                            <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtBcoCode" Enabled="True" runat="server"></telerik:RadTextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server"
+                                ControlToValidate="txtBcoCode"
                                 ErrorMessage="*"
                                 ForeColor="Red">
                             </asp:RequiredFieldValidator>

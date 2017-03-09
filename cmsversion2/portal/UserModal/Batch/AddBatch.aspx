@@ -7,7 +7,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title>Edit dialog</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
 
     <!-- Website CSS style -->
@@ -17,8 +17,8 @@
 
     <link href="../../../css/bootstrap.css" rel="stylesheet" />
     <!-- Google Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'/>
 
     <style type="text/css">
         /*
@@ -137,7 +137,7 @@
                     <div class="cols-sm-10">
                         <div class="input-group" style="font-size: 12px">
 
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks"></i></span>
                             <asp:Label ID="lblBatchID" runat="server" Text="" Visible="false"></asp:Label>
                             <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtBatchName" Enabled="True" runat="server"></telerik:RadTextBox>
 

@@ -25,15 +25,15 @@ namespace BusinessLogic
         }
 
 
-        public static void UpdateBranchCorpOfficeById(Guid ProvinceId, Guid BranchCorpId, string BCOName, Guid modifiedBy, int Flag, string conSTR)
+        public static void UpdateBranchCorpOfficeById(Guid ProvinceId, Guid BranchCorpId, string BCOName, string bcoCode, Guid modifiedBy, int Flag, string conSTR)
         {
-            DAL.BranchCorpOffice.UpdateBranchCorpOfficeById(ProvinceId, BranchCorpId, BCOName, modifiedBy, Flag, conSTR);
+            DAL.BranchCorpOffice.UpdateBranchCorpOfficeById(ProvinceId, BranchCorpId, BCOName, bcoCode, modifiedBy, Flag, conSTR);
         }
 
 
-        public static void InsertBranchCorpOffice(Guid ProvinceId, string BCOName, Guid modifiedBy, int Flag, string conSTR)
+        public static void InsertBranchCorpOffice(Guid ProvinceId, string BCOName, string bcoCode,Guid modifiedBy, int Flag, string conSTR)
         {
-            DAL.BranchCorpOffice.InsertBranchCorpOffice(ProvinceId,   BCOName, modifiedBy, Flag,conSTR);
+            DAL.BranchCorpOffice.InsertBranchCorpOffice(ProvinceId,   BCOName, bcoCode, modifiedBy, Flag,conSTR);
         }
 
         public static DataSet GetBranchCorpOfficeById(Guid BranchCorpId, string conSTR)

@@ -17,7 +17,7 @@ public partial class _EditFlight : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
-            LoadBranchCorpOffice();
+            //LoadBranchCorpOffice();
             LoadCity();
             GetGateway();
             GetGateway();
@@ -42,14 +42,14 @@ public partial class _EditFlight : System.Web.UI.Page
 
                         string ETD1 = row["ETD"].ToString();
                         string ETA1 = row["ETA"].ToString();
-                        string BCOName = row["BCOName"].ToString();
+                        //string BCOName = row["BCOName"].ToString();
                         string GateWayName = row["GateWayName"].ToString();
                         string DestinationCityName = row["DestinationCityName"].ToString();
                         string OriginCityName = row["OriginCityName"].ToString();
 
 
-                        RadComboBoxItem item = rcbBCO.FindItemByText(BCOName);
-                        item.Selected = true;
+                        //RadComboBoxItem item = rcbBCO.FindItemByText(BCOName);
+                       // item.Selected = true;
 
                         RadComboBoxItem item1 = rcbGateway.FindItemByText(GateWayName);
                         item1.Selected = true;
@@ -76,26 +76,26 @@ public partial class _EditFlight : System.Web.UI.Page
     private void GetGateway()
     {
 
-        rcbGateway.DataSource = BLL.Gateway.GetGateway(getConstr.ConStrCMS);
-        rcbGateway.DataValueField = "RevenueUnitId";
-        rcbGateway.DataTextField = "RevenueUnitName";
+        rcbGateway.DataSource = BLL.Airlines.GetAllAirlines(getConstr.ConStrCMS);
+        rcbGateway.DataValueField = "AirlineID";
+        rcbGateway.DataTextField = "AirlineName";
         rcbGateway.DataBind();
     }
 
     protected override void OnInit(EventArgs e)
     {
         base.OnInit(e);
-        this.Page.Title = "Edit BranchCorp";
+        this.Page.Title = "Edit Flight Information";
     }
 
 
-    private void LoadBranchCorpOffice()
-    {
-        rcbBCO.DataSource = BLL.BranchCorpOffice.GetBranchCorpOffice(getConstr.ConStrCMS);
-        rcbBCO.DataValueField = "BranchCorpOfficeId";
-        rcbBCO.DataTextField = "BranchCorpOfficeName";
-        rcbBCO.DataBind();
-    }
+    //private void LoadBranchCorpOffice()
+    //{
+    //    rcbBCO.DataSource = BLL.BranchCorpOffice.GetBranchCorpOffice(getConstr.ConStrCMS);
+    //    rcbBCO.DataValueField = "BranchCorpOfficeId";
+    //    rcbBCO.DataTextField = "BranchCorpOfficeName";
+    //    rcbBCO.DataBind();
+    //}
 
     private void LoadCity()
     {
@@ -162,16 +162,16 @@ public partial class _EditFlight : System.Web.UI.Page
 
     protected void btnSave_Click(object sender, EventArgs e)
     {
-        Guid BCOid = new Guid(rcbBCO.SelectedItem.Value.ToString());
+        //Guid BCOid = new Guid(rcbBCO.SelectedItem.Value.ToString());
         Guid GatewayId = new Guid(rcbGateway.SelectedItem.Value.ToString());
         Guid OriginCity = new Guid(rcbOrigin.SelectedItem.Value.ToString());
         Guid DestinationCity = new Guid(rcbDestination.SelectedItem.Value.ToString());
         DateTime ETD = rdtETD.SelectedDate.Value;
-        DateTime ETA = rdtETD.SelectedDate.Value;
+        DateTime ETA = rdtETA.SelectedDate.Value;
         String FlightNo = txtFlightNo.Text;
                 Guid ModifiedBy = new Guid("11111111-1111-1111-1111-111111111111");
         string host = HttpContext.Current.Request.Url.Authority;
-        DAL.Flight.UpdateFlightInfo(new Guid(lblGroupID.Text), txtFlightNo.Text, ETD, ETA, BCOid, GatewayId, OriginCity, DestinationCity, ModifiedBy, getConstr.ConStrCMS);
+        DAL.Flight.UpdateFlightInfo(new Guid(lblGroupID.Text), txtFlightNo.Text, ETD, ETA, GatewayId, OriginCity, DestinationCity, ModifiedBy, getConstr.ConStrCMS);
         string script = "<script>CloseOnReload()</" + "script>";
         ClientScript.RegisterStartupScript(this.GetType(), "CloseOnReload", script);
 
