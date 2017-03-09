@@ -1,30 +1,25 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="SegregationReport.aspx.cs" Inherits="portal_Operation_Manifest_SegregationReport" %>
+﻿<%@ Page Language="C#" Title="Segregation" MasterPageFile="~/cmsversion.master" AutoEventWireup="true" CodeFile="SegregationReport.aspx.cs" Inherits="portal_Operation_Manifest_SegregationReport" %>
 
-<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Segregation</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Website CSS style -->
-    <link href="~/styles/default.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
-    <link href="~/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
-    <!-- Website Font style -->
-    <link href="~/css/bootstrap.css" rel="stylesheet" />
-    <!-- Google Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'/>
-    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'/>
-</head>
-<body>
-<form id="form1" runat="server">
-<telerik:RadScriptManager ID="RadScriptManager1" runat="server"></telerik:RadScriptManager>
-<div class="wrapper">
+<%@ MasterType VirtualPath="~/cmsversion.master" %>
+<%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
+
+<asp:Content ID="Content0" ContentPlaceHolderID="head" runat="Server">
+    <link href="../../../styles/default.css" rel="stylesheet" />
+</asp:Content>
+
+<asp:Content ID="BranchAcceptance" ContentPlaceHolderID="ContentPlaceHolder2" runat="Server">
+ <div class="wrapper">
     <div id="page-wrapper">
-        <div class="container-fluid">
+        <div class="container">
             <!--- PAGE HEADER--->
             <div class="row">
                 <h3>SEGREGATION</h3>
+                <ol class="breadcrumb">
+                    <li>Manifest</li>
+                    <li>Operation</li>
+                    <li>Segregation</li>
+                </ol>
             </div>
             <!--- PAGE BODY--->
             <div class="row">
@@ -85,7 +80,5 @@
             </div>
         </div>
     </div>
-</div>
-</form>
-</body>
-</html>
+</div>   
+</asp:Content>

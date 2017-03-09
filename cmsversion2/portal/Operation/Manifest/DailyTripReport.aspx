@@ -1,30 +1,24 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="DailyTripReport.aspx.cs" Inherits="portal_Operation_Manifest_DailyTripReport" %>
+﻿<%@ Page Language="C#" Title="Daily Trip" MasterPageFile="~/cmsversion.master" AutoEventWireup="true" CodeFile="DailyTripReport.aspx.cs" Inherits="portal_Operation_Manifest_DailyTripReport" %>
 
-<!DOCTYPE html>
+<%@ MasterType VirtualPath="~/cmsversion.master" %>
+<%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Daily Trip</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Website CSS style -->
-    <link href="~/styles/default.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
-    <link href="~/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
-    <!-- Website Font style -->
-    <link href="~/css/bootstrap.css" rel="stylesheet" />
-    <!-- Google Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'/>
-    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'/>
-</head>
-<body>
-<form runat="server">
-<telerik:RadScriptManager ID="RadScriptManager1" runat="server"></telerik:RadScriptManager>
+<asp:Content ID="Content0" ContentPlaceHolderID="head" runat="Server">
+    <link href="../../../styles/default.css" rel="stylesheet" />
+</asp:Content>
+
+<asp:Content ID="BranchAcceptance" ContentPlaceHolderID="ContentPlaceHolder2" runat="Server">
 <div class="wrapper">
     <div id="page-wrapper">
-        <div class="container-fluid">
+        <div class="container">
             <!--- PAGE HEADER--->
             <div class="row">
                 <h3>DAILY TRIP</h3>
+                <ol class="breadcrumb">
+                    <li>Manifest</li>
+                    <li>Operation</li>
+                    <li>Daily Trip</li>
+                </ol>
             </div>
             <!--- PAGE BODY--->
             <div class="row">
@@ -59,13 +53,13 @@
                                   CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" 
                                   DataField="Driver" HeaderText="Driver"></telerik:GridBoundColumn>
 
-                            <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
+                            <%--<telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
                                   CurrentFilterFunction="EqualTo" AutoPostBackOnFilter="false"
                                   DataField="Checker" HeaderText="Checker"></telerik:GridBoundColumn>
 
                             <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
                                   CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" 
-                                  DataField="PlateNo" HeaderText="Plate #"></telerik:GridBoundColumn>
+                                  DataField="PlateNo" HeaderText="Plate #"></telerik:GridBoundColumn>--%>
 
                              <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
                                   CurrentFilterFunction="Contains" AutoPostBackOnFilter="false"
@@ -104,7 +98,5 @@
             </div>
         </div>
     </div>
-</div>
-</form>
-</body>
-</html>
+</div>    
+</asp:Content>

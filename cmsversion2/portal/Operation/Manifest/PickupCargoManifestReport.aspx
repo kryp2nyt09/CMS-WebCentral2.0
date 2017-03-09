@@ -1,52 +1,51 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="PickupCargoManifestReport.aspx.cs" Inherits="portal_Operation_Manifest_PickupCargoManifestReport" %>
+﻿<%@ Page Title="Pickup Cargo" Language="C#" AutoEventWireup="true"  MasterPageFile="~/cmsversion.master" CodeFile="PickupCargoManifestReport.aspx.cs" Inherits="portal_Operation_Manifest_PickupCargoManifestReport" %>
 
-<!DOCTYPE html>
+<%@ MasterType VirtualPath="~/cmsversion.master" %>
+<%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Pickup Cargo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Website CSS style -->
-    <link href="~/styles/default.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
-    <link href="~/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
-    <!-- Website Font style -->
-    <link href="~/css/bootstrap.css" rel="stylesheet" />
-    <!-- Google Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'/>
-    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'/>
-</head>
-<body>
-<form runat="server">
-<telerik:RadScriptManager ID="RadScriptManager1" runat="server"></telerik:RadScriptManager>
+<asp:Content ID="Content0" ContentPlaceHolderID="head" runat="Server">
+    <link href="../../../styles/default.css" rel="stylesheet" />
+</asp:Content>
+
+<asp:Content ID="PickUpCargo" ContentPlaceHolderID="ContentPlaceHolder2" runat="Server">
 <div class="wrapper">
     <div id="page-wrapper">
-        <div class="container-fluid">
+        <div class="container">
             <!--- PAGE HEADER--->
             <div class="row">
                 <h3>PICK UP CARGO</h3>
+                <ol class="breadcrumb">
+                    <li>Manifest</li>
+                    <li>Operation</li>
+                    <li>Pickup Cargo</li>
+                </ol>
             </div>
             <!--- PAGE BODY--->
             <div class="row">
-                <telerik:RadGrid ID="gridPickupCargo" runat="server"  Skin="Glow"
+                <telerik:RadGrid ID="gridPickupCargo" runat="server"  Skin="Glow" CssClass="row"
                     AllowPaging="True" 
                     PageSize="10"  
                     AllowFilteringByColumn="True"
                     AutoGenerateColumns="false"
                     AllowSorting="true" 
-                    OnNeedDataSource="gridPickupCargo_NeedDataSource">
+                    OnNeedDataSource="gridPickupCargo_NeedDataSource" OnInfrastructureExporting="gridPickupCargo_InfrastructureExporting">
                     
-                    <ExportSettings HideStructureColumns="true" ExportOnlyData="true" IgnorePaging="true" UseItemStyles="true"></ExportSettings>          
+                    <ExportSettings HideStructureColumns="true" ExportOnlyData="true" IgnorePaging="true" UseItemStyles="true" >
+                        <Pdf ForceTextWrap="true" PageWidth="297mm" PageHeight="210mm" BorderColor="Black" BorderType="AllBorders" BorderStyle="Thin" PageTitle="AP CARGO">
+                          
+                        </Pdf>
+                        <Excel  Format="Xlsx"/>
+                    </ExportSettings>          
                     <MasterTableView CommandItemDisplay="Top" Font-Size="Smaller">
-                        <CommandItemSettings ShowExportToExcelButton="true" ShowExportToPdfButton="true" ShowExportToWordButton="true" ShowExportToCsvButton="true" ShowAddNewRecordButton="false"  ShowRefreshButton="false" />
-                        <Columns>
+                        <CommandItemSettings ShowExportToExcelButton="true" ShowExportToPdfButton="true" ShowExportToWordButton="true" ShowExportToCsvButton="true" ShowAddNewRecordButton="false"  ShowRefreshButton="false"/>
+                        <Columns>                           
                              <telerik:GridDateTimeColumn
-                                 DataField="CreatedDate" HeaderText="Date" SortExpression="CreatedDate" AllowFiltering="true" FilterListOptions="VaryByDataType"
+                                 DataField="CreatedDate" HeaderText="Date" SortExpression="CreatedDate" AllowFiltering="true" FilterListOptions="VaryByDataType" Exportable="false"
                                  PickerType="DatePicker"  DataFormatString="{0:MM/dd/yyyy}" DataType="System.DateTime" UniqueName="CreatedDate" 
                                  ></telerik:GridDateTimeColumn>
 
                              <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
-                                  CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" 
+                                  CurrentFilterFunction="Contains" AutoPostBackOnFilter="false"  
                                   DataField="AirwayBillNo" HeaderText="Airway Bill No"></telerik:GridBoundColumn>
 
                             <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
@@ -100,6 +99,4 @@
         </div>
     </div>
 </div>
-</form>
-</body>
-</html>
+</asp:Content>
