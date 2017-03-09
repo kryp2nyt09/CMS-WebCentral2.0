@@ -35,13 +35,15 @@ public partial class _EditBranchCorp : System.Web.UI.Page
                                                
                         string Id = row["BranchCorpOfficeId"].ToString();
                         string BranchCorpOfficeName = row["BranchCorpOfficeName"].ToString();
-                        
+                        string BranchCorpOfficeCode= row["BranchCorpOfficeCode"].ToString();
+
                         string ProvinceName = row["ProvinceName"].ToString();
                        
                         RadComboBoxItem item = rcbGroup.FindItemByText(ProvinceName);
                         item.Selected = true;
 
                         txtRegionName.Text = BranchCorpOfficeName; //BCOname
+                        txtbcoCode.Text = BranchCorpOfficeCode;
                         lblGroupID.Text = Id;
                         counter++;
                     }
@@ -122,7 +124,7 @@ public partial class _EditBranchCorp : System.Web.UI.Page
         Guid ModifiedBy = new Guid("11111111-1111-1111-1111-111111111111");
         string host = HttpContext.Current.Request.Url.Authority;
         string RegionName = txtRegionName.Text;
-        BLL.BranchCorpOffice.UpdateBranchCorpOfficeById(ProvinceId, BranchCorpId, txtRegionName.Text, ModifiedBy, 1, getConstr.ConStrCMS);
+        BLL.BranchCorpOffice.UpdateBranchCorpOfficeById(ProvinceId, BranchCorpId, txtRegionName.Text,txtbcoCode.Text ,ModifiedBy, 1, getConstr.ConStrCMS);
            
         string script = "<script>CloseOnReload()</" + "script>";
         ClientScript.RegisterStartupScript(this.GetType(), "CloseOnReload", script);

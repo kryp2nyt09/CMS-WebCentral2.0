@@ -11,7 +11,7 @@ namespace DataAccess
 {
     public class Flight
     {
-
+        
         public static DataSet GetFlightInformation(string conSTR)
         {
             using (SqlConnection con = new SqlConnection(conSTR))
@@ -55,7 +55,7 @@ namespace DataAccess
         }
 
         public static void InsertFlightInfo(
-            String flightNo, DateTime ETD, DateTime ETA, Guid BCOid, Guid GatewayId, Guid OriginCity, Guid DestinationId, Guid CreatedBy,
+            string flightNo, DateTime ETD, DateTime ETA, Guid GatewayId, Guid OriginCity, Guid DestinationId, Guid CreatedBy,
            string conStr)
         {
             using (SqlConnection con = new SqlConnection(conStr))
@@ -68,7 +68,7 @@ namespace DataAccess
                     cmd.Parameters.Add("@FlightNo", SqlDbType.VarChar).Value = flightNo;
                     cmd.Parameters.Add("@ETD", SqlDbType.DateTime).Value = ETD;
                     cmd.Parameters.Add("@ETA", SqlDbType.DateTime).Value = ETA;
-                    cmd.Parameters.Add("@BCOId", SqlDbType.UniqueIdentifier).Value = BCOid;
+                    //cmd.Parameters.Add("@BCOId", SqlDbType.UniqueIdentifier).Value = BCOid;
                     cmd.Parameters.Add("@GatewayId", SqlDbType.UniqueIdentifier).Value = GatewayId;
                     cmd.Parameters.Add("@OriginCity", SqlDbType.UniqueIdentifier).Value = OriginCity;
                     cmd.Parameters.Add("@DestinationId", SqlDbType.UniqueIdentifier).Value = DestinationId;
@@ -82,7 +82,7 @@ namespace DataAccess
         }
 
         public static void UpdateFlightInfo(Guid FlightInfoId,
-            String flightNo, DateTime ETD, DateTime ETA, Guid BCOid, Guid GatewayId, Guid OriginCity, Guid DestinationId, Guid CreatedBy,
+            String flightNo, DateTime ETD, DateTime ETA, Guid GatewayId, Guid OriginCity, Guid DestinationId, Guid CreatedBy,
            string conStr)
         {
             using (SqlConnection con = new SqlConnection(conStr))
@@ -94,7 +94,7 @@ namespace DataAccess
                     cmd.Parameters.Add("@FlightNo", SqlDbType.VarChar).Value = flightNo;
                     cmd.Parameters.Add("@ETD", SqlDbType.DateTime).Value = ETD;
                     cmd.Parameters.Add("@ETA", SqlDbType.DateTime).Value = ETA;
-                    cmd.Parameters.Add("@BCOId", SqlDbType.UniqueIdentifier).Value = BCOid;
+                    //cmd.Parameters.Add("@BCOId", SqlDbType.UniqueIdentifier).Value = BCOid;
                     cmd.Parameters.Add("@GatewayId", SqlDbType.UniqueIdentifier).Value = GatewayId;
                     cmd.Parameters.Add("@OriginCity", SqlDbType.UniqueIdentifier).Value = OriginCity;
                     cmd.Parameters.Add("@DestinationId", SqlDbType.UniqueIdentifier).Value = DestinationId;
@@ -105,10 +105,6 @@ namespace DataAccess
                 }
             }
         }
-
-    
-
-
 
     }
 }

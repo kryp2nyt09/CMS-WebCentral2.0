@@ -7,18 +7,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title>Edit dialog</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
 
     <!-- Website CSS style -->
-    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css"/>
     <link href="../../../font-awesome/css/font-awesome.min.css" rel="stylesheet" />
     <!-- Website Font style -->
 
     <link href="../../../css/bootstrap.css" rel="stylesheet" />
     <!-- Google Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'/>
 
     <style type="text/css">
         /*
@@ -68,7 +68,7 @@
 
         .main-login {
             background-color: #fff;
-             shadows and rounded borders 
+             /*shadows and rounded borders*/ 
             -moz-border-radius: 2px;
             -webkit-border-radius: 2px;
         }
@@ -212,7 +212,7 @@
                     <div class="cols-sm-10">
                         <div class="input-group" style="font-size: 12px">
 
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks"></i></span>
 
                             <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtFirstname" Enabled="True" runat="server"></telerik:RadTextBox>
                         </div>
@@ -222,7 +222,7 @@
                     <label for="email" class="cols-sm-2 control-label">Last Name</label>
                     <div class="cols-sm-10">
                         <div class="input-group" style="font-size: 12px">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks"></i></span>
                             <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtLastname" Enabled="True" runat="server"></telerik:RadTextBox>
                         </div>
                         <br />
@@ -231,7 +231,7 @@
                     <label for="email" class="cols-sm-2 control-label">Middle Name</label>
                     <div class="cols-sm-10">
                         <div class="input-group" style="font-size: 12px">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks"></i></span>
                             <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtMiddlename" Enabled="True" runat="server"></telerik:RadTextBox>
                         </div>
                         <br />
@@ -241,7 +241,7 @@
                     <div class="cols-sm-10">
                         <div class="input-group" style="font-size: 12px">
 
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks"></i></span>
 
                             <telerik:RadDatePicker ID="dpBirthDate" MinDate="1950/1/1" ZIndex="11000"  runat="server" Width="190"></telerik:RadDatePicker>
 
@@ -253,7 +253,7 @@
                     <label for="email" class="cols-sm-2 control-label">Tel. Number</label>
                     <div class="cols-sm-10">
                         <div class="input-group" style="font-size: 12px">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks"></i></span>
                             <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtTel" Enabled="True" runat="server"></telerik:RadTextBox>
                         </div>
                         <br />
@@ -262,7 +262,7 @@
                     <label for="email" class="cols-sm-2 control-label">Mobile Number</label>
                     <div class="cols-sm-10">
                         <div class="input-group" style="font-size: 12px">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks"></i></span>
                             <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtMobile" Enabled="True" runat="server"></telerik:RadTextBox>
                         </div>
                         <br />
@@ -271,7 +271,7 @@
                     <label for="email" class="cols-sm-2 control-label">Email</label>
                     <div class="cols-sm-10">
                         <div class="input-group" style="font-size: 12px">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks"></i></span>
                             <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtEmail" Enabled="True" runat="server"></telerik:RadTextBox>
                         </div>
                         <br />
@@ -280,7 +280,7 @@
                     <label for="email" class="cols-sm-2 control-label">Driver License Number</label>
                     <div class="cols-sm-10">
                         <div class="input-group" style="font-size: 12px">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks"></i></span>
                             <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtLicense" Enabled="True" runat="server"></telerik:RadTextBox>
                         </div>
                         <br />
@@ -289,7 +289,7 @@
                     <label for="email" class="cols-sm-2 control-label">Driver License Expiration</label>
                     <div class="cols-sm-10">
                         <div class="input-group" style="font-size: 12px">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks"></i></span>
                             <telerik:RadDatePicker ID="dpLicense" MinDate="2017/1/1"  ZIndex="1100000" AutoPostBack ="false" runat="server" Width="190"></telerik:RadDatePicker>
                         </div>
                         <br />
@@ -305,7 +305,7 @@
 
 
         </div>
-        <script src="../js/bootstrap.js"></script>
+        
         <script type="text/javascript" src="../../../js/bootstrap.js"></script>
 
         <br />

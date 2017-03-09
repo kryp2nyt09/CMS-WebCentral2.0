@@ -132,21 +132,21 @@
 
                             |
                                         <a href="#" onclick="return ShowInsertForm();">
-                                             <img src="../images/emblem.png" alt="Add Company" width="20px">
+                                             <img src="../images/emblem.png" alt="Add Company" width="20">
                                              Add Representatives
                                          </a>
                                         
                                         |
                                         
                                         <a href="#"  onclick="return ShowExportForm();">
-                                            <img src="../images/emblem.png" alt="Print Preview" width="20px">
+                                            <img src="../images/emblem.png" alt="Print Preview" width="20">
                                            Print Preview
                                             </a>
        |
                    
                                  
                                         <a href="#"  onclick="location.reload();">
-                                            <img src="../images/emblem.png" alt="Export to Excel" width="20px">
+                                            <img src="../images/emblem.png" alt="Export to Excel" width="20">
                                             Refresh Data
                                             </a>
                         

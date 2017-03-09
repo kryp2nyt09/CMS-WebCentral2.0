@@ -89,5 +89,10 @@ namespace BusinessLogic
             return DAL.Company.GetCompanyByCompanyId(companyId, conStr);
         }
 
+        public static void DeleteCompany(Guid companyId, int Flag, string conStr)
+        {
+            DAL.Company.DeleteCompany(companyId, Flag, conStr);
+        }
+
     }
 }

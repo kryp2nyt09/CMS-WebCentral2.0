@@ -6,7 +6,19 @@
 
 <asp:Content ID="Content0" ContentPlaceHolderID="head" runat="Server">
     <link href="../styles/default.css" rel="stylesheet" />
+     <style type="text/css">
+        .alink{
+            text-decoration:none !important;
+            color:#c1c7ca !important;
+        }
 
+        .alink:hover{
+            text-decoration:none !important;
+            color:#c1c7ca !important;
+        }
+
+        
+    </style>
 
 </asp:Content>
 
@@ -69,45 +81,59 @@
                         </telerik:RadAjaxManager>
                         <telerik:RadAjaxLoadingPanel runat="server" ID="gridLoadingPanel"></telerik:RadAjaxLoadingPanel>
 
-                        <telerik:RadGrid ID="RadGrid2" OnItemCreated="RadGrid2_ItemCreated"
-                            runat="server" AllowPaging="True" ExportSettings-Excel-DefaultCellAlignment="Right"
-                            PageSize="10" Skin="Glow" AllowSorting="true" OnItemCommand="RadGrid2_ItemCommand1"
-                            RenderMode="Mobile"
-                            DataKeyNames="CompanyId" CommandItemDisplay="Top"
-                            OnNeedDataSource="RadGrid2_NeedDataSource">
+                        <telerik:RadGrid ID="RadGrid2" Skin="Glow" 
+                             runat="server" 
+                            OnNeedDataSource="RadGrid2_NeedDataSource"
+                            AllowPaging="True" 
+                            
+                            AutoGenerateColumns="false"
+                            AllowSorting="true"
+                             OnItemCreated="RadGrid2_ItemCreated"
+                            ExportSettings-Excel-DefaultCellAlignment="Right"
+                            PageSize="10" 
+                            OnItemCommand="RadGrid2_ItemCommand1"
+                            CommandItemDisplay="Top"
+                            >
                             <ExportSettings ExportOnlyData="true" IgnorePaging="true"></ExportSettings>
-                            <MasterTableView AutoGenerateColumns="False" ClientDataKeyNames="CompanyId"
-                                AllowFilteringByColumn="false"
+                            <GroupingSettings CaseSensitive="false"></GroupingSettings>
+                            
+                            <MasterTableView AutoGenerateColumns="false" ClientDataKeyNames="CompanyId"
+                                AllowFilteringByColumn="true"
                                 DataKeyNames="CompanyId" CommandItemDisplay="Top"
                                 InsertItemPageIndexAction="ShowItemOnFirstPage">
-                                <CommandItemSettings ShowExportToWordButton="true" ShowExportToExcelButton="true"
+                               
+                                 <CommandItemSettings ShowExportToWordButton="true" ShowExportToExcelButton="true"
                                     ShowExportToCsvButton="true" ShowExportToPdfButton="true"></CommandItemSettings>
                                 <Columns>
 
-                                    <telerik:GridBoundColumn DataField="AccountNo" HeaderText="Account No." SortExpression="AccountNo"
-                                        UniqueName="AccountNo">
-                                        <HeaderStyle />
+                                    <telerik:GridBoundColumn DataField="AccountNo" HeaderText="Account No." SortExpression="AccountNo" UniqueName="AccountNo"
+                                       FilterDelay="2000" ShowFilterIcon="false" FilterControlWidth="120px"
+                                  CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" HeaderStyle-Font-Bold="true">
                                     </telerik:GridBoundColumn>
 
-                                    <telerik:GridNumericColumn DataField="CompanyName" HeaderText="Company Name" SortExpression="CompanyName"
-                                        UniqueName="CompanyName">
-                                        <HeaderStyle />
-                                    </telerik:GridNumericColumn>
+                                    <telerik:GridBoundColumn DataField="CompanyName" HeaderText="Company Name" SortExpression="CompanyName"
+                                        UniqueName="CompanyName" FilterDelay="2000" ShowFilterIcon="false"
+                                  CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" HeaderStyle-Font-Bold="true">
+                                        
+                                    </telerik:GridBoundColumn>
 
                                     <telerik:GridDateTimeColumn DataField="ApprovedDate" HeaderText="Approved Date" SortExpression="ApprovedDate"
-                                        UniqueName="ApprovedDate" PickerType="DatePicker" DataFormatString="{0:MM/dd/yyyy}">
-                                        <HeaderStyle />
+                                        UniqueName="ApprovedDate" PickerType="DatePicker" DataFormatString="{0:MM/dd/yyyy}" FilterDelay="2000" ShowFilterIcon="false"
+                                  CurrentFilterFunction="EqualTo" AutoPostBackOnFilter="false" HeaderStyle-Font-Bold="true">
+                                       
                                     </telerik:GridDateTimeColumn>
 
-                                    <telerik:GridNumericColumn DataField="Stats" HeaderText="Status" SortExpression="Stats"
-                                        UniqueName="Stats">
-                                        <HeaderStyle />
-                                    </telerik:GridNumericColumn>
+                                    <telerik:GridBoundColumn DataField="Stats" HeaderText="Status" SortExpression="Stats"
+                                        UniqueName="Stats" FilterDelay="2000" ShowFilterIcon="false"
+                                  CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" HeaderStyle-Font-Bold="true">
+                                      
+                                    </telerik:GridBoundColumn>
 
-                                    <telerik:GridNumericColumn DataField="MotherCompany" HeaderText="Mother Company" SortExpression="MotherCompany"
-                                        UniqueName="MotherCompany">
-                                        <HeaderStyle />
-                                    </telerik:GridNumericColumn>
+                                    <telerik:GridBoundColumn DataField="MotherCompany" HeaderText="Mother Company" SortExpression="MotherCompany"
+                                        UniqueName="MotherCompany" FilterDelay="2000" ShowFilterIcon="false"
+                                  CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" HeaderStyle-Font-Bold="true">
+                                       
+                                    </telerik:GridBoundColumn>
 
                                     <telerik:GridTemplateColumn UniqueName="TemplateEditColumn" HeaderText="Representatives" AllowFiltering="false">
                                         <ItemTemplate>
@@ -141,21 +167,21 @@
                                 <CommandItemTemplate>
                                     |
 
-                                         <a href="#" onclick="return ShowInsertForm();">
-                                             <img src="../images/emblem.png" alt="Add Company" width="20px">
+                                         <a href="#" onclick="return ShowInsertForm();" class="alink">
+                                             <img src="../images/emblem.png" alt="Add Company" width="20">
                                              Add Company
                                          </a>
                                     |    
                                         
-                                        <a href="#" onclick="return ShowExportForm();">
-                                            <img src="../images/emblem.png" alt="Print Preview" width="20px">
+                                        <a href="#" onclick="return ShowExportForm();" class="alink">
+                                            <img src="../images/emblem.png" alt="Print Preview" width="20">
                                             Print Preview
                                         </a>
                                     |
                    
                                  
-                                        <a href="#" onclick="location.reload();">
-                                            <img src="../images/emblem.png" alt="Export to Excel" width="20px">
+                                        <a href="#" onclick="location.reload();" class="alink">
+                                            <img src="../images/emblem.png" alt="Export to Excel" width="20">
                                             Refresh Data
                                         </a>
 

@@ -562,9 +562,9 @@ public partial class _MainMaintenance : System.Web.UI.Page
 
         if (BranchCorpId != "")
         {
-
+            //rwAddGroupIsland.NavigateUrl = "http://" + host + "/portal/UserModal/GroupIslandMaintenance/AddGroupIsland.aspx?ID=" + groupdid;
             //rwBranchCodeEdit.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/BranchCorpOffice/EditBranchCorp.aspx?ID=" + BranchCorpId;
-            rwBranchCodeEdit.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/BranchCorpOffice/EditBranchCorp.aspx?ID=" + BranchCorpId;
+            rwBranchCodeEdit.NavigateUrl = "http://" + host  + "/portal/UserModal/BranchCorpOffice/EditBranchCorp.aspx?ID=" + BranchCorpId;
             string script = "function f(){$find(\"" + rwBranchCodeEdit.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
             RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
 
@@ -589,7 +589,7 @@ public partial class _MainMaintenance : System.Web.UI.Page
         string BranchCorpId = "";
 
         //rwBranchCodeAdd.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/BranchCorpOffice/AddBranchCorp.aspx?ID=" + BranchCorpId;
-        rwBranchCodeAdd.NavigateUrl = "http://" + host + "/" + WebPathName + "/portal/UserModal/BranchCorpOffice/AddBranchCorp.aspx?ID=" + BranchCorpId;
+        rwBranchCodeAdd.NavigateUrl = "http://" + host +  "/portal/UserModal/BranchCorpOffice/AddBranchCorp.aspx?ID=" + BranchCorpId;
         string script = "function f(){$find(\"" + rwBranchCodeAdd.ClientID + "\").show(); Sys.Application.remove_load(f);}Sys.Application.add_load(f);";
         RadScriptManager.RegisterStartupScript(Page, Page.GetType(), "key", script, true);
 

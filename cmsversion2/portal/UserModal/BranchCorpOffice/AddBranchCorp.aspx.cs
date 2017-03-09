@@ -94,7 +94,7 @@ public partial class _AddBranchCorp : System.Web.UI.Page
         Guid ModifiedBy = new Guid("11111111-1111-1111-1111-111111111111");
         string host = HttpContext.Current.Request.Url.Authority;
         string RegionName = txtRegionName.Text;
-        BLL.BranchCorpOffice.InsertBranchCorpOffice(ProvinceId, txtRegionName.Text, ModifiedBy, 1,  getConstr.ConStrCMS);
+        BLL.BranchCorpOffice.InsertBranchCorpOffice(ProvinceId, txtRegionName.Text, txtBcoCode.Text, ModifiedBy, 1,  getConstr.ConStrCMS);
            
         string script = "<script>CloseOnReload()</" + "script>";
         ClientScript.RegisterStartupScript(this.GetType(), "CloseOnReload", script);

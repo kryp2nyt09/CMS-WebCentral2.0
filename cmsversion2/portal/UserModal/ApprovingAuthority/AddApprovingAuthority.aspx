@@ -7,7 +7,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title>Edit dialog</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
 
     <!-- Website CSS style -->
@@ -17,8 +17,8 @@
 
     <link href="../../../css/bootstrap.css" rel="stylesheet" />
     <!-- Google Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'/>
 
     <style type="text/css">
         /*
@@ -137,7 +137,7 @@
                     <div class="cols-sm-10">
                         <div class="input-group" style="font-size: 12px">
 
-                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                            <span class="input-group-addon"><i class="fa fa-user fa"></i></span>
                             <%--<input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" style="width: 175px" required />--%>
 
                             <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtFname" Enabled="true" runat="server"></telerik:RadTextBox>
@@ -155,7 +155,7 @@
                     <div class="cols-sm-10">
                         <div class="input-group" style="font-size: 12px">
 
-                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                            <span class="input-group-addon"><i class="fa fa-user fa"></i></span>
                             <%--<input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" style="width: 175px" required />--%>
 
                             <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtLname" Enabled="true" runat="server"></telerik:RadTextBox>
@@ -173,7 +173,7 @@
                     <div class="cols-sm-10">
                         <div class="input-group" style="font-size: 12px">
 
-                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                            <span class="input-group-addon"><i class="fa fa-user fa"></i></span>
                             <%--<input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" style="width: 175px" required />--%>
 
                             <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtTitle" Enabled="true" runat="server"></telerik:RadTextBox>
@@ -191,7 +191,7 @@
                     <div class="cols-sm-10">
                         <div class="input-group" style="font-size: 12px">
 
-                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                            <span class="input-group-addon"><i class="fa fa-user fa"></i></span>
                             <%--<input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" style="width: 175px" required />--%>
 
                             <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtPosition" Enabled="true" runat="server"></telerik:RadTextBox>
@@ -209,7 +209,7 @@
                     <div class="cols-sm-10">
                         <div class="input-group" style="font-size: 12px">
 
-                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                            <span class="input-group-addon"><i class="fa fa-user fa"></i></span>
                             <%--<input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" style="width: 175px" required />--%>
 
                             <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtDepartment" Enabled="true" runat="server"></telerik:RadTextBox>
@@ -228,7 +228,7 @@
                     <div class="cols-sm-10">
                         <div class="input-group" style="font-size: 12px">
 
-                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                            <span class="input-group-addon"><i class="fa fa-user fa"></i></span>
                             <%--<input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" style="width: 175px" required />--%>
 
                             <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtContactNumber" Enabled="true" runat="server"></telerik:RadTextBox>
@@ -246,7 +246,7 @@
                     <div class="cols-sm-10">
                         <div class="input-group" style="font-size: 12px">
 
-                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                            <span class="input-group-addon"><i class="fa fa-user fa"></i></span>
                             <%--<input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" style="width: 175px" required />--%>
 
                             <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtMobile" Enabled="true" runat="server"></telerik:RadTextBox>
@@ -264,7 +264,7 @@
                     <div class="cols-sm-10">
                         <div class="input-group" style="font-size: 12px">
 
-                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                            <span class="input-group-addon"><i class="fa fa-user fa"></i></span>
                             <%--<input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" style="width: 175px" required />--%>
 
                             <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtFax" Enabled="true" runat="server"></telerik:RadTextBox>
@@ -282,7 +282,7 @@
                     <div class="cols-sm-10">
                         <div class="input-group" style="font-size: 12px">
 
-                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                            <span class="input-group-addon"><i class="fa fa-user fa"></i></span>
                             <%--<input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" style="width: 175px" required />--%>
 
                             <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtEmail" Enabled="true" runat="server"></telerik:RadTextBox>
@@ -303,7 +303,7 @@
                     <div class="cols-sm-10">
                         <div class="input-group" style="font-size: 12px">
 
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks"></i></span>
                             <%--<input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" style="width: 175px" required />--%>
                             <asp:Label ID="lblCompanyID" runat="server" Text="" Visible="false"></asp:Label>
                             

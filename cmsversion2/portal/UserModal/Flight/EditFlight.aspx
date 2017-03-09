@@ -7,7 +7,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title>Edit dialog</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
 
     <!-- Website CSS style -->
@@ -15,12 +15,11 @@
     <link href="../../../font-awesome/css/font-awesome.min.css" rel="stylesheet" />
     <!-- Website Font style -->
 
-
+    <link href="../../../css/bootstrap.css" rel="stylesheet" />
     <!-- Google Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
-       <script src="../../../js/bootstrap.js"></script>
-    <script src="../../../js/jquery.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'/>
+     
     <style type="text/css">
         /*
 /* Created by Filipe Pina
@@ -93,6 +92,20 @@
         input:required:hover {
             opacity: 1;
         }
+
+            #footer {
+        position: fixed;
+        right:10px;
+        bottom: 10px;
+   
+    }
+
+        .page{
+            margin-top: 30px;
+            margin-right: 15px;
+            margin-left: 15px;
+        }
+
     </style>
     <script type="text/javascript">
 
@@ -130,73 +143,71 @@
         <%--<asp:ScriptManager ID="ScriptManager2" runat="server" />--%>
         <telerik:RadFormDecorator RenderMode="Lightweight" ID="RadFormDecorator1" runat="server" Skin="Default" DecoratedControls="All" />
         <%--<asp:Button runat="server" Text="Close" ID="CloseButton"     OnClick="CloseButton_Click1"/>--%>
-        <div class="main-login main-center">
+      <div class="">
             <form class="form-horizontal" method="post" action="#">
+               <asp:Label ID="lblGroupID" runat="server" Text="" Visible="false"></asp:Label>
+                 <div class="page">
+                    <div class="col-xs-6">
+                        <div class="col-xs-3">
+                             <asp:Label ID="Label4" runat="server" Text="Origin"></asp:Label>
+                            <br />
+                            <br />
+                             <br />
+                             <asp:Label ID="Label5" runat="server" Text="Gateway"></asp:Label>
+                            <br />
+                             <br />
+                            <br />
+                             <asp:Label ID="Label8" runat="server" Text="Destination"></asp:Label>
+                        </div>
 
-
-                <div class="form-group">
-                    <asp:Label ID="lblGroupID" runat="server" Text="" Visible="false"></asp:Label>
-                    <div class="cols-sm-10">
-                        <label for="email" class="cols-sm-2 control-label">BCO</label>
-                        <div class="input-group" style="font-size: 12px">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
-                            <telerik:RadComboBox ID="rcbBCO" runat="server"></telerik:RadComboBox>
-                        </div>
-                        <br />
-                        <label for="email" class="cols-sm-2 control-label" style="font-style: normal">Gateway</label>
-                        <div class="input-group" style="font-size: 12px">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
-                            <telerik:RadComboBox ID="rcbGateway" runat="server"></telerik:RadComboBox>
-                        </div>
-                        <br />
-                        <label for="email" class="cols-sm-2 control-label" style="font-style: normal">Origin</label>
-                        <div class="input-group" style="font-size: 12px">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
-                            <telerik:RadComboBox ID="rcbOrigin" runat="server"></telerik:RadComboBox>
-                        </div>
-                        <br />
-                        <label for="email" class="cols-sm-2 control-label" style="font-style: normal">Destination</label>
-                        <div class="input-group" style="font-size: 12px">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
-                            <telerik:RadComboBox ID="rcbDestination" runat="server"></telerik:RadComboBox>
-                        </div>
-                        <br />
-                        <label for="email" class="cols-sm-2 control-label" style="font-style: normal">Flight No.</label>
-                        <div class="input-group" style="font-size: 12px">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
-                            <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtFlightNo" Enabled="True" runat="server"></telerik:RadTextBox>
-                        </div>
-                        <br />
-
-                         <label for="email" class="cols-sm-2 control-label" style="font-style: normal">ETD</label>
-                        <div class="input-group" style="font-size: 12px">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
-                              <telerik:RadDateTimePicker RenderMode="Lightweight" runat="server" ID="rdtETD" Width="100%">
-                </telerik:RadDateTimePicker>
-                        </div>
-                        <br />
-                         <label for="email" class="cols-sm-2 control-label" style="font-style: normal">ETA</label>
-                        <div class="input-group" style="font-size: 12px">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
-                          <telerik:RadDateTimePicker RenderMode="Lightweight" runat="server" ID="rdtETA" Width="100%">
-                </telerik:RadDateTimePicker>
-
-                        </div>
-                        <br />
-                        
-                        <br />
-                        <telerik:RadButton ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click"></telerik:RadButton>
-                        <telerik:RadButton ID="btnCancel" runat="server" AutoPostBack="true" Text="Cancel" OnClick="btnCancel_Click" OnClientClicked="redirect"></telerik:RadButton>
+                        <div class="col-xs-3">
+                            <telerik:RadComboBox ID="rcbOrigin" runat="server" Width="230px"></telerik:RadComboBox>
+                            <br />
+                            <br />
+                           <telerik:RadComboBox ID="rcbGateway" runat="server" Width="230px"></telerik:RadComboBox>
+                            <br />
+                            <br />
+                            <telerik:RadComboBox ID="rcbDestination" runat="server" Width="230px"></telerik:RadComboBox>
+                         </div>
                     </div>
+
+                    <div class="col-xs-6">
+                        <div class="col-xs-3">
+                            <asp:Label ID="Label7" runat="server" Text="ETD"></asp:Label>
+                            <br />
+                            <br />
+                            <br />
+                            <asp:Label ID="Label2" runat="server" Text="Flight No"></asp:Label>
+                            <br />
+                            <br />
+                              <asp:Label ID="Label9" runat="server" Text="ETA"></asp:Label>
+                        </div>
+
+                        <div class="col-xs-3">
+                             <telerik:RadDateTimePicker RenderMode="Lightweight" runat="server" ID="rdtETD"  Width="230px"></telerik:RadDateTimePicker>
+                            <br />
+                            <br />
+                            <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtFlightNo" Enabled="True" runat="server"></telerik:RadTextBox>
+                            <br />
+                             <br />
+                             <telerik:RadDateTimePicker RenderMode="Lightweight" runat="server" ID="rdtETA"  Width="230px"></telerik:RadDateTimePicker>
+                          
+                         </div>
+
                 </div>
-               
+                    </div>
+
+                
+                       
+                <div id="footer">
+                 <telerik:RadButton ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click"></telerik:RadButton>
+                 <telerik:RadButton ID="btnCancel" runat="server" AutoPostBack="true" Text="Cancel" OnClick="btnCancel_Click"></telerik:RadButton>
+                </div>
             </form>
 
 
         </div>
-
-        <%--<script type="text/javascript" src="../../../js/bootstrap.js"></script>--%>
-     
+       
         <br />
     </form>
 </body>
