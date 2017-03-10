@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/cmsversion.Master" AutoEventWireup="true" CodeFile="FlightMaintenance.aspx.cs" Inherits="_FlightMaintenance" %>
+﻿<%@ Page Title="Flight Maintenance" Language="C#" MasterPageFile="~/cmsversion.Master" AutoEventWireup="true" CodeFile="FlightMaintenance.aspx.cs" Inherits="_FlightMaintenance" %>
 
 <%@ MasterType VirtualPath="~/cmsversion.master" %>
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
@@ -122,14 +122,14 @@
 
                                     
                                     <telerik:GridDateTimeColumn DataField="ETD" HeaderText="ETD" SortExpression="ETD"
-                                        UniqueName="ETD" DataFormatString="{0:dd-MMM-yyyy HH:mm}" EnableTimeIndependentFiltering="true"
-                                         CurrentFilterFunction="Contains" ShowFilterIcon="false" PickerType="DatePicker" HeaderStyle-Font-Bold="true">
+                                        UniqueName="ETD" AllowFiltering="true" FilterListOptions="VaryByDataType" Exportable="false"
+                                 PickerType="DateTimePicker" DataType="System.DateTime" >
                                        
                                     </telerik:GridDateTimeColumn>
 
                                     <telerik:GridDateTimeColumn DataField="ETA" HeaderText="ETA" SortExpression="ETA"
-                                        UniqueName="ETA" DataFormatString="{0:dd-MMM-yyyy HH:mm}" EnableTimeIndependentFiltering="true"
-                                         CurrentFilterFunction="EqualTo" ShowFilterIcon="false" HeaderStyle-Font-Bold="true">
+                                        UniqueName="ETA"  AllowFiltering="true" FilterListOptions="VaryByDataType" Exportable="false"
+                                 PickerType="DateTimePicker" DataType="System.DateTime" >
                                        
                                     </telerik:GridDateTimeColumn>
 

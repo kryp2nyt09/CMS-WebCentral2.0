@@ -16,9 +16,9 @@ public partial class _ManageUsers : System.Web.UI.Page
     
         
         RadGrid2.MasterTableView.CommandItemSettings.ShowAddNewRecordButton = false;
-        radSearchUser.DataSource = GetUsers();
-        radSearchUser.DataTextField = "FullName";
-        radSearchUser.DataValueField = "UserId";
+        //radSearchUser.DataSource = GetUsers();
+        //radSearchUser.DataTextField = "FullName";
+        //radSearchUser.DataValueField = "UserId";
 
         if (!string.IsNullOrEmpty(Session["UsernameSession"] as string))
         {

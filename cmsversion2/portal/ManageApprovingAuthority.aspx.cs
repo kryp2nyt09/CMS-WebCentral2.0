@@ -15,9 +15,9 @@ public partial class _ManageApprovingAuthority : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
 
-        radSearchApprovingAuthority.DataSource = GetApprovingAutority();
-        radSearchApprovingAuthority.DataTextField = "Name";
-        radSearchApprovingAuthority.DataValueField = "ApprovingAuthorityId";
+        //radSearchApprovingAuthority.DataSource = GetApprovingAutority();
+        //radSearchApprovingAuthority.DataTextField = "Name";
+        //radSearchApprovingAuthority.DataValueField = "ApprovingAuthorityId";
 
         RadGrid2.MasterTableView.CommandItemSettings.ShowAddNewRecordButton = false;
       

@@ -94,6 +94,29 @@
         input:required:hover {
             opacity: 1;
         }
+
+        #footer {
+        position: fixed;
+        right:10px;
+        bottom: 10px;
+   
+    }
+
+        .page{
+            margin-top: 30px;
+            margin-right: 15px;
+            margin-left: 15px;
+        }
+
+        .errorMessage
+        {
+            position: fixed;
+            top:auto;
+            right:50px;
+            bottom: 50px;
+            left:130px;
+        }
+
     </style>
     <script type="text/javascript">
 
@@ -142,142 +165,82 @@
             </script>
             <asp:ScriptManager ID="ScriptManager2" runat="server" />
             <telerik:RadFormDecorator RenderMode="Lightweight" ID="RadFormDecorator1" runat="server" Skin="Default" DecoratedControls="All" />
-
-            <div class="main-login main-center">
-                <form class="form-horizontal" method="post" action="#">
-                     
-                    <%--<div class="form-group">
-                        <label for="name" class="cols-sm-2 control-label">Select BranchCorp.</label>
-                        <div class="cols-sm-10" style="font-size: 12px;">
-                            <div class="input-group">
-
-
-                                <asp:DropDownList Width="230px" Height="200px" ID="ddlBranchCorpOffice" runat="server" AutoPostBack="true" Style="font-size: 12px;" OnSelectedIndexChanged="ddlBranchCorpOffice_SelectedIndexChanged">
-                                    <asp:ListItem>--Select BranchCorp--</asp:ListItem>
-
-                                </asp:DropDownList>
-
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="ddlBranchCorpOffice"
-                                    ErrorMessage="*" ForeColor="Red" InitialValue="--Select Assignment--"></asp:RequiredFieldValidator>
-
-                            </div>
+            <div class="">
+            <form class="form-horizontal" method="post" action="#">
+               <div class="page">
+                    <div class="col-xs-8">
+                        <div class="col-xs-4">
+                            <asp:Label ID="Label3" runat="server" Text="Employee Name"></asp:Label>
+                            <br />
+                            <br />
+                              <asp:Label ID="Label4" runat="server" Text="Username"></asp:Label>
+                            <br />
+                            <br />
+                             <br />
+                             <asp:Label ID="Label5" runat="server" Text="Password"></asp:Label>
+                            <br />
+                             <br />
+                             <br />
+                             <asp:Label ID="Label8" runat="server" Text="Confirm Password"></asp:Label>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="name" class="cols-sm-2 control-label">Assigned To:</label>
-                        <div class="cols-sm-10" style="font-size: 12px;">
-                            <div class="input-group">
-                                <asp:DropDownList Width="230px" Height="200px" ID="ddlAssigned" runat="server" Style="font-size: 12px;" OnTextChanged="ddlAssigned_TextChanged" SelectMethod="" AutoPostBack="true" OnSelectedIndexChanged="ddlAssigned_SelectedIndexChanged">
-                                    <asp:ListItem>--Select Assignment--</asp:ListItem>
 
-                                </asp:DropDownList>
-
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="ddlAssigned"
-                                    ErrorMessage="*" ForeColor="Red" InitialValue="--Select Assignment--"></asp:RequiredFieldValidator>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="name" class="cols-sm-2 control-label">Select location</label>
-                        <div class="cols-sm-10" style="font-size: 12px;">
-                            <div class="input-group">
-
-                                <asp:DropDownList Width="230px" Height="200px" ID="ddlLocation" runat="server" Style="font-size: 12px;">
-                                    <asp:ListItem>--Select Assignment--</asp:ListItem>
-
-                                </asp:DropDownList>
-
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="ddlLocation"
-                                    ErrorMessage="*" ForeColor="Red" InitialValue="--Select Assignment--"></asp:RequiredFieldValidator>
-
-                            </div>
-                        </div>
-                    </div>--%>
-
-                    <div class="form-group">
-                        <label for="name" class="cols-sm-2 control-label">Employee Name</label>
-                        <div class="cols-sm-10" style="font-size: 12px;">
-                            <div class="input-group">
-                                <asp:DropDownList Width="230px" Height="200px" ID="ddLEmployee" runat="server" Style="font-size: 12px;">
+                        <div class="col-xs-4">
+                             <asp:DropDownList Width="230px" Height="200px" ID="ddLEmployee" runat="server" Style="font-size: 12px;">
                                     <asp:ListItem>--Select Employee--</asp:ListItem>
 
                                 </asp:DropDownList>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email" class="cols-sm-2 control-label">Username</label>
-                        <div class="cols-sm-10">
-                            <div class="input-group" style="font-size: 12px">
-
-                                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                                <%--<input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" style="width: 175px" required />--%>
-
-                                <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtUsername" runat="server"></telerik:RadTextBox>
+                            <br />
+                            <br />
+                            <telerik:RadTextBox  Width="230px" RenderMode="Mobile" ID="txtUsername" runat="server"></telerik:RadTextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"
                                     ControlToValidate="txtUsername"
                                     ErrorMessage="*"
                                     ForeColor="Red">
-                                </asp:RequiredFieldValidator>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="form-group">
-                        <label for="password" class="cols-sm-2 control-label">Password</label>
-                        <div class="cols-sm-10">
-                            <div class="input-group" style="font-size: 12px">
-                                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-
-                                <telerik:RadTextBox Width="190px" TextMode="Password" RenderMode="Mobile" ID="txtPassword" runat="server" Skin="Default"></telerik:RadTextBox>
+                                </asp:RequiredFieldValidator><br />
+                            <br />
+                           <telerik:RadTextBox  Width="230px" TextMode="Password" RenderMode="Mobile" ID="txtPassword" runat="server"></telerik:RadTextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server"
                                     ControlToValidate="txtPassword"
                                     ErrorMessage="*"
                                     ForeColor="Red">
-                                </asp:RequiredFieldValidator>
-
-                            </div>
-                        </div>
-                    </div>
-                                                           
-                    <div class="form-group">
-                        <label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
-                        <div class="cols-sm-10">
-                            <div class="input-group" style="font-size: 12px">
-
-                                <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                                <telerik:RadTextBox Width="190px" RenderMode="Mobile" TextMode="Password" ID="txtConfirmPassword" runat="server"></telerik:RadTextBox>
+                                </asp:RequiredFieldValidator>  <br />
+                            <br />
+                              <telerik:RadTextBox  Width="230px" RenderMode="Mobile" TextMode="Password" ID="txtConfirmPassword" runat="server"></telerik:RadTextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server"
                                     ControlToValidate="txtConfirmPassword"
                                     ErrorMessage="*"
                                     ForeColor="Red">
-                                </asp:RequiredFieldValidator>
-                                
+                                </asp:RequiredFieldValidator> <br />
+                            <br />
+                         
+                         </div>
+                       
 
-                            </div>
-                        </div>
-                        
                     </div>
-
-                    <div class="form-group " style="padding-bottom: 10px">
-                        <telerik:RadButton ID="btnSave" runat="server" Text="Save" OnClick="Save_Click"></telerik:RadButton>
-                        <telerik:RadButton ID="btnCancel" runat="server" AutoPostBack="true" Text="Cancel" OnClick="btnCancel_Click" OnClientClicked="redirect"></telerik:RadButton>
                     </div>
-                    <asp:CompareValidator ID="CompareValidator" runat="server"
+                <div id="footer">
+                     <div class="errorMessage"> 
+                         <asp:CompareValidator ID="CompareValidator1" runat="server"
                                     ControlToValidate="txtPassword"
                                     ControlToCompare="txtConfirmPassword"
                                     ErrorMessage="Password does not match!"
                                     ForeColor="Red">                                    
                                 </asp:CompareValidator>
-                </form>
 
-            </div>
+                     </div>
+                    
+                  <telerik:RadButton ID="RadButton1" runat="server" Text="Save" OnClick="Save_Click"></telerik:RadButton>
+                  <telerik:RadButton ID="RadButton2" runat="server" AutoPostBack="true" Text="Cancel" OnClick="btnCancel_Click" OnClientClicked="redirect"></telerik:RadButton>
+                </div>
+               
+            </form>
 
-            <script src="../../js/bootstrap.min.js"></script>
+
+        </div>
+
+
+
+            <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
             <br />
         </div>
     </form>

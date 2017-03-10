@@ -174,7 +174,12 @@ public partial class _FlightMaintenance : System.Web.UI.Page
                     FileUploadFlightInfo.SaveAs(SaveLocation);
 
                     DataTable csvData = GetDataTableFromCSVFile(SaveLocation);
+                    DataTable filterTable = FilterFlightInfoData(csvData);
 
+                    BLL.Flight.BulkInsertFlightInfo(filterTable, getConstr.ConStrCMS);
+
+                    string script = "<script>CloseOnReload()</" + "script>";
+                    ClientScript.RegisterStartupScript(this.GetType(), "CloseOnReload", script);
 
                 }
                 catch(Exception ex)
@@ -223,7 +228,7 @@ public partial class _FlightMaintenance : System.Web.UI.Page
                     DateTime ETD = Convert.ToDateTime(fieldData[1]);
                     DateTime ETA = Convert.ToDateTime(fieldData[2]);
 
-                    // csvData.Rows.Add(fieldData);
+                    csvData.Rows.Add(fieldData);
                 }
             }
         }
@@ -248,6 +253,51 @@ public partial class _FlightMaintenance : System.Web.UI.Page
         return DateTime.ParseExact(dateTimeInString, "T", dti);
     }
 
+    public DataTable FilterFlightInfoData(DataTable datatable)
+    {
+        DataTable filterDatafromCsv = new DataTable();
+        filterDatafromCsv.Columns.AddRange(new DataColumn[12] 
+                    {
+                        new DataColumn("FlightInfoId", typeof(Guid)),
+                        new DataColumn("FlightNo", typeof(string)),
+                        new DataColumn("ETD",typeof(DateTime)),
+                        new DataColumn("ETA",typeof(DateTime)),
+                        new DataColumn("GateWayId", typeof(Guid)),
+                        new DataColumn("OriginCityId", typeof(Guid)),
+                        new DataColumn("DestinationCityId", typeof(Guid)),
+                        new DataColumn("CreatedBy", typeof(Guid)),
+                        new DataColumn("CreatedDate", typeof(DateTime)),
+                        new DataColumn("ModifiedBy", typeof(Guid)),
+                        new DataColumn("ModifiedDate", typeof(DateTime)),
+                        new DataColumn("RecordStatus", typeof(int)),
+                    });
+
+        Guid FlightInfoId;
+        Guid airlineId = new Guid();
+        Guid OriginCityId = new Guid();
+        Guid DestinationCityId = new Guid();
+        Guid CreatedModifiedBy = new Guid("11111111-1111-1111-1111-111111111111");
+
+        foreach (DataRow row in datatable.Rows)
+        {
+            string flightNo = row[0].ToString(); //0
+            string airlineName = row[3].ToString();
+            string originCityName = row[4].ToString();
+            string destinationCityName = row[5].ToString();
+            DateTime ETD = Convert.ToDateTime(row[1].ToString()); //1
+            DateTime ETA = Convert.ToDateTime(row[2].ToString()); //2
+            FlightInfoId = Guid.NewGuid();
+
+            var result = BLL.Flight.GetIds(airlineName, originCityName, destinationCityName, getConstr.ConStrCMS);
+            airlineId = result.Item1;
+            OriginCityId = result.Item2;
+            DestinationCityId = result.Item3;
+            filterDatafromCsv.Rows.Add(FlightInfoId, flightNo,ETD ,ETA, airlineId, OriginCityId, DestinationCityId,
+                                        CreatedModifiedBy, DateTime.Now, CreatedModifiedBy, DateTime.Now, 1);
+        }
+
+        return filterDatafromCsv;
+    }
 
 
 }

@@ -106,5 +106,56 @@ namespace DataAccess
             }
         }
 
+        public static Tuple<Guid, Guid, Guid> GetIds(string airlineName, string originCityName, string destinationCityName, string conStr)
+        {
+            Guid airlineId = new Guid();
+            Guid OriginCityId = new Guid();
+            Guid DestinationCityId = new Guid();
+            using (SqlConnection con = new SqlConnection(conStr))
+            {
+                using (SqlCommand cmd = new SqlCommand("sp_getId_FlightInformation", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@airlineName", SqlDbType.VarChar).Value = airlineName;
+                    cmd.Parameters.Add("@originCityName", SqlDbType.VarChar).Value = originCityName;
+                    cmd.Parameters.Add("@destinationCityName", SqlDbType.VarChar).Value = destinationCityName;
+                    //airlineName output
+                    cmd.Parameters.Add("@AirlineId", SqlDbType.UniqueIdentifier);
+                    cmd.Parameters["@AirlineId"].Direction = ParameterDirection.Output;
+
+                    //originCityName output
+                    cmd.Parameters.Add("@OriginCityId", SqlDbType.UniqueIdentifier);
+                    cmd.Parameters["@OriginCityId"].Direction = ParameterDirection.Output;
+
+                    //originCityName output
+                    cmd.Parameters.Add("@DestinationCityId", SqlDbType.UniqueIdentifier);
+                    cmd.Parameters["@DestinationCityId"].Direction = ParameterDirection.Output;
+
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+
+                    airlineId= Guid.Parse(cmd.Parameters["@AirlineId"].Value.ToString());
+                    OriginCityId = Guid.Parse(cmd.Parameters["@OriginCityId"].Value.ToString());
+                    DestinationCityId = Guid.Parse(cmd.Parameters["@DestinationCityId"].Value.ToString());
+                }
+            }
+
+            return new Tuple<Guid, Guid, Guid>(airlineId, OriginCityId, DestinationCityId);
+        }
+
+        public static void BulkInsertFlightInfo(DataTable data, string conStr)
+        {
+            using (SqlConnection con = new SqlConnection(conStr))
+            {
+                using (SqlCommand cmd = new SqlCommand("sp_BulkInsert_FlightInformation", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@tblFlightInfo", data);
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
     }
 }

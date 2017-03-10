@@ -18,7 +18,9 @@ namespace BusinessLogic
 
         public static void AddUsers(string username, byte[] password, byte[] salt, Guid employeeId,  Guid createdBy, string conStr)
         {
-            DAL.Users.AddUsers(username, password, salt, employeeId,createdBy, conStr);
+           // int countRowsAffected =  DAL.Users.AddUsers(username, password, salt, employeeId,createdBy, conStr);
+          DAL.Users.AddUsers(username, password, salt, employeeId, createdBy, conStr);
+            //return countRowsAffected;
 
         }
         

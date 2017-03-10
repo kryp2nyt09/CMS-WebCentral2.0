@@ -128,6 +128,7 @@ namespace DataAccess
         /// <param name="conStr"></param>
         public static void AddUsers(string username, byte[] password, byte[] salt, Guid employeeId,  Guid createdby, string conStr)
         {
+            int countRowsAffected = 0;
             using (SqlConnection con = new SqlConnection(conStr))
             {
                 using (SqlCommand cmd = new SqlCommand("sp_Insert_User", con))
@@ -139,13 +140,20 @@ namespace DataAccess
                     cmd.Parameters.Add("@salt", SqlDbType.VarBinary).Value = salt;
                     cmd.Parameters.Add("@employeeid", SqlDbType.UniqueIdentifier).Value = employeeId;
                     cmd.Parameters.Add("@createdby", SqlDbType.UniqueIdentifier).Value = createdby;
+                   // cmd.Parameters.Add("@rowCount", SqlDbType.Int).Direction = ParameterDirection.Output;
+                    //cmd.Parameters.Add("@rowCount", System.Data.SqlDbType.Int).Direction = System.Data.ParameterDirection.Output;
                     con.Open();
                     cmd.ExecuteNonQuery();
 
+                   // countRowsAffected = (int)cmd.Parameters["@rowCount"].Value;
+                  //  countRowsAffected = Convert.ToInt32(cmd.Parameters["@rowCount"].Value);
+
                 }
             }
+            //return countRowsAffected;
         }
 
+     
         public static void UpdateUsers(Guid userId, string username, byte[] oldPassword, byte[] newPassword, Guid modifiedBy, string conStr)
         {
             using (SqlConnection con = new SqlConnection(conStr))

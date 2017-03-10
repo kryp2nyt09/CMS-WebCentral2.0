@@ -11,7 +11,7 @@ using BLL = BusinessLogic;
 using Tools = utilities;
 
 
-public partial class _EditCrating : System.Web.UI.Page
+public partial class _EditEmployee : System.Web.UI.Page
 {
     Tools.DataAccessProperties getConstr = new Tools.DataAccessProperties();
     protected void Page_Load(object sender, EventArgs e)
@@ -24,13 +24,13 @@ public partial class _EditCrating : System.Web.UI.Page
             LoadBranchCorporateOffice();
             LoadRevenueUnitType();
             PopulateRevenueUnitName();
-            if (Request.QueryString["UserId"] == null)
+            if (Request.QueryString["EmployeeId"] == null)
             {
 
             }
             else
             {
-                string EmployeeId = Request.QueryString["UserId"].ToString();
+                string EmployeeId = Request.QueryString["EmployeeId"].ToString();
 
 
                 DataTable Data = GetEmployeeInfo(new Guid(EmployeeId));
