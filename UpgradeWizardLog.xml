@@ -53,12 +53,6 @@
   <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\MasterPageSingleMenu.master" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\MasterPageSingleMenu.master" />
   <event action="Analyze" type="Success" name="MasterPageSingleMenu.master" path="E:\AP CARGO Web Central Local Repository\cmsversion2\MasterPageSingleMenu.master" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ApprovingAuthority\AddApprovingAuthority.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ApprovingAuthority\AddApprovingAuthority.aspx" />
-  <event action="Analyze" type="Success" name="AddApprovingAuthority.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ApprovingAuthority\AddApprovingAuthority.aspx" />
-  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ApprovingAuthority\EditApprovingAuthority.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ApprovingAuthority\EditApprovingAuthority.aspx" />
-  <event action="Analyze" type="Success" name="EditApprovingAuthority.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\ApprovingAuthority\EditApprovingAuthority.aspx" />
   <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\AWBSeriesManagement.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\AWBSeriesManagement.aspx" />
   <event action="Analyze" type="Success" name="AWBSeriesManagement.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\AWBSeriesManagement.aspx" />
