@@ -455,10 +455,10 @@
                            <telerik:RadComboBox ID="rcbPaymentMode" Width="230px" Height="200px" runat="server"></telerik:RadComboBox>
                             <br />
                             <br />
-                            <%-- <telerik:RadDatePicker ID="dateApproved" Width="230px" MinDate="1950/1/1" ZIndex="11000"  runat="server"></telerik:RadDatePicker>--%>
+                             <telerik:RadDatePicker ID="dateApproved" Width="230px" MinDate="1950/1/1" ZIndex="11000"  runat="server"></telerik:RadDatePicker>
                             <%-- <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="RadTextBox1" Enabled="True" runat="server"></telerik:RadTextBox>
                           --%>  
-                             <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="dateApproved" Enabled="True" runat="server"></telerik:RadTextBox>
+                             <%--<telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="dateApproved" Enabled="True" runat="server"></telerik:RadTextBox>--%>
 
                             <br />
                             <br />

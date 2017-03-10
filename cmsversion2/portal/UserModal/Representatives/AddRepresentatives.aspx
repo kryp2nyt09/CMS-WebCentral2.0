@@ -179,6 +179,10 @@
                              <br />
                               <br />
                              <asp:Label ID="Label14" runat="server" Text="Barangay"></asp:Label>
+                             <br />
+                              <br />
+                            <br />
+                             <asp:Label ID="Label16" runat="server" Text="Remarks"></asp:Label>
                             
                         </div>
 
@@ -201,11 +205,14 @@
                              <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtRepzipCode" Enabled ="True" runat="server"></telerik:RadTextBox>
                             <br />
                             <br />
+                            <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtRepStreet" Enabled="True" runat="server"></telerik:RadTextBox>
+                            <br />
+                            <br />
                             <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtRepBarangay" Enabled="True" runat="server"></telerik:RadTextBox>
                             <br />
                             <br />
-                            <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtRepStreet" Enabled="True" runat="server"></telerik:RadTextBox>
-                         
+                               <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtRepRemarks" TextMode="MultiLine" Enabled="True" runat="server"></telerik:RadTextBox>
+
                          </div>
                     </div>
 
@@ -213,6 +220,13 @@
                         <div class="col-xs-3">
                             <asp:Label ID="Label7" runat="server" Text="Company"></asp:Label>
                             <br />
+                            <br />
+                            <br />
+                            <asp:Label ID="Label17" runat="server" Text="BCO"></asp:Label>
+                            <br />
+                            <br />
+                            <br />
+                             <asp:Label ID="Label18" runat="server" Text="Revenue Type"></asp:Label>
                             <br />
                             <br />
                             <asp:Label ID="Label2" runat="server" Text="Area"></asp:Label>
@@ -237,17 +251,23 @@
                               <br />
                             <br />
                              <asp:Label ID="Label15" runat="server" Text="Department"></asp:Label>
-                             <br />
-                              <br />
-                            <br />
-                             <asp:Label ID="Label16" runat="server" Text="Remarks"></asp:Label>
+                            
                         </div>
 
                         <div class="col-xs-3">
                              <telerik:RadComboBox ID="rcbRepCompany" Width="230px" Height="200px" AutoPostBack="true" runat="server"></telerik:RadComboBox>
-                          <br />
+                             <br />
                             <br />
-                              <telerik:RadComboBox ID="rcbRepArea" Width="230px" Height="200px" AutoPostBack="true" runat="server"></telerik:RadComboBox>
+                              <telerik:RadComboBox ID="rcbBco" Width="230px" Height="200px" runat="server" AutoPostBack="true" 
+                                  OnSelectedIndexChanged="rcbBco_SelectedIndexChanged"></telerik:RadComboBox>
+                             <br />
+                            <br />
+                             <telerik:RadComboBox ID="rcbRevenueType" Width="230px" Height="200px" runat="server"
+                                 AutoPostBack="true" OnTextChanged="rcbRevenueType_TextChanged" OnSelectedIndexChanged="rcbRevenueType_SelectedIndexChanged"></telerik:RadComboBox>
+                           
+                            <br />
+                            <br />
+                             <telerik:RadComboBox ID="rcbRepArea" Width="230px" Height="200px" AutoPostBack="true" runat="server"></telerik:RadComboBox>
                             <br />
                             <br />
                             <telerik:RadTextBox RenderMode="Mobile" ID="txtRepContactNo" Enabled="True" Width="230px" runat="server"></telerik:RadTextBox>
@@ -266,10 +286,7 @@
                             <br />
                             <br />
                                <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtRepDept" Enabled="True" runat="server"></telerik:RadTextBox>
-                             <br />
-                            <br />
-                               <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtRepRemarks" TextMode="MultiLine" Enabled="True" runat="server"></telerik:RadTextBox>
-
+                             
                          </div>
 
                 </div>

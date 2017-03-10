@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/cmsversion.Master" AutoEventWireup="true" CodeFile="ManageCompany.aspx.cs" Inherits="_ManageCompany" %>
+﻿<%@ Page Title="Manage Company" Language="C#" MasterPageFile="~/cmsversion.Master" AutoEventWireup="true" CodeFile="ManageCompany.aspx.cs" Inherits="_ManageCompany" %>
 
 <%@ MasterType VirtualPath="~/cmsversion.master" %>
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
@@ -16,8 +16,6 @@
             text-decoration:none !important;
             color:#c1c7ca !important;
         }
-
-        
     </style>
 
 </asp:Content>
@@ -48,7 +46,7 @@
                     </div>
                 </div>
                 <!-- /.row -->
-                 <div class="size-wide">
+                 <%--<div class="size-wide">
                     <telerik:RadSearchBox RenderMode="Lightweight" runat="server" ID="radSearchCompany" EmptyMessage="Search Company Name "
                           OnSearch="radCompany_Search" Width="300"
                         DataKeyNames="CompanyId"
@@ -59,7 +57,7 @@
                     </telerik:RadSearchBox>
                     
                  </div>
-                 <br />
+                 <br />--%>
                 <telerik:LayoutColumn HiddenMd="true" HiddenSm="true" HiddenXs="true">
 
                     <telerik:RadAjaxPanel ID="RadAjaxPanel2" ClientEvents-OnRequestStart="onRequestStart" runat="server" CssClass="gridwrapper">
@@ -85,7 +83,6 @@
                              runat="server" 
                             OnNeedDataSource="RadGrid2_NeedDataSource"
                             AllowPaging="True" 
-                            
                             AutoGenerateColumns="false"
                             AllowSorting="true"
                              OnItemCreated="RadGrid2_ItemCreated"
@@ -118,8 +115,8 @@
                                     </telerik:GridBoundColumn>
 
                                     <telerik:GridDateTimeColumn DataField="ApprovedDate" HeaderText="Approved Date" SortExpression="ApprovedDate"
-                                        UniqueName="ApprovedDate" PickerType="DatePicker" DataFormatString="{0:MM/dd/yyyy}" FilterDelay="2000" ShowFilterIcon="false"
-                                  CurrentFilterFunction="EqualTo" AutoPostBackOnFilter="false" HeaderStyle-Font-Bold="true">
+                                        UniqueName="ApprovedDate" PickerType="DatePicker" DataFormatString="{0:MM/dd/yyyy}" FilterDelay="2000" DataType="System.DateTime"
+                                  HeaderStyle-Font-Bold="true" AllowFiltering="true" FilterListOptions="VaryByDataType">
                                        
                                     </telerik:GridDateTimeColumn>
 

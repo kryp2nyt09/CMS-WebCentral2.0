@@ -36,6 +36,13 @@ public partial class _EditRepresentatives : System.Web.UI.Page
                         cityId.Selected = true;
                         RadComboBoxItem companyId = rcbRepCompany.FindItemByValue(row["CompanyId"].ToString());
                         companyId.Selected = true;
+
+                        RadComboBoxItem bcoId = rcbBco.FindItemByValue(row["BranchCorpOfficeId"].ToString());
+                        bcoId.Selected = true;
+
+                        RadComboBoxItem runitType = rcbRevenueType.FindItemByValue(row["RevenueUnitTypeId"].ToString());
+                        runitType.Selected = true;
+
                         RadComboBoxItem areaId = rcbRepArea.FindItemByValue(row["AreaId"].ToString());
                         areaId.Selected = true;
 
@@ -79,6 +86,9 @@ public partial class _EditRepresentatives : System.Web.UI.Page
         LoadCity();
         LoadAllRevenueUnit();
         LoadCompany();
+        LoadBranchCorporateOffice();
+        LoadRevenueUnitType();
+        PopulateRevenueUnitName();
     }
     #endregion
 
@@ -106,6 +116,43 @@ public partial class _EditRepresentatives : System.Web.UI.Page
         rcbRepCompany.DataValueField = "CompanyId";
         rcbRepCompany.DataTextField = "CompanyName";
         rcbRepCompany.DataBind();
+    }
+    private void LoadBranchCorporateOffice()
+    {
+        DataTable bcoList = BLL.Revenue_Info.getBranchCorp(getConstr.ConStrCMS).Tables[0];
+
+        rcbBco.DataSource = bcoList;
+        rcbBco.DataTextField = "BranchCorpOfficeName";
+        rcbBco.DataValueField = "BranchCorpOfficeId";
+        rcbBco.DataBind();
+
+    }
+
+    private void LoadRevenueUnitType()
+    {
+        DataTable revenueUnitTypeList = BLL.Revenue_Info.getRevenueType(getConstr.ConStrCMS).Tables[0];
+        rcbRevenueType.DataSource = revenueUnitTypeList;
+        rcbRevenueType.DataTextField = "RevenueUnitTypeName";
+        rcbRevenueType.DataValueField = "RevenueUnitTypeId";
+        rcbRevenueType.DataBind();
+    }
+
+    private void PopulateRevenueUnitName()
+    {
+        DataTable revenueUnitName = BLL.Revenue_Info.getRevenueUnit(new Guid(rcbRevenueType.SelectedValue.ToString()), getConstr.ConStrCMS).Tables[0];
+        rcbRepArea.DataSource = revenueUnitName;
+        rcbRepArea.DataTextField = "RevenueUnitName";
+        rcbRepArea.DataValueField = "RevenueUnitId";
+        rcbRepArea.DataBind();
+    }
+
+    private void populateRevenueUnitNameByBCO()
+    {
+        DataTable LocationList = BLL.Revenue_Info.getRevenueUnitByBCO(new Guid(rcbRevenueType.SelectedValue.ToString()), new Guid(rcbBco.SelectedValue.ToString()), getConstr.ConStrCMS).Tables[0];
+        rcbRepArea.DataSource = LocationList;
+        rcbRepArea.DataTextField = "RevenueUnitName";
+        rcbRepArea.DataValueField = "RevenueUnitId";
+        rcbRepArea.DataBind();
     }
     #endregion
 
@@ -139,6 +186,22 @@ public partial class _EditRepresentatives : System.Web.UI.Page
         string script = "<script>RefreshParentPage()</" + "script>";
         //RadScriptManager.RegisterStartupScript(this, this.GetType(), "RefreshParentPage", script, false);
         ClientScript.RegisterStartupScript(this.GetType(), "RefreshParentPage", script);
+    }
+
+    protected void rcbRevenueType_SelectedIndexChanged(object sender, Telerik.Web.UI.RadComboBoxSelectedIndexChangedEventArgs e)
+    {
+        populateRevenueUnitNameByBCO();
+    }
+
+    protected void rcbRevenueType_TextChanged(object sender, EventArgs e)
+    {
+        rcbRepArea.Items.Clear();
+        populateRevenueUnitNameByBCO();
+    }
+
+    protected void rcbBco_SelectedIndexChanged(object sender, Telerik.Web.UI.RadComboBoxSelectedIndexChangedEventArgs e)
+    {
+        populateRevenueUnitNameByBCO();
     }
 
 

@@ -92,7 +92,8 @@ public partial class _EditCompany : System.Web.UI.Page
                         RadComboBoxItem areaId = rcbArea.FindItemByValue(row["AreaId"].ToString());
                         areaId.Selected = true;
 
-                        dateApproved.Text = row["ApprovedDate"].ToString();
+                        DateTime dateApp = Convert.ToDateTime(row["ApprovedDate"].ToString());
+                        dateApproved.SelectedDate = dateApp;
                         txtAcctDiscount.Text = row["Discount"].ToString();
                         txtAcctCreditLimit.Text = row["CreditLimit"].ToString();
 
@@ -521,8 +522,8 @@ public partial class _EditCompany : System.Web.UI.Page
         Guid PaymentModeId = new Guid();
         Guid ApproveById = new Guid();
         Guid AreaId = new Guid();
-        //DateTime dateApprove = dateApproved.SelectedDate.Value;
-        DateTime dateApprove = Convert.ToDateTime(dateApproved.Text);
+        DateTime dateApprove = dateApproved.SelectedDate.Value;
+        //DateTime dateApprove = Convert.ToDateTime(dateApproved.Text);
         decimal Discount = 0;
         decimal CreditLimit = 0;
 

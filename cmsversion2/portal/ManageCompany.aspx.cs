@@ -13,9 +13,9 @@ public partial class _ManageCompany : System.Web.UI.Page
     Tools.DataAccessProperties getConstr = new Tools.DataAccessProperties();
     protected void Page_Load(object sender, EventArgs e)
     {
-        radSearchCompany.DataSource = GetCompany();
-        radSearchCompany.DataTextField = "CompanyName";
-        radSearchCompany.DataValueField = "CompanyId";
+        //radSearchCompany.DataSource = GetCompany();
+        //radSearchCompany.DataTextField = "CompanyName";
+        //radSearchCompany.DataValueField = "CompanyId";
 
 
         RadGrid2.MasterTableView.CommandItemSettings.ShowAddNewRecordButton = false;

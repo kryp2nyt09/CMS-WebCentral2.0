@@ -154,8 +154,17 @@ public partial class _AddNewUser : System.Web.UI.Page
                 byte[] Password = Tools.Encryption.EncryptPassword(txtPassword.Text);
 
                 BLL.Users_Info.AddUsers(UserName, Password, Password, employeeId, new Guid("11111111-1111-1111-1111-111111111111"), getConstr.ConStrCMS);
-                string script = "<script>CloseOnReload()</" + "script>";
-                ClientScript.RegisterStartupScript(this.GetType(), "CloseOnReload", script);
+                //if(countRowsAffected > 0)
+                //{
+                //    string script = "<script>CloseOnReload()</" + "script>";
+                //    ClientScript.RegisterStartupScript(this.GetType(), "CloseOnReload", script);
+                //}
+                //else
+                //{
+                //    string script = "<script>alert('Already Exists')</" + "script>";
+                //    ClientScript.RegisterStartupScript(GetType(), "Alert", script);
+                //}
+                
 
             }
             else

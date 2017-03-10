@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/cmsversion.Master" AutoEventWireup="true" CodeFile="ManageRepresentatives.aspx.cs" Inherits="_ManageRepresentatives" %>
+﻿<%@ Page Title="Manage Representatives" Language="C#" MasterPageFile="~/cmsversion.Master" AutoEventWireup="true" CodeFile="ManageRepresentatives.aspx.cs" Inherits="_ManageRepresentatives" %>
 
 <%@ MasterType VirtualPath="~/cmsversion.master" %>
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
@@ -6,6 +6,17 @@
 
 <asp:Content ID="Content0" ContentPlaceHolderID="head" runat="Server">
     <link href="../styles/default.css" rel="stylesheet" />
+     <style type="text/css">
+        .alink{
+            text-decoration:none !important;
+            color:#c1c7ca !important;
+        }
+
+        .alink:hover{
+            text-decoration:none !important;
+            color:#c1c7ca !important;
+        }
+    </style>
 
 
 </asp:Content>
@@ -34,7 +45,7 @@
                     </div>
                 </div>
                 <!-- /.row -->
-                <div class="size-wide">
+               <%-- <div class="size-wide">
                     <telerik:RadSearchBox RenderMode="Lightweight" runat="server" ID="radSearchRepresentatives" EmptyMessage="Search Representatives"
                           OnSearch="radSearchRepresentatives_Search" Width="300"
                         DataKeyNames="ClientId"
@@ -45,7 +56,7 @@
                     </telerik:RadSearchBox>
                     
                  </div>
-                <br />
+                <br />--%>
                           <telerik:LayoutColumn HiddenMd="true" HiddenSm="true" HiddenXs="true">
 
                         <telerik:RadAjaxPanel ID="RadAjaxPanel2" ClientEvents-OnRequestStart="onRequestStart" runat="server" CssClass="gridwrapper">
@@ -67,46 +78,61 @@
                             </telerik:RadAjaxManager>
                             <telerik:RadAjaxLoadingPanel runat="server" ID="gridLoadingPanel"></telerik:RadAjaxLoadingPanel>
                            
-                            <telerik:RadGrid ID="RadGrid2" OnItemCreated="RadGrid2_ItemCreated"
-                                runat="server" AllowPaging="True" ExportSettings-Excel-DefaultCellAlignment="Right"
-                                PageSize="10" Skin="Glow" AllowSorting="true" OnItemCommand="RadGrid2_ItemCommand1"
-                                RenderMode="Mobile"
+                            <telerik:RadGrid ID="RadGrid2" Skin="Glow"
+                                runat="server"
+                                OnNeedDataSource="RadGrid2_NeedDataSource"
+                                AllowPaging="True" 
+                                AutoGenerateColumns="false"
+                                AllowSorting="true"
+                                OnItemCreated="RadGrid2_ItemCreated"
+                                ExportSettings-Excel-DefaultCellAlignment="Right"
+                                PageSize="10" OnItemCommand="RadGrid2_ItemCommand1"
                                 DataKeyNames="ClientId" CommandItemDisplay="Top"
-                                OnNeedDataSource="RadGrid2_NeedDataSource"> 
+                                > 
+                                
                                 <ExportSettings ExportOnlyData="true" IgnorePaging="true"></ExportSettings>
+                                <GroupingSettings CaseSensitive="false"></GroupingSettings>
+
+
                                 <MasterTableView AutoGenerateColumns="False" ClientDataKeyNames="ClientId"
-                                    AllowFilteringByColumn="false"
+                                    AllowFilteringByColumn="true"
                                     DataKeyNames="ClientId" CommandItemDisplay="Top" 
                                     InsertItemPageIndexAction="ShowItemOnFirstPage">
+
                                    <CommandItemSettings ShowExportToWordButton="true" ShowExportToExcelButton="true" 
-            ShowExportToCsvButton="true" ShowExportToPdfButton="true"></CommandItemSettings>
+                                        ShowExportToCsvButton="true" ShowExportToPdfButton="true"></CommandItemSettings>
                                     <Columns>
 
-                                        <telerik:GridNumericColumn DataField="Name" HeaderText="Client Name" SortExpression="Name"
-                                            UniqueName="Name">
+                                        <telerik:GridBoundColumn DataField="Name" HeaderText="Client Name" SortExpression="Name"
+                                            UniqueName="Name" FilterDelay="2000" ShowFilterIcon="false"
+                                             CurrentFilterFunction="Contains" AutoPostBackOnFilter="false"  >
                                             <HeaderStyle />
-                                        </telerik:GridNumericColumn>
+                                        </telerik:GridBoundColumn>
 
                                         
-                                        <telerik:GridNumericColumn DataField="AccountNo" HeaderText="AccountNo" SortExpression="AccountNo"
-                                            UniqueName="AccountNo">
+                                        <telerik:GridBoundColumn DataField="AccountNo" HeaderText="AccountNo" SortExpression="AccountNo"
+                                            UniqueName="AccountNo" FilterDelay="2000" ShowFilterIcon="false"
+                                             CurrentFilterFunction="Contains" AutoPostBackOnFilter="false">
                                             <HeaderStyle />
-                                        </telerik:GridNumericColumn>
+                                        </telerik:GridBoundColumn>
 
-                                        <telerik:GridNumericColumn DataField="CompanyName" HeaderText="Company Name" SortExpression="CompanyName"
-                                            UniqueName="CompanyName">
+                                        <telerik:GridBoundColumn DataField="CompanyName" HeaderText="Company Name" SortExpression="CompanyName"
+                                            UniqueName="CompanyName" FilterDelay="2000" ShowFilterIcon="false"
+                                             CurrentFilterFunction="Contains" AutoPostBackOnFilter="false">
                                             <HeaderStyle />
-                                        </telerik:GridNumericColumn>
+                                        </telerik:GridBoundColumn>
 
-                                        <telerik:GridNumericColumn DataField="CityName" HeaderText="City Name" SortExpression="CityName"
-                                            UniqueName="CityName">
+                                        <telerik:GridBoundColumn DataField="CityName" HeaderText="City Name" SortExpression="CityName"
+                                            UniqueName="CityName" FilterDelay="2000" ShowFilterIcon="false"
+                                             CurrentFilterFunction="Contains" AutoPostBackOnFilter="false">
                                             <HeaderStyle />
-                                        </telerik:GridNumericColumn>
+                                        </telerik:GridBoundColumn>
                                         
-                                        <telerik:GridNumericColumn DataField="BranchCorpOfficeName" HeaderText="BranchCorpOffice" SortExpression="BranchCorpOfficeName"
-                                            UniqueName="BranchCorpOfficeName">
+                                        <telerik:GridBoundColumn DataField="BranchCorpOfficeName" HeaderText="BranchCorpOffice" SortExpression="BranchCorpOfficeName"
+                                            UniqueName="BranchCorpOfficeName" FilterDelay="2000" ShowFilterIcon="false"
+                                             CurrentFilterFunction="Contains" AutoPostBackOnFilter="false">
                                             <HeaderStyle />
-                                        </telerik:GridNumericColumn>
+                                        </telerik:GridBoundColumn>
 
                                        <telerik:GridDateTimeColumn DataField="ModifiedDate" HeaderText="Date Modified" SortExpression="ModifiedDate"
                                             UniqueName="ModifiedDate" PickerType="DatePicker" DataFormatString="{0:MM/dd/yyyy}">
@@ -131,21 +157,21 @@
                                     <CommandItemTemplate>
 
                             |
-                                        <a href="#" onclick="return ShowInsertForm();">
+                                        <a href="#" onclick="return ShowInsertForm();" class="alink">
                                              <img src="../images/emblem.png" alt="Add Company" width="20">
                                              Add Representatives
                                          </a>
                                         
                                         |
                                         
-                                        <a href="#"  onclick="return ShowExportForm();">
+                                        <a href="#"  onclick="return ShowExportForm();" class="alink">
                                             <img src="../images/emblem.png" alt="Print Preview" width="20">
                                            Print Preview
                                             </a>
        |
                    
                                  
-                                        <a href="#"  onclick="location.reload();">
+                                        <a href="#"  onclick="location.reload();" class="alink">
                                             <img src="../images/emblem.png" alt="Export to Excel" width="20">
                                             Refresh Data
                                             </a>
@@ -164,12 +190,12 @@
                             <br />
                             <telerik:RadWindowManager RenderMode="Mobile" ID="RadWindowManager1" runat="server" EnableShadow="true">
                                 <Windows>
-                                    <telerik:RadWindow RenderMode="Mobile" ID="RepresentativeListDialog" runat="server" Title="Editing record" Height="620px"
+                                    <telerik:RadWindow RenderMode="Mobile" ID="RepresentativeListDialog" runat="server" Title="Editing record" Height="650px"
                                         Width="800px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false"
                                         Modal="true" Behaviors="Close,Move">
                                     </telerik:RadWindow>
 
-                                     <telerik:RadWindow RenderMode="Mobile" ID="AddRepresentatives" runat="server" Title="Adding record" Height="600px"
+                                     <telerik:RadWindow RenderMode="Mobile" ID="AddRepresentatives" runat="server" Title="Adding record" Height="630px"
                                         Width="800px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false" VisibleStatusbar ="false" AutoSize="false"
                                         Modal="true" Behaviors="Close,Move"  >
                                     </telerik:RadWindow>

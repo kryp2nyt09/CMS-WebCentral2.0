@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="EditEmployee.aspx.cs" EnableEventValidation="false" Inherits="_EditCrating" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="EditEmployee.aspx.cs" EnableEventValidation="false" Inherits="_EditEmployee" %>
 
 <%--<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Editform_csharp.aspx.cs" Inherits="Telerik.Web.Examples.Grid.Integration.GridAndWindow.EditFormCS" %>--%>
 
