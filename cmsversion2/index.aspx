@@ -39,7 +39,7 @@
                     </button>
 
                    
-                    <a class="navbar-brand" href="#"> <img src="../images/logo.png"  style=""/></a>
+                    <a class="navbar-brand" href="#"> <img src="images/logo1.png"  style=""/></a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
 

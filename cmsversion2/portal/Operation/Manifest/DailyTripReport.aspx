@@ -15,8 +15,8 @@
             <div class="row">
                 <h3>DAILY TRIP</h3>
                 <ol class="breadcrumb">
-                    <li>Manifest</li>
                     <li>Operation</li>
+                    <li>Manifest</li>
                     <li>Daily Trip</li>
                 </ol>
             </div>
@@ -36,7 +36,7 @@
                         <Columns>
                             <telerik:GridDateTimeColumn
                                  DataField="CreatedDate" HeaderText="Date" SortExpression="CreatedDate" AllowFiltering="true" FilterListOptions="VaryByDataType"
-                                 PickerType="DatePicker"  DataFormatString="{0:MM/dd/yyyy}" DataType="System.DateTime" UniqueName="CreatedDate" 
+                                 PickerType="DatePicker"  DataFormatString="{0:MM/dd/yyyy}" DataType="System.DateTime" UniqueName="CreatedDate" FilterControlWidth="100px"
                                  ></telerik:GridDateTimeColumn>
 
                             <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
@@ -95,6 +95,7 @@
                         </Columns>
                     </MasterTableView>
                 </telerik:RadGrid>
+                <br />
             </div>
         </div>
     </div>

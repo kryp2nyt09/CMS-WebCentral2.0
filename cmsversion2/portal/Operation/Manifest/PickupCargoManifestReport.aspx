@@ -15,8 +15,8 @@
             <div class="row">
                 <h3>PICK UP CARGO</h3>
                 <ol class="breadcrumb">
-                    <li>Manifest</li>
                     <li>Operation</li>
+                    <li>Manifest</li>
                     <li>Pickup Cargo</li>
                 </ol>
             </div>
@@ -30,9 +30,13 @@
                     AllowSorting="true" 
                     OnNeedDataSource="gridPickupCargo_NeedDataSource" OnInfrastructureExporting="gridPickupCargo_InfrastructureExporting">
                     
-                    <ExportSettings HideStructureColumns="true" ExportOnlyData="true" IgnorePaging="true" UseItemStyles="true" >
-                        <Pdf ForceTextWrap="true" PageWidth="297mm" PageHeight="210mm" BorderColor="Black" BorderType="AllBorders" BorderStyle="Thin" PageTitle="AP CARGO">
-                          
+                    <ExportSettings HideStructureColumns="true" ExportOnlyData="true" IgnorePaging="true" UseItemStyles="true" Pdf-PageLeftMargin="20px" Pdf-PageRightMargin="20px"> 
+                        <Pdf ForceTextWrap="true" PageWidth="397mm" PageHeight="210mm" BorderColor="Black" 
+                             BorderType="AllBorders" BorderStyle="Thin" PageHeaderMargin="10px" 
+                             PageHeader-LeftCell-Text="Checker:" PageTopMargin="100px">
+                          <PageHeader>
+                              <MiddleCell  Text="<img src='../../../images/APCARGO-Logo.jpg' width='100%' height='100%'/>"/>
+                          </PageHeader>
                         </Pdf>
                         <Excel  Format="Xlsx"/>
                     </ExportSettings>          
@@ -41,11 +45,12 @@
                         <Columns>                           
                              <telerik:GridDateTimeColumn
                                  DataField="CreatedDate" HeaderText="Date" SortExpression="CreatedDate" AllowFiltering="true" FilterListOptions="VaryByDataType" Exportable="false"
-                                 PickerType="DatePicker"  DataFormatString="{0:MM/dd/yyyy}" DataType="System.DateTime" UniqueName="CreatedDate" 
-                                 ></telerik:GridDateTimeColumn>
+                                 PickerType="DatePicker"  DataFormatString="{0:MM/dd/yyyy}" DataType="System.DateTime" UniqueName="CreatedDate" FilterControlWidth="100px" 
+                                 >
+                             </telerik:GridDateTimeColumn>
 
                              <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
-                                  CurrentFilterFunction="Contains" AutoPostBackOnFilter="false"  
+                                  CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" FilterControlWidth="60px"
                                   DataField="AirwayBillNo" HeaderText="Airway Bill No"></telerik:GridBoundColumn>
 
                             <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
@@ -95,6 +100,7 @@
                         </Columns>
                     </MasterTableView>
                 </telerik:RadGrid>
+                <br />
             </div>
         </div>
     </div>

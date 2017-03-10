@@ -17,7 +17,7 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body>
+<body>  
 <form id="form1" runat="server">
     <telerik:RadScriptManager runat="server"></telerik:RadScriptManager>
     <div id="container">
@@ -72,38 +72,50 @@
                                                 <li><a runat="server" href="~/portal/Operation/Manifest/BranchAcceptanceReport.aspx">Branch Acceptance</a></li>
                                                 <li><a runat="server" href="~/portal/Operation/Manifest/BundleReport.aspx">Bundle</a></li>
                                                 <li><a runat="server" href="~/portal/Operation/Manifest/UnbundleReport.aspx">Unbundle</a></li>
-                                                <li><a runat="server" href="#">Gateway Transmital</a></li>
+                                                <%--<li><a runat="server" href="#">Gateway Transmital</a></li>
                                                 <li><a runat="server" href="#">Gateway Outbound</a></li>
                                                 <li><a runat="server" href="#">Gateway Inbound</a></li>
-                                                <li><a runat="server" href="#">Cargo Transfer</a></li>
+                                                <li><a runat="server" href="#">Cargo Transfer</a></li>--%>
                                                 <li><a runat="server" href="~/portal/Operation/Manifest/SegregationReport.aspx">Segregation</a></li>
                                                 <li><a runat="server" href="~/portal/Operation/Manifest/DailyTripReport.aspx">Daily Trip</a></li>
-                                                <li><a runat="server" href="#">Hold Cargo</a></li>
+                                                <%--<li><a runat="server" href="#">Hold Cargo</a></li>--%>
                                             </ul>
                                         </li>
-                                        <li><a runat="server" href="#">Grand Manifest</a></li>
-                                        <li><a runat="server" href="#">Transport</a></li>
-                                        <li><a runat="server" href="#">Flight Load Monitoring</a></li>
-                                        <li><a runat="server" href="#">Offloaded</a></li>
-                                        <li><a runat="server" href="#">Trans Shipment Monitoring</a></li>
+                                        <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Grand Manifest</a></li>
+                                        <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Transport</a></li>
+                                        <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Flight Load Monitoring</a></li>
+                                        <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Offloaded</a></li>
+                                        <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Trans Shipment Monitoring</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown dropdown-submenu">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Finance</a>
                                     <ul class="dropdown-menu">
-                                        <li><a runat="server" href="#">Revenue</a></li>
+                                        <li class="dropdown dropdown-submenu">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Revenue</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Summary</a></li>
+                                                <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Branch Corporate Office</a></li>
+                                                <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">CLuster</a></li>
+                                                <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Revenue Unit</a></li>
+                                                <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">User</a></li>
+                                                <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Client</a></li>
+                                                <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Ship Mode</a></li>
+                                                <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Commodity Type</a></li>
+                                            </ul>
+                                        </li>
                                         <li><a runat="server" href="~/portal/Finance/CollectionReport.aspx">Collection</a></li>
-                                        <li><a runat="server" href="#">Transport</a></li>
-                                        <li><a runat="server" href="#">Flight Load Monitoring</a></li>
-                                        <li><a runat="server" href="#">Offloaded</a></li>
-                                        <li><a runat="server" href="#">Trans Shipment Monitoring</a></li>
+                                        <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Transport</a></li>
+                                        <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Flight Load Monitoring</a></li>
+                                        <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Offloaded</a></li>
+                                        <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Trans Shipment Monitoring</a></li>
                                     </ul>
                                 </li>
-                                <li><a runat="server" href="#">Marketing</a></li>
-                                <li><a runat="server" href="#">Courier</a></li>
-                                <li><a runat="server" href="#">AWB Series</a></li>
-                                <li><a runat="server" href="#">OR Series</a></li>
-                                <li><a runat="server" href="#">Booking</a></li>
+                                <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Marketing</a></li>
+                                <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Courier</a></li>
+                                <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">AWB Series</a></li>
+                                <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">OR Series</a></li>
+                                <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Booking</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -168,6 +180,7 @@
         <div class="body-content">
         <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder> 
         </div>
+
     </div>
     
     <script src="../js/jquery.js"></script>

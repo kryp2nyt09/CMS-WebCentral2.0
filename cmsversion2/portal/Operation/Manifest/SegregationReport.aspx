@@ -16,8 +16,8 @@
             <div class="row">
                 <h3>SEGREGATION</h3>
                 <ol class="breadcrumb">
+                    <li>Operation</li>  
                     <li>Manifest</li>
-                    <li>Operation</li>
                     <li>Segregation</li>
                 </ol>
             </div>
@@ -36,11 +36,11 @@
                         <Columns>
                              <telerik:GridDateTimeColumn
                                  DataField="CreatedDate" HeaderText="Date" SortExpression="CreatedDate" AllowFiltering="true" FilterListOptions="VaryByDataType"
-                                 PickerType="DatePicker"  DataFormatString="{0:MM/dd/yyyy}" DataType="System.DateTime" UniqueName="CreatedDate" 
+                                 PickerType="DatePicker"  DataFormatString="{0:MM/dd/yyyy}" DataType="System.DateTime" UniqueName="CreatedDate" FilterControlWidth="120px"
                                  ></telerik:GridDateTimeColumn>
 
                             <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
-                                CurrentFilterFunction="Contains" AutoPostBackOnFilter="false"
+                                CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" FilterControlWidth="200px"
                                 DataField="BCO" HeaderText="BCO">
                             </telerik:GridBoundColumn>
 
@@ -54,11 +54,11 @@
                                   DataField="Driver" HeaderText="Driver"></telerik:GridBoundColumn>
 
                             <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
-                                  CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" 
+                                  CurrentFilterFunction="Contains" AutoPostBackOnFilter="false"  AllowFiltering="false"
                                   DataField="Checker" HeaderText="Checker"></telerik:GridBoundColumn>
 
                             <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
-                                  CurrentFilterFunction="Contains" AutoPostBackOnFilter="false"
+                                  CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" AllowFiltering="false"
                                   DataField="PlateNo" HeaderText="Plate #"></telerik:GridBoundColumn>
 
                              <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
@@ -77,6 +77,7 @@
                         </Columns>
                     </MasterTableView>
                 </telerik:RadGrid>
+                <br />
             </div>
         </div>
     </div>

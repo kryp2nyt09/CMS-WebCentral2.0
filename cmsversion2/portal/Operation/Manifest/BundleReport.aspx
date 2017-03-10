@@ -14,8 +14,8 @@
             <div class="row">
                 <h3>BUNDLE</h3>
                 <ol class="breadcrumb">
-                    <li>Manifest</li>
                     <li>Operation</li>
+                    <li>Manifest</li>
                     <li>Bundle</li>
                 </ol>
             </div>
@@ -35,7 +35,7 @@
 
                             <telerik:GridDateTimeColumn
                                  DataField="CreatedDate" HeaderText="Date" SortExpression="CreatedDate" AllowFiltering="true" FilterListOptions="VaryByDataType"
-                                 PickerType="DatePicker"  DataFormatString="{0:MM/dd/yyyy}" DataType="System.DateTime" UniqueName="CreatedDate" 
+                                 PickerType="DatePicker"  DataFormatString="{0:MM/dd/yyyy}" DataType="System.DateTime" UniqueName="CreatedDate" FilterControlWidth="100px"
                                  ></telerik:GridDateTimeColumn>
 
                             <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
@@ -49,12 +49,12 @@
                             </telerik:GridBoundColumn>
 
                             <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
-                                CurrentFilterFunction="Contains" AutoPostBackOnFilter="false"
+                                CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" FilterControlWidth="60px"
                                 DataField="AirwayBillNo" HeaderText="Airway Bill No">
                             </telerik:GridBoundColumn>
 
                              <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
-                                CurrentFilterFunction="Contains" AutoPostBackOnFilter="false"
+                                CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" FilterControlWidth="60px"
                                 DataField="SackNo" HeaderText="Sack #">
                             </telerik:GridBoundColumn>
 
@@ -101,6 +101,7 @@
                         </Columns>
                     </MasterTableView>
                 </telerik:RadGrid>
+                <br />
             </div>
         </div>
     </div>
