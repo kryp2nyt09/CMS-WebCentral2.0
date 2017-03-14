@@ -28,53 +28,63 @@
                     AutoGenerateColumns="false"
                     AllowSorting="true" OnNeedDataSource="grid_BranchAcceptance_NeedDataSource">
                     
-                    <ExportSettings HideStructureColumns="true" ExportOnlyData="true" IgnorePaging="true" UseItemStyles="true"></ExportSettings>          
+                    <ExportSettings HideStructureColumns="true" ExportOnlyData="true" 
+                        IgnorePaging="true" UseItemStyles="true" Pdf-BorderColor="Black" 
+                        Pdf-BorderStyle="Thin" Pdf-BorderType="AllBorders">
+                        <Pdf>
+                            <PageHeader>
+                                <LeftCell  Text="<img src='../../../images/APCARGO-Logo.jpg' width='100%' height='100%'/>"/>
+                                
+                            </PageHeader>
+                        </Pdf>
+
+                    </ExportSettings>          
                     <MasterTableView CommandItemDisplay="Top">
                         <CommandItemSettings ShowExportToExcelButton="true" ShowExportToPdfButton="true" ShowExportToWordButton="true" ShowExportToCsvButton="true" ShowAddNewRecordButton="false"  ShowRefreshButton="false" />
                         <Columns>
 
                             <telerik:GridDateTimeColumn
-                                 DataField="CreatedDate" HeaderText="Date" SortExpression="CreatedDate" AllowFiltering="true" FilterListOptions="VaryByDataType"
+                                 DataField="CreatedDate" HeaderText="Date" SortExpression="CreatedDate" AllowFiltering="true" FilterListOptions="VaryByDataType" Exportable="false"
                                  PickerType="DatePicker"  DataFormatString="{0:MM/dd/yyyy}" DataType="System.DateTime" UniqueName="CreatedDate"  FilterControlWidth="100px" 
                                  ></telerik:GridDateTimeColumn>
 
                             <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
-                                  CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" 
+                                  CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" Exportable="false" 
                                   DataField="BCO" HeaderText="BCO"></telerik:GridBoundColumn>
                             
                              <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
-                                  CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" 
+                                  CurrentFilterFunction="Contains" AutoPostBackOnFilter="false"  Exportable="false"
                                   DataField="Area" HeaderText="BSO"></telerik:GridBoundColumn>
 
-                             <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
+                             <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false" HeaderStyle-Width="260px"
                                   CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" FilterControlWidth="70px" 
                                   DataField="AirwayBillNo" HeaderText="Airway Bill No"></telerik:GridBoundColumn>
 
-                             <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
+                             <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false" Exportable="false"
                                   CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" 
                                   DataField="Driver" HeaderText="Driver"></telerik:GridBoundColumn>
 
-                            <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
+                            <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false" Exportable="false"
                                   CurrentFilterFunction="EqualTo" AutoPostBackOnFilter="false" AllowFiltering="false"
                                   DataField="Checker" HeaderText="Checker"></telerik:GridBoundColumn>
 
-                            <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
+                            <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false" Exportable="false"
                                   CurrentFilterFunction="EqualTo" AutoPostBackOnFilter="false" AllowFiltering="false"
                                   DataField="PlateNo" HeaderText="Plate #"></telerik:GridBoundColumn>
 
-                             <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
+                             <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false" Exportable="false"
                                   CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" FilterControlWidth="60px" 
                                   DataField="BatchName" HeaderText="Batch"></telerik:GridBoundColumn>
 
-                            <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
+                            <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false" HeaderStyle-Width="70px" 
                                   CurrentFilterFunction="EqualTo" AutoPostBackOnFilter="false" AllowFiltering="false"
                                   DataField="Recieved Qty" HeaderText="Recieved Qty"></telerik:GridBoundColumn>
 
-                            <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false" HeaderStyle-Width="40px"
+                            <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false" HeaderStyle-Width="70px"
                                   CurrentFilterFunction="EqualTo" AutoPostBackOnFilter="false" AllowFiltering="false"
                                   DataField="Decripency Qty" HeaderText="Discrepency Qty"></telerik:GridBoundColumn>
 
-                            <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
+                            <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false" HeaderStyle-Width="70px"
                                   CurrentFilterFunction="EqualTo" AutoPostBackOnFilter="false" AllowFiltering="false"
                                   DataField="Total Qty" HeaderText="Total Qty"></telerik:GridBoundColumn>
                             
