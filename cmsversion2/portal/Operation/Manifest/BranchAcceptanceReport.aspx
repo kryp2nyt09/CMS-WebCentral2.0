@@ -21,26 +21,27 @@
             </div>
             <!--- PAGE BODY--->
             <div class="row">
+             
                 <telerik:RadGrid ID="grid_BranchAcceptance" runat="server"  Skin="Glow"
                     AllowPaging="True" 
                     PageSize="10"  
-                    AllowFilteringByColumn="True"
+                    AllowFilteringByColumn="True" 
                     AutoGenerateColumns="false"
                     AllowSorting="true" OnNeedDataSource="grid_BranchAcceptance_NeedDataSource">
                     
-                    <ExportSettings HideStructureColumns="true" ExportOnlyData="true" 
-                        IgnorePaging="true" UseItemStyles="true" Pdf-BorderColor="Black" 
-                        Pdf-BorderStyle="Thin" Pdf-BorderType="AllBorders">
-                        <Pdf>
+                    <ExportSettings HideStructureColumns="true" ExportOnlyData="true" Pdf-DefaultFontFamily="Segoe UI 10"
+                        IgnorePaging="true" UseItemStyles="true" Pdf-BorderColor="Black" Pdf-FontType="Subset">
+                        <Pdf Title="Branch Acceptance" PageHeaderMargin="10px" PageTopMargin="100px" BorderType="AllBorders" BorderStyle="Thin">
                             <PageHeader>
-                                <LeftCell  Text="<img src='../../../images/APCARGO-Logo.jpg' width='100%' height='100%'/>"/>
-                                
-                            </PageHeader>
+                              <MiddleCell  Text="<img src='../../../images/APCARGO-Logo.jpg' width='100%' height='100%'/>"/>
+                          </PageHeader>
                         </Pdf>
 
                     </ExportSettings>          
-                    <MasterTableView CommandItemDisplay="Top">
-                        <CommandItemSettings ShowExportToExcelButton="true" ShowExportToPdfButton="true" ShowExportToWordButton="true" ShowExportToCsvButton="true" ShowAddNewRecordButton="false"  ShowRefreshButton="false" />
+                    <MasterTableView CommandItemDisplay="Top" FilterItemStyle-VerticalAlign="Top">
+                        <CommandItemSettings ShowExportToExcelButton="true" ShowExportToPdfButton="true" ExportToPdfText="PDF" ShowExportToWordButton="false" ShowExportToCsvButton="false" ShowAddNewRecordButton="false"  ShowRefreshButton="false" />
+                        <FilterItemStyle VerticalAlign="Top" />
+
                         <Columns>
 
                             <telerik:GridDateTimeColumn
@@ -87,10 +88,9 @@
                             <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false" HeaderStyle-Width="70px"
                                   CurrentFilterFunction="EqualTo" AutoPostBackOnFilter="false" AllowFiltering="false"
                                   DataField="Total Qty" HeaderText="Total Qty"></telerik:GridBoundColumn>
-                            
-                             
-
+                           
                         </Columns>
+                       
                     </MasterTableView>
                 </telerik:RadGrid>
                 <br />
