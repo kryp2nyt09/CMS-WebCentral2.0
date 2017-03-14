@@ -137,6 +137,9 @@
   <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Reports\UserExportPreview.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Reports\UserExportPreview.aspx" />
   <event action="Analyze" type="Success" name="UserExportPreview.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\Reports\UserExportPreview.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UnderMaintenancePage.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UnderMaintenancePage.aspx" />
+  <event action="Analyze" type="Success" name="UnderMaintenancePage.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UnderMaintenancePage.aspx" />
   <event action="Analyze" type="Success" name="Register Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\AccountStatus\AddAccountStatus.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\AccountStatus\AddAccountStatus.aspx" />
   <event action="Analyze" type="Success" name="AddAccountStatus.aspx" path="E:\AP CARGO Web Central Local Repository\cmsversion2\portal\UserModal\AccountStatus\AddAccountStatus.aspx" />
