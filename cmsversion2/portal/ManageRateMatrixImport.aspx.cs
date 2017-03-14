@@ -48,7 +48,7 @@ public partial class _ManageRateMatrixImport : System.Web.UI.Page
                 conn.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Import_FileName + ";" + "Extended Properties='Excel 12.0 Xml;HDR=YES;'";
             using (OleDbCommand comm = new OleDbCommand())
             {
-                comm.CommandText = "Select * from [" + sheetName + "$]";
+                comm.CommandText = "Select * from [" + sheetName + "$] WHERE not ltrim(rtrim(OriginCityName)) = ''";
 
                 comm.Connection = conn;
 

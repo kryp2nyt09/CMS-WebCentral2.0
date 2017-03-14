@@ -139,7 +139,8 @@ public partial class _FlightMaintenance : System.Web.UI.Page
         }
     }
 
-    //Upload File
+
+    #region Upload File
     protected void btnUpload_Click(object sender, EventArgs e)
     {
         //StreamReader streamReader;
@@ -148,7 +149,7 @@ public partial class _FlightMaintenance : System.Web.UI.Page
         {
             string extension = System.IO.Path.GetExtension(FileUploadFlightInfo.FileName); // extension file
             //string contentType = FileUploadFlightInfo.PostedFile.ContentType;
-            if (extension.Equals(".csv") || extension.Equals(".xlsx") || extension.Equals(".xls"))
+            if (extension.Equals(".csv"))
             {
                 try
                 {
@@ -175,11 +176,29 @@ public partial class _FlightMaintenance : System.Web.UI.Page
 
                     DataTable csvData = GetDataTableFromCSVFile(SaveLocation);
                     DataTable filterTable = FilterFlightInfoData(csvData);
+                    int count = filterTable.Rows.Count;
+                    if(count > 0)
+                    {
+                        BLL.Flight.BulkInsertFlightInfo(filterTable, getConstr.ConStrCMS);
 
-                    BLL.Flight.BulkInsertFlightInfo(filterTable, getConstr.ConStrCMS);
+                        //string script = "<script>CloseOnReload()</" + "script>";
+                        //ClientScript.RegisterStartupScript(this.GetType(), "CloseOnReload", script);
 
-                    string script = "<script>CloseOnReload()</" + "script>";
-                    ClientScript.RegisterStartupScript(this.GetType(), "CloseOnReload", script);
+                        if (Directory.Exists(folderPath))
+                        {
+                            // Directory.Delete(SaveLocation);
+                            File.Delete(SaveLocation);
+                        }
+
+                        string script = "<script>alert('File successfully imported!.')</" + "script>";
+                        ClientScript.RegisterStartupScript(GetType(), "Alert", script);
+
+                        RadGrid2.DataSource = GetFlightDetails();
+                        RadGrid2.Rebind();
+
+                    }
+
+
 
                 }
                 catch(Exception ex)
@@ -194,9 +213,13 @@ public partial class _FlightMaintenance : System.Web.UI.Page
         }
     }
 
+    #endregion
+
     static System.Globalization.DateTimeFormatInfo dti = new System.Globalization.DateTimeFormatInfo();
     static string dateFormat = "yyyyMMddHHmmss";
 
+    #region GetDataFromCsvFile
+    
     public DataTable GetDataTableFromCSVFile(string csvFilePath)
     {
         DataTable csvData = new DataTable();
@@ -211,9 +234,9 @@ public partial class _FlightMaintenance : System.Web.UI.Page
                 string[] colFields = csvReader.ReadFields();
                 foreach (string column in colFields)
                 {
-                    DataColumn datecolumn = new DataColumn(column);
-                    datecolumn.AllowDBNull = true;
-                    csvData.Columns.Add(datecolumn);
+                    DataColumn datacolumn = new DataColumn(column);
+                    datacolumn.AllowDBNull = true;
+                    csvData.Columns.Add(datacolumn);
                 }
 
                 while (!csvReader.EndOfData)
@@ -223,8 +246,6 @@ public partial class _FlightMaintenance : System.Web.UI.Page
                     string airlineName = fieldData[3];
                     string originCityName = fieldData[4];
                     string destinationCityName = fieldData[5];
-                    //DateTime ETD = convertStringToDateTime(fieldData[1]);
-                    //DateTime ETA = convertStringToDateTime(fieldData[2]);
                     DateTime ETD = Convert.ToDateTime(fieldData[1]);
                     DateTime ETA = Convert.ToDateTime(fieldData[2]);
 
@@ -239,6 +260,7 @@ public partial class _FlightMaintenance : System.Web.UI.Page
 
         return csvData;
     }
+    #endregion
 
     //convert DateTime into Formated String
     public static string convertDateTimeToFormatedString(DateTime dateTime)
@@ -253,6 +275,8 @@ public partial class _FlightMaintenance : System.Web.UI.Page
         return DateTime.ParseExact(dateTimeInString, "T", dti);
     }
 
+    #region DataTable FilterFlightInfoData
+    
     public DataTable FilterFlightInfoData(DataTable datatable)
     {
         DataTable filterDatafromCsv = new DataTable();
@@ -272,6 +296,18 @@ public partial class _FlightMaintenance : System.Web.UI.Page
                         new DataColumn("RecordStatus", typeof(int)),
                     });
 
+        //DataTable duplicateRecord = new DataTable();
+        //duplicateRecord.Columns.AddRange(new DataColumn[6]
+        //            {
+        //                new DataColumn("Flight No", typeof(string)),
+        //                new DataColumn("ETD",typeof(DateTime)),
+        //                new DataColumn("ETA",typeof(DateTime)),
+        //                new DataColumn("GateWay Name", typeof(string)),
+        //                new DataColumn("Origin City", typeof(string)),
+        //                new DataColumn("Destination City", typeof(string)),
+        //            });
+
+
         Guid FlightInfoId;
         Guid airlineId = new Guid();
         Guid OriginCityId = new Guid();
@@ -288,16 +324,35 @@ public partial class _FlightMaintenance : System.Web.UI.Page
             DateTime ETA = Convert.ToDateTime(row[2].ToString()); //2
             FlightInfoId = Guid.NewGuid();
 
-            var result = BLL.Flight.GetIds(airlineName, originCityName, destinationCityName, getConstr.ConStrCMS);
-            airlineId = result.Item1;
-            OriginCityId = result.Item2;
-            DestinationCityId = result.Item3;
-            filterDatafromCsv.Rows.Add(FlightInfoId, flightNo,ETD ,ETA, airlineId, OriginCityId, DestinationCityId,
-                                        CreatedModifiedBy, DateTime.Now, CreatedModifiedBy, DateTime.Now, 1);
+            #region Check If FlightNumber and Id exists
+            int checkIfFlightNumberExists = BLL.Flight.checkIfFlightNumberExists(flightNo, getConstr.ConStrCMS);
+
+            //IF NOT EXISTS
+            if(checkIfFlightNumberExists == 0)
+            {
+                int checkIfIdExists = BLL.Flight.checkIfIdExists(airlineName, originCityName, destinationCityName, getConstr.ConStrCMS);
+                // CHECK IF airlineName, originCityName, destinationCityName HAS ID
+                if (checkIfIdExists > 0)
+                {
+                    var result = BLL.Flight.GetIds(airlineName, originCityName, destinationCityName, getConstr.ConStrCMS);
+                    airlineId = result.Item1;
+                    OriginCityId = result.Item2;
+                    DestinationCityId = result.Item3;
+                    filterDatafromCsv.Rows.Add(FlightInfoId, flightNo, ETD, ETA, airlineId, OriginCityId, DestinationCityId,
+                                                CreatedModifiedBy, DateTime.Now, CreatedModifiedBy, DateTime.Now, 1);
+                }
+                
+            }
+            else
+            {
+
+            }
+            #endregion
         }
 
         return filterDatafromCsv;
     }
 
+    #endregion
 
 }

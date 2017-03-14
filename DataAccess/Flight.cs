@@ -106,6 +106,58 @@ namespace DataAccess
             }
         }
 
+        public static int checkIfFlightNumberExists(string flightNumber, string conStr)
+        {
+            int countRowsAffected = 0;
+            using (SqlConnection con = new SqlConnection(conStr))
+            {
+                using (SqlCommand cmd = new SqlCommand("sp_checkifExists_FlightNumber", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@FlightNumber", SqlDbType.VarChar).Value = flightNumber;
+                    //rows output
+                    cmd.Parameters.Add("@checkIfExists", SqlDbType.Int);
+                    cmd.Parameters["@checkIfExists"].Direction = ParameterDirection.Output;
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+
+                    // read output value from @rowCount
+                    countRowsAffected = Convert.ToInt32(cmd.Parameters["@checkIfExists"].Value);
+                }
+            }
+
+            return countRowsAffected;
+        }
+
+        public static int checkIfIdExists(string airlineName, string originCityName, string destinationCityName, string conStr)
+        {
+            int countRowsAffected = 0;
+            using (SqlConnection con = new SqlConnection(conStr))
+            {
+                using (SqlCommand cmd = new SqlCommand("sp_checkIfExists_Id", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add("@airlineName", SqlDbType.VarChar).Value = airlineName;
+                    cmd.Parameters.Add("@originCityName", SqlDbType.VarChar).Value = originCityName;
+                    cmd.Parameters.Add("@destinationCityName", SqlDbType.VarChar).Value = destinationCityName;
+
+                    //rows output
+                    cmd.Parameters.Add("@ifIdExists", SqlDbType.Int);
+                    cmd.Parameters["@ifIdExists"].Direction = ParameterDirection.Output;
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+
+                    // read output value from @rowCount
+                    countRowsAffected = Convert.ToInt32(cmd.Parameters["@ifIdExists"].Value);
+                }
+            }
+
+            return countRowsAffected;
+        }
+
+
+
+
         public static Tuple<Guid, Guid, Guid> GetIds(string airlineName, string originCityName, string destinationCityName, string conStr)
         {
             Guid airlineId = new Guid();
