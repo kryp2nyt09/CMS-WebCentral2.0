@@ -81,7 +81,7 @@
 
             <telerik:RadGrid ID="RadGrid2"
                                 runat="server" AllowPaging="false" ExportSettings-Excel-DefaultCellAlignment="Right" 
-                                PageSize="100" Skin="Glow" AllowSorting="true" OnItemCreated="RadGrid2_ItemCreated"
+                                PageSize="10" Skin="Glow" AllowSorting="true" OnItemCreated="RadGrid2_ItemCreated"
                                 RenderMode="Mobile" 
                                 DataKeyNames="ExpressRateId" CommandItemDisplay="Top"
                                 OnNeedDataSource="RadGrid2_NeedDataSource"> 

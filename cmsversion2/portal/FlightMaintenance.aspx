@@ -26,10 +26,32 @@
         {
             text-align:right;
         }
-        
+  </style>
 
+    <script type="text/javascript">
+
+        function GetRadWindow() {
+            var oWindow = null;
+            if (window.radWindow) oWindow = window.radWindow;//Will work in Moz in all cases, including clasic dialog
+            else if (window.frameElement.radWindow) oWindow = window.frameElement.radWindow;//IE (and Moz az well)
+            return oWindow;
+        }
+
+        function CloseOnReload() {
+            //GetRadWindow().Close();
+            var oWnd = GetRadWindow();
+            oWnd.close();
+            top.location.href = top.location.href;
+        }
+
+        function RefreshParentPage() {
+            var oWnd = GetRadWindow();
+            oWnd.close();
+            top.location.href = top.location.href;
         
-    </style>
+        }
+        </script>
+
 
 </asp:Content>
 
@@ -248,11 +270,8 @@
                                     args.set_enableAjax(false);
                                 }
                             }
-                        </script>
 
-
-                        <script type="text/javascript">
-                        function UploadFile(fileUpload) {
+                            function UploadFile(fileUpload) {
                                 if (fileUpload.value != '') {
                                     document.getElementById("<%=btnUpload.ClientID %>").click();
                                 }
@@ -309,14 +328,6 @@
                                   }
                                   function RowDblClick(sender, eventArgs) {
 
-                                    <%--<%--    //changed code here 
-                                    var grid = $find("<%= RadGrid2.ClientID %>");
-                                    var MasterTable = grid.get_masterTableView();
-                                    var row = MasterTable.get_dataItems()[eventArgs.get_itemIndexHierarchical()];
-                                    var key = MasterTable.getCellByColumnUniqueName(row, "UserId");  // get the value by uniquecolumnname
-                                    var ID = key.innerHTML;        
-                                    MasterTable.fireCommand("MyClick2",ID);        
-                                --%>
                                     //ShowEditForm();
                                       window.radopen("UserModal/Flight/EditFlight.aspx?Id=" + eventArgs.getDataKeyValue("FlightInfoId"), "UserListDialog");
 

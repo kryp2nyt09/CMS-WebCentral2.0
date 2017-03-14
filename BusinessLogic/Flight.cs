@@ -17,6 +17,16 @@ namespace BusinessLogic
             return tuple;
         }
 
+        public static int checkIfFlightNumberExists(string flightNumber, string conStr)
+        {
+            return DAL.Flight.checkIfFlightNumberExists(flightNumber, conStr);
+        }
+
+        public static int checkIfIdExists(string airlineName, string originCityName, string destinationCityName, string conStr)
+        {
+            return DAL.Flight.checkIfIdExists(airlineName, originCityName, destinationCityName, conStr);
+        }
+
 
         public static DataSet GetFlightInformation(string conSTR)
         {

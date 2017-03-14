@@ -139,9 +139,17 @@ public partial class _AddRepresentatives : System.Web.UI.Page
         Guid companyId = new Guid();
         Guid areaId = new Guid();
 
-        cityId = Guid.Parse(rcbRepCity.SelectedValue.ToString());
-        companyId = Guid.Parse(rcbRepCompany.SelectedValue.ToString());
-        areaId = Guid.Parse(rcbRepArea.SelectedValue.ToString());
+        try
+        {
+            cityId = Guid.Parse(rcbRepCity.SelectedValue.ToString());
+            companyId = Guid.Parse(rcbRepCompany.SelectedValue.ToString());
+            areaId = Guid.Parse(rcbRepArea.SelectedValue.ToString());
+        }catch(Exception ex)
+        {
+            Console.WriteLine(ex);
+        }
+
+       
 
 
         BLL.Representatives.InsertRepresentatives(txtRepFirstName.Text, txtRepLastName.Text, txtRepContactNo.Text,txtRepMobileNo.Text, txtRepFax.Text,

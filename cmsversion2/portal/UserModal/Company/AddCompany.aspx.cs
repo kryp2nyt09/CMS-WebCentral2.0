@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.OleDb;
 using System.Globalization;
 using System.Web;
+using System.Web.UI;
 using System.Web.UI.WebControls;
 using Telerik.Web.UI;
 using BLL = BusinessLogic;
@@ -194,7 +195,7 @@ public partial class _AddCompany : System.Web.UI.Page
     {
         if (rcbAcctInfoOrganizationType.SelectedIndex >= 0)
         {
-            string organizationType = rcbAcctInfoOrganizationType.SelectedItem.ToString();
+            string organizationType = rcbAcctInfoOrganizationType.SelectedItem.Text;
             if (organizationType.Equals("Head Office"))
             {
                 rcbAcctInfoMotherCompany.Enabled = false;
@@ -221,9 +222,19 @@ public partial class _AddCompany : System.Web.UI.Page
     private void CompInfo()
     {
         Guid cityId = new Guid();
-        Guid industryId = new Guid();
-        cityId = Guid.Parse(rcbCompInfoCity.SelectedValue.ToString());
-        industryId = Guid.Parse(rcbCompInfoIndustry.SelectedValue.ToString());
+        Guid? industryId = new Guid();
+
+        try
+        {
+            cityId = Guid.Parse(rcbCompInfoCity.SelectedValue.ToString());
+            industryId = Guid.Parse(rcbCompInfoIndustry.SelectedValue.ToString());
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+            industryId = null;
+        }
+        
 
         compInfo.CompanyName = txtCompInfoCompanyName.Text;
         compInfo.Address1 = txtCompInfoAddress1.Text;
@@ -287,12 +298,7 @@ public partial class _AddCompany : System.Web.UI.Page
         {
             CreditLimit = Convert.ToDecimal(txtAcctCreditLimit.Text);
         }
-
-        
-        AccttypeId = Guid.Parse(rcbAccountType.SelectedValue.ToString());
-        acctStatusId = Guid.Parse(rcbAccountStatus.SelectedValue.ToString());
-        OrgTypeId = Guid.Parse(rcbAcctInfoOrganizationType.SelectedValue.ToString());
-         
+     
         if(rcbAcctInfoMotherCompany.Items.Count == 0)
         {
             MotherCompId = null;
@@ -300,15 +306,32 @@ public partial class _AddCompany : System.Web.UI.Page
         }
         else
         {
-            MotherCompId = Guid.Parse(rcbAcctInfoMotherCompany.SelectedValue.ToString());
+            try
+            {
+                MotherCompId = Guid.Parse(rcbAcctInfoMotherCompany.SelectedValue.ToString());
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
         }
         
-        BusinessTypeId = Guid.Parse(rcbBusinessType.SelectedValue.ToString());
-        BillingPeriodId = Guid.Parse(rcbBillingPeriod.SelectedValue.ToString());
-        PaymentTermId = Guid.Parse(rcbPaymentTerm.SelectedValue.ToString());
-        PaymentModeId = Guid.Parse(rcbPaymentMode.SelectedValue.ToString());
-        ApproveById = Guid.Parse(rcbApprovedBy.SelectedValue.ToString());
-        AreaId = Guid.Parse(rcbArea.SelectedValue.ToString());
+        try
+        {
+            AccttypeId = Guid.Parse(rcbAccountType.SelectedValue.ToString());
+            acctStatusId = Guid.Parse(rcbAccountStatus.SelectedValue.ToString());
+            OrgTypeId = Guid.Parse(rcbAcctInfoOrganizationType.SelectedValue.ToString());
+            BusinessTypeId = Guid.Parse(rcbBusinessType.SelectedValue.ToString());
+            BillingPeriodId = Guid.Parse(rcbBillingPeriod.SelectedValue.ToString());
+            PaymentTermId = Guid.Parse(rcbPaymentTerm.SelectedValue.ToString());
+            PaymentModeId = Guid.Parse(rcbPaymentMode.SelectedValue.ToString());
+            ApproveById = Guid.Parse(rcbApprovedBy.SelectedValue.ToString());
+            AreaId = Guid.Parse(rcbArea.SelectedValue.ToString());
+        }
+        catch(Exception ex)
+        {
+            Console.WriteLine(ex);
+        }
 
         compInfo.AccttypeId = AccttypeId;
         compInfo.AcctStatusId = acctStatusId;
@@ -445,7 +468,15 @@ public partial class _AddCompany : System.Web.UI.Page
     private void BillingInfo()
     {
         Guid billInfoCityId = new Guid();
-        billInfoCityId = Guid.Parse(rcbBillingInfoCity.SelectedValue.ToString());
+        try
+        {
+            billInfoCityId = Guid.Parse(rcbBillingInfoCity.SelectedValue.ToString());
+        }
+        catch(Exception ex)
+        {
+            Console.WriteLine(ex);
+        }
+
 
         compInfo.billInfoAddress1 = txtBillingInfoAdd1.Text;
         compInfo.billInfoAddress2 = txtBillingInfoAdd2.Text;
@@ -508,10 +539,12 @@ public partial class _AddCompany : System.Web.UI.Page
 
             string script = "<script>CloseOnReload()</" + "script>";
             ClientScript.RegisterStartupScript(this.GetType(), "CloseOnReload", script);
-        }else
+        }
+        else
         {
-            string alert = "<script>alert('Fill out required fields!.)</" + "script>";
-            ClientScript.RegisterStartupScript(this.GetType(), "Alert", alert);
+            //string alert = "<script>alert('Fill out required fields!.)</" + "script>";
+            //ClientScript.RegisterStartupScript(this.GetType(), "Alert", alert);
+            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Fill out required fields!')", true);
         }
 
         
