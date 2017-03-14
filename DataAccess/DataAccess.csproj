@@ -47,6 +47,7 @@
     <Compile Include="Department.cs" />
     <Compile Include="Flight.cs" />
     <Compile Include="awbissuance.cs" />
+    <Compile Include="Invoice.cs" />
     <Compile Include="Position.cs" />
     <Compile Include="Reason.cs" />
     <Compile Include="Remarks.cs" />

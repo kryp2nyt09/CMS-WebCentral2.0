@@ -48,6 +48,7 @@
     <Compile Include="Department.cs" />
     <Compile Include="Flight.cs" />
     <Compile Include="Industry.cs" />
+    <Compile Include="Invoice.cs" />
     <Compile Include="OrganizationType.cs" />
     <Compile Include="BusinessType.cs" />
     <Compile Include="AccounStatus.cs" />
