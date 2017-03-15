@@ -27,24 +27,22 @@
     <div id="wrapper">
    <div id="page-wrapper"  >
 
-            <div class="container-fluid" ">
+            <div class="container">
 
                 <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-12">
                      
-                            <h4>USER MAINTENANCE</h4>   
+                            <h3>USER MAINTENANCE</h3>   
                         
                         <ol class="breadcrumb">
                             <li>
-                                <i class="fa fa-dashboard"></i>  <a href="#">Administration</a>
+                                Administration
                             </li>
-                            <li class="active">
-                                <i class="fa fa-file"></i> Manage Users
+                            <li >
+                                 Manage Users
                             </li>
                         </ol>
-                        <hr />
-
                     </div>
                 </div>
                 <!-- /.row -->

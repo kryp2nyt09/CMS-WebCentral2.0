@@ -7,6 +7,7 @@
   <event action="Analyze" type="Success" name="DataAccess" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\DataAccess\DataAccess.csproj" />
   <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\Utilities\Utilities.csproj" />
   <event action="Analyze" type="Success" name="Utilities" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\Utilities\Utilities.csproj" />
+  <event action="Analyze" type="Success" name="Binary References" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\App_Start\Bin\" />
   <event action="Analyze" type="Success" name="Binary References" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\Bin\" />
   <event action="Analyze" type="Success" />
   <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\blank-page.html" />
@@ -53,6 +54,13 @@
   <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\MasterPageSingleMenu.master" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\MasterPageSingleMenu.master" />
   <event action="Analyze" type="Success" name="MasterPageSingleMenu.master" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\MasterPageSingleMenu.master" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\packages.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\packages.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\packages.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\packages.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\packages.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\packages.config" />
+  <event action="Analyze" type="Success" name="packages.config" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\packages.config" />
   <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\AWBSeriesManagement.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\AWBSeriesManagement.aspx" />
   <event action="Analyze" type="Success" name="AWBSeriesManagement.aspx" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\AWBSeriesManagement.aspx" />
@@ -444,9 +452,4 @@
   <event action="Analyze" type="Success" name="web.config" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\web.config" />
   <event action="Analyze" type="Success" name="C:\...\cmsversion2\" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2" />
   <event action="Analyze" type="Success" name="CMSversion2.1" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\CMSversion2.1.sln" />
-  <event action="Backup" type="Success" name="C:\...\cmsversion2\" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2" />
-  <event action="Upgrade" type="Success" name="Assembly References" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\web.config" />
-  <event action="Upgrade" type="Success" name="web.config" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\web.config" />
-  <event action="Upgrade" type="Success" name="C:\...\cmsversion2\" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2" />
-  <event action="Upgrade" type="Success" name="CMSversion2.1" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\CMSversion2.1.sln" />
 </log>

@@ -82,15 +82,18 @@
                     </div>
                 </div>
                 <!-- /.row -->
-                <div class="alignright">
-                                              <asp:FileUpload ID="FileUploadFlightInfo" runat="server" />  
-                                           <%-- <asp:Button ID="btnUpload" Text="Upload" runat="server" style="display: none" />--%>
-                                            <%--<telerik:RadAsyncUpload RenderMode="Lightweight" runat="server" ID="FileUploadFlightInfo"
+                <div>
+                        <telerik:RadAsyncUpload runat="server" ID="FileUploadFlightInfo"
                                             HideFileInput="true"
-                                            AllowedFileExtensions=".xls,.xlsx" />--%>
-                                           <telerik:RadButton ID="btnUpload" runat="server" Text="Upload" style="display: none" OnClick="btnUpload_Click"></telerik:RadButton>
-                                        </div>
-                
+                                            AllowedFileExtensions=".xls,.xlsx,.csv"
+                                            OnFileUploaded="FileUploadFlightInfo_FileUploaded"
+                                            OnClientFilesUploaded="UploadFile"
+                                            Localization-Select="Import File"
+                                            Font-Size="14px" />
+                        <telerik:RadButton ID="btnUpload" runat="server" Text="Upload" style="display: none" OnClick="btnUpload_Click"></telerik:RadButton>
+                 </div>
+                                <br />
+               
                <telerik:LayoutColumn HiddenMd="true" HiddenSm="true" HiddenXs="true">
 
                     <telerik:RadAjaxPanel ID="RadAjaxPanel2" ClientEvents-OnRequestStart="onRequestStart" runat="server" CssClass="gridwrapper">
@@ -111,6 +114,7 @@
                             </AjaxSettings>
                         </telerik:RadAjaxManager>
                         <telerik:RadAjaxLoadingPanel runat="server" ID="gridLoadingPanel"></telerik:RadAjaxLoadingPanel>
+                         
 
                         <telerik:RadGrid ID="RadGrid2" Skin="Glow"
                             runat="server" 
@@ -271,10 +275,14 @@
                                 }
                             }
 
-                            function UploadFile(fileUpload) {
+                           <%-- function UploadFile(fileUpload) {
                                 if (fileUpload.value != '') {
                                     document.getElementById("<%=btnUpload.ClientID %>").click();
                                 }
+                            }--%>
+
+                             function UploadFile(sender, args) {
+                                document.getElementById("<%= btnUpload.ClientID %>").click();
                             }
 
                             function ShowEditForm(id, rowIndex) {

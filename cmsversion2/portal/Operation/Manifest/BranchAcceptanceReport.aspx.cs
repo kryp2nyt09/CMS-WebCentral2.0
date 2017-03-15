@@ -14,7 +14,7 @@ public partial class portal_Operation_Manifest_BranchAcceptanceReport : System.W
     Tools.DataAccessProperties getConstr = new Tools.DataAccessProperties();
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        
     }
     public DataTable getBranchAcceptance()
     {

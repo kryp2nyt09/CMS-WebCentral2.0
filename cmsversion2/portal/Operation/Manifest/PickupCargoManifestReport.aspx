@@ -30,23 +30,22 @@
                     AllowSorting="true" 
                     OnNeedDataSource="gridPickupCargo_NeedDataSource" OnInfrastructureExporting="gridPickupCargo_InfrastructureExporting">
                     
-                    <ExportSettings HideStructureColumns="true" ExportOnlyData="true" IgnorePaging="true" UseItemStyles="true" Pdf-PageLeftMargin="20px" Pdf-PageRightMargin="20px"> 
+                    <ExportSettings HideStructureColumns="true" ExportOnlyData="true" IgnorePaging="true" UseItemStyles="false" FileName="Pickup_Cargo" Pdf-PageLeftMargin="20px" Pdf-PageRightMargin="20px"> 
                         <Pdf ForceTextWrap="true" PageWidth="397mm" PageHeight="210mm" BorderColor="Black" 
                              BorderType="AllBorders" BorderStyle="Thin" PageHeaderMargin="10px" 
-                             PageHeader-LeftCell-Text="Checker:" PageTopMargin="100px">
+                             PageTopMargin="100px">
                           <PageHeader>
-                              <MiddleCell  Text="<img src='../../../images/APCARGO-Logo.jpg' width='100%' height='100%'/>"/>
+                              <MiddleCell  Text="<img src='../../../images/APCARGO-Logo.jpg' width='100%' height='100%'/>" TextAlign="Center" />
                           </PageHeader>
                         </Pdf>
                         <Excel  Format="Xlsx"/>
                     </ExportSettings>          
                     <MasterTableView CommandItemDisplay="Top" Font-Size="Smaller">
-                        <CommandItemSettings ShowExportToExcelButton="true" ShowExportToPdfButton="true" ShowExportToWordButton="true" ShowExportToCsvButton="true" ShowAddNewRecordButton="false"  ShowRefreshButton="false"/>
+                        <CommandItemSettings ShowExportToExcelButton="true" ShowExportToPdfButton="true" ShowExportToWordButton="false" ShowExportToCsvButton="false" ShowAddNewRecordButton="false"  ShowRefreshButton="false"/>
                         <Columns>                           
                              <telerik:GridDateTimeColumn
                                  DataField="CreatedDate" HeaderText="Date" SortExpression="CreatedDate" AllowFiltering="true" FilterListOptions="VaryByDataType" Exportable="false"
-                                 PickerType="DatePicker"  DataFormatString="{0:MM/dd/yyyy}" DataType="System.DateTime" UniqueName="CreatedDate" FilterControlWidth="100px" 
-                                 >
+                                 PickerType="DatePicker"  DataFormatString="{0:MM/dd/yyyy}" DataType="System.DateTime" UniqueName="CreatedDate" FilterControlWidth="100px">
                              </telerik:GridDateTimeColumn>
 
                              <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"

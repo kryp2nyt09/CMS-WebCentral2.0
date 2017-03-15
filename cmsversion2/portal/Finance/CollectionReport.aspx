@@ -24,7 +24,13 @@
                     AutoGenerateColumns="true"
                     AllowSorting="true" OnNeedDataSource="grid_Collection_NeedDataSource">
                     
-                    <ExportSettings HideStructureColumns="true" ExportOnlyData="true" IgnorePaging="true" UseItemStyles="true"></ExportSettings>          
+                    <ExportSettings HideStructureColumns="true" ExportOnlyData="true" IgnorePaging="true" UseItemStyles="true">
+                        <Pdf Title="Branch Acceptance" PageHeaderMargin="10px" PageTopMargin="100px" BorderType="AllBorders" BorderStyle="Thin">
+                            <PageHeader>
+                              <MiddleCell  Text="<img src='../../images/APCARGO-Logo.jpg' width='100%' height='100%'/>"/>
+                          </PageHeader>
+                        </Pdf>
+                    </ExportSettings>          
                     <MasterTableView CommandItemDisplay="Top" Font-Size="Small">
                         <CommandItemSettings ShowExportToExcelButton="true" 
                              ShowExportToPdfButton="true" ShowExportToWordButton="true"
