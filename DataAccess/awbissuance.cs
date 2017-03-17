@@ -9,10 +9,10 @@ using System.Configuration;
 
 namespace DataAccess
 {
-    public class awbissuance
+    public class AwbIssuance
     {
 
-        public static DataSet Getawbissuance(string conSTR)
+        public static DataSet GetAwbIssuance(string conSTR)
         {
             using (SqlConnection con = new SqlConnection(conSTR))
             {
@@ -26,13 +26,13 @@ namespace DataAccess
         }
 
 
-        public static DataSet GetawbissuanceById(Guid Ratematrixid, string conSTR)
+        public static DataSet GetawbissuanceById(Guid AwbIssuanceId, string conSTR)
         {
             using (SqlConnection con = new SqlConnection(conSTR))
             {
                 SqlDataAdapter da = new SqlDataAdapter("sp_view_AwbIssuanceById", con);
                 da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                da.SelectCommand.Parameters.Add("@AwbIssuanceId", SqlDbType.UniqueIdentifier).Value = Ratematrixid;
+                da.SelectCommand.Parameters.Add("@AwbIssuanceId", SqlDbType.UniqueIdentifier).Value = AwbIssuanceId;
                 DataSet ds = new DataSet();
                 da.Fill(ds);
                 return ds;
@@ -52,8 +52,7 @@ namespace DataAccess
             }
         }
 
-        public static void InsertAWBIssuance(string seriesStart, string seriesend, DateTime issueddate, Guid RevenueUnitId, Guid BCOid,  Guid IssuedTold, Guid CreatedBy,
-                    string conStr)
+        public static void InsertAWBIssuance(string seriesStart, string seriesend, DateTime issueddate, Guid? RevenueUnitId, Guid BCOid,  Guid? IssuedTold, Guid CreatedBy,string conStr)
         {
             using (SqlConnection con = new SqlConnection(conStr))
             {
@@ -75,7 +74,7 @@ namespace DataAccess
         }
 
 
-        public static void updateAWBIssuanceWB(Guid AwbIssuanceId, string seriesStart, string seriesend, DateTime issueddate, Guid RevenueUnitId, Guid BCOid, Guid IssuedTold, Guid CreatedBy,
+        public static void updateAWBIssuanceWB(Guid AwbIssuanceId, string seriesStart, string seriesend, DateTime issueddate, Guid? RevenueUnitId, Guid BCOid, Guid? IssuedTold, Guid CreatedBy,
               string conStr)
         {
             using (SqlConnection con = new SqlConnection(conStr))
@@ -90,7 +89,7 @@ namespace DataAccess
                     cmd.Parameters.Add("@BCOid", SqlDbType.UniqueIdentifier).Value = BCOid;
                     cmd.Parameters.Add("@IssuedToId", SqlDbType.UniqueIdentifier).Value = IssuedTold;
                     cmd.Parameters.Add("@CreatedBy", SqlDbType.UniqueIdentifier).Value = CreatedBy;
-                    cmd.Parameters.Add("@AwbIssuanceId", SqlDbType.UniqueIdentifier).Value = CreatedBy;
+                    cmd.Parameters.Add("@AwbIssuanceId", SqlDbType.UniqueIdentifier).Value = AwbIssuanceId;
                     con.Open();
                     cmd.ExecuteNonQuery();
                 }

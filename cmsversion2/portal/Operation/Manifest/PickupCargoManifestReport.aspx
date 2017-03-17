@@ -28,7 +28,7 @@
                     AllowFilteringByColumn="True"
                     AutoGenerateColumns="false"
                     AllowSorting="true" 
-                    OnNeedDataSource="gridPickupCargo_NeedDataSource" OnInfrastructureExporting="gridPickupCargo_InfrastructureExporting">
+                    OnNeedDataSource="gridPickupCargo_NeedDataSource">
                     
                     <ExportSettings HideStructureColumns="true" ExportOnlyData="true" IgnorePaging="true" UseItemStyles="false" FileName="Pickup_Cargo" Pdf-PageLeftMargin="20px" Pdf-PageRightMargin="20px"> 
                         <Pdf ForceTextWrap="true" PageWidth="397mm" PageHeight="210mm" BorderColor="Black" 

@@ -29,9 +29,9 @@ public partial class _ManageAwbIssuance : System.Web.UI.Page
     {
         if (e.Item is GridDataItem)
         {
-            //HyperLink editLink = (HyperLink)e.Item.FindControl("EditLink");
-            //editLink.Attributes["href"] = "javascript:void(0);";
-            //editLink.Attributes["onclick"] = String.Format("return ShowEditForm('{0}','{1}');", e.Item.OwnerTableView.DataKeyValues[e.Item.ItemIndex]["CompanyId"], e.Item.ItemIndex);
+            HyperLink editLink = (HyperLink)e.Item.FindControl("EditLink");
+            editLink.Attributes["href"] = "javascript:void(0);";
+            editLink.Attributes["onclick"] = String.Format("return ShowEditForm('{0}','{1}');", e.Item.OwnerTableView.DataKeyValues[e.Item.ItemIndex]["AwbIssuanceId"], e.Item.ItemIndex);
 
         }
     }
@@ -53,28 +53,12 @@ public partial class _ManageAwbIssuance : System.Web.UI.Page
             RadGrid2.Rebind();
         }
     }
-    //public DataTable Sellers
-    //{
-    //    get
-    //    {
-    //        DataTable data = Session["Data"] as DataTable;
-
-    //        if (data == null)
-    //        {
-    //            data = GetUsers();
-    //            Session["Data"] = data;
-    //        }
-
-
-    //        return data;
-    //    }
-    //}
-
+   
     public DataTable GetAWBIssuance()
     {
         //DataTable data = new DataTable();
-        DataSet dt = DAL.awbissuance.Getawbissuance(getConstr.ConStrCMS);
-              DataTable convertdata = new DataTable();
+        DataSet dt = DAL.AwbIssuance.GetAwbIssuance(getConstr.ConStrCMS);
+        DataTable convertdata = new DataTable();
         convertdata = dt.Tables[0];
         return convertdata;
     }
@@ -87,43 +71,20 @@ public partial class _ManageAwbIssuance : System.Web.UI.Page
     }
 
 
-
-
-    protected void RadGrid2_ItemDataBound(object sender, GridItemEventArgs e)
-    {
-
-    }
-
     protected void RadGrid2_ItemCommand(object sender, GridCommandEventArgs e)
-    {
-    }
-
-    protected void RadGrid2_ItemDataBound1(object sender, GridItemEventArgs e)
-    {
-
-    }
-
-    protected void RadGrid2_ItemUpdated(object sender, GridUpdatedEventArgs e)
-    {
-
-    }
-
-    protected void RadGrid2_ItemCreated1(object sender, GridItemEventArgs e)
-    {
-
-    }
-
- 
-
-
-    protected void RadGrid2_ItemCommand1(object sender, GridCommandEventArgs e)
     {
         if (e.CommandName == "Delete")
         {
             string Id = e.Item.OwnerTableView.DataKeyValues[e.Item.ItemIndex]["AwbIssuanceId"].ToString();
   
-            DAL.awbissuance.DeleteAWBIssuanceWB(new Guid(Id), getConstr.ConStrCMS);
+            BLL.AwbIssuance.DeleteAWBIssuanceWB(new Guid(Id), getConstr.ConStrCMS);
             //3 for delete flagging
         }
+    }
+
+    protected void btnSubmit_Click(object sender, EventArgs e)
+    {
+        RadGrid2.DataSource = GetAWBIssuance();
+        RadGrid2.Rebind();
     }
 }

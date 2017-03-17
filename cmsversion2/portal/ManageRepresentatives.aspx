@@ -16,6 +16,10 @@
             text-decoration:none !important;
             color:#c1c7ca !important;
         }
+
+        .center {
+            text-align: center;
+        }
     </style>
 
 
@@ -24,14 +28,14 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="Server">
     
     <div id="wrapper">
-   <div id="page-wrapper"  >
+   <div id="page-wrapper">
 
-            <div class="container-fluid" ">
+            <div class="container">
 
                 <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-12">
-                            <h4>Representatives</h4>
+                            <h3>Representatives</h3>
                         <ol class="breadcrumb">
                             <li>
                                 <i class="fa fa-dashboard"></i>  <a href="#">Corporate</a>
@@ -155,7 +159,7 @@
                                     </Columns>
 
                                     <CommandItemTemplate>
-
+                                        <div class="center">
                             |
                                         <a href="#" onclick="return ShowInsertForm();" class="alink">
                                              <img src="../images/emblem.png" alt="Add Company" width="20">
@@ -177,7 +181,7 @@
                                             </a>
                         
                             |
-                                       
+                                       </div>
                                     </CommandItemTemplate>
                               
                                 </MasterTableView>
@@ -190,7 +194,7 @@
                             <br />
                             <telerik:RadWindowManager RenderMode="Mobile" ID="RadWindowManager1" runat="server" EnableShadow="true">
                                 <Windows>
-                                    <telerik:RadWindow RenderMode="Mobile" ID="RepresentativeListDialog" runat="server" Title="Editing record" Height="650px"
+                                    <telerik:RadWindow RenderMode="Mobile" ID="RepresentativeListDialog" runat="server" Title="Editing record" Height="630px"
                                         Width="800px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false"
                                         Modal="true" Behaviors="Close,Move">
                                     </telerik:RadWindow>

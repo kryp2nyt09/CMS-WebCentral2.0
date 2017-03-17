@@ -92,6 +92,18 @@
         input:required:hover {
             opacity: 1;
         }
+
+         #footer {
+        position: fixed;
+        right:10px;
+        bottom: 10px;
+        }
+
+          .page{
+            margin-top: 30px;
+            margin-right: 15px;
+            margin-left: 15px;
+        }
     </style>
     <script type="text/javascript">
 
@@ -119,157 +131,113 @@
 
 </head>
 <body>
-    <form id="form1" runat="server">
-
-
-
-        <telerik:RadScriptManager ID="RadScriptManager1" runat="server"></telerik:RadScriptManager>
-
-        <%--<asp:ScriptManager ID="ScriptManager2" runat="server" />--%>
-        <telerik:RadFormDecorator RenderMode="Lightweight" ID="RadFormDecorator1" runat="server" Skin="Default" DecoratedControls="All" />
-        <%--<asp:Button runat="server" Text="Close" ID="CloseButton"     OnClick="CloseButton_Click1"/>--%>
-        <div class="main-login main-center">
+    <form id="form2" runat="server">
+<telerik:RadScriptManager ID="RadScriptManager2" runat="server"></telerik:RadScriptManager>
+    <telerik:RadFormDecorator RenderMode="Lightweight" ID="RadFormDecorator2" runat="server" Skin="Default" DecoratedControls="All" />
+        
+         <div class="">
             <form class="form-horizontal" method="post" action="#">
-                 <asp:Label ID="lblEmployeeID" runat="server" Text="" Visible="false"></asp:Label>
+               <asp:Label ID="lblEmployeeID" runat="server" Text="" Visible="false"></asp:Label>
+                 <div class="page">
+                    <div class="col-xs-6">
+                        <div class="">
+                           <telerik:RadLabel ID="lbl_Fname" runat="server" Text="First Name" Width="30%"></telerik:RadLabel>
+                            <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtFirstname" Enabled="True" runat="server"></telerik:RadTextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtFirstname"
+                                    ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                            <br /> 
+                            <br /> 
 
-                <div class="form-group">
-                    <label class="cols-sm-2 control-label">Branch Corp Office</label>
-                    <div class="input-group" style="font-size: 12px">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
-                        <telerik:RadComboBox ID="rcbBranchCorpOffice" runat="server" AutoPostBack="true" OnSelectedIndexChanged="rcbBranchCorpOffice_SelectedIndexChanged"></telerik:RadComboBox>
-                    </div>
-                    <br />
+                            <telerik:RadLabel ID="lbl_Mname" runat="server" Text="Middle Name" Width="30%"></telerik:RadLabel>
+                            <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtMiddlename" Enabled="True" runat="server"></telerik:RadTextBox>
+                            <br />
+                            <br /> 
 
-                    <label  class="cols-sm-2 control-label">Assigned To</label>
-                    <div class="input-group" style="font-size: 12px">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
-                        <telerik:RadComboBox ID="rcbRevenueUnitType" runat="server" AutoPostBack="true" OnTextChanged="rcbRevenueUnitType_TextChanged" OnSelectedIndexChanged="rcbRevenueUnitType_SelectedIndexChanged"></telerik:RadComboBox>
-                    </div>
-                    <br />
+                            <telerik:RadLabel ID="lbl_Lname" runat="server" Text="Last Name" Width="30%"></telerik:RadLabel>
+                             <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtLastname" Enabled="True" runat="server"></telerik:RadTextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtLastname"
+                                    ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                            <br />
+                            <br /> 
 
-                      <label class="cols-sm-2 control-label">Location</label>
-                    <div class="input-group" style="font-size: 12px">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
-                        <telerik:RadComboBox ID="rcbRevenueUnitName" runat="server"></telerik:RadComboBox>
-                    </div>
-                    <br />
+                            <telerik:RadLabel ID="lbl_Birthday" runat="server" Text="Birthday" Width="30%"></telerik:RadLabel>
+                             <telerik:RadDatePicker ID="txtBirthdate" MinDate="1950/1/1" ZIndex="11000"  runat="server" Width="230px"></telerik:RadDatePicker>
+                            <br />
+                            <br /> 
 
+                            <telerik:RadLabel ID="lbl_TelNo" runat="server" Text="Tel. No." Width="30%"></telerik:RadLabel>
+                            <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtTel" Enabled="True" runat="server"></telerik:RadTextBox>
+                            <br />
+                            <br /> 
 
-                    <label class="cols-sm-2 control-label">Department</label>
-                    <div class="input-group" style="font-size: 12px">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
-                        <telerik:RadComboBox ID="rcbDepartment" runat="server"></telerik:RadComboBox>
-                    </div>
-                    <br />
+                             <telerik:RadLabel ID="lbl_MobNo" runat="server" Text="Mobile No." Width="30%"></telerik:RadLabel>
+                             <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtMobile" Enabled="True" runat="server"></telerik:RadTextBox>
+                             <br />
+                             <br /> 
 
-                    <label for="email" class="cols-sm-2 control-label">Position</label>
-                    <div class="input-group" style="font-size: 12px">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
-                        <telerik:RadComboBox ID="rcbPosition" runat="server"></telerik:RadComboBox>
-                    </div>
-                    <br />
-
-                    <label for="email" class="cols-sm-2 control-label">First Name</label>
-                    <div class="cols-sm-10">
-                        <div class="input-group" style="font-size: 12px">
-
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
-
-                            <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtFirstname" Enabled="True" runat="server"></telerik:RadTextBox>
+                             <telerik:RadLabel ID="lbl_Email" runat="server" Text="Email" Width="30%"></telerik:RadLabel>
+                             <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtEmail" Enabled="True" runat="server"></telerik:RadTextBox>
+                             
                         </div>
-                        <br />
                     </div>
 
-                    <label for="email" class="cols-sm-2 control-label">Last Name</label>
-                    <div class="cols-sm-10">
-                        <div class="input-group" style="font-size: 12px">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
-                            <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtLastname" Enabled="True" runat="server"></telerik:RadTextBox>
+                    <div class="col-xs-6">
+                         <div class="">
+                           <telerik:RadLabel ID="lbl_Bco" runat="server" Text="BCO" Width="30%"></telerik:RadLabel>
+                           <telerik:RadComboBox Width="230px" ID="rcbBranchCorpOffice" runat="server" AutoPostBack="true" OnSelectedIndexChanged="rcbBranchCorpOffice_SelectedIndexChanged"></telerik:RadComboBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="rcbBranchCorpOffice"
+                                    ErrorMessage="*" ForeColor="Red" InitialValue="--Select Assignment--"></asp:RequiredFieldValidator>
+                            <br /> 
+                            <br /> 
+
+                            <telerik:RadLabel ID="lbl_AssignedTo" runat="server" Text="Assigned To" Width="30%"></telerik:RadLabel>
+                            <telerik:RadComboBox Width="230px" ID="rcbRevenueUnitType" runat="server" AutoPostBack="true" OnTextChanged="rcbRevenueUnitType_TextChanged" OnSelectedIndexChanged="rcbRevenueUnitType_SelectedIndexChanged"></telerik:RadComboBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="rcbRevenueUnitType"
+                                    ErrorMessage="*" ForeColor="Red" InitialValue="--Select Assignment--"></asp:RequiredFieldValidator>
+                            <br />
+                            <br /> 
+
+                            <telerik:RadLabel ID="lbl_Location" runat="server" Text="Location" Width="30%"></telerik:RadLabel>
+                             <telerik:RadComboBox ID="rcbRevenueUnitName" runat="server" Width="230px" Height="200px"></telerik:RadComboBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="rcbRevenueUnitName"
+                                    ErrorMessage="*" ForeColor="Red" InitialValue="--Select Assignment--"></asp:RequiredFieldValidator>
+                            <br />
+                            <br /> 
+
+                            <telerik:RadLabel ID="lbl_Department" runat="server" Text="Department" Width="30%"></telerik:RadLabel>
+                             <telerik:RadComboBox ID="rcbDepartment" runat="server" Width="230px" Height="200px"></telerik:RadComboBox>
+                            <br />
+                            <br /> 
+
+                            <telerik:RadLabel ID="lbl_Position" runat="server" Text="Position" Width="30%"></telerik:RadLabel>
+                             <telerik:RadComboBox ID="rcbPosition" runat="server" Width="230px" Height="200px"></telerik:RadComboBox>
+                            <br />
+                            <br /> 
+
+                             <telerik:RadLabel ID="lbl_DLNum" runat="server" Text="Driver License Number" Width="30%"></telerik:RadLabel>
+                             <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtLicense" Enabled="True" runat="server"></telerik:RadTextBox>
+                             <br />
+                             <br /> 
+
+                             <telerik:RadLabel ID="lbl_DLNumExp" runat="server" Text="Driver License Expiration" Width="30%"></telerik:RadLabel>
+                             <telerik:RadDatePicker ID="txtLicenseExpiration" Width="230px" MinDate="2017/1/1"  ZIndex="1100000" AutoPostBack ="false" runat="server"></telerik:RadDatePicker>
+                             
                         </div>
-                        <br />
-                    </div>
-
-                    <label for="email" class="cols-sm-2 control-label">Middle Name</label>
-                    <div class="cols-sm-10">
-                        <div class="input-group" style="font-size: 12px">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
-                            <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtMiddlename" Enabled="True" runat="server"></telerik:RadTextBox>
                         </div>
-                        <br />
                     </div>
-
-                    <label for="email" class="cols-sm-2 control-label">Birth Date</label>
-                    <div class="cols-sm-10">
-                        <div class="input-group" style="font-size: 12px">
-
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
-
-                            <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtBirthdate" Enabled="True" runat="server"></telerik:RadTextBox>
-
-                        </div>
-                        <br />
-
-                    </div>
-
-                    <label for="email" class="cols-sm-2 control-label">Tel. Number</label>
-                    <div class="cols-sm-10">
-                        <div class="input-group" style="font-size: 12px">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
-                            <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtTel" Enabled="True" runat="server"></telerik:RadTextBox>
-                        </div>
-                        <br />
-                    </div>
-
-                    <label for="email" class="cols-sm-2 control-label">Mobile Number</label>
-                    <div class="cols-sm-10">
-                        <div class="input-group" style="font-size: 12px">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
-                            <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtMobile" Enabled="True" runat="server"></telerik:RadTextBox>
-                        </div>
-                        <br />
-                    </div>
-
-                    <label for="email" class="cols-sm-2 control-label">Email</label>
-                    <div class="cols-sm-10">
-                        <div class="input-group" style="font-size: 12px">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
-                            <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtEmail" Enabled="True" runat="server"></telerik:RadTextBox>
-                        </div>
-                        <br />
-                    </div>
-
-                    <label for="email" class="cols-sm-2 control-label">Driver License Number</label>
-                    <div class="cols-sm-10">
-                        <div class="input-group" style="font-size: 12px">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
-                            <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtLicense" Enabled="True" runat="server"></telerik:RadTextBox>
-                        </div>
-                        <br />
-                    </div>
-
-                    <label for="email" class="cols-sm-2 control-label">Driver License Expiration</label>
-                    <div class="cols-sm-10">
-                        <div class="input-group" style="font-size: 12px">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks" aria-hidden="true"></i></span>
-                            <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtLicenseExpiration" Enabled="True" runat="server"></telerik:RadTextBox>
-                        </div>
-                        <br />
-                    </div>
-
-                    <br />
+                 <div id="footer">
                     <telerik:RadButton ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" OnClientClicked=""></telerik:RadButton>
                     <telerik:RadButton ID="btnCancel" runat="server" AutoPostBack="true" Text="Cancel" OnClick="btnCancel_Click" OnClientClicked="redirect"></telerik:RadButton>
-
                 </div>
-
             </form>
 
 
         </div>
-        <%--<script src="../js/bootstrap.js"></script>--%>
-        <script type="text/javascript" src="../../../js/bootstrap.js"></script>
+        
+       <%-- <script type="text/javascript" src="../../../js/bootstrap.js"></script>--%>
 
         <br />
     </form>
+
 </body>
 </html>

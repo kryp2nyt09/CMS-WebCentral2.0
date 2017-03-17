@@ -43,14 +43,5 @@ public partial class portal_Operation_Manifest_PickupCargoManifestReport : Syste
     {
         gridPickupCargo.DataSource = getPickUpCargoData();
     }
-
-    protected void gridPickupCargo_InfrastructureExporting(object sender, GridInfrastructureExportingEventArgs e)
-    {
-        //ExportStructure exportStructure = e.ExportStructure;
-
-        //Telerik.Web.UI.ExportInfrastructure.Table table = exportStructure.Tables[0]; // new Telerik.Web.UI.ExportInfrastructure.Table("Table1");
-        //table.InsertImage(new Range("A1", "B2"), "~/images/logo1.png");
-
-        //table.ShiftRowsDown(1, 5);
-    }
+    
 }

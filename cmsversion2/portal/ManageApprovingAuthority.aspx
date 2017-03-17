@@ -16,6 +16,9 @@
             text-decoration:none !important;
             color:#c1c7ca !important;
         }
+        .center {
+            text-align: center;
+        }
     </style>
 
 </asp:Content>
@@ -25,12 +28,12 @@
     <div id="wrapper">
    <div id="page-wrapper"  >
 
-            <div class="container-fluid" ">
+            <div class="container">
 
                 <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-12">
-                            <h4>Approving Authority</h4>
+                            <h3>Approving Authority</h3>
                         <ol class="breadcrumb">
                             <li>
                                 <i class="fa fa-dashboard"></i>  <a href="#">Corporate</a>
@@ -154,7 +157,7 @@
                                     </Columns>
 
                                     <CommandItemTemplate>
-
+                                      <div class="center">
                                         
                                         |
 
@@ -179,6 +182,7 @@
                                             </a>
                         
                             |
+                                          </div>
                                        
                                     </CommandItemTemplate>
                               
@@ -192,13 +196,13 @@
                             <br />
                             <telerik:RadWindowManager RenderMode="Mobile" ID="RadWindowManager1" runat="server" EnableShadow="true">
                                 <Windows>
-                                    <telerik:RadWindow RenderMode="Mobile" ID="ApprovingAuthorityListDialog" runat="server" Title="Editing record" Height="520px"
-                                        Width="380px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false"
+                                    <telerik:RadWindow RenderMode="Mobile" ID="ApprovingAuthorityListDialog" runat="server" Title="Editing record" Height="450px"
+                                        Width="800px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false"
                                         Modal="true" Behaviors="Close,Move">
                                     </telerik:RadWindow>
 
-                                     <telerik:RadWindow RenderMode="Mobile" ID="AddUser" runat="server" Title="Adding record" Height="600px"
-                                        Width="380px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false" VisibleStatusbar ="false" AutoSize="false"
+                                     <telerik:RadWindow RenderMode="Mobile" ID="AddUser" runat="server" Title="Adding record" Height="450px"
+                                        Width="800px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false" VisibleStatusbar ="false" AutoSize="false"
                                         Modal="true" Behaviors="Close,Move"  >
                                     </telerik:RadWindow>
 
