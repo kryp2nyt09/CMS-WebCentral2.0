@@ -19,7 +19,7 @@
                        <h3>AWB Series Monitoring</h3>
                        <ol class="breadcrumb">
                            <li>AWB Series</li>
-                            <li class="active">AWB Issued Summary</li>
+                            <li class="active">AWB Series Monitoring</li>
                        </ol><!--breadcrumb-->
                        <hr />
                    </div>
@@ -66,7 +66,7 @@
                     </ExportSettings>      
 
                         <MasterTableView CommandItemDisplay="Top" Font-Size="Smaller">
-                            <CommandItemSettings ShowExportToExcelButton="true" ShowExportToPdfButton="true" ShowExportToWordButton="false" ShowExportToCsvButton="false" ShowAddNewRecordButton="false"  ShowRefreshButton="false"/>
+                            <CommandItemSettings ShowExportToExcelButton="false" ShowExportToPdfButton="true" ShowExportToWordButton="false" ShowExportToCsvButton="false" ShowAddNewRecordButton="false"  ShowRefreshButton="false"/>
                             
                             <Columns>
                                  <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"

@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Airlines.cs" />
+    <Compile Include="AirwayBill.cs" />
     <Compile Include="AwbIssuance.cs" />
     <Compile Include="AwbSeries.cs" />
     <Compile Include="Batch.cs" />

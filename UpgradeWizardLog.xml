@@ -53,6 +53,13 @@
   <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\MasterPageSingleMenu.master" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\MasterPageSingleMenu.master" />
   <event action="Analyze" type="Success" name="MasterPageSingleMenu.master" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\MasterPageSingleMenu.master" />
+  <event action="Analyze" type="Success" name="Assembly References" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\packages.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\packages.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\packages.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\packages.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\packages.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\packages.config" />
+  <event action="Analyze" type="Success" name="packages.config" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\packages.config" />
   <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\AWBSeries\AWBIssuedSummary.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\AWBSeries\AWBIssuedSummary.aspx" />
   <event action="Analyze" type="Success" name="AWBIssuedSummary.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\AWBSeries\AWBIssuedSummary.aspx" />
@@ -125,6 +132,9 @@
   <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Reports\ApprovingAuthorityExportReport.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Reports\ApprovingAuthorityExportReport.aspx" />
   <event action="Analyze" type="Success" name="ApprovingAuthorityExportReport.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Reports\ApprovingAuthorityExportReport.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Reports\AwbIssuanceExport.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Reports\AwbIssuanceExport.aspx" />
+  <event action="Analyze" type="Success" name="AwbIssuanceExport.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Reports\AwbIssuanceExport.aspx" />
   <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Reports\ClientExportReport.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Reports\ClientExportReport.aspx" />
   <event action="Analyze" type="Success" name="ClientExportReport.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Reports\ClientExportReport.aspx" />
