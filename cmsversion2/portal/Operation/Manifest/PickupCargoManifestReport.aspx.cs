@@ -21,20 +21,11 @@ public partial class portal_Operation_Manifest_PickupCargoManifestReport : Syste
 
     }
 
-    public DataTable getBranchCorpOffice()
-    {
-        DataSet data = BLL.BranchCorpOffice.GetBranchCorpOffice(getConstr.ConStrCMS);
-        DataTable dt = new DataTable();
-        dt = data.Tables[0];
-        return dt;
-    }
-
     public DataTable getPickUpCargoData()
     {
         DataSet data = BLL.Report.PickupCargoManifestReport.GetPickupCargoManifest(getConstr.ConStrCMS);
         DataTable dt = new DataTable();
         dt = data.Tables[0];
-        Console.WriteLine("ROW COUNT == > " + dt.Rows.Count);
         return dt;
     }
     
@@ -42,15 +33,5 @@ public partial class portal_Operation_Manifest_PickupCargoManifestReport : Syste
     protected void gridPickupCargo_NeedDataSource(object sender, GridNeedDataSourceEventArgs e)
     {
         gridPickupCargo.DataSource = getPickUpCargoData();
-    }
-
-    protected void gridPickupCargo_InfrastructureExporting(object sender, GridInfrastructureExportingEventArgs e)
-    {
-        //ExportStructure exportStructure = e.ExportStructure;
-
-        //Telerik.Web.UI.ExportInfrastructure.Table table = exportStructure.Tables[0]; // new Telerik.Web.UI.ExportInfrastructure.Table("Table1");
-        //table.InsertImage(new Range("A1", "B2"), "~/images/logo1.png");
-
-        //table.ShiftRowsDown(1, 5);
     }
 }

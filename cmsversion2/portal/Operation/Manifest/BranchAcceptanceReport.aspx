@@ -29,7 +29,7 @@
                     AutoGenerateColumns="false"
                     AllowSorting="true" OnNeedDataSource="grid_BranchAcceptance_NeedDataSource">
                     
-                    <ExportSettings HideStructureColumns="true" ExportOnlyData="true" Pdf-DefaultFontFamily="Segoe UI 10"
+                    <ExportSettings HideStructureColumns="true" ExportOnlyData="true" Pdf-DefaultFontFamily="Calibri Light"
                         IgnorePaging="true" UseItemStyles="true" Pdf-BorderColor="Black" Pdf-FontType="Subset">
                         <Pdf Title="Branch Acceptance" PageHeaderMargin="10px" PageTopMargin="100px" BorderType="AllBorders" BorderStyle="Thin">
                             <PageHeader>

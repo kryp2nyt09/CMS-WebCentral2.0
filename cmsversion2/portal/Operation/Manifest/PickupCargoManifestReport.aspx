@@ -22,16 +22,19 @@
             </div>
             <!--- PAGE BODY--->
             <div class="row">
+
+            </div>
+            <div class="row">
                 <telerik:RadGrid ID="gridPickupCargo" runat="server"  Skin="Glow" CssClass="row"
                     AllowPaging="True" 
                     PageSize="10"  
                     AllowFilteringByColumn="True"
                     AutoGenerateColumns="false"
                     AllowSorting="true" 
-                    OnNeedDataSource="gridPickupCargo_NeedDataSource" OnInfrastructureExporting="gridPickupCargo_InfrastructureExporting">
+                    OnNeedDataSource="gridPickupCargo_NeedDataSource">
                     
                     <ExportSettings HideStructureColumns="true" ExportOnlyData="true" IgnorePaging="true" UseItemStyles="false" FileName="Pickup_Cargo" Pdf-PageLeftMargin="20px" Pdf-PageRightMargin="20px"> 
-                        <Pdf ForceTextWrap="true" PageWidth="397mm" PageHeight="210mm" BorderColor="Black" 
+                        <Pdf ForceTextWrap="true" PageWidth="397mm" PageHeight="210mm" BorderColor="Black" DefaultFontFamily="Calibri Light" 
                              BorderType="AllBorders" BorderStyle="Thin" PageHeaderMargin="10px" 
                              PageTopMargin="100px">
                           <PageHeader>

@@ -21,6 +21,23 @@
             </div>
             <!--- PAGE BODY--->
             <div class="row">
+                 <telerik:RadLabel ID="RadLabel1" runat="server" Text="Date:"></telerik:RadLabel>
+                 <telerik:RadDatePicker ID="date" runat="server" Skin="Glow"></telerik:RadDatePicker>
+                 <telerik:RadLabel ID="bcolabel" runat="server" Text="Bundle Number:"></telerik:RadLabel>
+                 <telerik:RadComboBox ID="BundleNumber" runat="server" Skin="Glow" AppendDataBoundItems="true" AutoPostBack="true">
+                    <Items>
+                        <telerik:RadComboBoxItem Text="All" Value="0" Selected="true" />
+                    </Items>
+                </telerik:RadComboBox>
+                <telerik:RadLabel ID="RadLabel2" runat="server" Text="Destination:"></telerik:RadLabel>
+                 <telerik:RadComboBox ID="Destination" runat="server" Skin="Glow" AppendDataBoundItems="true" AutoPostBack="true">
+                    <Items>
+                        <telerik:RadComboBoxItem Text="All" Value="0" Selected="true" />
+                    </Items>
+                </telerik:RadComboBox>
+            </div>
+
+            <div class="row">
                 <telerik:RadGrid ID="grid_Bundle" runat="server" Skin="Glow"
                     OnNeedDataSource="grid_Bundle_NeedDataSource"
                     AllowPaging="True" 
@@ -29,7 +46,7 @@
                     AutoGenerateColumns="false"
                     AllowSorting="true">
                     <ExportSettings HideStructureColumns="true" ExportOnlyData="true" IgnorePaging="true" UseItemStyles="true">
-                        <Pdf ForceTextWrap="true" PageWidth="397mm" PageHeight="210mm" BorderColor="Black" 
+                        <Pdf ForceTextWrap="true" PageWidth="397mm" PageHeight="210mm" BorderColor="Black" DefaultFontFamily="Calibri Light"
                              BorderType="AllBorders" BorderStyle="Thin" PageHeaderMargin="10px" 
                              PageTopMargin="100px">
                             <PageHeader>

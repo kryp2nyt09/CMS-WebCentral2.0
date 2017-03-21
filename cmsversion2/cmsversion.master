@@ -86,12 +86,24 @@
                                         <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Flight Load Monitoring</a></li>
                                         <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Offloaded</a></li>
                                         <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Trans Shipment Monitoring</a></li>
+                                        
                                     </ul>
                                 </li>
                                 <li class="dropdown dropdown-submenu">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Finance</a>
                                     <ul class="dropdown-menu">
                                         <li class="dropdown dropdown-submenu">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sales</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a runat="server" href="~/portal/Finance/Sales/MasterSalesReport.aspx">Master Sales</a></li>
+                                                <li><a runat="server" href="~/portal/Finance/Sales/BCOSalesSummary.aspx">BCO Sales Summary</a></li>
+                                                <li><a runat="server" href="~/portal/Finance/Sales/SalesPerShipModeReport.aspx">Sales Per ShipMode</a></li>
+                                                <li><a runat="server" href="~/portal/Finance/Sales/SalesPerClientReport.aspx">Sales Per Client</a></li>
+                                                <li><a runat="server" href="~/portal/Finance/Sales/SalesPerRevenueUnitReport.aspx">Sales Per Revenue Unit</a></li>
+                                                <li><a runat="server" href="~/portal/Finance/Sales/SalesPerUserLevel.aspx">Sales Per User Level</a></li>
+                                            </ul>
+                                         </li>
+                                       <%-- <li class="dropdown dropdown-submenu">
                                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Revenue</a>
                                             <ul class="dropdown-menu">
                                                 <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Summary</a></li>
@@ -103,12 +115,13 @@
                                                 <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Ship Mode</a></li>
                                                 <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Commodity Type</a></li>
                                             </ul>
-                                        </li>
+                                        </li>--%>
                                         <li><a runat="server" href="~/portal/Finance/CollectionReport.aspx">Collection</a></li>
                                         <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Transport</a></li>
                                         <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Flight Load Monitoring</a></li>
                                         <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Offloaded</a></li>
                                         <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Trans Shipment Monitoring</a></li>
+                                        
                                     </ul>
                                 </li>
                                 <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Marketing</a></li>
@@ -116,6 +129,7 @@
                                 <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">AWB Series</a></li>
                                 <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">OR Series</a></li>
                                 <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Booking</a></li>
+                                
                             </ul>
                         </li>
                         <li class="dropdown">

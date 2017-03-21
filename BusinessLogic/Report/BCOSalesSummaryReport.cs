@@ -5,14 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAL = DataAccess;
-
 namespace BusinessLogic.Report
 {
-    public class BundleReport
+    public class BCOSalesSummaryReport
     {
-        public static DataSet GetBundle(string conSTR, DateTime date, string bundlenumber, string destination)
+        public static DataSet GetBCOSalesSummary(string conSTR , string bco)
         {
-            return DAL.Reports.Bundle.GetBundle(conSTR , date , bundlenumber , destination);
+            return DAL.Reports.BCOSalesSummary.GetBCOSalesSummary(conSTR , bco);
         }
     }
 }
