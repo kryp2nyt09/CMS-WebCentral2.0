@@ -9,13 +9,15 @@ using DAL = DataAccess;
 using System.IO;
 using System.Text.RegularExpressions;
 using Microsoft.VisualBasic.FileIO;
+using System.Data.OleDb;
+using System.Collections;
 
 public partial class _FlightMaintenance : System.Web.UI.Page
 {
     Tools.DataAccessProperties getConstr = new Tools.DataAccessProperties();
     protected void Page_Load(object sender, EventArgs e)
     {
-        FileUploadFlightInfo.Attributes["onchange"] = "UploadFile(this)";
+        //FileUploadFlightInfo.Attributes["onchange"] = "UploadFile(this)";
 
 
 
@@ -27,6 +29,44 @@ public partial class _FlightMaintenance : System.Web.UI.Page
         }
 
     }
+
+    #region Properties
+    private string fileExtension;
+    private string fileName;
+    private string path;
+    #endregion
+
+    #region Read Excel file
+    private DataTable ReadExcelFile(string sheetName, string path)
+    {
+
+        using (OleDbConnection conn = new OleDbConnection())
+        {
+            DataTable dt = new DataTable();
+            string Import_FileName = path;
+            string fileExtension = Path.GetExtension(Import_FileName);
+            if (fileExtension == ".xls")
+                conn.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + Import_FileName + ";" + "Extended Properties='Excel 8.0;HDR=YES;'";
+            if (fileExtension == ".xlsx")
+                conn.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + Import_FileName + ";" + "Extended Properties='Excel 12.0 Xml;HDR=YES;'";
+            using (OleDbCommand comm = new OleDbCommand())
+            {
+                comm.CommandText = "Select * from [" + sheetName + "$] WHERE not ltrim(rtrim(FlightNo)) = ''";
+
+                comm.Connection = conn;
+
+                using (OleDbDataAdapter da = new OleDbDataAdapter())
+                {
+                    da.SelectCommand = comm;
+                    da.Fill(dt);
+                    return dt;
+                }
+
+            }
+        }
+    }
+    #endregion
+
 
     protected void RadGrid2_ItemCreated(object sender, GridItemEventArgs e)
     {
@@ -66,23 +106,7 @@ public partial class _FlightMaintenance : System.Web.UI.Page
             RadGrid2.Rebind();
         }
     }
-    //public DataTable Sellers
-    //{
-    //    get
-    //    {
-    //        DataTable data = Session["Data"] as DataTable;
-
-    //        if (data == null)
-    //        {
-    //            data = GetUsers();
-    //            Session["Data"] = data;
-    //        }
-
-
-    //        return data;
-    //    }
-    //}
-
+  
     public DataTable GetFlightDetails()
     {
         //DataTable data = new DataTable();
@@ -139,78 +163,180 @@ public partial class _FlightMaintenance : System.Web.UI.Page
         }
     }
 
+   
+
+    protected void FileUploadFlightInfo_FileUploaded(object sender, FileUploadedEventArgs e)
+    {
+        UploadedFile file = e.File;
+        fileExtension = file.GetExtension();
+        fileName = file.GetName();
+        path = Server.MapPath("~/Upload/");
+        file.SaveAs(path + fileName);
+    }
+
+
 
     #region Upload File
     protected void btnUpload_Click(object sender, EventArgs e)
     {
-        //StreamReader streamReader;
-        //FileUpload1.SaveAs(Server.MapPath("~/Uploads/" + Path.GetFileName(FileUpload1.FileName)));
-        if (FileUploadFlightInfo.HasFile)
+        DataTable data;
+        DataTable dataSheets = new DataTable();
+        DataTable filterTable;
+        DataTable ftable = new DataTable();
+        int count;
+        object missing = System.Reflection.Missing.Value;
+
+        Microsoft.Office.Interop.Excel.Application excelObj = null;
+        Microsoft.Office.Interop.Excel.Workbook workbook = null;
+
+
+        if (fileName != null && path != null)
         {
-            string extension = System.IO.Path.GetExtension(FileUploadFlightInfo.FileName); // extension file
-            //string contentType = FileUploadFlightInfo.PostedFile.ContentType;
-            if (extension.Equals(".csv"))
+            if(fileExtension.Equals(".xlsx") || fileExtension.Equals(".xls"))
             {
                 try
                 {
-                    //string fileName = Path.GetFileName(FileUploadFlightInfo.PostedFile.FileName);
-                    //string SaveLocation = Server.MapPath("UploadedFiles") + "\\" + fileName;
-                    // FileInfo fi = new FileInfo(SaveLocation);
-                    //FileUploadFlightInfo.PostedFile.SaveAs(SaveLocation);
-                    //FileUploadFlightInfo.SaveAs(SaveLocation);
-                    string folderPath = Server.MapPath("~/Upload");
-                    
-                    //Check whether Directory (Folder) exists.
-                    if (!Directory.Exists(folderPath))
+                    excelObj = new Microsoft.Office.Interop.Excel.Application();
+                    workbook = excelObj.Workbooks.Open(path + fileName, missing, missing, missing, missing, missing, missing, missing, missing, missing, missing, missing, missing, missing, missing);
+                    ArrayList sheetname = new ArrayList();
+
+                    foreach (Microsoft.Office.Interop.Excel.Worksheet sheet in workbook.Sheets)
                     {
-                        //If Directory (Folder) does not exists. Create it.
-                        Directory.CreateDirectory(folderPath);
+                        //sheetname.Add(sheet.Name);
+                        data = ReadExcelFile(sheet.Name, path + fileName);
+                        dataSheets.Merge(data);
                     }
 
-                    string SaveLocation = folderPath + "\\" + FileUploadFlightInfo.FileName;
-                    //string SaveLocation = folderPath + Path.GetFileName(FileUploadFlightInfo.FileName);
-                    // FileUploadFlightInfo.SaveAs(SaveLocation);
+                    //data = ReadExcelFile("Sheet1", path + fileName);
+                    filterTable = FilterFlightInfoData(dataSheets);
+                    ftable = filterTable;
+                    //count = ftable.Rows.Count;
                     
-                    //Save the File to the Directory (Folder).
-                    FileUploadFlightInfo.SaveAs(SaveLocation);
-
-                    DataTable csvData = GetDataTableFromCSVFile(SaveLocation);
-                    DataTable filterTable = FilterFlightInfoData(csvData);
-                    int count = filterTable.Rows.Count;
-                    if(count > 0)
-                    {
-                        BLL.Flight.BulkInsertFlightInfo(filterTable, getConstr.ConStrCMS);
-
-                        //string script = "<script>CloseOnReload()</" + "script>";
-                        //ClientScript.RegisterStartupScript(this.GetType(), "CloseOnReload", script);
-
-                        if (Directory.Exists(folderPath))
-                        {
-                            // Directory.Delete(SaveLocation);
-                            File.Delete(SaveLocation);
-                        }
-
-                        string script = "<script>alert('File successfully imported!.')</" + "script>";
-                        ClientScript.RegisterStartupScript(GetType(), "Alert", script);
-
-                        RadGrid2.DataSource = GetFlightDetails();
-                        RadGrid2.Rebind();
-
-                    }
-
-
-
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     Console.WriteLine(ex);
                 }
             }
-            else
+            else if(fileExtension.Equals(".csv"))
             {
+                try
+                {
+                    string SaveLocation = path + fileName;
+                    DataTable csvData = GetDataTableFromCSVFile(SaveLocation);
+                    filterTable = FilterFlightInfoData(csvData);
+                    ftable = filterTable;
+                    //count = filterTable.Rows.Count;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex);
+                }
+            }
+   
+        }
+
+        try
+        {
+            count = ftable.Rows.Count;
+            if (count > 0)
+            {
+                BLL.Flight.BulkInsertFlightInfo(ftable, getConstr.ConStrCMS);
+
+                if(workbook != null)
+                {
+                    workbook.Close(false);
+                    excelObj.Quit();
+
+                    GC.Collect();
+                    GC.WaitForPendingFinalizers();
+
+                    System.Runtime.InteropServices.Marshal.ReleaseComObject(workbook);
+                    System.Runtime.InteropServices.Marshal.ReleaseComObject(excelObj);
+                }
+                
+                if (Directory.Exists(path))
+                {
+                    // Directory.Delete(SaveLocation);
+                    File.Delete(path + "\\" + fileName);
+                }
+
+                string script = "<script>alert('File successfully imported!.')</" + "script>";
+                ClientScript.RegisterStartupScript(GetType(), "Alert", script);
+
+                RadGrid2.DataSource = GetFlightDetails();
+                RadGrid2.Rebind();
 
             }
         }
+        catch(Exception ex)
+        {
+            Console.WriteLine(ex);
+        }
+        
+
+        //if (FileUploadFlightInfo.HasFile)
+        //{
+        //    string extension = System.IO.Path.GetExtension(FileUploadFlightInfo.FileName); // extension file
+
+        //    if (extension.Equals(".csv"))
+        //    {
+        //        try
+        //        {
+
+        //            string folderPath = Server.MapPath("~/Upload");
+
+        //            //Check whether Directory (Folder) exists.
+        //            if (!Directory.Exists(folderPath))
+        //            {
+        //                //If Directory (Folder) does not exists. Create it.
+        //                Directory.CreateDirectory(folderPath);
+        //            }
+
+        //            string SaveLocation = folderPath + "\\" + FileUploadFlightInfo.FileName;
+        //            //string SaveLocation = folderPath + Path.GetFileName(FileUploadFlightInfo.FileName);
+        //            // FileUploadFlightInfo.SaveAs(SaveLocation);
+
+        //            //Save the File to the Directory (Folder).
+        //            FileUploadFlightInfo.SaveAs(SaveLocation);
+
+        //            DataTable csvData = GetDataTableFromCSVFile(SaveLocation);
+        //            DataTable filterTable = FilterFlightInfoData(csvData);
+        //            int count = filterTable.Rows.Count;
+        //            if(count > 0)
+        //            {
+        //                BLL.Flight.BulkInsertFlightInfo(filterTable, getConstr.ConStrCMS);
+
+        //                //string script = "<script>CloseOnReload()</" + "script>";
+        //                //ClientScript.RegisterStartupScript(this.GetType(), "CloseOnReload", script);
+
+        //                if (Directory.Exists(folderPath))
+        //                {
+        //                    // Directory.Delete(SaveLocation);
+        //                    File.Delete(SaveLocation);
+        //                }
+
+        //                string script = "<script>alert('File successfully imported!.')</" + "script>";
+        //                ClientScript.RegisterStartupScript(GetType(), "Alert", script);
+
+        //                RadGrid2.DataSource = GetFlightDetails();
+        //                RadGrid2.Rebind();
+
+        //            }
+
+
+
+        //        }
+        //        catch(Exception ex)
+        //        {
+        //            Console.WriteLine(ex);
+        //        }
+        //    }
+        //    else
+        //    {
+
+        //    }
+        //}
     }
 
     #endregion
@@ -296,18 +422,6 @@ public partial class _FlightMaintenance : System.Web.UI.Page
                         new DataColumn("RecordStatus", typeof(int)),
                     });
 
-        //DataTable duplicateRecord = new DataTable();
-        //duplicateRecord.Columns.AddRange(new DataColumn[6]
-        //            {
-        //                new DataColumn("Flight No", typeof(string)),
-        //                new DataColumn("ETD",typeof(DateTime)),
-        //                new DataColumn("ETA",typeof(DateTime)),
-        //                new DataColumn("GateWay Name", typeof(string)),
-        //                new DataColumn("Origin City", typeof(string)),
-        //                new DataColumn("Destination City", typeof(string)),
-        //            });
-
-
         Guid FlightInfoId;
         Guid airlineId = new Guid();
         Guid OriginCityId = new Guid();
@@ -332,7 +446,7 @@ public partial class _FlightMaintenance : System.Web.UI.Page
             {
                 int checkIfIdExists = BLL.Flight.checkIfIdExists(airlineName, originCityName, destinationCityName, getConstr.ConStrCMS);
                 // CHECK IF airlineName, originCityName, destinationCityName HAS ID
-                if (checkIfIdExists > 0)
+                if (checkIfIdExists == 3)
                 {
                     var result = BLL.Flight.GetIds(airlineName, originCityName, destinationCityName, getConstr.ConStrCMS);
                     airlineId = result.Item1;

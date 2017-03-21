@@ -16,6 +16,10 @@
             text-decoration:none !important;
             color:#c1c7ca !important;
         }
+
+        .center {
+            text-align: center;
+        }
     </style>
 
 </asp:Content>
@@ -151,7 +155,7 @@
                                     </Columns>
 
                                     <CommandItemTemplate>
-
+                                        <div class="center">
                                         |
 
                                          <a href="#"  onclick="return ShowInsertForm();" class="alink">
@@ -173,7 +177,7 @@
                                             </a>
                         
                             |
-                                       
+                                       </div>
                                     </CommandItemTemplate>
                               
                                 </MasterTableView>

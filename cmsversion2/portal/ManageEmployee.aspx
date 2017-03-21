@@ -16,6 +16,10 @@
             text-decoration:none !important;
             color:#c1c7ca !important;
         }
+
+         .center {
+            text-align: center;
+        }
     </style>
 
 </asp:Content>
@@ -181,7 +185,7 @@
                                     </Columns>
 
                                     <CommandItemTemplate>
-
+                                        <div class="center">
                                         |
 
                                          <a href="#"  onclick="return ShowInsertForm();" class="alink">
@@ -203,7 +207,7 @@
                                             </a>
                         
                             &nbsp;|
-                                       
+                                       </div>
                                     </CommandItemTemplate>
                               
                                 </MasterTableView>
@@ -216,8 +220,8 @@
                             <br />
                             <telerik:RadWindowManager RenderMode="Mobile" ID="RadWindowManager1" runat="server" EnableShadow="true">
                                 <Windows>
-                                    <telerik:RadWindow RenderMode="Mobile" ID="UserListDialog" runat="server" Title="Editing record" Height="520px"
-                                        Width="380px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false"
+                                    <telerik:RadWindow RenderMode="Mobile" ID="UserListDialog" runat="server" Title="Editing record" Height="600px"
+                                        Width="800px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false"
                                         Modal="true" Behaviors="Close,Move">
                                     </telerik:RadWindow>
 

@@ -19,7 +19,7 @@
 
         .center
         {
-            position:center;
+            text-align:center;
         }
 
          .alignright
@@ -61,13 +61,13 @@
     <div id="wrapper">
         <div id="page-wrapper">
 
-            <div class="container-fluid">
+            <div class="container">
 
                 <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-12">
 
-                        <h4>Flight Details</h4>
+                        <h3>Flight Details</h3>
 
                         <ol class="breadcrumb">
                             <li>
@@ -82,15 +82,18 @@
                     </div>
                 </div>
                 <!-- /.row -->
-                <div class="alignright">
-                                              <asp:FileUpload ID="FileUploadFlightInfo" runat="server" />  
-                                           <%-- <asp:Button ID="btnUpload" Text="Upload" runat="server" style="display: none" />--%>
-                                            <%--<telerik:RadAsyncUpload RenderMode="Lightweight" runat="server" ID="FileUploadFlightInfo"
+                <div class="buttons">
+                        <telerik:RadAsyncUpload runat="server" ID="FileUploadFlightInfo"
                                             HideFileInput="true"
-                                            AllowedFileExtensions=".xls,.xlsx" />--%>
-                                           <telerik:RadButton ID="btnUpload" runat="server" Text="Upload" style="display: none" OnClick="btnUpload_Click"></telerik:RadButton>
-                                        </div>
-                
+                                            AllowedFileExtensions=".xls,.xlsx,.csv"
+                                            OnFileUploaded="FileUploadFlightInfo_FileUploaded"
+                                            OnClientFilesUploaded="UploadFile"
+                                            Localization-Select="Import File"
+                                            Font-Size="14px"/>
+                        <telerik:RadButton ID="btnUpload" runat="server" Text="Upload" style="display: none" OnClick="btnUpload_Click"></telerik:RadButton>
+                 </div>
+                                <br />
+               
                <telerik:LayoutColumn HiddenMd="true" HiddenSm="true" HiddenXs="true">
 
                     <telerik:RadAjaxPanel ID="RadAjaxPanel2" ClientEvents-OnRequestStart="onRequestStart" runat="server" CssClass="gridwrapper">
@@ -111,6 +114,7 @@
                             </AjaxSettings>
                         </telerik:RadAjaxManager>
                         <telerik:RadAjaxLoadingPanel runat="server" ID="gridLoadingPanel"></telerik:RadAjaxLoadingPanel>
+                         
 
                         <telerik:RadGrid ID="RadGrid2" Skin="Glow"
                             runat="server" 
@@ -168,14 +172,14 @@
                                        
                                     </telerik:GridBoundColumn>
 
-                                    <telerik:GridBoundColumn DataField="OriginCityName" HeaderText="Origin City" SortExpression="OriginCityName"
+                                    <telerik:GridBoundColumn DataField="OriginCityName" HeaderText="Origin" SortExpression="OriginCityName"
                                         UniqueName="OriginCityName" FilterDelay="2000" ShowFilterIcon="false"
                                   CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" HeaderStyle-Font-Bold="true">
                                        
                                     </telerik:GridBoundColumn>
 
                                     
-                                    <telerik:GridBoundColumn DataField="DestinationCityName" HeaderText="Destination City" SortExpression="DestinationCityName"
+                                    <telerik:GridBoundColumn DataField="DestinationCityName" HeaderText="Destination" SortExpression="DestinationCityName"
                                         UniqueName="DestinationCityName" FilterDelay="2000" ShowFilterIcon="false"
                                   CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" HeaderStyle-Font-Bold="true" >
                                         <HeaderStyle />
@@ -271,10 +275,14 @@
                                 }
                             }
 
-                            function UploadFile(fileUpload) {
+                           <%-- function UploadFile(fileUpload) {
                                 if (fileUpload.value != '') {
                                     document.getElementById("<%=btnUpload.ClientID %>").click();
                                 }
+                            }--%>
+
+                             function UploadFile(sender, args) {
+                                document.getElementById("<%= btnUpload.ClientID %>").click();
                             }
 
                             function ShowEditForm(id, rowIndex) {

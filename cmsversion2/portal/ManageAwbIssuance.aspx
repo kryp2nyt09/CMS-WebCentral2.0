@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/cmsversion.Master" AutoEventWireup="true" CodeFile="ManageAwbIssuance.aspx.cs" Inherits="_ManageAwbIssuance" %>
+﻿<%@ Page Title="Manage AWB Issuance" Language="C#" MasterPageFile="~/cmsversion.Master" AutoEventWireup="true" CodeFile="ManageAwbIssuance.aspx.cs" Inherits="_ManageAwbIssuance" %>
 
 <%@ MasterType VirtualPath="~/cmsversion.master" %>
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
@@ -6,7 +6,21 @@
 
 <asp:Content ID="Content0" ContentPlaceHolderID="head" runat="Server">
     <link href="../styles/default.css" rel="stylesheet" />
+     <style type="text/css">
+        .alink{
+            text-decoration:none !important;
+            color:#c1c7ca !important;
+        }
 
+        .alink:hover{
+            text-decoration:none !important;
+            color:#c1c7ca !important;
+        }
+
+        .center {
+            text-align: center;
+        }
+    </style>
 
 </asp:Content>
 
@@ -15,7 +29,7 @@
     <div id="wrapper">
         <div id="page-wrapper">
 
-            <div class="container-fluid">
+            <div class="container">
 
                 <!-- Page Heading -->
                 <div class="row">
@@ -25,10 +39,10 @@
 
                         <ol class="breadcrumb">
                             <li>
-                                <i class="fa fa-dashboard"></i><a href="#">AWB Issuance</a>
+                                AWB Series
                             </li>
                             <li class="active">
-                                <i class="fa fa-file"></i>AWB Issuance
+                                AWB Issuance
                             </li>
                         </ol>
                         <hr />
@@ -57,88 +71,97 @@
                         </telerik:RadAjaxManager>
                         <telerik:RadAjaxLoadingPanel runat="server" ID="gridLoadingPanel"></telerik:RadAjaxLoadingPanel>
 
-                        <telerik:RadGrid ID="RadGrid2" OnItemCreated="RadGrid2_ItemCreated"
-                            runat="server" AllowPaging="True" ExportSettings-Excel-DefaultCellAlignment="Right"
-                            PageSize="10" Skin="Glow" AllowSorting="true" OnItemCommand="RadGrid2_ItemCommand1"
-                            RenderMode="Mobile"
-                            DataKeyNames="AwbIssuanceId" CommandItemDisplay="Top"
-                            OnNeedDataSource="RadGrid2_NeedDataSource">
+                        <telerik:RadGrid ID="RadGrid2"  Skin="Glow"
+                             runat="server" 
+                             OnNeedDataSource="RadGrid2_NeedDataSource"
+                             AllowPaging="True" 
+                             AutoGenerateColumns="false"
+                             AllowSorting="true"
+                             OnItemCreated="RadGrid2_ItemCreated"
+                             ExportSettings-Excel-DefaultCellAlignment="Right"
+                             PageSize="10"
+                             OnItemCommand="RadGrid2_ItemCommand"
+                            DataKeyNames="AwbIssuanceId" CommandItemDisplay="Top">
                             <ExportSettings ExportOnlyData="true" IgnorePaging="true"></ExportSettings>
-                            <MasterTableView AutoGenerateColumns="False" ClientDataKeyNames="AwbIssuanceId"
-                                AllowFilteringByColumn="false"
-                                DataKeyNames="AwbIssuanceId" CommandItemDisplay="Top"
+                            
+                            <MasterTableView AutoGenerateColumns="False" 
+                                ClientDataKeyNames="AwbIssuanceId"
+                                AllowFilteringByColumn="true"
+                                DataKeyNames="AwbIssuanceId" 
+                                CommandItemDisplay="Top"
                                 InsertItemPageIndexAction="ShowItemOnFirstPage">
                                 <CommandItemSettings ShowExportToWordButton="true" ShowExportToExcelButton="true"
                                     ShowExportToCsvButton="true" ShowExportToPdfButton="true"></CommandItemSettings>
                                 <Columns>
 
-                                    <telerik:GridBoundColumn DataField="SeriesStart" HeaderText="Series Start" SortExpression="SeriesStart"
-                                        UniqueName="SeriesStart">
-                                        <HeaderStyle />
-                                    </telerik:GridBoundColumn>
+                                 <telerik:GridDateTimeColumn
+                                 HeaderText="Date Assigned" AllowFiltering="true" DataField="IssueDate" SortExpression="IssueDate" FilterListOptions="VaryByDataType" Exportable="false"
+                                 PickerType="DatePicker"  DataFormatString="{0:MM/dd/yyyy}" DataType="System.DateTime" UniqueName="IssueDate" FilterControlWidth="100px" ></telerik:GridDateTimeColumn>
 
-                                    <telerik:GridNumericColumn DataField="SeriesEnd" HeaderText="SeriesEnd" SortExpression="SeriesEnd"
-                                        UniqueName="SeriesEnd">
-                                        <HeaderStyle />
-                                    </telerik:GridNumericColumn>
+                                <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
+                                  CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" Exportable="false" 
+                                  DataField="BranchCorpOfficeName" HeaderText="BCO"></telerik:GridBoundColumn>
 
-                                    <telerik:GridDateTimeColumn DataField="IssueDate" HeaderText="IssueDate" SortExpression="IssueDate"
-                                        UniqueName="IssueDate" PickerType="DatePicker" DataFormatString="{0:MM/dd/yyyy}">
-                                        <HeaderStyle />
-                                    </telerik:GridDateTimeColumn>
+                                 <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
+                                  CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" Exportable="false" 
+                                  DataField="RevenueUnitName" HeaderText="Area"></telerik:GridBoundColumn>
 
-                                    <telerik:GridNumericColumn DataField="RevenueUnitName" HeaderText="RevenueUnitName" SortExpression="RevenueUnitName"
-                                        UniqueName="RevenueUnitName">
-                                        <HeaderStyle />
-                                    </telerik:GridNumericColumn>
+                                <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
+                                  CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" Exportable="false" 
+                                  DataField="Name" HeaderText="Name"></telerik:GridBoundColumn>
 
-                                    <telerik:GridNumericColumn DataField="BranchCorpOfficeName" HeaderText="BranchCorpOfficeName" SortExpression="BranchCorpOfficeName"
-                                        UniqueName="BranchCorpOfficeName">
-                                        <HeaderStyle />
-                                    </telerik:GridNumericColumn>
+                                 <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
+                                  CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" Exportable="false" 
+                                  DataField="SeriesStart" HeaderText="Start Series"></telerik:GridBoundColumn>
 
+                                <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
+                                  CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" Exportable="false" 
+                                  DataField="SeriesEnd" HeaderText="End Series"></telerik:GridBoundColumn>
 
 
 
-<%--                                    <telerik:GridTemplateColumn UniqueName="TemplateEditColumn" AllowFiltering="false">
+                                    <telerik:GridTemplateColumn UniqueName="TemplateEditColumn" AllowFiltering="false">
                                         <ItemTemplate>
                                             <asp:HyperLink ID="EditLink" runat="server" Text="Edit"></asp:HyperLink>
                                         </ItemTemplate>
-                                    </telerik:GridTemplateColumn>--%>
+                                    </telerik:GridTemplateColumn>
 
 
                                     <%--    <telerik:GridButtonColumn  CommandName="Delete" Text="Delete" UniqueName="DeleteColumn" HeaderText="">
                                             <HeaderStyle />
                                         </telerik:GridButtonColumn>--%>
-                                    <telerik:GridButtonColumn ConfirmText="Are you sure you want to deactivate this user?" ButtonType="LinkButton"
-                                        ConfirmDialogType="RadWindow" ConfirmDialogHeight="150px" ConfirmTitle="Deactivate User"
+                                    <telerik:GridButtonColumn ConfirmText="Are you sure you want to delete?" ButtonType="LinkButton"
+                                        ConfirmDialogType="RadWindow" ConfirmDialogHeight="150px" ConfirmTitle="Delete"
                                         CommandName="Delete" Text="Delete" UniqueName="DeleteColumn" HeaderText="">
                                         <HeaderStyle />
                                     </telerik:GridButtonColumn>
                                 </Columns>
 
                                 <CommandItemTemplate>
+                                    <div class="center">
                                     |
 
-                                         <a href="#" onclick="return ShowInsertForm();">
-                                             <img src="../images/emblem.png" alt="Add Company" width="20px">
+                                         <a href="#" onclick="return ShowInsertForm();" class="alink">
+                                             <img src="../images/emblem.png" alt="Add Company" width="20">
                                              Add Series
                                          </a>
                                     |    
                                         
-                                        <a href="#" onclick="return ShowExportForm();">
-                                            <img src="../images/emblem.png" alt="Print Preview" width="20px">
+                                        <a href="#" onclick="return ShowExportForm();" class="alink">
+                                            <img src="../images/emblem.png" alt="Print Preview" width="20">
                                             Print Preview
                                         </a>
                                     |
                    
                                  
-                                        <a href="#" onclick="location.reload();">
-                                            <img src="../images/emblem.png" alt="Export to Excel" width="20px">
+                                        <a href="" onclick="LoadRadGrid()" class="alink">
+                                            <img src="../images/emblem.png" alt="Export to Excel" width="20">
                                             Refresh Data
                                         </a>
+                                        <asp:button id="btnSubmit" runat="server" text="Submit" xmlns:asp="#unknown"
+                                            onclick="btnSubmit_Click" style="display:none" /> 
 
-                                    |
+                                    |</div>
                                        
                                 </CommandItemTemplate>
 
@@ -157,13 +180,13 @@
                                     Modal="true" Behaviors="Close,Move">
                                 </telerik:RadWindow>
 
-                                <telerik:RadWindow RenderMode="Mobile" ID="AddUser" runat="server" Title="Adding record" Height="600px"
-                                    Width="380px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false" VisibleStatusbar="false" AutoSize="false"
+                                <telerik:RadWindow RenderMode="Mobile" ID="AddUser" runat="server" Title="Adding record" Height="500px"
+                                    Width="500px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false" VisibleStatusbar="false" AutoSize="false"
                                     Modal="true" Behaviors="Close,Move">
                                 </telerik:RadWindow>
 
-                                <telerik:RadWindow RenderMode="Mobile" ID="ViewRepresentative" runat="server" Title="Representatives" Height="590px"
-                                    Width="1000px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false" VisibleStatusbar="false" AutoSize="false"
+                                <telerik:RadWindow RenderMode="Mobile" ID="ViewRepresentative" runat="server" Title="Representatives" Height="500px"
+                                    Width="500px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false" VisibleStatusbar="false" AutoSize="false"
                                     Modal="true" Behaviors="Close,Move">
                                 </telerik:RadWindow>
                                 <telerik:RadWindow RenderMode="Mobile" ID="ShowExport" runat="server" Title="Export Report Preview" Height="590px"
@@ -184,35 +207,16 @@
 
 
                         <script type="text/javascript">
+                            
                             function ShowEditForm(id, rowIndex) {
-                                var grid = $find("<%= RadGrid2.ClientID %>");
-
-                                var rowControl = grid.get_masterTableView().get_dataItems()[rowIndex].get_element();
-                                grid.get_masterTableView().selectItem(rowControl, true);
-
-                                window.radopen("UserModal/EditForm_csharp.aspx?UserId=" + id, "UserListDialog");
-                                return false;
-                            }
-
-                            function ViewRep(id, rowIndex) {
                                 var grid = $find("<%= RadGrid2.ClientID %>");
 
                                     var rowControl = grid.get_masterTableView().get_dataItems()[rowIndex].get_element();
                                     grid.get_masterTableView().selectItem(rowControl, true);
 
-                                    window.radopen("UserModal/ViewRepresentative.aspx?CompanyId=" + id, "ViewRepresentative");
+                                    window.radopen("UserModal/AWBIssuance/EditAwbSeries.aspx?AwbIssuanceId=" + id, "ViewRepresentative");
                                     return false;
                                 }
-
-                                function ViewApprovingAuthority(id, rowIndex) {
-                                    var grid = $find("<%= RadGrid2.ClientID %>");
-
-                                   var rowControl = grid.get_masterTableView().get_dataItems()[rowIndex].get_element();
-                                   grid.get_masterTableView().selectItem(rowControl, true);
-
-                                   window.radopen("UserModal/ViewApprovingAuthority.aspx?CompanyId=" + id, "ViewRepresentative");
-                                   return false;
-                               }
 
                                function ShowInsertForm() {
                                    window.radopen("UserModal/AwbIssuance/AddAwbSeries.aspx", "AddUser");
@@ -220,7 +224,7 @@
                                }
 
                                function ShowExportForm() {
-                                   window.radopen("Reports/CompanyExportPreview.aspx", "ShowExport");
+                                   window.radopen("Reports/AwbIssuanceExport.aspx", "ShowExport");
                                    return false;
                                }
 
@@ -246,6 +250,10 @@
                                     //ShowEditForm();
                                     window.radopen("UserModal/EditForm_csharp.aspx?UserID=" + eventArgs.getDataKeyValue("UserId"), "UserListDialog");
                                 }
+
+                                function LoadRadGrid(){ 
+                                            document.getElementById("btnSubmit").click(); 
+                                        } 
                         </script>
 
 

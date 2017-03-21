@@ -32,42 +32,56 @@
             <asp:ScriptManager ID="ScriptManager2" runat="server" />
             <telerik:RadFormDecorator RenderMode="Lightweight" ID="RadFormDecorator1" runat="server" Skin="Vista" DecoratedControls="All" />
          
-           <telerik:RadGrid RenderMode="Lightweight" ID="rdPreview" OnNeedDataSource="rdPreview_NeedDataSource" AllowSorting="True" Skin="Simple" MasterTableView-AllowSorting="false"
+           <telerik:RadGrid ID="rdPreview" OnNeedDataSource="rdPreview_NeedDataSource" AllowSorting="True" Skin="Glow" MasterTableView-AllowSorting="false"
             AutoGenerateColumns="false" AllowPaging="True" PageSize="10" runat="server" OnItemCommand="rdPreview_ItemCommand">
-            <ExportSettings HideStructureColumns="true" ExportOnlyData="true" IgnorePaging="true" UseItemStyles="true">
-            </ExportSettings>
+           <ExportSettings HideStructureColumns="true" ExportOnlyData="true" IgnorePaging="true" UseItemStyles="false" FileName="User" Pdf-PageLeftMargin="20px" Pdf-PageRightMargin="20px"> 
+                        <Pdf ForceTextWrap="true" PageWidth="397mm" PageHeight="210mm" BorderColor="Black" 
+                             BorderType="AllBorders" BorderStyle="Thin" PageHeaderMargin="10px" 
+                             PageTopMargin="100px">
+                          <PageHeader>
+                               <MiddleCell  Text="<img src='../../images/APCARGO-Logo.jpg' width='100%' height='100%'/>" TextAlign="Center" />
+                          </PageHeader>
+                        </Pdf>
+                       
+                    </ExportSettings>    
             <MasterTableView Width="100%" CommandItemDisplay="Top" >
-                <CommandItemSettings ShowExportToExcelButton="true" ShowExportToPdfButton="true" ShowExportToWordButton="true" ShowExportToCsvButton="true" ShowAddNewRecordButton="false"  ShowRefreshButton="false" />
+                <CommandItemSettings ShowExportToExcelButton="false" ShowExportToPdfButton="true" ShowExportToWordButton="false" ShowExportToCsvButton="false" ShowAddNewRecordButton="false"  ShowRefreshButton="false" />
                     <Columns>
 
-                        <telerik:GridBoundColumn DataField="Username" HeaderText="Username" SortExpression="Username"
-                            UniqueName="Username">
-                            <HeaderStyle />
-                        </telerik:GridBoundColumn>
+                       <telerik:GridBoundColumn DataField="FullName" HeaderText="Full name" SortExpression="FullName"
+                                            UniqueName="FullName" FilterDelay="2000" ShowFilterIcon="false" FilterControlWidth="120px"
+                                  CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" HeaderStyle-Font-Bold="true">
+                                            <HeaderStyle />
+                                        </telerik:GridBoundColumn>
 
-                        <telerik:GridNumericColumn DataField="FirstName" HeaderText="First name" SortExpression="FirstName"
-                            UniqueName="FirstName">
-                            <HeaderStyle />
-                        </telerik:GridNumericColumn>
+                                        <telerik:GridDateTimeColumn DataField="BirthDate" HeaderText="Birth Date" SortExpression="BirthDate" FilterControlWidth="120px"
+                                            UniqueName="BirthDate"  PickerType="DatePicker" DataFormatString="{0:MM/dd/yyyy}" FilterDelay="2000" DataType="System.DateTime"
+                                  HeaderStyle-Font-Bold="true" AllowFiltering="true" FilterListOptions="VaryByDataType">
+                                            <HeaderStyle />
+                                        </telerik:GridDateTimeColumn>
+                                        
+                                        <telerik:GridNumericColumn DataField="ContactNo" HeaderText="Contact No" SortExpression="ContactNo"
+                                            UniqueName="ContactNo"  FilterDelay="2000" ShowFilterIcon="false" FilterControlWidth="120px"
+                                  CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" HeaderStyle-Font-Bold="true">
+                                            <HeaderStyle />
+                                        </telerik:GridNumericColumn>
 
-                        <telerik:GridNumericColumn DataField="LastName" HeaderText="Last name" SortExpression="LastName"
-                            UniqueName="LastName">
-                            <HeaderStyle />
-                        </telerik:GridNumericColumn>
-                        <telerik:GridNumericColumn DataField="PositionName" HeaderText="Position" SortExpression="PositionName"
-                            UniqueName="PositionName">
-                            <HeaderStyle />
-                        </telerik:GridNumericColumn>
-                        <telerik:GridDateTimeColumn DataField="CreatedDate" HeaderText="Date Created" SortExpression="CreatedDate"
-                            UniqueName="CreatedDate" PickerType="DatePicker" DataFormatString="{0:MM/dd/yyyy}">
-                            <HeaderStyle />
-                        </telerik:GridDateTimeColumn>
+                                        
+                                        <telerik:GridBoundColumn DataField="Email" HeaderText="Email" SortExpression="Email"
+                                            UniqueName="Email"  FilterDelay="2000" ShowFilterIcon="false" FilterControlWidth="120px"
+                                  CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" HeaderStyle-Font-Bold="true">
+                                            <HeaderStyle />
+                                        </telerik:GridBoundColumn>
+
+                                      
+
+                                         <telerik:GridDateTimeColumn DataField="CreatedDate" HeaderText="Date Created" SortExpression="CreatedDate" FilterControlWidth="120px"
+                                            UniqueName="CreatedDate"  PickerType="DatePicker" DataFormatString="{0:MM/dd/yyyy}" FilterDelay="2000" DataType="System.DateTime"
+                                  HeaderStyle-Font-Bold="true" AllowFiltering="true" FilterListOptions="VaryByDataType">
+                                            <HeaderStyle />
+                                        </telerik:GridDateTimeColumn>
                       
                     </Columns>
-                   <ItemStyle BackColor="#DFDFDF" />
-                <HeaderStyle BackColor="#FFFFFF" ForeColor="#767676" />
-                <AlternatingItemStyle BackColor="#FFFFFF" />
-
                 </MasterTableView>
              
             </telerik:RadGrid>

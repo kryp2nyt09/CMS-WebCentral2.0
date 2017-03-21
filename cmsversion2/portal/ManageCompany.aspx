@@ -16,6 +16,10 @@
             text-decoration:none !important;
             color:#c1c7ca !important;
         }
+
+        .center {
+            text-align: center;
+        }
     </style>
 
 </asp:Content>
@@ -25,13 +29,13 @@
     <div id="wrapper">
         <div id="page-wrapper">
 
-            <div class="container-fluid">
+            <div class="container">
 
                 <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-12">
 
-                        <h4>COMPANY</h4>
+                        <h3>COMPANY</h3>
 
                         <ol class="breadcrumb">
                             <li>
@@ -162,6 +166,7 @@
                                 </Columns>
 
                                 <CommandItemTemplate>
+                                    <div class="center">
                                     |
 
                                          <a href="#" onclick="return ShowInsertForm();" class="alink">
@@ -183,7 +188,7 @@
                                         </a>
 
                                     |
-                                       
+                                       </div>
                                 </CommandItemTemplate>
 
                             </MasterTableView>

@@ -39,30 +39,45 @@ public partial class _EditEmployee : System.Web.UI.Page
                 {
                     if (counter == 0)
                     {
+                        try
+                        {
+                            RadComboBoxItem item = rcbDepartment.FindItemByValue(row["DepartmentId"].ToString());
+                            item.Selected = true;
+                            RadComboBoxItem item1 = rcbPosition.FindItemByValue(row["PositionId"].ToString());
+                            item1.Selected = true;
+                            RadComboBoxItem bcoId = rcbBranchCorpOffice.FindItemByValue(row["BranchCorpOfficeId"].ToString());
+                            bcoId.Selected = true;
+                            RadComboBoxItem revenueUnitTypeId = rcbRevenueUnitType.FindItemByValue(row["RevenueUnitTypeId"].ToString());
+                            revenueUnitTypeId.Selected = true;
+                            RadComboBoxItem RevenueUnitId = rcbRevenueUnitName.FindItemByValue(row["RevenueUnitId"].ToString());
+                            RevenueUnitId.Selected = true;
+
+                            string bdate = row["Birthdate"].ToString();
+                            string licenseExp = row["DriversLicenseExpiration"].ToString();
+
+                            txtBirthdate.SelectedDate = Convert.ToDateTime(bdate);
+                            txtLicenseExpiration.SelectedDate = Convert.ToDateTime(licenseExp);
+                           
+
+                            txtFirstname.Text = row["FirstName"].ToString();
+                            txtLastname.Text = row["Lastname"].ToString();
+                            txtMiddlename.Text = row["Middlename"].ToString();
+                            //txtBirthdate.Text = row["Birthdate"].ToString();
+                            txtTel.Text = row["ContactNo"].ToString();
+                            txtMobile.Text = row["Mobile"].ToString();
+                            txtEmail.Text = row["Email"].ToString();
+                            txtLicense.Text = row["DriversLicenseNo"].ToString();
+                            //txtLicenseExpiration.Text = row["DriversLicenseExpiration"].ToString();
+                            //txtLicenseExpiration.Text = row["DriversLicenseExpiration"].ToString();
+
+                            lblEmployeeID.Text = row["EmployeeId"].ToString();
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex);
+                        }
                         
-                        RadComboBoxItem item = rcbDepartment.FindItemByValue(row["DepartmentId"].ToString());
-                        item.Selected = true;
-                        RadComboBoxItem item1 = rcbPosition.FindItemByValue(row["PositionId"].ToString());
-                        item1.Selected = true;
-                        RadComboBoxItem bcoId = rcbBranchCorpOffice.FindItemByValue(row["BranchCorpOfficeId"].ToString());
-                        bcoId.Selected = true;
-                        RadComboBoxItem revenueUnitTypeId = rcbRevenueUnitType.FindItemByValue(row["RevenueUnitTypeId"].ToString());
-                        revenueUnitTypeId.Selected = true;
-                        RadComboBoxItem RevenueUnitId = rcbRevenueUnitName.FindItemByValue(row["RevenueUnitId"].ToString());
-                        RevenueUnitId.Selected = true;
-
-                        txtFirstname.Text = row["FirstName"].ToString();
-                        txtLastname.Text = row["Lastname"].ToString();
-                        txtMiddlename.Text = row["Middlename"].ToString();
-                        txtBirthdate.Text = row["Birthdate"].ToString();
-                        txtTel.Text = row["ContactNo"].ToString();
-                        txtMobile.Text = row["Mobile"].ToString();
-                        txtEmail.Text = row["Email"].ToString();
-                        txtLicense.Text = row["DriversLicenseNo"].ToString();
-                        txtLicenseExpiration.Text = row["DriversLicenseExpiration"].ToString();
-                        txtLicenseExpiration.Text = row["DriversLicenseExpiration"].ToString();
-
-                        lblEmployeeID.Text = row["EmployeeId"].ToString();
+                        
 
                         counter++;
                     }
@@ -206,7 +221,7 @@ public partial class _EditEmployee : System.Web.UI.Page
         Guid ID = new Guid("11111111-1111-1111-1111-111111111111");
         BLL.Employee_Info.UpdateEmployee(new Guid(lblEmployeeID.Text), Guid.Parse(rcbDepartment.SelectedValue.ToString()), Guid.Parse(rcbPosition.SelectedValue.ToString()) ,
             txtFirstname.Text, txtLastname.Text, txtMiddlename.Text,
-            Convert.ToDateTime(txtBirthdate.Text), txtTel.Text, txtMobile.Text, txtEmail.Text, txtLicense.Text, Convert.ToDateTime( txtLicenseExpiration.Text), ID, 
+           txtBirthdate.SelectedDate.Value, txtTel.Text, txtMobile.Text, txtEmail.Text, txtLicense.Text, txtLicenseExpiration.SelectedDate.Value, ID, 
             Guid.Parse(rcbRevenueUnitName.SelectedValue.ToString()),getConstr.ConStrCMS);
         string script = "<script>CloseOnReload()</" + "script>";
         ClientScript.RegisterStartupScript(this.GetType(), "CloseOnReload", script);

@@ -135,138 +135,99 @@
 
 
         <telerik:RadScriptManager ID="RadScriptManager1" runat="server"></telerik:RadScriptManager>
-
-      <%--  <telerik:RadDateTimePicker ID="RadDateTimePicker1" Runat="server">
-        </telerik:RadDateTimePicker>--%>
-
-        <%--<asp:ScriptManager ID="ScriptManager2" runat="server" />--%>
-        <telerik:RadFormDecorator RenderMode="Lightweight" ID="RadFormDecorator1" runat="server" Skin="Default" DecoratedControls="All" />
-        <%--<asp:Button runat="server" Text="Close" ID="CloseButton"     OnClick="CloseButton_Click1"/>--%>
+    <telerik:RadFormDecorator RenderMode="Lightweight" ID="RadFormDecorator1" runat="server" Skin="Default" DecoratedControls="All" />
+        
          <div class="">
             <form class="form-horizontal" method="post" action="#">
                
                  <div class="page">
                     <div class="col-xs-6">
-                        <div class="col-xs-3">
-                           
-                             <asp:Label ID="Label3" runat="server" Text="First Name"></asp:Label>
-                            <br />
-                            <br />
-                            <br />
-                              <asp:Label ID="Label4" runat="server" Text="Middle Name"></asp:Label>
-                             <br />
-                             <br />
-                             <asp:Label ID="Label5" runat="server" Text="Last Name"></asp:Label>
-                             <br />
-                             <br />
-                            <br />
-                             <asp:Label ID="Label8" runat="server" Text="Birthday"></asp:Label>
-                             <br />
-                             <br />
-                            <asp:Label ID="Label6" runat="server" Text="Tel Number"></asp:Label>
-                            <br />
-                             <br />
-                             <asp:Label ID="Label46" runat="server" Text="Mobile Number"></asp:Label>
-                              <br />
-                             <br />
-                            <br />
+                        <div class="">
+                           <telerik:RadLabel ID="lbl_Fname" runat="server" Text="First Name" Width="30%"></telerik:RadLabel>
+                            <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtFirstname" Enabled="True" runat="server"></telerik:RadTextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtFirstname"
+                                    ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                            <br /> 
+                            <br /> 
 
-                            <asp:Label ID="Label13" runat="server" Text="Email"></asp:Label>
-                        </div>
+                            <telerik:RadLabel ID="lbl_Mname" runat="server" Text="Middle Name" Width="30%"></telerik:RadLabel>
+                            <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtMiddlename" Enabled="True" runat="server"></telerik:RadTextBox>
+                            <br />
+                            <br /> 
 
-                        <div class="col-xs-3">
-                              <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtFirstname" Enabled="True" runat="server"></telerik:RadTextBox>
-                              <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtFirstname"
+                            <telerik:RadLabel ID="lbl_Lname" runat="server" Text="Last Name" Width="30%"></telerik:RadLabel>
+                            <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtLastname" Enabled="True" runat="server"></telerik:RadTextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtLastname"
                                     ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                             <br />
+                            <br /> 
+
+                            <telerik:RadLabel ID="lbl_Birthday" runat="server" Text="Birthday" Width="30%"></telerik:RadLabel>
+                             <telerik:RadDatePicker ID="dpBirthDate" MinDate="1950/1/1" ZIndex="11000"  runat="server" Width="230px"></telerik:RadDatePicker>
                             <br />
-                          <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtMiddlename" Enabled="True" runat="server"></telerik:RadTextBox>
-                            <br />
-                            <br />
-                             <br />
-                             <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtLastname" Enabled="True" runat="server"></telerik:RadTextBox>
-                             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtLastname"
-                                    ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
-                             <br />
-                            <br />
-                            <telerik:RadDatePicker ID="dpBirthDate" MinDate="1950/1/1" ZIndex="11000"  runat="server" Width="230px"></telerik:RadDatePicker>
-                            <br />
-                            <br />
+                            <br /> 
+
+                            <telerik:RadLabel ID="lbl_TelNo" runat="server" Text="Tel. No." Width="30%"></telerik:RadLabel>
                             <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtTel" Enabled="True" runat="server"></telerik:RadTextBox>
-                          <br />
                             <br />
-                              <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtMobile" Enabled="True" runat="server"></telerik:RadTextBox>
-                            <br />
-                            <br />
-                            <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtEmail" Enabled="True" runat="server"></telerik:RadTextBox>
-                         </div>
+                            <br /> 
+
+                             <telerik:RadLabel ID="lbl_MobNo" runat="server" Text="Mobile No." Width="30%"></telerik:RadLabel>
+                             <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtMobile" Enabled="True" runat="server"></telerik:RadTextBox>
+                             <br />
+                             <br /> 
+
+                             <telerik:RadLabel ID="lbl_Email" runat="server" Text="Email" Width="30%"></telerik:RadLabel>
+                             <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtEmail" Enabled="True" runat="server"></telerik:RadTextBox>
+                             
+                        </div>
                     </div>
 
                     <div class="col-xs-6">
-                        <div class="col-xs-3">
-                            <asp:Label ID="Label7" runat="server" Text="BCO"></asp:Label>
-                            <br />
-                            <br />
-                            <br />
-                            <asp:Label ID="Label17" runat="server" Text="Assigned To"></asp:Label>
-                            <br />
-                            <br />
-                            <br />
-                             <br />
-                             <asp:Label ID="Label18" runat="server" Text="Location"></asp:Label>
-                            <br />
-                            <br />
-                            <br />
-                            <asp:Label ID="Label2" runat="server" Text="Department"></asp:Label>
-                            <br />
-                            <br />
-                            <br />
-                              <asp:Label ID="Label9" runat="server" Text="Position"></asp:Label>
-                             <br />
-                            <br />
-                             <asp:Label ID="Label10" runat="server" Text="Driver License Number"></asp:Label>
-                             <br />
-                             <br />
-                            <asp:Label ID="Label11" runat="server" Text="Driver License Expiration"></asp:Label>
-                           
-                        </div>
-
-                        <div class="col-xs-3">
-                              <telerik:RadComboBox ID="rcbBranchCorpOffice" runat="server" Width="230px" Height="200px" AutoPostBack="true" OnSelectedIndexChanged="rcbBranchCorpOffice_SelectedIndexChanged"></telerik:RadComboBox>
+                         <div class="">
+                           <telerik:RadLabel ID="lbl_Bco" runat="server" Text="BCO" Width="30%"></telerik:RadLabel>
+                           <telerik:RadComboBox ID="rcbBranchCorpOffice" runat="server" Width="230px" Height="200px" AutoPostBack="true" OnSelectedIndexChanged="rcbBranchCorpOffice_SelectedIndexChanged"></telerik:RadComboBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="rcbBranchCorpOffice"
                                     ErrorMessage="*" ForeColor="Red" InitialValue="--Select Assignment--"></asp:RequiredFieldValidator>
-                             <br />
-                            <br />
-                               <telerik:RadComboBox ID="rcbRevenueUnitType" runat="server" Width="230px" Height="200px" AutoPostBack="true" OnTextChanged="rcbRevenueUnitType_TextChanged" OnSelectedIndexChanged="rcbRevenueUnitType_SelectedIndexChanged"></telerik:RadComboBox>
+                            <br /> 
+                            <br /> 
+
+                            <telerik:RadLabel ID="lbl_AssignedTo" runat="server" Text="Assigned To" Width="30%"></telerik:RadLabel>
+                             <telerik:RadComboBox ID="rcbRevenueUnitType" runat="server" Width="230px" Height="200px" AutoPostBack="true" OnTextChanged="rcbRevenueUnitType_TextChanged" OnSelectedIndexChanged="rcbRevenueUnitType_SelectedIndexChanged"></telerik:RadComboBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="rcbRevenueUnitType"
                                     ErrorMessage="*" ForeColor="Red" InitialValue="--Select Assignment--"></asp:RequiredFieldValidator>
-                             <br />
                             <br />
-                            <telerik:RadComboBox ID="rcbRevenueUnitName" runat="server" Width="230px" Height="200px"></telerik:RadComboBox>
+                            <br /> 
+
+                            <telerik:RadLabel ID="lbl_Location" runat="server" Text="Location" Width="30%"></telerik:RadLabel>
+                             <telerik:RadComboBox ID="rcbRevenueUnitName" runat="server" Width="230px" Height="200px"></telerik:RadComboBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="rcbRevenueUnitName"
                                     ErrorMessage="*" ForeColor="Red" InitialValue="--Select Assignment--"></asp:RequiredFieldValidator>
-                           
                             <br />
-                            <br />
+                            <br /> 
+
+                            <telerik:RadLabel ID="lbl_Department" runat="server" Text="Department" Width="30%"></telerik:RadLabel>
                             <telerik:RadComboBox ID="rcbDepartment" runat="server" Width="230px" Height="200px"></telerik:RadComboBox>
                             <br />
-                            <br />
-                            <telerik:RadComboBox ID="rcbPosition" runat="server" Width="230px" Height="200px"></telerik:RadComboBox>
-                            <br />
-                            <br />
-                            <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtLicense" Enabled="True" runat="server"></telerik:RadTextBox>
-                            <br />
-                            <br />
-                            <br />
-                           <telerik:RadDatePicker ID="dpLicense" Width="230px" MinDate="2017/1/1"  ZIndex="1100000" AutoPostBack ="false" runat="server"></telerik:RadDatePicker>
-                         </div>
+                            <br /> 
 
-                </div>
+                            <telerik:RadLabel ID="lbl_Position" runat="server" Text="Position" Width="30%"></telerik:RadLabel>
+                             <telerik:RadComboBox ID="rcbPosition" runat="server" Width="230px" Height="200px"></telerik:RadComboBox>
+                            <br />
+                            <br /> 
+
+                             <telerik:RadLabel ID="lbl_DLNum" runat="server" Text="Driver License Number" Width="30%"></telerik:RadLabel>
+                             <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtLicense" Enabled="True" runat="server"></telerik:RadTextBox>
+                             <br />
+                             <br /> 
+
+                             <telerik:RadLabel ID="lbl_DLNumExp" runat="server" Text="Driver License Expiration" Width="30%"></telerik:RadLabel>
+                             <telerik:RadDatePicker ID="dpLicense" Width="230px" MinDate="2017/1/1"  ZIndex="1100000" AutoPostBack ="false" runat="server"></telerik:RadDatePicker>
+                             
+                        </div>
+                        </div>
                     </div>
-
-              
-                       
-                <div id="footer">
+                 <div id="footer">
                     <telerik:RadButton ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" OnClientClicked=""></telerik:RadButton>
                     <telerik:RadButton ID="btnCancel" runat="server" AutoPostBack="true" Text="Cancel" OnClick="btnCancel_Click"></telerik:RadButton>
                 </div>

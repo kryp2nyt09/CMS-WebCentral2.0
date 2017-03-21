@@ -18,39 +18,15 @@ public partial class _AddAwbSeries : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
-
-            LoadCity();
-            LoadArea();
+           
             LoadBranchCorpOffice();
-            //if (Request.QueryString["ID"] == null)
-            //{
+            LoadRevenueType();
+            LoadArea();
+            LoadEmployee();
+            rdDateAssigned.SelectedDate = DateTime.Now;
 
-            //}
-            //else
-            //{
-            //    string GroupId = Request.QueryString["ID"].ToString();
-
-
-            //    DataTable GroupInfo = GetGroupIsland(new Guid(GroupId));
-            //    int counter = 0;
-            //    foreach (DataRow row in GroupInfo.Rows)
-            //    {
-            //        if (counter == 0)
-            //        {
-            //            string x = row["GroupId"].ToString();
-            //            string y = row["GroupName"].ToString();
-
-            //            txtIslandGroup.Text = y;
-            //            lblGroupID.Text = x;
-            //            counter++;
-            //        }
-            //    }
-
-            //}
         }
     }
-
-
 
     protected override void OnInit(EventArgs e)
     {
@@ -58,6 +34,7 @@ public partial class _AddAwbSeries : System.Web.UI.Page
         this.Page.Title = "Add Series";
     }
 
+    #region DataSources
     public DataTable GetGroupIsland(Guid ID)
     {
         //DataTable data = new DataTable();
@@ -76,18 +53,87 @@ public partial class _AddAwbSeries : System.Web.UI.Page
 
     private void LoadArea()
     {
-        rdcArea.DataSource = BLL.Area.GetArea(getConstr.ConStrCMS);
+        DataTable area = BLL.Revenue_Info.getAllRevenueUnit(getConstr.ConStrCMS).Tables[0];
+        rdcArea.DataSource = area;
         rdcArea.DataValueField = "RevenueUnitId";
         rdcArea.DataTextField = "RevenueUnitName";
         rdcArea.DataBind();
+        if (area != null)
+        {
+            rdcArea.Items.Insert(0, "None");
+        }
     }
 
-    private void LoadCity()
+    private void LoadRevenueType()
     {
-        rcbCity.DataSource = BLL.City.GetCity(getConstr.ConStrCMS);
-        rcbCity.DataValueField = "CityId";
-        rcbCity.DataTextField = "CityName";
-        rcbCity.DataBind();
+        rcbRevenueType.DataSource = BLL.Revenue_Info.getRevenueType(getConstr.ConStrCMS);
+        rcbRevenueType.DataValueField = "RevenueUnitTypeId";
+        rcbRevenueType.DataTextField = "RevenueUnitTypeName";
+        rcbRevenueType.DataBind();
+    }
+
+    private void LoadEmployee()
+    {
+        DataTable employee = BLL.Employee_Info.GetEmployee(getConstr.ConStrCMS).Tables[0];
+        rcbName.DataSource = employee;
+        rcbName.DataValueField = "EmployeeId";
+        rcbName.DataTextField = "FullName";
+        rcbName.DataBind();
+        if(employee !=null)
+        {
+            rcbName.Items.Insert(0,"None");
+        }
+
+    }
+
+    private void populateRevenueUnitNameByBCO()
+    {
+        DataTable LocationList = BLL.Revenue_Info.getRevenueUnitByBCO(new Guid(rcbRevenueType.SelectedValue.ToString()), new Guid(rdcBCO.SelectedValue.ToString()), getConstr.ConStrCMS).Tables[0];
+        rdcArea.DataSource = LocationList;
+        rdcArea.DataTextField = "RevenueUnitName";
+        rdcArea.DataValueField = "RevenueUnitId";
+        rdcArea.DataBind();
+        if (LocationList != null)
+        {
+            rdcArea.Items.Insert(0, "None");
+        }
+    }
+
+    private void populateEmployeeByArea()
+    {
+        DataTable LocationList = BLL.Employee_Info.GetEmployeeBySearch(new Guid(rdcBCO.SelectedValue.ToString()), new Guid(rcbRevenueType.SelectedValue.ToString()), new Guid(rdcArea.SelectedValue.ToString()), getConstr.ConStrCMS).Tables[0];
+        rcbName.DataSource = LocationList;
+        rcbName.DataTextField = "FullName";
+        rcbName.DataValueField = "EmployeeId";
+        rcbName.DataBind();
+        if (LocationList != null)
+        {
+            rcbName.Items.Insert(0, "None");
+        }
+    }
+    #endregion
+
+    #region Events
+    protected void rdcBCO_SelectedIndexChanged(object sender, Telerik.Web.UI.RadComboBoxSelectedIndexChangedEventArgs e)
+    {
+        populateRevenueUnitNameByBCO();
+    }
+
+    protected void rcbRevenueType_SelectedIndexChanged(object sender, Telerik.Web.UI.RadComboBoxSelectedIndexChangedEventArgs e)
+    {
+        
+        populateRevenueUnitNameByBCO();
+    }
+
+    protected void rcbRevenueType_TextChanged(object sender, EventArgs e)
+    {
+        rdcArea.Items.Clear();
+        populateRevenueUnitNameByBCO();
+    }
+
+    protected void rdcArea_SelectedIndexChanged(object sender, Telerik.Web.UI.RadComboBoxSelectedIndexChangedEventArgs e)
+    {
+        populateEmployeeByArea();
     }
 
     protected void DetailsView1_ItemCommand(object sender, DetailsViewCommandEventArgs e)
@@ -130,16 +176,56 @@ public partial class _AddAwbSeries : System.Web.UI.Page
 
     protected void btnSave_Click(object sender, EventArgs e)
     {
-        Guid BCOid = new Guid(rdcBCO.SelectedItem.Value.ToString());
-        Guid CityId = new Guid(rcbCity.SelectedItem.Value.ToString());
-        Guid AreaId = new Guid(rdcArea.SelectedItem.Value.ToString());
-        string seriesStart = txtStartSeries.Text;
-        string seriesEnd = txtEndSeries.Text;
-        DateTime assignedate = RadDateTimePicker1.SelectedDate.Value;
+        Guid BCOid = new Guid();
+        Guid? AreaId = new Guid();
+        Guid? empId = new Guid();
 
-        Guid ModifiedBy = new Guid("11111111-1111-1111-1111-111111111111");
+        string seriesStart = "";
+        string seriesEnd = "";
+        DateTime assignedate = new DateTime();
+
+        Guid CreatedBy = new Guid();
+        string emp = "";
+        string area = "";
+
+        try
+        {
+            BCOid = new Guid(rdcBCO.SelectedItem.Value.ToString());
+            emp = rcbName.SelectedItem.Text;
+            area = rdcArea.SelectedItem.Text;
+            if (emp.Equals("None"))
+            {
+                empId = null;
+            }
+            else
+            {
+                empId = new Guid(rcbName.SelectedItem.Value.ToString());
+            }
+
+            if(area.Equals("None"))
+            {
+                AreaId = null;
+            }
+            else
+            {
+                AreaId = new Guid(rdcArea.SelectedItem.Value.ToString());
+            }
+            
+            seriesStart = txtStartSeries.Text;
+            seriesEnd = txtEndSeries.Text;
+            assignedate = rdDateAssigned.SelectedDate.Value;
+            CreatedBy = new Guid("11111111-1111-1111-1111-111111111111");
+        }
+
+
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+        }
+
+
         string host = HttpContext.Current.Request.Url.Authority;
-        DAL.awbissuance.InsertAWBIssuance(seriesStart,seriesEnd, assignedate, AreaId,BCOid,ModifiedBy,ModifiedBy,   getConstr.ConStrCMS);
+        BLL.AwbIssuance.InsertAWBIssuance(seriesStart, seriesEnd, assignedate, AreaId, BCOid, empId, CreatedBy, getConstr.ConStrCMS);
         string script = "<script>CloseOnReload()</" + "script>";
         ClientScript.RegisterStartupScript(this.GetType(), "CloseOnReload", script);
 
@@ -157,16 +243,10 @@ public partial class _AddAwbSeries : System.Web.UI.Page
         string script = "<script>RefreshParentPage()</" + "script>";
         //RadScriptManager.RegisterStartupScript(this, this.GetType(), "RefreshParentPage", script, false);
         ClientScript.RegisterStartupScript(this.GetType(), "RefreshParentPage", script);
-
-
-
     }
 
-    //protected void CloseButton_Click1(object sender, EventArgs e)
-    //{
+    #endregion
 
-    //    Page.ClientScript.RegisterClientScriptBlock(GetType(),
-    //        "CloseScript", "Close()", true);
 
-    //}
+
 }

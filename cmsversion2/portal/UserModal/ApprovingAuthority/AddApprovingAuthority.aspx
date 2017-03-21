@@ -92,6 +92,19 @@
         input:required:hover {
             opacity: 1;
         }
+
+          #footer {
+        position: fixed;
+        right:0;
+        bottom: 0;
+   
+        }
+
+        .page{
+            margin-top: 30px;
+            margin-right: 15px;
+            margin-left: 15px;
+        }
     </style>
     <script type="text/javascript">
 
@@ -119,100 +132,58 @@
 
 </head>
 <body>
-    <form id="form1" runat="server">
-
-
-
-        <telerik:RadScriptManager ID="RadScriptManager1" runat="server"></telerik:RadScriptManager>
-
-        <%--<asp:ScriptManager ID="ScriptManager2" runat="server" />--%>
-        <telerik:RadFormDecorator RenderMode="Lightweight" ID="RadFormDecorator1" runat="server" Skin="Default" DecoratedControls="All" />
-        <%--<asp:Button runat="server" Text="Close" ID="CloseButton"     OnClick="CloseButton_Click1"/>--%>
-        <div class="main-login main-center">
+     <form id="form2" runat="server">
+    <telerik:RadScriptManager ID="RadScriptManager2" runat="server"></telerik:RadScriptManager>
+    <telerik:RadFormDecorator RenderMode="Lightweight" ID="RadFormDecorator2" runat="server" Skin="Default" DecoratedControls="All" />
+        
+         <div class="">
             <form class="form-horizontal" method="post" action="#">
-
-
-                <div class="form-group">
-                    <label for="email" class="cols-sm-2 control-label">First Name</label>
-                    <div class="cols-sm-10">
-                        <div class="input-group" style="font-size: 12px">
-
-                            <span class="input-group-addon"><i class="fa fa-user fa"></i></span>
-                            <%--<input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" style="width: 175px" required />--%>
-
-                            <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtFname" Enabled="true" runat="server"></telerik:RadTextBox>
+               
+                 <div class="page">
+                    <div class="col-xs-6">
+                        <div class="">
+                           <telerik:RadLabel ID="lbl_Fname" runat="server" Text="First Name" Width="30%"></telerik:RadLabel>
+                            <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtFname" Enabled="true" runat="server"></telerik:RadTextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"
                                 ControlToValidate="txtFname"
                                 ErrorMessage="*"
                                 ForeColor="Red">
                             </asp:RequiredFieldValidator>
-                        </div>
-                    </div>
-                </div>
+                            <br /> 
+                            <br /> 
 
-                <div class="form-group">
-                    <label for="email" class="cols-sm-2 control-label">Last Name</label>
-                    <div class="cols-sm-10">
-                        <div class="input-group" style="font-size: 12px">
-
-                            <span class="input-group-addon"><i class="fa fa-user fa"></i></span>
-                            <%--<input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" style="width: 175px" required />--%>
-
-                            <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtLname" Enabled="true" runat="server"></telerik:RadTextBox>
+                            <telerik:RadLabel ID="lbl_Lname" runat="server" Text="Last Name" Width="30%"></telerik:RadLabel>
+                             <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtLname" Enabled="true" runat="server"></telerik:RadTextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server"
                                 ControlToValidate="txtLname"
                                 ErrorMessage="*"
                                 ForeColor="Red">
                             </asp:RequiredFieldValidator>
-                        </div>
-                    </div>
-                </div>
+                            <br />
+                            <br /> 
 
-                <div class="form-group">
-                    <label for="email" class="cols-sm-2 control-label">Title</label>
-                    <div class="cols-sm-10">
-                        <div class="input-group" style="font-size: 12px">
-
-                            <span class="input-group-addon"><i class="fa fa-user fa"></i></span>
-                            <%--<input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" style="width: 175px" required />--%>
-
-                            <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtTitle" Enabled="true" runat="server"></telerik:RadTextBox>
+                            <telerik:RadLabel ID="lbl_Title" runat="server" Text="Title" Width="30%"></telerik:RadLabel>
+                              <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtTitle" Enabled="true" runat="server"></telerik:RadTextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server"
                                 ControlToValidate="txtTitle"
                                 ErrorMessage="*"
                                 ForeColor="Red">
                             </asp:RequiredFieldValidator>
-                        </div>
-                    </div>
-                </div>
+                            <br />
+                            <br /> 
 
-                <div class="form-group">
-                    <label for="email" class="cols-sm-2 control-label">Position</label>
-                    <div class="cols-sm-10">
-                        <div class="input-group" style="font-size: 12px">
-
-                            <span class="input-group-addon"><i class="fa fa-user fa"></i></span>
-                            <%--<input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" style="width: 175px" required />--%>
-
-                            <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtPosition" Enabled="true" runat="server"></telerik:RadTextBox>
+                            <telerik:RadLabel ID="lbl_Position" runat="server" Text="Position" Width="30%"></telerik:RadLabel>
+                            <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtPosition" Enabled="true" runat="server"></telerik:RadTextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server"
                                 ControlToValidate="txtPosition"
                                 ErrorMessage="*"
                                 ForeColor="Red">
                             </asp:RequiredFieldValidator>
-                        </div>
-                    </div>
-                </div>
+                            <br />
+                            <br /> 
 
-                <div class="form-group">
-                    <label for="email" class="cols-sm-2 control-label">Department</label>
-                    <div class="cols-sm-10">
-                        <div class="input-group" style="font-size: 12px">
-
-                            <span class="input-group-addon"><i class="fa fa-user fa"></i></span>
-                            <%--<input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" style="width: 175px" required />--%>
-
-                            <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtDepartment" Enabled="true" runat="server"></telerik:RadTextBox>
+                             <telerik:RadLabel ID="lbl_Department" runat="server" Text="Department" Width="30%"></telerik:RadLabel>
+                              <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtDepartment" Enabled="true" runat="server"></telerik:RadTextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server"
                                 ControlToValidate="txtDepartment"
                                 ErrorMessage="*"
@@ -220,111 +191,56 @@
                             </asp:RequiredFieldValidator>
                         </div>
                     </div>
-                </div>
 
-
-                <div class="form-group">
-                    <label for="email" class="cols-sm-2 control-label">Contact Number</label>
-                    <div class="cols-sm-10">
-                        <div class="input-group" style="font-size: 12px">
-
-                            <span class="input-group-addon"><i class="fa fa-user fa"></i></span>
-                            <%--<input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" style="width: 175px" required />--%>
-
-                            <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtContactNumber" Enabled="true" runat="server"></telerik:RadTextBox>
+                    <div class="col-xs-6">
+                         <div class="">
+                           <telerik:RadLabel ID="lbl_ContactNo" runat="server" Text="Contact No" Width="30%"></telerik:RadLabel>
+                          <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtContactNumber" Enabled="true" runat="server"></telerik:RadTextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server"
                                 ControlToValidate="txtContactNumber"
                                 ErrorMessage="*"
                                 ForeColor="Red">
                             </asp:RequiredFieldValidator>
-                        </div>
-                    </div>
-                </div>
+                            <br /> 
+                            <br /> 
 
-                <div class="form-group">
-                    <label for="email" class="cols-sm-2 control-label">Mobile</label>
-                    <div class="cols-sm-10">
-                        <div class="input-group" style="font-size: 12px">
-
-                            <span class="input-group-addon"><i class="fa fa-user fa"></i></span>
-                            <%--<input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" style="width: 175px" required />--%>
-
-                            <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtMobile" Enabled="true" runat="server"></telerik:RadTextBox>
+                            <telerik:RadLabel ID="lbl_Mobile" runat="server" Text="Mobile" Width="30%"></telerik:RadLabel>
+                             <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtMobile" Enabled="true" runat="server"></telerik:RadTextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server"
                                 ControlToValidate="txtMobile"
                                 ErrorMessage="*"
                                 ForeColor="Red">
                             </asp:RequiredFieldValidator>
-                        </div>
-                    </div>
-                </div>
+                            <br />
+                            <br /> 
 
-                <div class="form-group">
-                    <label for="email" class="cols-sm-2 control-label">Fax</label>
-                    <div class="cols-sm-10">
-                        <div class="input-group" style="font-size: 12px">
+                            <telerik:RadLabel ID="lbl_Fax" runat="server" Text="Fax" Width="30%"></telerik:RadLabel>
+                            <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtFax" Enabled="true" runat="server"></telerik:RadTextBox>
+                            <br />
+                            <br /> 
 
-                            <span class="input-group-addon"><i class="fa fa-user fa"></i></span>
-                            <%--<input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" style="width: 175px" required />--%>
-
-                            <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtFax" Enabled="true" runat="server"></telerik:RadTextBox>
-                            <%--   <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server"
-                                ControlToValidate="txtMobile"
-                                ErrorMessage="*"
-                                ForeColor="Red">
-                            </asp:RequiredFieldValidator>--%>
-                        </div>
-                    </div>
-                </div>
-
-                   <div class="form-group">
-                    <label for="email" class="cols-sm-2 control-label">Email</label>
-                    <div class="cols-sm-10">
-                        <div class="input-group" style="font-size: 12px">
-
-                            <span class="input-group-addon"><i class="fa fa-user fa"></i></span>
-                            <%--<input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" style="width: 175px" required />--%>
-
-                            <telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtEmail" Enabled="true" runat="server"></telerik:RadTextBox>
-                            <asp:RegularExpressionValidator ID="regexEmailValid" runat="server" ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ControlToValidate="txtEmail" ErrorMessage="Invalid Email Format"></asp:RegularExpressionValidator>  
-                            <%-- <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server"
-                                ControlToValidate="txtMobile"
-                                ErrorMessage="*"
-                                ForeColor="Red">
-                            </asp:RequiredFieldValidator>--%>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <div class="form-group">
-                    <label for="email" class="cols-sm-2 control-label">Company</label>
-                    <div class="cols-sm-10">
-                        <div class="input-group" style="font-size: 12px">
-
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-tasks"></i></span>
-                            <%--<input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" style="width: 175px" required />--%>
-                            <asp:Label ID="lblCompanyID" runat="server" Text="" Visible="false"></asp:Label>
+                            <telerik:RadLabel ID="lbl_Email" runat="server" Text="Email" Width="30%"></telerik:RadLabel>
+                            <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtEmail" Enabled="true" runat="server"></telerik:RadTextBox>
+                             <asp:RegularExpressionValidator ID="regexEmailValid" runat="server" ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ControlToValidate="txtEmail" ErrorMessage="Invalid Email Format"></asp:RegularExpressionValidator>  
+                            <br />
                             
-                            <telerik:RadComboBox ID="rcbComapny" runat="server" Width="190px"></telerik:RadComboBox>
-
-                            <%--<telerik:RadTextBox Width="190px" RenderMode="Mobile" ID="txtIslandGroup" Enabled="True" runat="server"></telerik:RadTextBox>--%>
-
+                            <telerik:RadLabel ID="lbl_Company" runat="server" Text="Company" Width="30%"></telerik:RadLabel>
+                              <telerik:RadComboBox ID="rcbComapny" runat="server" Width="230px"></telerik:RadComboBox>
+                           
+                             
                         </div>
-                        <br />
-                        <telerik:RadButton ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" OnClientClicked=""></telerik:RadButton>
-                        <telerik:RadButton ID="btnCancel" runat="server" AutoPostBack="true" Text="Cancel" OnClick="btnCancel_Click" OnClientClicked="redirect"></telerik:RadButton>
-
+                        </div>
                     </div>
+                 <div id="footer">
+                    <telerik:RadButton ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" OnClientClicked=""></telerik:RadButton>
+                        <telerik:RadButton ID="btnCancel" runat="server" AutoPostBack="true" Text="Cancel" OnClick="btnCancel_Click" OnClientClicked="redirect"></telerik:RadButton>
                 </div>
-
             </form>
 
 
         </div>
-        <%--<script src="../js/bootstrap.js"></script>--%>
-        <script type="text/javascript" src="../../../js/bootstrap.js"></script>
+        
+       <%-- <script type="text/javascript" src="../../../js/bootstrap.js"></script>--%>
 
         <br />
     </form>

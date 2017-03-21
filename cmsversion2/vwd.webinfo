@@ -12,5 +12,6 @@
 
   <comReferences>
     <reference Name="interop.msdasc" ID="{2206CEB0-19C1-11D1-89E0-00C04FD7A829}\1.0\0"/>
+    <reference Name="interop.microsoft.office.interop.excel" ID="{00020813-0000-0000-C000-000000000046}\1.7\0"/>
   </comReferences>
 </VisualWebDeveloper>
