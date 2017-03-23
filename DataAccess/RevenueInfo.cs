@@ -41,7 +41,7 @@ namespace DataAccess
         {
             using (SqlConnection con = new SqlConnection(conSTR))
             {
-                SqlDataAdapter da = new SqlDataAdapter("sp_view_revenueunitbyBco", con);
+                SqlDataAdapter da = new SqlDataAdapter("sp_view_revenueunitbyBCO", con);
                 da.SelectCommand.CommandType = CommandType.StoredProcedure;
 
                 da.SelectCommand.Parameters.Add("@RUnit", SqlDbType.UniqueIdentifier).Value = RevenueUnitType;

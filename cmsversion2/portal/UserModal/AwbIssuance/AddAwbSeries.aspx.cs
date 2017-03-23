@@ -133,7 +133,7 @@ public partial class _AddAwbSeries : System.Web.UI.Page
 
     protected void rdcArea_SelectedIndexChanged(object sender, Telerik.Web.UI.RadComboBoxSelectedIndexChangedEventArgs e)
     {
-        populateEmployeeByArea();
+        //populateEmployeeByArea();
     }
 
     protected void DetailsView1_ItemCommand(object sender, DetailsViewCommandEventArgs e)

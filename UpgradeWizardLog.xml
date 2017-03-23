@@ -66,6 +66,9 @@
   <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\AWBSeries\AWBSeriesMonitoring.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\AWBSeries\AWBSeriesMonitoring.aspx" />
   <event action="Analyze" type="Success" name="AWBSeriesMonitoring.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\AWBSeries\AWBSeriesMonitoring.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Dashboard.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Dashboard.aspx" />
+  <event action="Analyze" type="Success" name="Dashboard.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Dashboard.aspx" />
   <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Finance\CollectionReport.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Finance\CollectionReport.aspx" />
   <event action="Analyze" type="Success" name="CollectionReport.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Finance\CollectionReport.aspx" />
@@ -435,6 +438,9 @@
   <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ViewApprovingAuthority.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ViewApprovingAuthority.aspx" />
   <event action="Analyze" type="Success" name="ViewApprovingAuthority.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ViewApprovingAuthority.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ViewCargo.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ViewCargo.aspx" />
+  <event action="Analyze" type="Success" name="ViewCargo.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ViewCargo.aspx" />
   <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ViewRepresentative.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ViewRepresentative.aspx" />
   <event action="Analyze" type="Success" name="ViewRepresentative.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ViewRepresentative.aspx" />

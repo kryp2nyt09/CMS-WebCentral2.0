@@ -13,9 +13,9 @@ public partial class _ManageCompany : System.Web.UI.Page
     Tools.DataAccessProperties getConstr = new Tools.DataAccessProperties();
     protected void Page_Load(object sender, EventArgs e)
     {
-        //radSearchCompany.DataSource = GetCompany();
-        //radSearchCompany.DataTextField = "CompanyName";
-        //radSearchCompany.DataValueField = "CompanyId";
+        radSearchCompany.DataSource = GetCompany();
+        radSearchCompany.DataTextField = "CompanyName";
+        radSearchCompany.DataValueField = "CompanyId";
 
 
         RadGrid2.MasterTableView.CommandItemSettings.ShowAddNewRecordButton = false;
@@ -147,6 +147,12 @@ public partial class _ManageCompany : System.Web.UI.Page
             RadGrid2.DataSource = GetCompany();
             RadGrid2.DataBind();
         }
+    }
+
+    protected void btnSubmit_Click(object sender, EventArgs e)
+    {
+        RadGrid2.DataSource = GetCompany();
+        RadGrid2.Rebind();
     }
 
 }

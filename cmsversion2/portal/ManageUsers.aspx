@@ -51,20 +51,20 @@
                 </div>
                 <!-- /.row -->
 
-                <%--<div class="size-wide">
+                <div class="size-wide">
                     <telerik:RadSearchBox RenderMode="Lightweight" runat="server" ID="radSearchUser" EmptyMessage="Search "
                         OnSearch="radSearchUser_Search"  Width="300"
                         DataKeyNames="UserId"
                         DataTextField="FullName"
                         DataValueField="UserId"
-                        ShowSearchButton="false">
+                        ShowSearchButton="false" Skin="Glow">
                         <DropDownSettings Width="300">
                            
             </DropDownSettings>
                     </telerik:RadSearchBox>
                     
                  </div>
-                <br />--%>
+                <br />
                         <telerik:LayoutColumn HiddenMd="true" HiddenSm="true" HiddenXs="true">
                         <telerik:RadAjaxPanel ID="RadAjaxPanel2" ClientEvents-OnRequestStart="onRequestStart" runat="server" CssClass="gridwrapper">
 
@@ -94,7 +94,7 @@
                                 <ExportSettings ExportOnlyData="true" IgnorePaging="true"></ExportSettings>
                                 
                                 <MasterTableView AutoGenerateColumns="False" ClientDataKeyNames="UserId"
-                                    AllowFilteringByColumn="true"
+                                    AllowFilteringByColumn="false"
                                     DataKeyNames="UserId" CommandItemDisplay="Top" 
                                     InsertItemPageIndexAction="ShowItemOnFirstPage">
                                    
@@ -171,10 +171,12 @@
        |
                    
                                  
-                                        <a href="#"  onclick="location.reload();" class="alink">
+                                        <a href="" onclick="LoadRadGrid()" class="alink">
                                             <img src="../images/emblem.png" alt="Export to Excel" width="20">
                                             Refresh Data
-                                            </a>
+                                        </a>
+                                        <asp:button id="btnSubmit" runat="server" text="Submit" xmlns:asp="#unknown"
+                                            onclick="btnSubmit_Click" style="display:none" /> 
                         
                             |
                                        </div>
@@ -260,6 +262,10 @@
                                     //ShowEditForm();
                                     window.radopen("UserModal/EditForm_csharp.aspx?UserID=" + eventArgs.getDataKeyValue("UserId"), "UserListDialog");
                                 }
+
+                                function LoadRadGrid(){ 
+                                            document.getElementById("btnSubmit").click(); 
+                                        } 
                             </script>
 
 
