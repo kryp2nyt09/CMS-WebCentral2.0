@@ -70,11 +70,17 @@
     <Compile Include="RateMatrix.cs" />
     <Compile Include="Reason.cs" />
     <Compile Include="Remarks.cs" />
+    <Compile Include="Report\BCOSalesSummaryReport.cs" />
     <Compile Include="Report\BranchAcceptanceReport.cs" />
     <Compile Include="Report\BundleReport.cs" />
     <Compile Include="Report\CollectionReport.cs" />
     <Compile Include="Report\DailyTripReport.cs" />
+    <Compile Include="Report\MasterSalesReport.cs" />
     <Compile Include="Report\PickupCargoManifestReport.cs" />
+    <Compile Include="Report\SalesPerClientReport.cs" />
+    <Compile Include="Report\SalesPerRevenueUnitReport.cs" />
+    <Compile Include="Report\SalesPerShipmodeReport.cs" />
+    <Compile Include="Report\SalesPerUserLevelReport.cs" />
     <Compile Include="Report\SegregationReport.cs" />
     <Compile Include="Report\UnbundleReport.cs" />
     <Compile Include="ShipMode.cs" />

@@ -53,11 +53,17 @@
     <Compile Include="Position.cs" />
     <Compile Include="Reason.cs" />
     <Compile Include="Remarks.cs" />
+    <Compile Include="Reports\BCOSalesSummary.cs" />
     <Compile Include="Reports\BranchAcceptance.cs" />
     <Compile Include="Reports\Bundle.cs" />
     <Compile Include="Reports\Collection.cs" />
     <Compile Include="Reports\DailyTrip.cs" />
+    <Compile Include="Reports\MasterSales.cs" />
     <Compile Include="Reports\PickupCargoManifest.cs" />
+    <Compile Include="Reports\SalesPerClient.cs" />
+    <Compile Include="Reports\SalesPerRevenueUnit.cs" />
+    <Compile Include="Reports\SalesPerShipmode.cs" />
+    <Compile Include="Reports\SalesPerUserLevel.cs" />
     <Compile Include="Reports\Segregation.cs" />
     <Compile Include="Reports\Unbundle.cs" />
     <Compile Include="Status.cs" />

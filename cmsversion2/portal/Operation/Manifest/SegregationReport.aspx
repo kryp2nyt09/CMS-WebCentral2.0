@@ -31,7 +31,7 @@
                     PageSize="10" 
                     OnNeedDataSource="grid_Segregation_NeedDataSource">
                 <ExportSettings HideStructureColumns="true" ExportOnlyData="true" IgnorePaging="true" UseItemStyles="true">
-                    <Pdf Title="Segregation" PageHeaderMargin="10px" PageTopMargin="100px" BorderType="AllBorders" BorderStyle="Thin">
+                    <Pdf Title="Segregation" PageHeaderMargin="10px" PageTopMargin="100px" BorderType="AllBorders" BorderStyle="Thin" DefaultFontFamily="Calibri Light">
                             <PageHeader>
                               <MiddleCell  Text="<img src='../../../images/APCARGO-Logo.jpg' width='100%' height='100%'/>"/>
                           </PageHeader>

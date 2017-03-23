@@ -21,20 +21,11 @@ public partial class portal_Operation_Manifest_PickupCargoManifestReport : Syste
 
     }
 
-    public DataTable getBranchCorpOffice()
-    {
-        DataSet data = BLL.BranchCorpOffice.GetBranchCorpOffice(getConstr.ConStrCMS);
-        DataTable dt = new DataTable();
-        dt = data.Tables[0];
-        return dt;
-    }
-
     public DataTable getPickUpCargoData()
     {
         DataSet data = BLL.Report.PickupCargoManifestReport.GetPickupCargoManifest(getConstr.ConStrCMS);
         DataTable dt = new DataTable();
         dt = data.Tables[0];
-        Console.WriteLine("ROW COUNT == > " + dt.Rows.Count);
         return dt;
     }
     
@@ -43,5 +34,4 @@ public partial class portal_Operation_Manifest_PickupCargoManifestReport : Syste
     {
         gridPickupCargo.DataSource = getPickUpCargoData();
     }
-    
 }

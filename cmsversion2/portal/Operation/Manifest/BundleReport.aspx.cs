@@ -14,12 +14,27 @@ public partial class portal_Operation_Manifest_BundleReport : System.Web.UI.Page
     Tools.DataAccessProperties getConstr = new Tools.DataAccessProperties();
     protected void Page_Load(object sender, EventArgs e)
     {
-        
+        if (!IsPostBack)
+        {
+            BundleNumber.DataSource = getBundle();
+            BundleNumber.DataTextField = "SackNo";
+            BundleNumber.DataValueField = "SackNo";
+            BundleNumber.DataBind();
+
+            Destination.DataSource = getBundle();
+            Destination.DataTextField = "Destination";
+            Destination.DataValueField = "Destination";
+            Destination.DataBind();
+        }
     }
 
     public DataTable getBundle()
     {
-        DataSet data = BLL.Report.BundleReport.GetBundle(getConstr.ConStrCMS );
+        //DateTime date =
+        string bundlenumber = "All";
+        string destination = "All";
+
+        DataSet data = BLL.Report.BundleReport.GetBundle(getConstr.ConStrCMS, DateTime.Now, bundlenumber , destination);
         DataTable dt = new DataTable();
         dt = data.Tables[0];
         return dt;

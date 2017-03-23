@@ -31,7 +31,7 @@
                     Width="100%" 
                     PageSize="10">
                 <ExportSettings HideStructureColumns="true" ExportOnlyData="true" IgnorePaging="true" UseItemStyles="true">
-                    <Pdf ForceTextWrap="true" PageWidth="397mm" PageHeight="210mm" BorderColor="Black" 
+                    <Pdf ForceTextWrap="true" PageWidth="397mm" PageHeight="210mm" BorderColor="Black" DefaultFontFamily="Calibri Light"
                              BorderType="AllBorders" BorderStyle="Thin" PageHeaderMargin="10px" 
                              PageTopMargin="100px">
                             <PageHeader>
