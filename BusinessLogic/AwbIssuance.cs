@@ -30,6 +30,16 @@ namespace BusinessLogic
             return DAL.AwbIssuance.GetawbissuanceById(AwbIssuanceId, conSTR);
         }
 
+        public static DataSet GetawbissuanceByBCOandAwbId(Guid bcoId, Guid AwbIssuanceId, string conSTR)
+        {
+            return DAL.AwbIssuance.GetawbissuanceByBCOandAwbId(bcoId, AwbIssuanceId, conSTR);
+        }
+
+        public static DataSet GetawbissuanceByBCO(Guid bcoId, Guid RevenueUnitId, string conSTR)
+        {
+            return DAL.AwbIssuance.GetawbissuanceByBCO(bcoId, RevenueUnitId, conSTR);
+        }
+
         public static void updateAWBIssuanceWB(Guid AwbIssuanceId, string seriesStart, string seriesend, DateTime issueddate, Guid? RevenueUnitId, Guid BCOid, Guid? IssuedTold, Guid ModifiedBy,string conStr)
         {
             DAL.AwbIssuance.updateAWBIssuanceWB(AwbIssuanceId, seriesStart, seriesend, issueddate, RevenueUnitId, BCOid, IssuedTold, ModifiedBy, conStr);

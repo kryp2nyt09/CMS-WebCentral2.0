@@ -72,6 +72,24 @@
   <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Finance\CollectionReport.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Finance\CollectionReport.aspx" />
   <event action="Analyze" type="Success" name="CollectionReport.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Finance\CollectionReport.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Finance\Sales\BCOSalesSummary.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Finance\Sales\BCOSalesSummary.aspx" />
+  <event action="Analyze" type="Success" name="BCOSalesSummary.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Finance\Sales\BCOSalesSummary.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Finance\Sales\MasterSalesReport.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Finance\Sales\MasterSalesReport.aspx" />
+  <event action="Analyze" type="Success" name="MasterSalesReport.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Finance\Sales\MasterSalesReport.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Finance\Sales\SalesPerClientReport.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Finance\Sales\SalesPerClientReport.aspx" />
+  <event action="Analyze" type="Success" name="SalesPerClientReport.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Finance\Sales\SalesPerClientReport.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Finance\Sales\SalesPerRevenueUnitReport.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Finance\Sales\SalesPerRevenueUnitReport.aspx" />
+  <event action="Analyze" type="Success" name="SalesPerRevenueUnitReport.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Finance\Sales\SalesPerRevenueUnitReport.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Finance\Sales\SalesPerShipModeReport.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Finance\Sales\SalesPerShipModeReport.aspx" />
+  <event action="Analyze" type="Success" name="SalesPerShipModeReport.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Finance\Sales\SalesPerShipModeReport.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Finance\Sales\SalesPerUserLevel.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Finance\Sales\SalesPerUserLevel.aspx" />
+  <event action="Analyze" type="Success" name="SalesPerUserLevel.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\Finance\Sales\SalesPerUserLevel.aspx" />
   <event action="Analyze" type="Success" name="Register Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\FlightMaintenance.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\FlightMaintenance.aspx" />
   <event action="Analyze" type="Success" name="FlightMaintenance.aspx" path="D:\CMS Client Repository\CMS-WebCentral2.0\cmsversion2\portal\FlightMaintenance.aspx" />

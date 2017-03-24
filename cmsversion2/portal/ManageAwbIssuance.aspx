@@ -20,6 +20,11 @@
         .center {
             text-align: center;
         }
+
+       
+        .contextDropDown {
+                height:300px;
+        }
     </style>
 
 </asp:Content>
@@ -50,6 +55,41 @@
                     </div>
                 </div>
                 <!-- /.row -->
+               <%-- <div class="size-wide">
+                    <telerik:RadSearchBox RenderMode="Lightweight" runat="server" ID="radSearchawbIssuance" 
+                        CssClass="searchBox"
+                        DropDownSettings-Height="300"
+                        DataSourceID="SqlDataSource1"
+                        EmptyMessage="Search"
+                        Width="400"
+                        DataKeyNames="AwbIssuanceId, BCOid"
+                        DataTextField="Name"
+                        DataValueField="AwbIssuanceId"
+                        ShowSearchButton="false" Skin="Glow"
+                        OnDataSourceSelect="radSearchawbIssuance_DataSourceSelect"
+                        OnSearch="radSearchawbIssuance_Search">
+                        <SearchContext DataSourceID="SqlDataSourceBCO" DataTextField="BranchCorpOfficeName" DataKeyField="BranchCorpOfficeId" DropDownCssClass="contextDropDown"></SearchContext>
+                    </telerik:RadSearchBox>
+                    
+                 </div>
+                <br />
+                <br />--%>
+
+                <div class="col-md-12">
+                     <div class="col-md-12">
+                                <telerik:RadLabel ID="lblBco" runat="server" Text="BCO:"></telerik:RadLabel>
+                                <telerik:RadComboBox ID="rcbBranchCorpOffice" Skin="Glow" Width="230px" Height="200px" runat="server"  AutoPostBack="true" OnSelectedIndexChanged="rcbBranchCorpOffice_SelectedIndexChanged"></telerik:RadComboBox>
+                                
+                                <telerik:RadLabel ID="lblType" runat="server" Text="Type:"></telerik:RadLabel>
+                                <telerik:RadComboBox ID="rcbRevenueUnitType" Skin="Glow" Width="230px" Height="200px" runat="server" AutoPostBack="true" OnTextChanged="rcbRevenueUnitType_TextChanged" OnSelectedIndexChanged="rcbRevenueUnitType_SelectedIndexChanged"></telerik:RadComboBox>
+                                
+                         <telerik:RadLabel ID="RadLabel1" runat="server" Text="Area:"></telerik:RadLabel>
+                         <telerik:RadComboBox ID="rcbRevenueUnitName" Skin="Glow" Width="230px" Height="200px" runat="server"></telerik:RadComboBox>
+                                 <telerik:RadButton ID="btnSearch" runat="server" Skin="Glow" Text="SEARCH" OnClick="btnSearch_Click"></telerik:RadButton>
+                 </div>
+                </div>
+                <br />
+                 <br />
                 <telerik:LayoutColumn HiddenMd="true" HiddenSm="true" HiddenXs="true">
 
                     <telerik:RadAjaxPanel ID="RadAjaxPanel2" ClientEvents-OnRequestStart="onRequestStart" runat="server" CssClass="gridwrapper">
@@ -73,6 +113,7 @@
 
                         <telerik:RadGrid ID="RadGrid2"  Skin="Glow"
                              runat="server" 
+                             ShowSearchPanel="True"
                              OnNeedDataSource="RadGrid2_NeedDataSource"
                              AllowPaging="True" 
                              AutoGenerateColumns="false"
@@ -86,7 +127,7 @@
                             
                             <MasterTableView AutoGenerateColumns="False" 
                                 ClientDataKeyNames="AwbIssuanceId"
-                                AllowFilteringByColumn="true"
+                                AllowFilteringByColumn="false"
                                 DataKeyNames="AwbIssuanceId" 
                                 CommandItemDisplay="Top"
                                 InsertItemPageIndexAction="ShowItemOnFirstPage">
@@ -258,8 +299,16 @@
 
 
                     </telerik:RadCodeBlock>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server"
+                        ConnectionString="<%$ ConnectionStrings:Cms %>"
+                        SelectCommand="SELECT awb.*, bco.BranchCorpOfficeName, ru.RevenueUnitName, emp.FirstName + ' ' + emp.MiddleName + ' ' + emp.LastName AS Name from AwbIssuance awb LEFT join BranchCorpOffice bco on awb.BCOid = bco.BranchCorpOfficeId LEFT join RevenueUnit ru on awb.RevenueUnitId = ru.RevenueUnitId LEFT join Employee emp on awb.IssuedToId = emp.EmployeeId where awb.RecordStatus = 1 and bco.BranchCorpOfficeName is not null"></asp:SqlDataSource>
+                     <asp:SqlDataSource ID="SqlDataSourceBCO" runat="server"
+                        ConnectionString="<%$ ConnectionStrings:Cms %>"
+                        SelectCommand="SELECT [BranchCorpOfficeId], [BranchCorpOfficeName] FROM BranchCorpOffice WHERE RecordStatus = 1 ORDER BY [BranchCorpOfficeName]">
+                    </asp:SqlDataSource>
+    
 
-                </telerik:LayoutColumn>
+                </telerik:LayoutColumn> 
             </div>
             <!-- /.container-fluid -->
 

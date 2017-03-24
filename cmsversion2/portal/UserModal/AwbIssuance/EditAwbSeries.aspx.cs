@@ -18,7 +18,7 @@ public partial class _EditAwbSeries : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
-           
+            
             LoadBranchCorpOffice();
             LoadRevenueType();
             LoadArea();

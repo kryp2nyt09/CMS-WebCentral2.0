@@ -119,7 +119,7 @@
                                 PageSize="10" AllowSorting="true" OnItemCommand="RadGrid2_ItemCommand1"
                                 AllowFilteringByColumn="true"
                                 DataKeyNames="EmployeeId" CommandItemDisplay="Top"
-                                OnNeedDataSource="RadGrid2_NeedDataSource" > 
+                                OnNeedDataSource="RadGrid2_NeedDataSource" Skin="Glow" > 
                                 
                                 <ExportSettings ExportOnlyData="true" IgnorePaging="true"></ExportSettings>
                                 <GroupingSettings CaseSensitive="false"></GroupingSettings>

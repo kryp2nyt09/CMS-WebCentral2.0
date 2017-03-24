@@ -18,7 +18,7 @@ public partial class _AddAwbSeries : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
-           
+            
             LoadBranchCorpOffice();
             LoadRevenueType();
             LoadArea();
@@ -60,7 +60,8 @@ public partial class _AddAwbSeries : System.Web.UI.Page
         rdcArea.DataBind();
         if (area != null)
         {
-            rdcArea.Items.Insert(0, "None");
+            //rdcArea.Items.Insert(0, "None");
+            rdcArea.Items.Add("None");
         }
     }
 
@@ -81,7 +82,8 @@ public partial class _AddAwbSeries : System.Web.UI.Page
         rcbName.DataBind();
         if(employee !=null)
         {
-            rcbName.Items.Insert(0,"None");
+            //rcbName.Items.Insert(0,"None");
+            rcbName.Items.Add("None");
         }
 
     }
@@ -95,7 +97,8 @@ public partial class _AddAwbSeries : System.Web.UI.Page
         rdcArea.DataBind();
         if (LocationList != null)
         {
-            rdcArea.Items.Insert(0, "None");
+            //rdcArea.Items.Insert(0, "None");
+            rdcArea.Items.Add("None");
         }
     }
 
@@ -108,7 +111,8 @@ public partial class _AddAwbSeries : System.Web.UI.Page
         rcbName.DataBind();
         if (LocationList != null)
         {
-            rcbName.Items.Insert(0, "None");
+            //rcbName.Items.Insert(0, "None");
+            rcbName.Items.Add("None");
         }
     }
     #endregion
@@ -133,7 +137,7 @@ public partial class _AddAwbSeries : System.Web.UI.Page
 
     protected void rdcArea_SelectedIndexChanged(object sender, Telerik.Web.UI.RadComboBoxSelectedIndexChangedEventArgs e)
     {
-        //populateEmployeeByArea();
+        populateEmployeeByArea();
     }
 
     protected void DetailsView1_ItemCommand(object sender, DetailsViewCommandEventArgs e)
