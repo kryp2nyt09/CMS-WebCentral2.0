@@ -10,13 +10,15 @@ namespace DataAccess.Reports
 {
     public class PickupCargoManifest
     {
-        public static DataSet GetPickupCargoManifest(string conSTR)
+        public static DataSet GetPickupCargoManifest(string conSTR , string Area, string AWB, string Date)
         {
             using (SqlConnection con = new SqlConnection(conSTR))
             {
                 SqlDataAdapter da = new SqlDataAdapter("sp_view_Reports_PickupCargoManifest", con);
                 da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                //da.SelectCommand.Parameters.Add("@Area", SqlDbType.VarChar).Value = strArea;
+                da.SelectCommand.Parameters.Add("@AREA", SqlDbType.VarChar).Value = Area;
+                da.SelectCommand.Parameters.Add("@AWB", SqlDbType.VarChar).Value = AWB;
+                da.SelectCommand.Parameters.Add("@DATE", SqlDbType.VarChar).Value = Date;
                 DataSet ds = new DataSet();
                 da.Fill(ds);
                 return ds;

@@ -10,9 +10,9 @@ namespace BusinessLogic.Report
 {
     public class SalesPerShipmodeReport
     {
-        public static DataSet GetSalesPerShipMode(string conSTR)
+        public static DataSet GetSalesPerShipMode(string conSTR, string bcostr ,DateTime? date1 ,DateTime? date2)
         {
-            return DAL.Reports.SalesPerShipmode.GetSalesPerShipMode(conSTR);
+            return DAL.Reports.SalesPerShipmode.GetSalesPerShipMode(conSTR, bcostr, date1, date2);
         }
     }
 }

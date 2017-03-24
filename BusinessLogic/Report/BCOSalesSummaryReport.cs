@@ -9,9 +9,9 @@ namespace BusinessLogic.Report
 {
     public class BCOSalesSummaryReport
     {
-        public static DataSet GetBCOSalesSummary(string conSTR , string bco)
+        public static DataSet GetBCOSalesSummary(string conSTR , string bco , DateTime? date1 ,DateTime? date2)
         {
-            return DAL.Reports.BCOSalesSummary.GetBCOSalesSummary(conSTR , bco);
+            return DAL.Reports.BCOSalesSummary.GetBCOSalesSummary(conSTR , bco , date1, date2);
         }
     }
 }

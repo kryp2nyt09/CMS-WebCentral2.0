@@ -20,31 +20,89 @@
                     <li>Master Sales Report</li>
                 </ol>
             </div>
+           <%-- <div class="row">
+                <telerik:RadLabel runat="server" Text="Date   :"></telerik:RadLabel>
+                <telerik:RadDatePicker ID="RadDatePicker1" runat="server" Skin="Glow"></telerik:RadDatePicker>
+                <telerik:RadLabel runat="server" Text="-"></telerik:RadLabel>
+                <telerik:RadDatePicker ID="Date" runat="server" Skin="Glow"></telerik:RadDatePicker>
+                &nbsp;&nbsp;
+            </div>
+            <br />
+            <div class="row">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                            <label class="col-md-1"><telerik:RadLabel runat="server" Text="BCO Shipper:"></telerik:RadLabel></label>
+                            <div class="col-sm-10">
+                            <telerik:RadComboBox ID="BCOShipper" runat="server" MarkFirstMatch="true" AllowCustomText="true"
+                                Skin="Glow" AppendDataBoundItems="true" Width="300px">
+                                <Items>
+                                    <telerik:RadComboBoxItem Text="All" Value="0" Selected="true" />
+                                </Items>
+                            </telerik:RadComboBox>
+                            </div>
+                    </div>
+                    <div class="form-group">
+                            <label class="col-md-1"><telerik:RadLabel runat="server" Text="BCO Consignee:"></telerik:RadLabel></label>
+                            <div class="col-sm-10">
+                            <telerik:RadComboBox ID="RadComboBox1" runat="server" MarkFirstMatch="true" AllowCustomText="true"
+                                Skin="Glow" AppendDataBoundItems="true" Width="300px">
+                                <Items>
+                                    <telerik:RadComboBoxItem Text="All" Value="0" Selected="true" />
+                                </Items>
+                            </telerik:RadComboBox>
+                            </div>
+                    </div>
 
+                    <div class="form-group">
+                            <label class="col-md-1"><telerik:RadLabel runat="server" Text="Shipmode:"></telerik:RadLabel></label>
+                            <div class="col-sm-10">
+                            <telerik:RadComboBox ID="RadComboBox2" runat="server" MarkFirstMatch="true" AllowCustomText="true"
+                                Skin="Glow" AppendDataBoundItems="true" Width="300px">
+                                <Items>
+                                    <telerik:RadComboBoxItem Text="All" Value="0" Selected="true" />
+                                </Items>
+                            </telerik:RadComboBox>
+                            </div>
+                    </div>
+
+                    <div class="form-group">
+                            <label class="col-md-1"><telerik:RadLabel runat="server" Text="Commodity Type:"></telerik:RadLabel></label>
+                            <div class="col-sm-10">
+                            <telerik:RadComboBox ID="RadComboBox3" runat="server" MarkFirstMatch="true" AllowCustomText="true"
+                                Skin="Glow" AppendDataBoundItems="true" Width="300px">
+                                <Items>
+                                    <telerik:RadComboBoxItem Text="All" Value="0" Selected="true" />
+                                </Items>
+                            </telerik:RadComboBox>
+                            </div>
+                    </div>
+                </div>
+            </div>--%>
             <!--- PAGE BODY--->
+          
             <div class="row">
 
                  <telerik:RadGrid ID="grid_MasterSales" runat="server"  Skin="Glow"
-                    AllowPaging="True"  ShowGroupPanel="true" ShowFooter="true"
+                    AllowPaging="True"
                     PageSize="10"  
-                    AllowFilteringByColumn="true" 
-                    AutoGenerateColumns="false"
+                    AllowFilteringByColumn="false" 
+                    AutoGenerateColumns="true"
                     AllowSorting="true" 
                     OnNeedDataSource="grid_MasterSales_NeedDataSource" ClientSettings-Scrolling-AllowScroll="true" Height="400px" ItemStyle-Wrap="false">
                     
-                    <ExportSettings HideStructureColumns="true" ExportOnlyData="true" Pdf-DefaultFontFamily="Calibri Light" 
+                    <ExportSettings HideStructureColumns="true" FileName="Master Sales" ExportOnlyData="true" Pdf-DefaultFontFamily="Calibri Light" 
                         IgnorePaging="true" UseItemStyles="true" Pdf-BorderColor="Black" Pdf-FontType="Subset">
-                        <Pdf ForceTextWrap="false"  PageWidth="397mm" PageHeight="210mm" BorderColor="Black" DefaultFontFamily="Calibri Light" 
+                        <Pdf ForceTextWrap="false"  PageTitle="Master Sales Report" PageWidth="397mm" PageHeight="210mm" BorderColor="Black" DefaultFontFamily="Calibri Light" 
                              BorderType="AllBorders" BorderStyle="Thin" PageHeaderMargin="10px" 
-                             PageTopMargin="100px">
+                             PageTopMargin="150px">
                           <PageHeader>
                               <MiddleCell  Text="<img src='../../../images/APCARGO-Logo.jpg' width='100%' height='100%'/>" TextAlign="Center" />
                           </PageHeader>
                         </Pdf>
                     </ExportSettings>          
                     <MasterTableView ShowFooter="true" AllowMultiColumnSorting="true" CommandItemDisplay="Top" FilterItemStyle-VerticalAlign="Top" Font-Size="X-Small">
-                        <CommandItemSettings ShowExportToExcelButton="true" ShowExportToPdfButton="true" ExportToPdfText="PDF" ShowExportToWordButton="false" ShowExportToCsvButton="false" ShowAddNewRecordButton="false"  ShowRefreshButton="false" />                       
-                        <Columns>
+                        <CommandItemSettings ShowExportToExcelButton="true" ShowExportToPdfButton="false" ExportToPdfText="PDF" ShowExportToWordButton="false" ShowExportToCsvButton="true" ShowAddNewRecordButton="false"  ShowRefreshButton="false" />                       
+                        <%--<Columns>
                             <telerik:GridDateTimeColumn
                                  DataField="TRANSACTION DATE" HeaderText="TRANSACTION DATE" SortExpression="TRANSACTION DATE" AllowFiltering="true" FilterListOptions="VaryByDataType"
                                  PickerType="DatePicker" EnableRangeFiltering="true"  DataFormatString="{0:MM/dd/yyyy}" DataType="System.DateTime"  FilterControlWidth="85px" 
@@ -134,13 +192,13 @@
 
                             <telerik:GridBoundColumn Aggregate="Sum" FilterDelay="200" ShowFilterIcon="false" AllowFiltering="false"
                                   CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" 
-                                  DataField="AMOUNT" HeaderText="AMOUNT" FooterText="TOTAL AMOUNT: "></telerik:GridBoundColumn>
+                                  DataField="AMOUNT" HeaderText="AMOUNT" FooterText="TOTAL: "></telerik:GridBoundColumn>
 
                             <telerik:GridBoundColumn FilterDelay="200" ShowFilterIcon="false" AllowFiltering="true"
                                   CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" 
                                   DataField="USER" HeaderText="USER"></telerik:GridBoundColumn>
 
-                        </Columns>
+                        </Columns>--%>
                     </MasterTableView>
                 </telerik:RadGrid>
                 <br />

@@ -33,16 +33,23 @@ public partial class portal_Operation_Sales_BCOSalesSummary : System.Web.UI.Page
 
     public DataTable getBCOSalesSummary()
     {
-        string bcostr = "";
+        string bcostr = "All";
+        DateTime date1 = DateTime.Now;
+        DateTime date2 = DateTime.Now;
+
         try
         {
             bcostr = bco.SelectedItem.Text.ToString();
+            date1 = Date1.SelectedDate.Value;
+            date2 = Date2.SelectedDate.Value;
+
         }
         catch (Exception)
         {
-            bcostr = "All";
+            date1 = DateTime.Now.AddYears(-1000);
+            date2 = DateTime.Now.AddYears(1000);
         }
-        DataSet data = BLL.Report.BCOSalesSummaryReport.GetBCOSalesSummary(getConstr.ConStrCMS , bcostr);
+        DataSet data = BLL.Report.BCOSalesSummaryReport.GetBCOSalesSummary(getConstr.ConStrCMS , bcostr , date1 , date2);
         DataTable dt = new DataTable();
         dt = data.Tables[0];
         return dt;
@@ -53,9 +60,10 @@ public partial class portal_Operation_Sales_BCOSalesSummary : System.Web.UI.Page
         grid_BCOSalesSummary.DataSource = getBCOSalesSummary();
     }
 
-    protected void bco_SelectedIndexChanged(object sender, Telerik.Web.UI.RadComboBoxSelectedIndexChangedEventArgs e)
+
+    protected void Search_Click(object sender, EventArgs e)
     {
-        grid_BCOSalesSummary.DataSource  = getBCOSalesSummary();
+        grid_BCOSalesSummary.DataSource = getBCOSalesSummary();
         grid_BCOSalesSummary.Rebind();
     }
 }

@@ -29,5 +29,10 @@ namespace BusinessLogic
         {
             return DAL.Batch.GetBatchByBatchID(conSTR, ID);
         }
+
+        public static DataSet GetBatchByBatchCode(string conSTR, string code)
+        {
+            return DAL.Batch.GetBatchByBatchCode(conSTR, code);
+        }
     }
 }

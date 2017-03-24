@@ -23,64 +23,84 @@
             </div>
             <!--- PAGE BODY--->
             <div class="row">
+                <telerik:RadLabel runat="server" Text="Date:"></telerik:RadLabel>
+                <telerik:RadDatePicker ID="Date" runat="server" Skin="Glow"></telerik:RadDatePicker>
+                &nbsp;&nbsp;
+
+                <telerik:RadLabel runat="server" Text="BCO:"></telerik:RadLabel>
+                <telerik:RadComboBox ID="BCO" runat="server" MarkFirstMatch="true" AllowCustomText="true" Width="250px"
+                    Skin="Glow" AppendDataBoundItems="true">
+                    <Items>
+                        <telerik:RadComboBoxItem Text="All" Value="0" Selected="true" />
+                    </Items>
+                </telerik:RadComboBox>
+                &nbsp;&nbsp;
+
+
+                <telerik:RadLabel runat="server" Text="Driver:"></telerik:RadLabel>
+                <telerik:RadComboBox ID="Driver" runat="server" MarkFirstMatch="true" AllowCustomText="true" Width="150px"
+                    Skin="Glow" AppendDataBoundItems="true">
+                    <Items>
+                        <telerik:RadComboBoxItem Text="All" Value="0" Selected="true" />
+                    </Items>
+                </telerik:RadComboBox>
+                &nbsp;&nbsp;
+
+                <telerik:RadLabel runat="server" Text="Cheker:"></telerik:RadLabel>
+                 <telerik:RadComboBox ID="Checker" runat="server" MarkFirstMatch="true" AllowCustomText="true"
+                     Skin="Glow" AppendDataBoundItems="true">
+                    <Items>
+                        <telerik:RadComboBoxItem Text="All" Value="0" Selected="true" />
+                    </Items>
+                </telerik:RadComboBox>
+                &nbsp;&nbsp;
+
+                <telerik:RadLabel runat="server" Text="Plate #:" Visible="false"></telerik:RadLabel>
+                 <telerik:RadComboBox ID="PlateNo" runat="server" MarkFirstMatch="true" AllowCustomText="true"
+                     Skin="Glow" AppendDataBoundItems="true" Visible="false">
+                    <Items>
+                        <telerik:RadComboBoxItem Text="All" Value="0" Selected="true" />
+                    </Items>
+                </telerik:RadComboBox>
+                &nbsp;
+
+                <telerik:RadButton ID="Search" runat="server" Text="Search" Skin="Glow" AutoPostBack="true" OnClick="Search_Click"> </telerik:RadButton>
+            </div>
+            <br />
+            <div class="row">
                 <telerik:RadGrid ID="grid_Segregation" runat="server" Skin="Glow" 
-                    AllowPaging="True" 
-                    AllowFilteringByColumn="True"
+                    AllowPaging="True" ShowFooter="true" 
+                    AllowFilteringByColumn="false"
                     AutoGenerateColumns="false"
-                    AllowSorting="true" Width="100%" 
+                    AllowSorting="true"
                     PageSize="10" 
                     OnNeedDataSource="grid_Segregation_NeedDataSource">
-                <ExportSettings HideStructureColumns="true" ExportOnlyData="true" IgnorePaging="true" UseItemStyles="true">
-                    <Pdf Title="Segregation" PageHeaderMargin="10px" PageTopMargin="100px" BorderType="AllBorders" BorderStyle="Thin" DefaultFontFamily="Calibri Light">
+                <ExportSettings HideStructureColumns="true" FileName="Segregation" 
+                    ExportOnlyData="true" IgnorePaging="true" UseItemStyles="true">
+                    <Pdf Title="Segregation" PageTitle="Segregation Report" 
+                        PageHeaderMargin="10px" PageTopMargin="140px" BorderType="AllBorders" 
+                        BorderStyle="Thin" DefaultFontFamily="Calibri">
                             <PageHeader>
-                              <MiddleCell  Text="<img src='../../../images/APCARGO-Logo.jpg' width='100%' height='100%'/>"/>
+                              <MiddleCell TextAlign="Center"  Text="<img src='../../../images/APCARGO-Logo.jpg' width='100%' height='100%'/>"/>
                           </PageHeader>
                         </Pdf>
                 </ExportSettings>          
-                    <MasterTableView CommandItemDisplay="Top" Width="100%">
+                    <MasterTableView CommandItemDisplay="Top" Width="100%" Font-Size="Smaller">
                         <CommandItemSettings ShowExportToExcelButton="true" ShowExportToPdfButton="true" ShowExportToWordButton="false" ShowExportToCsvButton="false" ShowAddNewRecordButton="false"  ShowRefreshButton="false" />
                         <Columns>
-                             <telerik:GridDateTimeColumn Exportable="false"
-                                 DataField="CreatedDate" HeaderText="Date" SortExpression="CreatedDate" AllowFiltering="true" FilterListOptions="VaryByDataType"
-                                 PickerType="DatePicker"  DataFormatString="{0:MM/dd/yyyy}" DataType="System.DateTime" UniqueName="CreatedDate" FilterControlWidth="120px"
-                                 ></telerik:GridDateTimeColumn>
-
-                            <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false" Exportable="false"
-                                CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" FilterControlWidth="200px"
-                                DataField="BCO" HeaderText="BCO">
-                            </telerik:GridBoundColumn>
-
-                            
-                             <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
-                                  CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" 
-                                  DataField="AirwayBillNo" HeaderText="Airway Bill No"></telerik:GridBoundColumn>
-
-                              <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false" Exportable="false"
-                                  CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" 
-                                  DataField="Driver" HeaderText="Driver"></telerik:GridBoundColumn>
-
-                            <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false" Exportable="false"
-                                  CurrentFilterFunction="Contains" AutoPostBackOnFilter="false"  AllowFiltering="false"
-                                  DataField="Checker" HeaderText="Checker"></telerik:GridBoundColumn>
-
-                            <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false" Exportable="false"
-                                  CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" AllowFiltering="false"
-                                  DataField="PlateNo" HeaderText="Plate #"></telerik:GridBoundColumn>
-
-                             <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false" Exportable="false"
-                                  CurrentFilterFunction="Contains" AutoPostBackOnFilter="false"
-                                  DataField="BatchName" HeaderText="Batch"></telerik:GridBoundColumn>
-
-                            
-                             <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
-                                  CurrentFilterFunction="EqualTo" AutoPostBackOnFilter="false" AllowFiltering="false"
-                                  DataField="Qty" HeaderText="Qty"></telerik:GridBoundColumn>
-
-                              <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
-                                  CurrentFilterFunction="EqualTo" AutoPostBackOnFilter="false"  AllowFiltering="false"
-                                  DataField="Area" HeaderText="Area"></telerik:GridBoundColumn>
+                             <telerik:GridBoundColumn DataField="No" HeaderText="#" HeaderStyle-Width="20px"></telerik:GridBoundColumn>                            
+                             <telerik:GridBoundColumn DataField="AirwayBillNo" HeaderText="Airway Bill No" FooterText="TOTAL: " ></telerik:GridBoundColumn>
+                             <telerik:GridBoundColumn DataField="Driver" HeaderText="Driver" Exportable="false"></telerik:GridBoundColumn>
+                             <telerik:GridBoundColumn DataField="Checker" HeaderText="Checker" Exportable="false"></telerik:GridBoundColumn>
+                             <telerik:GridBoundColumn DataField="PlateNo" HeaderText="Plate #" Exportable="false"></telerik:GridBoundColumn>
+                             <telerik:GridBoundColumn DataField="BatchName" HeaderText="Batch" Exportable="false"></telerik:GridBoundColumn> 
+                             <telerik:GridBoundColumn DataField="Qty" HeaderText="Qty" FooterText=" " Aggregate="Sum"></telerik:GridBoundColumn>
+                             <telerik:GridBoundColumn DataField="Area" HeaderText="Area"></telerik:GridBoundColumn>
+                             <telerik:GridBoundColumn DataField="SCANNEDBY" HeaderText="SCANNED BY"></telerik:GridBoundColumn>
 
                         </Columns>
+                        <HeaderStyle Font-Size="Smaller" Font-Bold="true" />
+                        <FooterStyle Font-Bold="true" />
                     </MasterTableView>
                 </telerik:RadGrid>
                 <br />
