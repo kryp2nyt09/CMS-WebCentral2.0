@@ -50,6 +50,7 @@
     <Compile Include="BillingPeriod.cs" />
     <Compile Include="Department.cs" />
     <Compile Include="Flight.cs" />
+    <Compile Include="Graph.cs" />
     <Compile Include="Industry.cs" />
     <Compile Include="Invoice.cs" />
     <Compile Include="OrganizationType.cs" />
@@ -122,6 +123,9 @@
       <Project>{1ea9e4c1-0c5f-4114-a917-7fae6c35ff15}</Project>
       <Name>Utilities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

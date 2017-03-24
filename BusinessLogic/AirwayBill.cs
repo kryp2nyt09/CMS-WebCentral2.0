@@ -18,5 +18,10 @@ namespace BusinessLogic
         {
             return DAL.AirwayBill.GetDetailsAwbNo(awbNo, conSTR);
         }
+
+        //public static DataTable awbDatatable(DataTable datatable)
+        //{
+        //    return DAL.AirwayBill.awbDatatable(datatable);
+        //}
     }
 }

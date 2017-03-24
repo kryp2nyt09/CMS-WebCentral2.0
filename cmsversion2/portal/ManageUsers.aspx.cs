@@ -16,9 +16,9 @@ public partial class _ManageUsers : System.Web.UI.Page
     
         
         RadGrid2.MasterTableView.CommandItemSettings.ShowAddNewRecordButton = false;
-        //radSearchUser.DataSource = GetUsers();
-        //radSearchUser.DataTextField = "FullName";
-        //radSearchUser.DataValueField = "UserId";
+        radSearchUser.DataSource = GetUsers();
+        radSearchUser.DataTextField = "FullName";
+        radSearchUser.DataValueField = "UserId";
 
         if (!string.IsNullOrEmpty(Session["UsernameSession"] as string))
         {
@@ -146,6 +146,12 @@ public partial class _ManageUsers : System.Web.UI.Page
             BLL.Users_Info.UpdateUserProfile(new Guid(userid), 3, getConstr.ConStrCMS);
             //3 for delete flagging
         }
+    }
+
+    protected void btnSubmit_Click(object sender, EventArgs e)
+    {
+        RadGrid2.DataSource = GetUsers();
+        RadGrid2.Rebind();
     }
     #endregion
 

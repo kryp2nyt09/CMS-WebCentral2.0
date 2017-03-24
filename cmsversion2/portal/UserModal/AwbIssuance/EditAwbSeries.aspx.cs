@@ -18,7 +18,7 @@ public partial class _EditAwbSeries : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
-           
+            
             LoadBranchCorpOffice();
             LoadRevenueType();
             LoadArea();
@@ -124,7 +124,8 @@ public partial class _EditAwbSeries : System.Web.UI.Page
         rdcArea.DataBind();
         if (area != null)
         {
-            rdcArea.Items.Insert(0, "None");
+            // rdcArea.Items.Insert(0, "None");
+            rdcArea.Items.Add("None");
         }
     }
 
@@ -145,7 +146,8 @@ public partial class _EditAwbSeries : System.Web.UI.Page
         rcbName.DataBind();
         if (employee != null)
         {
-            rcbName.Items.Insert(0, "None");
+            //rcbName.Items.Insert(0, "None");
+            rcbName.Items.Add("None");
         }
     }
 
@@ -158,7 +160,8 @@ public partial class _EditAwbSeries : System.Web.UI.Page
         rdcArea.DataBind();
         if (LocationList != null)
         {
-            rdcArea.Items.Insert(0, "None");
+            //rdcArea.Items.Insert(0, "None");
+            rdcArea.Items.Add("None");
         }
     }
 
@@ -171,7 +174,8 @@ public partial class _EditAwbSeries : System.Web.UI.Page
         rcbName.DataBind();
         if (LocationList != null)
         {
-            rcbName.Items.Insert(0, "None");
+            //rcbName.Items.Insert(0, "None");
+            rcbName.Items.Add("None");
         }
     }
     #endregion
