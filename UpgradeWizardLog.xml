@@ -451,5 +451,35 @@
   <event action="Analyze" type="Success" name="Session State Providers" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\web.config" />
   <event action="Analyze" type="Success" name="web.config" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\web.config" />
   <event action="Analyze" type="Success" name="C:\...\cmsversion2\" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\CMS2.API\CMS2.API.csproj" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\CMS2.API\packages.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\CMS2.API\packages.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\CMS2.API\packages.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\CMS2.API\packages.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\CMS2.API\packages.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\CMS2.API\packages.config" />
+  <event action="Analyze" type="Success" name="packages.config" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\CMS2.API\packages.config" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\CMS2.API\Web.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\CMS2.API\Web.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\CMS2.API\Web.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\CMS2.API\Web.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\CMS2.API\Web.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\CMS2.API\Web.config" />
+  <event action="Analyze" type="Success" name="Web.config" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\CMS2.API\Web.config" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\CMS2.API\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\CMS2.API\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\CMS2.API\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\CMS2.API\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\CMS2.API\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\CMS2.API\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Web.Debug.config" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\CMS2.API\Web.Debug.config" />
+  <event action="Analyze" type="Success" name="Assembly References" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\CMS2.API\Web.Release.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\CMS2.API\Web.Release.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\CMS2.API\Web.Release.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\CMS2.API\Web.Release.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\CMS2.API\Web.Release.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\CMS2.API\Web.Release.config" />
+  <event action="Analyze" type="Success" name="Web.Release.config" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\CMS2.API\Web.Release.config" />
+  <event action="Analyze" type="Success" name="CMS2.API" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\CMS2.API\CMS2.API.csproj" />
   <event action="Analyze" type="Success" name="CMSversion2.1" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\CMSversion2.1.sln" />
 </log>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using DAL = DataAccess;
 
@@ -55,58 +56,115 @@ namespace BusinessLogic
             return Invoices( DAL.Invoice.GetInvoice(start, end, ConnectionString));
         }
 
-        private static List<Invoice> Invoices( DataSet data)
+        private static List<Invoice> Invoices(DataSet data)
         {
             List<Invoice> invoices = new List<Invoice>();
             DataTable convertdata = new DataTable();
-            convertdata = data.Tables[0];
-            foreach (DataRow row in convertdata.Rows)
-            {
-                Invoice invoice = new Invoice();
-                invoice.AcceptedArea = row["AcceptedArea"].ToString();
-                invoice.AcceptedBy = row["AcceptedBy"].ToString();
-                invoice.ActualGrossWeight = (decimal)row["ActualGrossWeight"];
-                invoice.AirwayBillNo = row["AirwayBillNo"].ToString();
-                invoice.AwbFee =(decimal) row["AwbFee"];
-                invoice.Branch = row["Branch"].ToString();
-                invoice.ChargeableWeight = (decimal)row["ChargeableWeight"];
-                invoice.Consignee = row["Consignee"].ToString();
-                invoice.CratingFee = (decimal)row["CratingFee"];
-                invoice.DangerousFee = (decimal)row["DangerousFee"];
-                invoice.DateAccepted = (DateTime)row["DateAccepted"];
-                invoice.DeclaredValue = (decimal)row["DeclaredValue"];
-                invoice.DeliveryFee = (decimal)row["DeliveryFee"];
-                invoice.DestinationArea = row["DestinationArea"].ToString();
-                invoice.Discount = (decimal)row["Discount"];
-                invoice.FreightCollectCharge = (decimal)row["FreightCollectCharge"];
-                invoice.FuelSurcharge = (decimal)row["FuelSurcharge"];
-                invoice.HasAwbFee = row["HasAwbFee"].ToString();
-                invoice.HasFreightCollectCharge = row["HasFreightCollectCharge"].ToString();
-                invoice.HasNonVatInsurance = row["HasNonVatInsurance"].ToString();
-                invoice.HasNonVatWeightCharge = row["hasNonVatWeightCharge"].ToString();
-                invoice.HasPerishableGoods = row["HasPerishableGoods"].ToString();
-                invoice.Insurance = (decimal)row["Insurance"];
-                invoice.IsNonVatable = row["IsNonVatable"].ToString();
-                invoice.IsNonVatValuation = row["IsNonVatValuation"].ToString();
-                invoice.OriginArea = row["OriginArea"].ToString();
-                invoice.OtherChargesAmount =(decimal) row["OtherChargesAmount"];
-                invoice.OtherChargesDesc = row["OtherChargesDesc"].ToString();
-                invoice.PaymentMode = row["PaymentMode"].ToString();
-                invoice.PaymentTerm = row["PaymentTerm"].ToString();
-                invoice.PeracFee = (decimal)row["PeracFee"];
-                invoice.Quantity = row["Quantity"].ToString();
-                invoice.ServiceMode = row["ServiceMode"].ToString();
-                invoice.Shipper = row["Shipper"].ToString();
-                invoice.SubTotal = (decimal)row["SubTotal"];
-                invoice.TotalAmount = (decimal)row["TotalAmount"];
-                invoice.ValuationAmount = (decimal)row["ValuationAmount"];
-                invoice.VatAmount = (decimal)row["VatAmount"];
-                invoice.WeightCharge = (decimal)row["WeightCharge"];
 
-                invoices.Add(invoice);
+            convertdata = data.Tables[0];
+            foreach (DataRow invoice in convertdata.Rows)
+            {
+                Invoice _invoice = new Invoice();
+                _invoice.AcceptedArea = invoice["AcceptedArea"].ToString();
+                _invoice.AcceptedBy = invoice["AcceptedBy"].ToString();
+                _invoice.ActualGrossWeight = (decimal)invoice["ActualGrossWeight"];
+                _invoice.AirwayBillNo = invoice["AirwayBillNo"].ToString();
+                _invoice.AwbFee = (decimal)invoice["AwbFee"];
+                _invoice.Branch = invoice["Branch"].ToString();
+                _invoice.ChargeableWeight = (decimal)invoice["ChargeableWeight"];
+                _invoice.Consignee = invoice["Consignee"].ToString();
+                _invoice.CratingFee = (decimal)invoice["CratingFee"];
+                _invoice.DangerousFee = (decimal)invoice["DangerousFee"];
+                _invoice.DateAccepted = (DateTime)invoice["DateAccepted"];
+                _invoice.DeclaredValue = (decimal)invoice["DeclaredValue"];
+                _invoice.DeliveryFee = (decimal)invoice["DeliveryFee"];
+                _invoice.DestinationArea = invoice["DestinationArea"].ToString();
+                _invoice.Discount = (decimal)invoice["Discount"];
+                _invoice.FreightCollectCharge = (decimal)invoice["FreightCollectCharge"];
+                _invoice.FuelSurcharge = (decimal)invoice["FuelSurcharge"];
+                _invoice.HasAwbFee = invoice["HasAwbFee"].ToString();
+                _invoice.HasFreightCollectCharge = invoice["HasFreightCollectCharge"].ToString();
+                _invoice.HasNonVatInsurance = invoice["HasNonVatInsurance"].ToString();
+                _invoice.HasNonVatWeightCharge = invoice["hasNonVatWeightCharge"].ToString();
+                _invoice.HasPerishableGoods = invoice["HasPerishableGoods"].ToString();
+                _invoice.Insurance = (decimal)invoice["Insurance"];
+                _invoice.IsNonVatable = invoice["IsNonVatable"].ToString();
+                _invoice.IsNonVatValuation = invoice["IsNonVatValuation"].ToString();
+                _invoice.OriginArea = invoice["OriginArea"].ToString();
+                _invoice.OtherChargesAmount = (decimal)invoice["OtherChargesAmount"];
+                _invoice.OtherChargesDesc = invoice["OtherChargesDesc"].ToString();
+                _invoice.PaymentMode = invoice["PaymentMode"].ToString();
+                _invoice.PaymentTerm = invoice["PaymentTerm"].ToString();
+                _invoice.PeracFee = (decimal)invoice["PeracFee"];
+                _invoice.Quantity = invoice["Quantity"].ToString();
+                _invoice.ServiceMode = invoice["ServiceMode"].ToString();
+                _invoice.Shipper = invoice["Shipper"].ToString();
+                _invoice.SubTotal = (decimal)invoice["SubTotal"];
+                _invoice.TotalAmount = (decimal)invoice["TotalAmount"];
+                _invoice.ValuationAmount = (decimal)invoice["ValuationAmount"];
+                _invoice.VatAmount = (decimal)invoice["VatAmount"];
+                _invoice.WeightCharge = (decimal)invoice["WeightCharge"];
+
+                invoices.Add(_invoice);
             }
 
             return invoices;
         }
+
+        private static void AddInvoice(Object obj)
+        {
+            State state = (State)obj;
+
+            Invoice invoice = new Invoice();
+            invoice.AcceptedArea = state.invoice["AcceptedArea"].ToString();
+            invoice.AcceptedBy = state.invoice["AcceptedBy"].ToString();
+            invoice.ActualGrossWeight = (decimal)state.invoice["ActualGrossWeight"];
+            invoice.AirwayBillNo = state.invoice["AirwayBillNo"].ToString();
+            invoice.AwbFee = (decimal)state.invoice["AwbFee"];
+            invoice.Branch = state.invoice["Branch"].ToString();
+            invoice.ChargeableWeight = (decimal)state.invoice["ChargeableWeight"];
+            invoice.Consignee = state.invoice["Consignee"].ToString();
+            invoice.CratingFee = (decimal)state.invoice["CratingFee"];
+            invoice.DangerousFee = (decimal)state.invoice["DangerousFee"];
+            invoice.DateAccepted = (DateTime)state.invoice["DateAccepted"];
+            invoice.DeclaredValue = (decimal)state.invoice["DeclaredValue"];
+            invoice.DeliveryFee = (decimal)state.invoice["DeliveryFee"];
+            invoice.DestinationArea = state.invoice["DestinationArea"].ToString();
+            invoice.Discount = (decimal)state.invoice["Discount"];
+            invoice.FreightCollectCharge = (decimal)state.invoice["FreightCollectCharge"];
+            invoice.FuelSurcharge = (decimal)state.invoice["FuelSurcharge"];
+            invoice.HasAwbFee = state.invoice["HasAwbFee"].ToString();
+            invoice.HasFreightCollectCharge = state.invoice["HasFreightCollectCharge"].ToString();
+            invoice.HasNonVatInsurance = state.invoice["HasNonVatInsurance"].ToString();
+            invoice.HasNonVatWeightCharge = state.invoice["hasNonVatWeightCharge"].ToString();
+            invoice.HasPerishableGoods = state.invoice["HasPerishableGoods"].ToString();
+            invoice.Insurance = (decimal)state.invoice["Insurance"];
+            invoice.IsNonVatable = state.invoice["IsNonVatable"].ToString();
+            invoice.IsNonVatValuation = state.invoice["IsNonVatValuation"].ToString();
+            invoice.OriginArea = state.invoice["OriginArea"].ToString();
+            invoice.OtherChargesAmount = (decimal)state.invoice["OtherChargesAmount"];
+            invoice.OtherChargesDesc = state.invoice["OtherChargesDesc"].ToString();
+            invoice.PaymentMode = state.invoice["PaymentMode"].ToString();
+            invoice.PaymentTerm = state.invoice["PaymentTerm"].ToString();
+            invoice.PeracFee = (decimal)state.invoice["PeracFee"];
+            invoice.Quantity = state.invoice["Quantity"].ToString();
+            invoice.ServiceMode = state.invoice["ServiceMode"].ToString();
+            invoice.Shipper = state.invoice["Shipper"].ToString();
+            invoice.SubTotal = (decimal)state.invoice["SubTotal"];
+            invoice.TotalAmount = (decimal)state.invoice["TotalAmount"];
+            invoice.ValuationAmount = (decimal)state.invoice["ValuationAmount"];
+            invoice.VatAmount = (decimal)state.invoice["VatAmount"];
+            invoice.WeightCharge = (decimal)state.invoice["WeightCharge"];
+
+            state.invoices.Add(invoice);
+            state.reset.Set();
+        }
+    }
+
+     class State
+    {
+         public List<Invoice> invoices;
+         public ManualResetEvent reset;
+         public DataRow invoice;
     }
 }

@@ -104,7 +104,7 @@
                                 <Columns>
 
                                     <telerik:GridBoundColumn DataField="AccountNo" HeaderText="Account No." SortExpression="AccountNo" UniqueName="AccountNo"
-                                       FilterDelay="2000" ShowFilterIcon="false" FilterControlWidth="120px"
+                                       FilterDelay="2000" ShowFilterIcon="true" AllowFiltering ="true"
                                   CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" HeaderStyle-Font-Bold="true">
                                     </telerik:GridBoundColumn>
 
