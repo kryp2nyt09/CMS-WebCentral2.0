@@ -57,6 +57,7 @@
     <Compile Include="Reports\BCOSalesSummary.cs" />
     <Compile Include="Reports\BranchAcceptance.cs" />
     <Compile Include="Reports\Bundle.cs" />
+    <Compile Include="Reports\CargoMonitoring.cs" />
     <Compile Include="Reports\Collection.cs" />
     <Compile Include="Reports\DailyTrip.cs" />
     <Compile Include="Reports\MasterSales.cs" />
