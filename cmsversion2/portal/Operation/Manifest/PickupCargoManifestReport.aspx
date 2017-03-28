@@ -22,30 +22,76 @@
             </div>
             <!--- PAGE BODY--->
             <div class="row">
-                <telerik:RadGrid ID="gridPickupCargo" runat="server"  Skin="Glow" CssClass="row"
-                    AllowPaging="True" 
+
+                <telerik:RadLabel runat="server" Text="Date:"></telerik:RadLabel>
+                <telerik:RadDatePicker ID="Date" runat="server" AutoPostBack="true" Skin="Glow" DateInput-DateFormat="MM/dd/yyyy">
+                </telerik:RadDatePicker>                
+                &nbsp;&nbsp;
+
+                <telerik:RadLabel runat="server" Text="AWB #:"></telerik:RadLabel>
+                <telerik:RadComboBox ID="AWB" runat="server" Skin="Glow" AutoPostBack="true"
+                    AutoCompleteSeparator="None" AllowCustomText="true" MarkFirstMatch="true"
+                    AppendDataBoundItems="true">
+                </telerik:RadComboBox>
+
+                &nbsp;&nbsp;
+
+                <telerik:RadLabel runat="server" Text="BCO:"></telerik:RadLabel>
+                <telerik:RadComboBox ID="BCO" runat="server" Skin="Glow" Width="250px" 
+                    AppendDataBoundItems="true" EnableTextSelection="true" 
+                    AutoCompleteSeparator="None" AllowCustomText="true" MarkFirstMatch="true" AutoPostBack="true" OnSelectedIndexChanged="BCO_SelectedIndexChanged">
+                    <Items>
+                        <telerik:RadComboBoxItem Text="All" Value="All" Selected="true" />
+                    </Items>
+                </telerik:RadComboBox>
+                &nbsp;&nbsp;
+
+                <telerik:RadLabel runat="server" Text="Area:"></telerik:RadLabel>
+                <telerik:RadComboBox ID="Area" runat="server" Skin="Glow" EnableTextSelection="true"
+                    AppendDataBoundItems="true" AutoPostBack="true" MarkFirstMatch="true"    
+                    AutoCompleteSeparator="" AllowCustomText="true">
+                    <Items>
+                        <telerik:RadComboBoxItem Text="All" Value="All" Selected="true" />
+                    </Items>
+                </telerik:RadComboBox>
+                &nbsp;&nbsp;
+                <telerik:RadButton ID="Search" runat="server" Text="Search" Skin="Glow" OnClick="Search_Click" AutoPostBack="true"> </telerik:RadButton>
+            </div>
+            <br />
+            <div class="row">
+                <telerik:RadGrid ID="gridPickupCargo" runat="server"  Skin="Glow"
+                    AllowPaging="True"
                     PageSize="10"  
-                    AllowFilteringByColumn="True"
-                    AutoGenerateColumns="false"
-                    AllowSorting="true" 
-                    OnNeedDataSource="gridPickupCargo_NeedDataSource" OnInfrastructureExporting="gridPickupCargo_InfrastructureExporting">
+                    AllowFilteringByColumn="false"
+                    AutoGenerateColumns="true"
+                    AllowSorting="true" ExportSettings-Pdf-ForceTextWrap="false" ExportSettings-Pdf-ContentFilter="NoFilter"
+                    ClientSettings-Scrolling-AllowScroll="true" Height="500px"
+                    ItemStyle-Wrap="false"
+                    OnNeedDataSource="gridPickupCargo_NeedDataSource" 
+                    OnPreRender="gridPickupCargo_PreRender">
                     
-                    <ExportSettings HideStructureColumns="true" ExportOnlyData="true" IgnorePaging="true" UseItemStyles="false" FileName="Pickup_Cargo" Pdf-PageLeftMargin="20px" Pdf-PageRightMargin="20px"> 
-                        <Pdf ForceTextWrap="true" PageWidth="397mm" PageHeight="210mm" BorderColor="Black" 
-                             BorderType="AllBorders" BorderStyle="Thin" PageHeaderMargin="10px" 
-                             PageTopMargin="100px">
-                          <PageHeader>
-                              <MiddleCell  Text="<img src='../../../images/APCARGO-Logo.jpg' width='100%' height='100%'/>" TextAlign="Center" />
+                    <ExportSettings HideStructureColumns="true" ExportOnlyData="true" IgnorePaging="true" 
+                        UseItemStyles="false" FileName="Pickup_Cargo" > 
+                        
+                        <Pdf ForceTextWrap="false" PageWidth="597mm" PageHeight="220mm" BorderColor="Black"
+                             DefaultFontFamily="Calibri" 
+                             BorderType="AllBorders" BorderStyle="Thin" PageHeaderMargin="20px" 
+                             PageTopMargin="150px" PageTitle="Pickup Cargo Manifest Report">
+                          <PageHeader>                             
+                              <MiddleCell  Text="<img src='../../../images/APCARGO-Logo.jpg' />" TextAlign="Center" />                              
                           </PageHeader>
-                        </Pdf>
-                        <Excel  Format="Xlsx"/>
+
+                        </Pdf>           
+                                     
                     </ExportSettings>          
                     <MasterTableView CommandItemDisplay="Top" Font-Size="Smaller">
-                        <CommandItemSettings ShowExportToExcelButton="true" ShowExportToPdfButton="true" ShowExportToWordButton="false" ShowExportToCsvButton="false" ShowAddNewRecordButton="false"  ShowRefreshButton="false"/>
-                        <Columns>                           
+                        <CommandItemSettings ShowExportToExcelButton="true" ShowExportToPdfButton="true" 
+                            ShowExportToWordButton="false" ShowExportToCsvButton="true" 
+                            ShowAddNewRecordButton="false"  ShowRefreshButton="false"/>
+                        <%--<Columns>                           
                              <telerik:GridDateTimeColumn
                                  DataField="CreatedDate" HeaderText="Date" SortExpression="CreatedDate" AllowFiltering="true" FilterListOptions="VaryByDataType" Exportable="false"
-                                 PickerType="DatePicker"  DataFormatString="{0:MM/dd/yyyy}" DataType="System.DateTime" UniqueName="CreatedDate" FilterControlWidth="100px">
+                                 PickerType="DatePicker"  DataFormatString="{0:MM/dd/yyyy}" DataType="System.DateTime" UniqueName="CreatedDate" FilterControlWidth="80px">
                              </telerik:GridDateTimeColumn>
 
                              <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
@@ -79,11 +125,11 @@
 
                             <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
                                   CurrentFilterFunction="EqualTo" AutoPostBackOnFilter="false" AllowFiltering="false"
-                                  DataField="Qty" HeaderText="Qty"></telerik:GridBoundColumn>
+                                  DataField="Qty" HeaderText="Qty" Aggregate="Sum" FooterText="Total    : "></telerik:GridBoundColumn>
 
                             <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
                                   CurrentFilterFunction="EqualTo" AutoPostBackOnFilter="false" AllowFiltering="false"
-                                  DataField="AGW" HeaderText="AGW"></telerik:GridBoundColumn>
+                                  DataField="AGW" HeaderText="AGW" Aggregate="Sum" FooterText="Total:"></telerik:GridBoundColumn>
 
                             <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
                                   CurrentFilterFunction="EqualTo" AutoPostBackOnFilter="false" AllowFiltering="false"
@@ -93,10 +139,10 @@
                                   CurrentFilterFunction="EqualTo" AutoPostBackOnFilter="false" AllowFiltering="false"
                                   DataField="PaymentModeName" HeaderText="Payment Mode"></telerik:GridBoundColumn>
 
-                            <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
+                            <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false" Aggregate="Sum"
                                   CurrentFilterFunction="EqualTo" AutoPostBackOnFilter="false" AllowFiltering="false"
-                                  DataField="AMOUNT" HeaderText="Amount"></telerik:GridBoundColumn>
-                        </Columns>
+                                  DataField="AMOUNT" HeaderText="Amount" FooterText="Total: "></telerik:GridBoundColumn>
+                        </Columns>--%>
                     </MasterTableView>
                 </telerik:RadGrid>
                 <br />

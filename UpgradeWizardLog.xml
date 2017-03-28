@@ -61,15 +61,45 @@
   <event action="Analyze" type="Success" name="Render Extensions" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\packages.config" />
   <event action="Analyze" type="Success" name="Session State Providers" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\packages.config" />
   <event action="Analyze" type="Success" name="packages.config" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\packages.config" />
-  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\AWBSeriesManagement.aspx" />
-  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\AWBSeriesManagement.aspx" />
-  <event action="Analyze" type="Success" name="AWBSeriesManagement.aspx" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\AWBSeriesManagement.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\AWBSeries\AWBIssuedSummary.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\AWBSeries\AWBIssuedSummary.aspx" />
+  <event action="Analyze" type="Success" name="AWBIssuedSummary.aspx" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\AWBSeries\AWBIssuedSummary.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\AWBSeries\AWBSeriesMonitoring.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\AWBSeries\AWBSeriesMonitoring.aspx" />
+  <event action="Analyze" type="Success" name="AWBSeriesMonitoring.aspx" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\AWBSeries\AWBSeriesMonitoring.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\ConnectionTimeOut.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\ConnectionTimeOut.aspx" />
+  <event action="Analyze" type="Success" name="ConnectionTimeOut.aspx" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\ConnectionTimeOut.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Dashboard.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Dashboard.aspx" />
+  <event action="Analyze" type="Success" name="Dashboard.aspx" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Dashboard.aspx" />
   <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Finance\CollectionReport.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Finance\CollectionReport.aspx" />
   <event action="Analyze" type="Success" name="CollectionReport.aspx" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Finance\CollectionReport.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Finance\Sales\BCOSalesSummary.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Finance\Sales\BCOSalesSummary.aspx" />
+  <event action="Analyze" type="Success" name="BCOSalesSummary.aspx" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Finance\Sales\BCOSalesSummary.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Finance\Sales\MasterSalesReport.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Finance\Sales\MasterSalesReport.aspx" />
+  <event action="Analyze" type="Success" name="MasterSalesReport.aspx" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Finance\Sales\MasterSalesReport.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Finance\Sales\SalesPerClientReport.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Finance\Sales\SalesPerClientReport.aspx" />
+  <event action="Analyze" type="Success" name="SalesPerClientReport.aspx" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Finance\Sales\SalesPerClientReport.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Finance\Sales\SalesPerRevenueUnitReport.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Finance\Sales\SalesPerRevenueUnitReport.aspx" />
+  <event action="Analyze" type="Success" name="SalesPerRevenueUnitReport.aspx" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Finance\Sales\SalesPerRevenueUnitReport.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Finance\Sales\SalesPerShipModeReport.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Finance\Sales\SalesPerShipModeReport.aspx" />
+  <event action="Analyze" type="Success" name="SalesPerShipModeReport.aspx" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Finance\Sales\SalesPerShipModeReport.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Finance\Sales\SalesPerUserLevel.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Finance\Sales\SalesPerUserLevel.aspx" />
+  <event action="Analyze" type="Success" name="SalesPerUserLevel.aspx" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Finance\Sales\SalesPerUserLevel.aspx" />
   <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\FlightMaintenance.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\FlightMaintenance.aspx" />
   <event action="Analyze" type="Success" name="FlightMaintenance.aspx" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\FlightMaintenance.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Graph.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Graph.aspx" />
+  <event action="Analyze" type="Success" name="Graph.aspx" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Graph.aspx" />
   <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Gridsample.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Gridsample.aspx" />
   <event action="Analyze" type="Success" name="Gridsample.aspx" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Gridsample.aspx" />
@@ -130,6 +160,9 @@
   <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Reports\ApprovingAuthorityExportReport.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Reports\ApprovingAuthorityExportReport.aspx" />
   <event action="Analyze" type="Success" name="ApprovingAuthorityExportReport.aspx" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Reports\ApprovingAuthorityExportReport.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Reports\AwbIssuanceExport.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Reports\AwbIssuanceExport.aspx" />
+  <event action="Analyze" type="Success" name="AwbIssuanceExport.aspx" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Reports\AwbIssuanceExport.aspx" />
   <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Reports\ClientExportReport.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Reports\ClientExportReport.aspx" />
   <event action="Analyze" type="Success" name="ClientExportReport.aspx" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Reports\ClientExportReport.aspx" />
@@ -190,6 +223,9 @@
   <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\UserModal\AwbIssuance\AddAwbSeries.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\UserModal\AwbIssuance\AddAwbSeries.aspx" />
   <event action="Analyze" type="Success" name="AddAwbSeries.aspx" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\UserModal\AwbIssuance\AddAwbSeries.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\UserModal\AwbIssuance\EditAwbSeries.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\UserModal\AwbIssuance\EditAwbSeries.aspx" />
+  <event action="Analyze" type="Success" name="EditAwbSeries.aspx" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\UserModal\AwbIssuance\EditAwbSeries.aspx" />
   <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Batch\AddBatch.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Batch\AddBatch.aspx" />
   <event action="Analyze" type="Success" name="AddBatch.aspx" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Batch\AddBatch.aspx" />
@@ -427,6 +463,9 @@
   <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ViewApprovingAuthority.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ViewApprovingAuthority.aspx" />
   <event action="Analyze" type="Success" name="ViewApprovingAuthority.aspx" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ViewApprovingAuthority.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ViewCargo.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ViewCargo.aspx" />
+  <event action="Analyze" type="Success" name="ViewCargo.aspx" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ViewCargo.aspx" />
   <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ViewRepresentative.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ViewRepresentative.aspx" />
   <event action="Analyze" type="Success" name="ViewRepresentative.aspx" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ViewRepresentative.aspx" />

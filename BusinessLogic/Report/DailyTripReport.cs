@@ -10,9 +10,9 @@ namespace BusinessLogic.Report
 {
     public class DailyTripReport
     {
-        public static DataSet GetDailyTrip(string conSTR)
+        public static DataSet GetDailyTrip(string conSTR, string DateStr, string AreaStr , String BCO)
         {
-            return DAL.Reports.DailyTrip.GetDailyTrip(conSTR);
+            return DAL.Reports.DailyTrip.GetDailyTrip(conSTR, DateStr, AreaStr , BCO);
         }
     }
 }

@@ -19,7 +19,7 @@
 
         .center
         {
-            position:center;
+            text-align:center;
         }
 
          .alignright
@@ -61,13 +61,13 @@
     <div id="wrapper">
         <div id="page-wrapper">
 
-            <div class="container-fluid">
+            <div class="container">
 
                 <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-12">
 
-                        <h4>Flight Details</h4>
+                        <h3>Flight Details</h3>
 
                         <ol class="breadcrumb">
                             <li>
@@ -82,14 +82,14 @@
                     </div>
                 </div>
                 <!-- /.row -->
-                <div>
+                <div class="buttons">
                         <telerik:RadAsyncUpload runat="server" ID="FileUploadFlightInfo"
                                             HideFileInput="true"
                                             AllowedFileExtensions=".xls,.xlsx,.csv"
                                             OnFileUploaded="FileUploadFlightInfo_FileUploaded"
                                             OnClientFilesUploaded="UploadFile"
                                             Localization-Select="Import File"
-                                            Font-Size="14px" />
+                                            Font-Size="14px"/>
                         <telerik:RadButton ID="btnUpload" runat="server" Text="Upload" style="display: none" OnClick="btnUpload_Click"></telerik:RadButton>
                  </div>
                                 <br />
@@ -172,14 +172,14 @@
                                        
                                     </telerik:GridBoundColumn>
 
-                                    <telerik:GridBoundColumn DataField="OriginCityName" HeaderText="Origin City" SortExpression="OriginCityName"
+                                    <telerik:GridBoundColumn DataField="OriginCityName" HeaderText="Origin" SortExpression="OriginCityName"
                                         UniqueName="OriginCityName" FilterDelay="2000" ShowFilterIcon="false"
                                   CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" HeaderStyle-Font-Bold="true">
                                        
                                     </telerik:GridBoundColumn>
 
                                     
-                                    <telerik:GridBoundColumn DataField="DestinationCityName" HeaderText="Destination City" SortExpression="DestinationCityName"
+                                    <telerik:GridBoundColumn DataField="DestinationCityName" HeaderText="Destination" SortExpression="DestinationCityName"
                                         UniqueName="DestinationCityName" FilterDelay="2000" ShowFilterIcon="false"
                                   CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" HeaderStyle-Font-Bold="true" >
                                         <HeaderStyle />

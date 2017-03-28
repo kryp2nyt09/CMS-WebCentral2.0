@@ -14,6 +14,7 @@ namespace DataAccess
 
         public static DataSet GetBranchCorpOffice(string conSTR)
         {
+
             using (SqlConnection con = new SqlConnection(conSTR))
             {
                 SqlDataAdapter da = new SqlDataAdapter("sp_view_BranchCorpOffice", con);

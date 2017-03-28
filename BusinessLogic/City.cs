@@ -24,6 +24,11 @@ namespace BusinessLogic
             return DAL.City.GetCityByID(CityId, conSTR);
         }
 
+        public static DataSet GetCityByBCO(string conSTR, string BCO)
+        {
+            return DAL.City.GetCityByBCO(conSTR , BCO);
+        }
+
         public static void InsertCity(Guid BranchCorpOfficeId, Guid ModifiedBy, string CityName, string CityCode, string StreetAddress, string ContactNo1, string ContactNo2, string Fax, string zipcode, string conStr)
         {
             DAL.City.InsertCity(BranchCorpOfficeId, ModifiedBy, CityName, CityCode, StreetAddress, ContactNo1, ContactNo2, Fax, zipcode, conStr);

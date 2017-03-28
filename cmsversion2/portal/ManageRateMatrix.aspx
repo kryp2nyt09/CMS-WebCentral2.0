@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/cmsversion.Master" AutoEventWireup="true" CodeFile="ManageRateMatrix.aspx.cs" Inherits="_ManageRepresentatives" %>
+﻿<%@ Page Title="Rate Matrix" Language="C#" MasterPageFile="~/cmsversion.Master" AutoEventWireup="true" CodeFile="ManageRateMatrix.aspx.cs" Inherits="_ManageRepresentatives" %>
 
 
 <%@ MasterType VirtualPath="~/cmsversion.master" %>
@@ -21,12 +21,12 @@
     <div id="wrapper">
    <div id="page-wrapper"  >
 
-            <div class="container-fluid" >
+            <div class="container" >
 
                 <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-12">
-                            <h4>Rate Matrix</h4>
+                            <h3>Rate Matrix</h3>
                         <ol class="breadcrumb">
                             <li>
                                 <i class="fa fa-dashboard"></i>  <a href="#">Maintenance</a>

@@ -118,6 +118,16 @@
     bottom: 0;
    
 }
+
+.errorMessage
+    {   
+        display:  block;
+        margin-top:200px;
+        margin-left:170px;
+        font-size:12px;
+        font-family: Verdana, Tahoma, Arial;
+        font-weight:bold;
+    }
     </style>
     <script type="text/javascript">
 
@@ -159,9 +169,9 @@
       
         <div class="demo-container no-bg">
             <div>
-                <telerik:RadTabStrip RenderMode="Lightweight" runat="server" ID="RadTabStrip1"  MultiPageID="RadMultiPage1" SelectedIndex="0" Skin="Silk" AutoPostBack="true">
+                <telerik:RadTabStrip CausesValidation="false" RenderMode="Lightweight" runat="server" ID="RadTabStrip1"  MultiPageID="RadMultiPage1" SelectedIndex="0" Skin="Silk" AutoPostBack="true">
             <Tabs>
-                <telerik:RadTab Text="Company Information"></telerik:RadTab>
+                <telerik:RadTab Text="Company Information" ></telerik:RadTab>
                 <telerik:RadTab Text="Contact Information"></telerik:RadTab>
                 <telerik:RadTab Text="Account Information 1"></telerik:RadTab>
                 <telerik:RadTab Text="Account Information 2"></telerik:RadTab>
@@ -194,7 +204,6 @@
                             <br />
                             <br />
                             <br />
-                            <br />
                             <asp:Label ID="Label6" runat="server" Text="City"></asp:Label>
                             <br />
                             <br />
@@ -207,20 +216,21 @@
                             <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtCompInfoAccountNo" Enabled="false" runat="server"></telerik:RadTextBox>
                             <br />
                             <br />
+                            
                              <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtCompInfoCompanyName" TextMode="MultiLine" Enabled ="True" runat="server"></telerik:RadTextBox>
-                            <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"
-                                    ControlToValidate="txtCompInfoCompanyName"
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"
+                                    ControlToValidate="txtCompInfoCompanyName" Display="Dynamic" 
                                     ErrorMessage="*"
                                     ForeColor="Red">
-                            </asp:RequiredFieldValidator>--%>
+                            </asp:RequiredFieldValidator>
                             <br />
                             <br />
                             <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtCompInfoAddress1" TextMode="MultiLine" Enabled="True" runat="server"></telerik:RadTextBox>
-                            <%-- <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server"
-                                    ControlToValidate="txtCompInfoAddress1"
+                             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server"
+                                    ControlToValidate="txtCompInfoAddress1" Display="Dynamic" 
                                     ErrorMessage="*"
                                     ForeColor="Red">
-                            </asp:RequiredFieldValidator>--%>
+                            </asp:RequiredFieldValidator>
                             <br />
                             <br />
                             <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtCompInfoAdress2" TextMode="MultiLine" Enabled="True" runat="server"></telerik:RadTextBox>
@@ -262,12 +272,15 @@
                              <telerik:RadComboBox ID="rcbCompInfoIndustry" Width="230px" Height="200px" AutoPostBack="true" runat="server"></telerik:RadComboBox>
                           <br />
                             <br />
-                             <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtContactNo" Enabled="True" runat="server"></telerik:RadTextBox>
-                           <%--  <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server"
+                             <telerik:RadMaskedTextBox Width="230px" RenderMode="Mobile" ID="txtContactNo" Enabled="True" Mask="(###)-######" runat="server"></telerik:RadMaskedTextBox>
+                             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server"
                                     ControlToValidate="txtContactNo"
                                     ErrorMessage="*"
                                     ForeColor="Red">
-                            </asp:RequiredFieldValidator>--%>
+                            </asp:RequiredFieldValidator>
+                            <asp:RegularExpressionValidator Display="Dynamic" ID="MaskedTextBoxRegularExpressionValidator"
+                                runat="server" ControlToValidate="txtContactNo"
+                                ValidationExpression="\(\d{3}\)-\d{6}"></asp:RegularExpressionValidator>
                             <br />
                             <br />
                             <telerik:RadTextBox RenderMode="Mobile" ID="txtCompInfoTin" Enabled="True" Width="230px" runat="server"></telerik:RadTextBox>
@@ -277,6 +290,8 @@
                             <br />
                             <br />
                            <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtCompInfoEmail" Enabled="True" runat="server"></telerik:RadTextBox>
+                            <asp:RegularExpressionValidator ID="emailValidator" runat="server" Display="Dynamic" ControlToValidate="txtCompInfoEmail"
+                                ErrorMessage="*" ValidationExpression="^[\w\.\-]+@[a-zA-Z0-9\-]+(\.[a-zA-Z0-9\-]{1,})*(\.[a-zA-Z]{2,3}){1,2}$"></asp:RegularExpressionValidator>
                             <br />
                             <br />
                                <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtCompInfoPresident" Enabled="True" runat="server"></telerik:RadTextBox>
@@ -343,13 +358,21 @@
                         </div>
 
                         <div class="col-xs-3">
-                            <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtContactInfoMobile" Enabled="True" runat="server"></telerik:RadTextBox>
+                            <telerik:RadMaskedTextBox Width="230px" RenderMode="Mobile" ID="txtContactInfoMobile" Mask="(##) ###-###-####" RequireCompleteText="true" Enabled="True" runat="server"></telerik:RadMaskedTextBox>
+                            <%-- <asp:RegularExpressionValidator Display="Dynamic" ID="RegularExpressionValidator3"
+                                runat="server" ControlToValidate="txtContactInfoMobile" ErrorMessage="*"
+                                ValidationExpression="^(\\+)?(\\d+)$"></asp:RegularExpressionValidator>--%>
                             <br />
                             <br />
-                            <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtContactInfoTelNo" Enabled="True" runat="server"></telerik:RadTextBox>
+                            <telerik:RadMaskedTextBox Width="230px" RenderMode="Mobile" ID="txtContactInfoTelNo"  Mask="(###)-######" Enabled="True" runat="server"></telerik:RadMaskedTextBox>
+                             <asp:RegularExpressionValidator Display="Dynamic" ID="RegularExpressionValidator1"
+                                runat="server" ControlToValidate="txtContactInfoTelNo" ErrorMessage="*"
+                                ValidationExpression="\(\d{3}\)-\d{6}"></asp:RegularExpressionValidator>
                             <br />
                             <br />
                              <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtContactInfoEmail" Enabled ="True" runat="server"></telerik:RadTextBox>
+                             <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" Display="Dynamic" ControlToValidate="txtContactInfoEmail"
+                                ErrorMessage="*" ValidationExpression="^[\w\.\-]+@[a-zA-Z0-9\-]+(\.[a-zA-Z0-9\-]{1,})*(\.[a-zA-Z]{2,3}){1,2}$"></asp:RegularExpressionValidator>
                             <br />
                             <br />
                             <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtContactInfoFax" Enabled="True" runat="server"></telerik:RadTextBox>
@@ -395,10 +418,12 @@
                              <br />
                              <br />
                             <asp:Label ID="Label23" runat="server" Text="Billing Period"></asp:Label>
-                       
-                              <br />
+                            <br />
                             <br />
                              <asp:Label ID="Label24" runat="server" Text="Payment Term"></asp:Label>
+                            <br />
+                            <br />
+                             <asp:Label ID="Label47" runat="server" Text="Payment Mode"></asp:Label>
                             
 
                             
@@ -406,8 +431,8 @@
 
                         <div class="col-xs-3">
                             <telerik:RadComboBox ID="rcbAccountType" Width="230px" Height="200px" runat="server"></telerik:RadComboBox>
-                          <%-- <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="rcbAccountType"
-                             ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>--%>
+                           <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="rcbAccountType"
+                             ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                              <br />
                             <br />
                               <telerik:RadComboBox ID="rcbAccountStatus" Width="230px" Height="200px" runat="server"></telerik:RadComboBox>
@@ -427,7 +452,9 @@
                             <br />
                             <br />
                            <telerik:RadComboBox ID="rcbPaymentTerm" Width="230px" Height="200px" runat="server"></telerik:RadComboBox>
-                           
+                           <br />
+                             <br />
+                            <telerik:RadComboBox ID="rcbPaymentMode" Width="230px" Height="200px" runat="server"></telerik:RadComboBox>
                             <%-- <telerik:RadDateTimePicker RenderMode="Lightweight" ID="RadDateTimePicker1" Width="100%" runat="server" DateInput-CssClass="radPreventDecorate"></telerik:RadDateTimePicker>--%>
                              
                          </div>
@@ -435,14 +462,11 @@
 
                     <div class="col-xs-6">
                         <div class="col-xs-3">
-                           
-                             <asp:Label ID="Label25" runat="server" Text="Payment Mode"></asp:Label>
-                              <br />
-                            <br /> 
                             <asp:Label ID="Label26" runat="server" Text="Date Approve"></asp:Label>
                             <br />
                             <br />
                             <asp:Label ID="Label27" runat="server" Text="Approved By"></asp:Label>
+                            <br />
                             <br />
                             <br />
                              <asp:Label ID="Label28" runat="server" Text="BCO"></asp:Label>
@@ -453,25 +477,21 @@
                             <br />
                               <br />
                              <asp:Label ID="Label30" runat="server" Text="Discount"></asp:Label>
-
+                             <br />
+                             <br />
                             <br />
-                             <br />
-                             <br />
+                            <br />
                             <asp:Label ID="Label31" runat="server" Text="Tax"></asp:Label>
-                         
-                              <br />
+                            <br />
                             <br />
                              <asp:Label ID="Label32" runat="server" Text="Credit Limit"></asp:Label>
                         </div>
 
                         <div class="col-xs-3">
-                            
-                           <telerik:RadComboBox ID="rcbPaymentMode" Width="230px" Height="200px" runat="server"></telerik:RadComboBox>
-                            <br />
-                            <br />
                              <telerik:RadDatePicker ID="dateApproved" Width="230px" MinDate="1950/1/1" ZIndex="11000"  runat="server"></telerik:RadDatePicker>
-                            <%-- <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="RadTextBox1" Enabled="True" runat="server"></telerik:RadTextBox>
-                          --%>  <br />
+                              <asp:RequiredFieldValidator ID="RequiredFieldValidator_DateApproved" runat="server" ControlToValidate="dateApproved"
+                             ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                            <br />
                             <br />
                             <telerik:RadComboBox ID="rcbApprovedBy" Width="230px" Height="200px" runat="server"></telerik:RadComboBox><br />
                             <br />
@@ -480,14 +500,16 @@
                             <telerik:RadComboBox ID="rcbArea" Width="230px" Height="200px" runat="server"></telerik:RadComboBox><br />
                             <br />
                             <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtAcctDiscount" Enabled="True" runat="server"></telerik:RadTextBox>
-                           
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtAcctDiscount"
+                             ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                             <br />
                              <br />
                            <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtAcctTax" Enabled="True" runat="server"></telerik:RadTextBox>
-                         
                             <br />
-                                <br />
+                            <br />
                             <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtAcctCreditLimit" Enabled="True" runat="server"></telerik:RadTextBox>
+                             <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="txtAcctCreditLimit"
+                             ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
 
                 </div>
@@ -594,8 +616,8 @@
                             <br />
                             <br />
                              <telerik:RadComboBox ID="rcbBillingInfoCity" Width="230px" Height="200px" runat="server"></telerik:RadComboBox>
-                        <%--   <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="rcbBillingInfoCity"
-                            ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>--%>
+                           <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="rcbBillingInfoCity"
+                            ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
                             <br />
                             <br />
                             <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtBillingInfoZipCode" Enabled="True" runat="server"></telerik:RadTextBox>
@@ -639,13 +661,18 @@
                             <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtBillingInfoDept" Enabled="True" runat="server"></telerik:RadTextBox>
                             <br />
                             <br />
-                             <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtBillingInfoContactNo" Enabled ="True" runat="server"></telerik:RadTextBox>
+                             <telerik:RadMaskedTextBox Width="230px" RenderMode="Mobile" ID="txtBillingInfoContactNo" Mask="(###)-######" Enabled ="True" runat="server"></telerik:RadMaskedTextBox>
+                             <asp:RegularExpressionValidator Display="Dynamic" ID="RegularExpressionValidator5"
+                                runat="server" ControlToValidate="txtBillingInfoContactNo" ErrorMessage="*"
+                                ValidationExpression="\(\d{3}\)-\d{6}"></asp:RegularExpressionValidator>
                             <br />
                             <br />
-                            <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtBillingInfoMobileNo" Enabled="True" runat="server"></telerik:RadTextBox>
+                            <telerik:RadMaskedTextBox Width="230px" RenderMode="Mobile" ID="txtBillingInfoMobileNo" Mask="(##)-###-###-####" Enabled="True" runat="server"></telerik:RadMaskedTextBox>
                             <br />
                             <br />
                             <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtBillingInfoEmail" Enabled="True" runat="server"></telerik:RadTextBox>
+                             <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" Display="Dynamic" ControlToValidate="txtBillingInfoEmail"
+                                ErrorMessage="*" ValidationExpression="^[\w\.\-]+@[a-zA-Z0-9\-]+(\.[a-zA-Z0-9\-]{1,})*(\.[a-zA-Z]{2,3}){1,2}$"></asp:RegularExpressionValidator>
                             <br />
                             <br />
                            <telerik:RadTextBox Width="230px" RenderMode="Mobile" ID="txtBillingInfoFax" Enabled="True" runat="server"></telerik:RadTextBox>

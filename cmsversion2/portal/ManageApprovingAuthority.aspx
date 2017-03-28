@@ -16,6 +16,9 @@
             text-decoration:none !important;
             color:#c1c7ca !important;
         }
+        .center {
+            text-align: center;
+        }
     </style>
 
 </asp:Content>
@@ -25,18 +28,18 @@
     <div id="wrapper">
    <div id="page-wrapper"  >
 
-            <div class="container-fluid" ">
+            <div class="container">
 
                 <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-12">
-                            <h4>Approving Authority</h4>
+                            <h3>Approving Authority</h3>
                         <ol class="breadcrumb">
                             <li>
-                                <i class="fa fa-dashboard"></i>  <a href="#">Corporate</a>
+                                Corporate
                             </li>
                             <li class="active">
-                                <i class="fa fa-file"></i> Approving Authority
+                                Approving Authority
                             </li>
                         </ol>
                         <hr />
@@ -44,18 +47,18 @@
                     </div>
                 </div>
                 <!-- /.row -->
-                <%-- <div class="size-wide">
+                 <div class="size-wide">
                     <telerik:RadSearchBox RenderMode="Lightweight" runat="server" ID="radSearchApprovingAuthority" EmptyMessage="Search Approving Authority"
                           OnSearch="radSearchApprovingAuthority_Search" Width="300"
                         DataKeyNames="ApprovingAuthorityId"
                         DataTextField="Name"
                         DataValueField="ApprovingAuthorityId"
-                        ShowSearchButton="false">
+                        ShowSearchButton="false" Skin="Glow">
                         <DropDownSettings Width="300" />
                     </telerik:RadSearchBox>
                     
                  </div>
-                <br />--%>
+                <br />
                           <telerik:LayoutColumn HiddenMd="true" HiddenSm="true" HiddenXs="true">
 
                         <telerik:RadAjaxPanel ID="RadAjaxPanel2" ClientEvents-OnRequestStart="onRequestStart" runat="server" CssClass="gridwrapper">
@@ -88,7 +91,7 @@
                                 <GroupingSettings CaseSensitive="false"></GroupingSettings>
 
                                 <MasterTableView AutoGenerateColumns="False" ClientDataKeyNames="ApprovingAuthorityId"
-                                    AllowFilteringByColumn="true"
+                                    AllowFilteringByColumn="false"
                                     DataKeyNames="ApprovingAuthorityId" CommandItemDisplay="Top" 
                                     InsertItemPageIndexAction="ShowItemOnFirstPage">
                                    <CommandItemSettings ShowExportToWordButton="true" ShowExportToExcelButton="true" 
@@ -154,7 +157,7 @@
                                     </Columns>
 
                                     <CommandItemTemplate>
-
+                                      <div class="center">
                                         
                                         |
 
@@ -173,12 +176,15 @@
        |
                    
                                  
-                                        <a href="#"  onclick="location.reload();" class="alink">
+                                        <a href="" onclick="LoadRadGrid()" class="alink">
                                             <img src="../images/emblem.png" alt="Export to Excel" width="20">
                                             Refresh Data
-                                            </a>
+                                        </a>
+                                        <asp:button id="btnSubmit" runat="server" text="Submit" xmlns:asp="#unknown"
+                                            onclick="btnSubmit_Click" style="display:none" /> 
                         
                             |
+                                          </div>
                                        
                                     </CommandItemTemplate>
                               
@@ -192,13 +198,13 @@
                             <br />
                             <telerik:RadWindowManager RenderMode="Mobile" ID="RadWindowManager1" runat="server" EnableShadow="true">
                                 <Windows>
-                                    <telerik:RadWindow RenderMode="Mobile" ID="ApprovingAuthorityListDialog" runat="server" Title="Editing record" Height="520px"
-                                        Width="380px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false"
+                                    <telerik:RadWindow RenderMode="Mobile" ID="ApprovingAuthorityListDialog" runat="server" Title="Editing record" Height="450px"
+                                        Width="800px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false"
                                         Modal="true" Behaviors="Close,Move">
                                     </telerik:RadWindow>
 
-                                     <telerik:RadWindow RenderMode="Mobile" ID="AddUser" runat="server" Title="Adding record" Height="600px"
-                                        Width="380px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false" VisibleStatusbar ="false" AutoSize="false"
+                                     <telerik:RadWindow RenderMode="Mobile" ID="AddUser" runat="server" Title="Adding record" Height="450px"
+                                        Width="800px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false" VisibleStatusbar ="false" AutoSize="false"
                                         Modal="true" Behaviors="Close,Move"  >
                                     </telerik:RadWindow>
 
@@ -264,6 +270,10 @@
                                     //ShowEditForm();
                                     window.radopen("ApprovingAuthority/EditApprovingAuthority.aspx?ID=" + eventArgs.getDataKeyValue("ApprovingAuthorityId"), "ApprovingAuthorityListDialog");
                                 }
+
+                                function LoadRadGrid(){ 
+                                            document.getElementById("btnSubmit").click(); 
+                                    }
                             </script>
 
 

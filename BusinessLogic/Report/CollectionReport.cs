@@ -10,9 +10,9 @@ namespace BusinessLogic.Report
 {
     public class CollectionReport
     {
-        public static DataSet GetCollection(string conSTR)
+        public static DataSet GetCollection(string conSTR, string bcostr ,string type,DateTime? date1,DateTime? date2)
         {
-            return DAL.Reports.Collection.GetCollection(conSTR);
+            return DAL.Reports.Collection.GetCollection(conSTR, bcostr, type, date1, date2);
         }
     }
 }

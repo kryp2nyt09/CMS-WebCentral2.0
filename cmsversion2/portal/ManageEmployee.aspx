@@ -16,6 +16,10 @@
             text-decoration:none !important;
             color:#c1c7ca !important;
         }
+
+         .center {
+            text-align: center;
+        }
     </style>
 
 </asp:Content>
@@ -46,26 +50,34 @@
                     </div>
                 </div>
                 <!-- /.row -->
-                <%-- <div class="size-wide">
-                    <telerik:RadSearchBox RenderMode="Lightweight" runat="server" ID="radSearchEmployee" EmptyMessage="Search Employee Name "
+                <div class="size-wide">
+                    <telerik:RadSearchBox RenderMode="Lightweight" runat="server" ID="radSearchEmployee" 
+                        EmptyMessage="Search Employee Name "
                          OnSearch="radSearchEmployee_Search" Width="300"
                         DataKeyNames="EmployeeId"
                         DataTextField="FullName"
                         DataValueField="EmployeeId"
-                        ShowSearchButton="false">
+                        ShowSearchButton="false" Skin="Glow">
                         <DropDownSettings Width="300" />
                     </telerik:RadSearchBox>
                     
                  </div>
-                <br />--%>
-               <%-- <div class="col-md-12">
-                     <div class="col-md-8">
+                <br />
+             <div class="col-md-12">
+                     <div class="col-md-12">
+                                <telerik:RadLabel ID="lblBco" runat="server" Text="BCO:"></telerik:RadLabel>
                                 <telerik:RadComboBox ID="rcbBranchCorpOffice" Skin="Glow" Width="230px" Height="200px" runat="server"  AutoPostBack="true" OnSelectedIndexChanged="rcbBranchCorpOffice_SelectedIndexChanged"></telerik:RadComboBox>
+                                
+                                <telerik:RadLabel ID="lblType" runat="server" Text="Type:"></telerik:RadLabel>
                                 <telerik:RadComboBox ID="rcbRevenueUnitType" Skin="Glow" Width="230px" Height="200px" runat="server" AutoPostBack="true" OnTextChanged="rcbRevenueUnitType_TextChanged" OnSelectedIndexChanged="rcbRevenueUnitType_SelectedIndexChanged"></telerik:RadComboBox>
-                                <telerik:RadComboBox ID="rcbRevenueUnitName" Skin="Glow" Width="230px" Height="200px" runat="server"></telerik:RadComboBox>
+                                
+                         <telerik:RadLabel ID="RadLabel1" runat="server" Text="Area:"></telerik:RadLabel>
+                         <telerik:RadComboBox ID="rcbRevenueUnitName" Skin="Glow" Width="230px" Height="200px" runat="server"></telerik:RadComboBox>
                                  <telerik:RadButton ID="btnSearchEmployee" runat="server" Skin="Glow" Text="SEARCH" OnClick="btnSearch_Click"></telerik:RadButton>
                  </div>
-                </div>--%>
+                </div>
+                <br />
+                 <br />
 
               <%--  <div class="col-md-12 size-wide">
                     <div class="col-md-8 size-wide">
@@ -104,16 +116,16 @@
                            
                             <telerik:RadGrid ID="RadGrid2" OnItemCreated="RadGrid2_ItemCreated"
                                 runat="server" AllowPaging="True" ExportSettings-Excel-DefaultCellAlignment="Right"
-                                PageSize="10" Skin="Glow" AllowSorting="true" OnItemCommand="RadGrid2_ItemCommand1"
+                                PageSize="10" AllowSorting="true" OnItemCommand="RadGrid2_ItemCommand1"
                                 AllowFilteringByColumn="true"
                                 DataKeyNames="EmployeeId" CommandItemDisplay="Top"
-                                OnNeedDataSource="RadGrid2_NeedDataSource" > 
+                                OnNeedDataSource="RadGrid2_NeedDataSource" Skin="Glow" > 
                                 
                                 <ExportSettings ExportOnlyData="true" IgnorePaging="true"></ExportSettings>
                                 <GroupingSettings CaseSensitive="false"></GroupingSettings>
                                 
                                 <MasterTableView AutoGenerateColumns="False" ClientDataKeyNames="EmployeeId"
-                                    AllowFilteringByColumn="true"
+                                    AllowFilteringByColumn="false"
                                     DataKeyNames="EmployeeId" CommandItemDisplay="Top" 
                                     InsertItemPageIndexAction="ShowItemOnFirstPage">
                                    <CommandItemSettings ShowExportToWordButton="true" ShowExportToExcelButton="true" 
@@ -181,7 +193,7 @@
                                     </Columns>
 
                                     <CommandItemTemplate>
-
+                                        <div class="center">
                                         |
 
                                          <a href="#"  onclick="return ShowInsertForm();" class="alink">
@@ -197,13 +209,15 @@
        &nbsp;|
                    
                                  
-                                        <a href="#"  onclick="return location.reload();" class="alink">
+                                        <a href="" onclick="LoadRadGrid()" class="alink">
                                             <img src="../images/emblem.png" alt="Export to Excel" width="20">
                                             Refresh Data
                                             </a>
+                                            <asp:button id="btnSubmit" runat="server" text="Submit" xmlns:asp="#unknown"
+                                            onclick="btnSubmit_Click" style="display:none" /> 
                         
                             &nbsp;|
-                                       
+                                       </div>
                                     </CommandItemTemplate>
                               
                                 </MasterTableView>
@@ -216,8 +230,8 @@
                             <br />
                             <telerik:RadWindowManager RenderMode="Mobile" ID="RadWindowManager1" runat="server" EnableShadow="true">
                                 <Windows>
-                                    <telerik:RadWindow RenderMode="Mobile" ID="UserListDialog" runat="server" Title="Editing record" Height="520px"
-                                        Width="380px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false"
+                                    <telerik:RadWindow RenderMode="Mobile" ID="UserListDialog" runat="server" Title="Editing record" Height="600px"
+                                        Width="800px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false"
                                         Modal="true" Behaviors="Close,Move">
                                     </telerik:RadWindow>
 
@@ -291,6 +305,10 @@
                                     //ShowEditForm();
                                     window.radopen("EditForm_csharp.aspx?UserID=" + eventArgs.getDataKeyValue("UserId"), "UserListDialog");
                                 }
+
+                                function LoadRadGrid(){ 
+                                            document.getElementById("btnSubmit").click(); 
+                                        } 
                             </script>
 
 

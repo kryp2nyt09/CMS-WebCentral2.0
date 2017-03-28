@@ -16,6 +16,10 @@
             text-decoration:none !important;
             color:#c1c7ca !important;
         }
+
+        .center {
+            text-align: center;
+        }
     </style>
 
 
@@ -24,20 +28,20 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" runat="Server">
     
     <div id="wrapper">
-   <div id="page-wrapper"  >
+   <div id="page-wrapper">
 
-            <div class="container-fluid" ">
+            <div class="container">
 
                 <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-12">
-                            <h4>Representatives</h4>
+                            <h3>Representatives</h3>
                         <ol class="breadcrumb">
                             <li>
-                                <i class="fa fa-dashboard"></i>  <a href="#">Corporate</a>
+                                Corporate
                             </li>
                             <li class="active">
-                                <i class="fa fa-file"></i> Representatives
+                                 Representatives
                             </li>
                         </ol>
                         <hr />
@@ -45,18 +49,18 @@
                     </div>
                 </div>
                 <!-- /.row -->
-               <%-- <div class="size-wide">
+                <div class="size-wide">
                     <telerik:RadSearchBox RenderMode="Lightweight" runat="server" ID="radSearchRepresentatives" EmptyMessage="Search Representatives"
                           OnSearch="radSearchRepresentatives_Search" Width="300"
                         DataKeyNames="ClientId"
                         DataTextField="Name"
                         DataValueField="ClientId"
-                        ShowSearchButton="false">
+                        ShowSearchButton="false"  Skin="Glow">
                         <DropDownSettings Width="300" />
                     </telerik:RadSearchBox>
                     
                  </div>
-                <br />--%>
+                <br />
                           <telerik:LayoutColumn HiddenMd="true" HiddenSm="true" HiddenXs="true">
 
                         <telerik:RadAjaxPanel ID="RadAjaxPanel2" ClientEvents-OnRequestStart="onRequestStart" runat="server" CssClass="gridwrapper">
@@ -95,7 +99,7 @@
 
 
                                 <MasterTableView AutoGenerateColumns="False" ClientDataKeyNames="ClientId"
-                                    AllowFilteringByColumn="true"
+                                    AllowFilteringByColumn="false"
                                     DataKeyNames="ClientId" CommandItemDisplay="Top" 
                                     InsertItemPageIndexAction="ShowItemOnFirstPage">
 
@@ -155,7 +159,7 @@
                                     </Columns>
 
                                     <CommandItemTemplate>
-
+                                        <div class="center">
                             |
                                         <a href="#" onclick="return ShowInsertForm();" class="alink">
                                              <img src="../images/emblem.png" alt="Add Company" width="20">
@@ -171,13 +175,15 @@
        |
                    
                                  
-                                        <a href="#"  onclick="location.reload();" class="alink">
+                                         <a href="" onclick="LoadRadGrid()" class="alink">
                                             <img src="../images/emblem.png" alt="Export to Excel" width="20">
                                             Refresh Data
-                                            </a>
+                                        </a>
+                                        <asp:button id="btnSubmit" runat="server" text="Submit" xmlns:asp="#unknown"
+                                            onclick="btnSubmit_Click" style="display:none" /> 
                         
                             |
-                                       
+                                       </div>
                                     </CommandItemTemplate>
                               
                                 </MasterTableView>
@@ -190,7 +196,7 @@
                             <br />
                             <telerik:RadWindowManager RenderMode="Mobile" ID="RadWindowManager1" runat="server" EnableShadow="true">
                                 <Windows>
-                                    <telerik:RadWindow RenderMode="Mobile" ID="RepresentativeListDialog" runat="server" Title="Editing record" Height="650px"
+                                    <telerik:RadWindow RenderMode="Mobile" ID="RepresentativeListDialog" runat="server" Title="Editing record" Height="630px"
                                         Width="800px" Left="150px" ReloadOnShow="true" ShowContentDuringLoad="false"
                                         Modal="true" Behaviors="Close,Move">
                                     </telerik:RadWindow>
@@ -260,6 +266,10 @@
                                     //ShowEditForm();
                                     window.radopen("UserModal/Representatives/EditRepresentatives.aspx?ClientId=" + eventArgs.getDataKeyValue("ClientId"), "RepresentativeListDialog");
                                 }
+
+                                function LoadRadGrid(){ 
+                                            document.getElementById("btnSubmit").click(); 
+                                    }
                             </script>
 
 

@@ -13,9 +13,9 @@ public partial class _ManageRepresentatives : System.Web.UI.Page
     Tools.DataAccessProperties getConstr = new Tools.DataAccessProperties();
     protected void Page_Load(object sender, EventArgs e)
     {
-        //radSearchRepresentatives.DataSource = GetRepresentatives();
-        //radSearchRepresentatives.DataTextField = "Name";
-        //radSearchRepresentatives.DataValueField = "ClientId";
+        radSearchRepresentatives.DataSource = GetRepresentatives();
+        radSearchRepresentatives.DataTextField = "Name";
+        radSearchRepresentatives.DataValueField = "ClientId";
 
         RadGrid2.MasterTableView.CommandItemSettings.ShowAddNewRecordButton = false;
       
@@ -144,5 +144,11 @@ public partial class _ManageRepresentatives : System.Web.UI.Page
             RadGrid2.DataSource = GetRepresentatives();
             RadGrid2.DataBind();
         }
+    }
+
+    protected void btnSubmit_Click(object sender, EventArgs e)
+    {
+        RadGrid2.DataSource = GetRepresentatives();
+        RadGrid2.Rebind();
     }
 }

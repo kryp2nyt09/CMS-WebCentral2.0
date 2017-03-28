@@ -17,9 +17,8 @@ public partial class _AddFlight : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
-            //LoadBranchCorpOffice();
-            LoadCity();
-            GetGateway();
+            LoadBranchCorpOffice();
+            //LoadCity();
             GetGateway();
             //if (Request.QueryString["ID"] == null)
             //{
@@ -80,16 +79,16 @@ public partial class _AddFlight : System.Web.UI.Page
     }
     
 
-    private void LoadCity()
+    private void LoadBranchCorpOffice()
     {
-        rcbOrigin.DataSource = BLL.City.GetCity(getConstr.ConStrCMS);
-        rcbOrigin.DataValueField = "CityId";
-        rcbOrigin.DataTextField = "CityName";
+        rcbOrigin.DataSource = BLL.BranchCorpOffice.GetBranchCorpOffice(getConstr.ConStrCMS);
+        rcbOrigin.DataValueField = "BranchCorpOfficeId";
+        rcbOrigin.DataTextField = "BranchCorpOfficeName";
         rcbOrigin.DataBind();
 
-        rcbDestination.DataSource = BLL.City.GetCity(getConstr.ConStrCMS);
-        rcbDestination.DataValueField = "CityId";
-        rcbDestination.DataTextField = "CityName";
+        rcbDestination.DataSource = BLL.BranchCorpOffice.GetBranchCorpOffice(getConstr.ConStrCMS);
+        rcbDestination.DataValueField = "BranchCorpOfficeId";
+        rcbDestination.DataTextField = "BranchCorpOfficeName";
         rcbDestination.DataBind();
     }
 
@@ -146,13 +145,29 @@ public partial class _AddFlight : System.Web.UI.Page
     protected void btnSave_Click(object sender, EventArgs e)
     {
        // Guid BCOid = new Guid(rcbBCO.SelectedItem.Value.ToString());
-        Guid GatewayId = new Guid(rcbGateway.SelectedItem.Value.ToString());
-        Guid OriginCity = new Guid(rcbOrigin.SelectedItem.Value.ToString());
-        Guid DestinationCity = new Guid(rcbDestination.SelectedItem.Value.ToString());
-        DateTime ETD = rdtETD.SelectedDate.Value;
-        DateTime ETA = rdtETA.SelectedDate.Value;
-        String FlightNo = txtFlightNo.Text;
-                Guid createdBy = new Guid("11111111-1111-1111-1111-111111111111");
+        Guid GatewayId = new Guid();
+        Guid OriginCity = new Guid();
+        Guid DestinationCity = new Guid();
+        DateTime ETD = new DateTime();
+        DateTime ETA = new DateTime();
+        string FlightNo;
+
+        try
+        {
+            GatewayId = new Guid(rcbGateway.SelectedItem.Value.ToString());
+            OriginCity = new Guid(rcbOrigin.SelectedItem.Value.ToString());
+            DestinationCity = new Guid(rcbDestination.SelectedItem.Value.ToString());
+            ETD = rdtETD.SelectedDate.Value;
+            ETA = rdtETA.SelectedDate.Value;
+            FlightNo = txtFlightNo.Text;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+        }
+
+        
+        Guid createdBy = new Guid("11111111-1111-1111-1111-111111111111");
         string host = HttpContext.Current.Request.Url.Authority;
 
         BLL.Flight.InsertFlightInfo(txtFlightNo.Text, ETD, ETA, GatewayId, OriginCity, DestinationCity, createdBy, getConstr.ConStrCMS);

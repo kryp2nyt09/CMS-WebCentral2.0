@@ -10,13 +10,16 @@ namespace DataAccess.Reports
 {
     public class Unbundle
     {
-        public static DataSet GetUnbundle(string conSTR)
+        public static DataSet GetUnbundle(string conSTR, string DateStr, string SackNoStr, string OriginStr , string BCO)
         {
             using (SqlConnection con = new SqlConnection(conSTR))
             {
                 SqlDataAdapter da = new SqlDataAdapter("sp_view_Reports_Unbundle", con);
                 da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                //da.SelectCommand.Parameters.Add("@BCO_BSO", SqlDbType.UniqueIdentifier).Value = BCO_BSO;
+                da.SelectCommand.Parameters.Add("@DATE", SqlDbType.VarChar).Value = DateStr;
+                da.SelectCommand.Parameters.Add("@SACKNO", SqlDbType.VarChar).Value = SackNoStr;
+                da.SelectCommand.Parameters.Add("@ORIGIN", SqlDbType.VarChar).Value = OriginStr;
+                da.SelectCommand.Parameters.Add("@BCO", SqlDbType.VarChar).Value = BCO;
                 DataSet ds = new DataSet();
                 da.Fill(ds);
                 return ds;

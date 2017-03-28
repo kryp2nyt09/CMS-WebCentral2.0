@@ -16,6 +16,10 @@
             text-decoration:none !important;
             color:#c1c7ca !important;
         }
+
+        .center {
+            text-align: center;
+        }
     </style>
 
 </asp:Content>
@@ -25,20 +29,20 @@
     <div id="wrapper">
         <div id="page-wrapper">
 
-            <div class="container-fluid">
+            <div class="container">
 
                 <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-12">
 
-                        <h4>COMPANY</h4>
+                        <h3>COMPANY</h3>
 
                         <ol class="breadcrumb">
                             <li>
-                                <i class="fa fa-dashboard"></i><a href="#">Corporate</a>
+                               Corporate
                             </li>
                             <li class="active">
-                                <i class="fa fa-file"></i>Company
+                               Company
                             </li>
                         </ol>
                         <hr />
@@ -46,18 +50,18 @@
                     </div>
                 </div>
                 <!-- /.row -->
-                 <%--<div class="size-wide">
+                 <div class="size-wide">
                     <telerik:RadSearchBox RenderMode="Lightweight" runat="server" ID="radSearchCompany" EmptyMessage="Search Company Name "
                           OnSearch="radCompany_Search" Width="300"
                         DataKeyNames="CompanyId"
                         DataTextField="CompanyName"
                         DataValueField="CompanyId"
-                        ShowSearchButton="false">
+                        ShowSearchButton="false" Skin="Glow">
                         <DropDownSettings Width="300" />
                     </telerik:RadSearchBox>
                     
                  </div>
-                 <br />--%>
+                 <br />
                 <telerik:LayoutColumn HiddenMd="true" HiddenSm="true" HiddenXs="true">
 
                     <telerik:RadAjaxPanel ID="RadAjaxPanel2" ClientEvents-OnRequestStart="onRequestStart" runat="server" CssClass="gridwrapper">
@@ -95,7 +99,7 @@
                             <GroupingSettings CaseSensitive="false"></GroupingSettings>
                             
                             <MasterTableView AutoGenerateColumns="false" ClientDataKeyNames="CompanyId"
-                                AllowFilteringByColumn="true"
+                                AllowFilteringByColumn="false"
                                 DataKeyNames="CompanyId" CommandItemDisplay="Top"
                                 InsertItemPageIndexAction="ShowItemOnFirstPage">
                                
@@ -162,6 +166,7 @@
                                 </Columns>
 
                                 <CommandItemTemplate>
+                                    <div class="center">
                                     |
 
                                          <a href="#" onclick="return ShowInsertForm();" class="alink">
@@ -177,13 +182,15 @@
                                     |
                    
                                  
-                                        <a href="#" onclick="location.reload();" class="alink">
+                                         <a href="" onclick="LoadRadGrid()" class="alink">
                                             <img src="../images/emblem.png" alt="Export to Excel" width="20">
                                             Refresh Data
                                         </a>
+                                        <asp:button id="btnSubmit" runat="server" text="Submit" xmlns:asp="#unknown"
+                                            onclick="btnSubmit_Click" style="display:none" /> 
 
                                     |
-                                       
+                                       </div>
                                 </CommandItemTemplate>
 
                             </MasterTableView>
@@ -295,6 +302,9 @@
                                     //ShowEditForm();
                                     window.radopen("UserModal/Company/EditCompany.aspx?CompanyId=" + eventArgs.getDataKeyValue("CompanyId"), "CompanyListDialog");
                                 }
+                            function LoadRadGrid(){ 
+                                            document.getElementById("btnSubmit").click(); 
+                                    }
                         </script>
 
 

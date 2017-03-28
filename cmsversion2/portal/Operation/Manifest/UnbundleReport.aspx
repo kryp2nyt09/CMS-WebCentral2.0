@@ -22,61 +22,77 @@
             </div>
             <!--- PAGE BODY--->
             <div class="row">
+
+                <telerik:RadLabel runat="server" Text="Date:"></telerik:RadLabel>
+                <telerik:RadDatePicker ID="Date" runat="server" Skin="Glow" AutoPostBack="true"></telerik:RadDatePicker>
+                &nbsp;&nbsp;
+                 
+                <telerik:RadLabel runat="server" Text="Sack #:"></telerik:RadLabel>
+                 <telerik:RadComboBox ID="SackNumber" runat="server" Skin="Glow" MarkFirstMatch="true" AllowCustomText="true" 
+                     AppendDataBoundItems="true">
+                    <Items>
+                        <telerik:RadComboBoxItem Text="All" Value="0" Selected="true" />
+                    </Items>
+                </telerik:RadComboBox>
+                &nbsp;&nbsp;
+
+                <telerik:RadLabel runat="server" Text="BCO:"></telerik:RadLabel>
+                <telerik:RadComboBox ID="BCO" runat="server" Skin="Glow" Width="250px" 
+                    AppendDataBoundItems="true" EnableTextSelection="true" 
+                    AutoCompleteSeparator="None" AllowCustomText="true" MarkFirstMatch="true" 
+                    AutoPostBack="true" OnSelectedIndexChanged="BCO_SelectedIndexChanged">
+                    <Items>
+                        <telerik:RadComboBoxItem Text="All" Value="All" Selected="true" />
+                    </Items>
+                </telerik:RadComboBox>
+                &nbsp;&nbsp;
+
+
+                <telerik:RadLabel runat="server" Text="Origin(City):"></telerik:RadLabel>
+                 <telerik:RadComboBox ID="Origin" runat="server" Skin="Glow" MarkFirstMatch="true" AllowCustomText="true"
+                     AppendDataBoundItems="true" AutoPostBack="true">
+                    <Items>
+                        <telerik:RadComboBoxItem Text="All" Value="0" Selected="true" />
+                    </Items>
+                </telerik:RadComboBox>
+                &nbsp;&nbsp;
+
+                <telerik:RadButton ID="Search" runat="server" Text="Search" Skin="Glow" AutoPostBack="true" OnClick="Search_Click"> </telerik:RadButton>
+            </div>
+            <br />
+            <div class="row">
                 <telerik:RadGrid ID="grid_Unbundle" runat="server"  Skin="Glow"
-                    AllowPaging="True" 
+                    AllowPaging="True" ShowFooter="true" 
                     PageSize="10"  
-                    AllowFilteringByColumn="True"
+                    AllowFilteringByColumn="false"
                     AutoGenerateColumns="false"
-                    AllowSorting="true" 
+                    AllowSorting="true" OnPreRender="grid_Unbundle_PreRender"
                     OnNeedDataSource="grid_Unbundle_NeedDataSource">    
-                <ExportSettings  HideStructureColumns="true" ExportOnlyData="true" IgnorePaging="true" UseItemStyles="true">
-                    <Pdf Title="Unbundle" PageHeaderMargin="10px" PageTopMargin="100px" BorderType="AllBorders" BorderStyle="Thin">
+                <ExportSettings  HideStructureColumns="true" FileName="Unbundle"
+                     ExportOnlyData="true" IgnorePaging="true" UseItemStyles="true">
+                    <Pdf Title="Unbundle Report" PageHeaderMargin="10px" PageTopMargin="130px"  
+                        BorderType="AllBorders" BorderStyle="Thin" DefaultFontFamily="Calibri" 
+                        PageTitle="Unbundle Report">
                             <PageHeader>
                               <MiddleCell  Text="<img src='../../../images/APCARGO-Logo.jpg' width='100%' height='100%'/>"/>
                           </PageHeader>
                         </Pdf>
                 </ExportSettings>          
-                    <MasterTableView CommandItemDisplay="Top" Width="100%">
-                        <CommandItemSettings ShowExportToExcelButton="true" ShowExportToPdfButton="true" ShowExportToWordButton="false" ShowExportToCsvButton="false" ShowAddNewRecordButton="false"  ShowRefreshButton="false" />
+                    <MasterTableView CommandItemDisplay="Top" Font-Size="Smaller">
+                        <CommandItemSettings ShowExportToExcelButton="true" ShowExportToPdfButton="true" 
+                            ShowExportToWordButton="false" ShowExportToCsvButton="false" ShowAddNewRecordButton="false"  ShowRefreshButton="false" />
                         <Columns>
-
-                           <telerik:GridDateTimeColumn
-                                 DataField="CreatedDate" HeaderText="Date" SortExpression="CreatedDate" AllowFiltering="true" FilterListOptions="VaryByDataType" Exportable="false"
-                                 PickerType="DatePicker"  DataFormatString="{0:MM/dd/yyyy}" DataType="System.DateTime" UniqueName="CreatedDate"  FilterControlWidth="120px"
-                                 ></telerik:GridDateTimeColumn>
-
-                            <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false" Exportable="false"
-                                  CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" FilterControlWidth="200px" 
-                                  DataField="BCO" HeaderText="BCO"></telerik:GridBoundColumn>
-
-                            <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false" Exportable="false"
-                                  CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" 
-                                  DataField="SackNo" HeaderText="Sack #"></telerik:GridBoundColumn>
-
-                             <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false" 
-                                  CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" 
-                                  DataField="AirwayBillNo" HeaderText="AWB"></telerik:GridBoundColumn>
-
-                             <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
-                                  CurrentFilterFunction="EqualTo" AutoPostBackOnFilter="false" AllowFiltering="false"
-                                  DataField="Scanned Pcs" HeaderText="Scanned Pcs"></telerik:GridBoundColumn>
-
-                            <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
-                                  CurrentFilterFunction="EqualTo" AutoPostBackOnFilter="false" AllowFiltering="false"
-                                  DataField="Discrepency Pcs" HeaderText="Discrepency Pcs"></telerik:GridBoundColumn>
-
-                            <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false"
-                                  CurrentFilterFunction="EqualTo" AutoPostBackOnFilter="false" AllowFiltering="false"
-                                  DataField="Total Pcs" HeaderText="Total Pcs"></telerik:GridBoundColumn>
-
-                            <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false" Exportable="false"
-                                  CurrentFilterFunction="EqualTo" AutoPostBackOnFilter="false" AllowFiltering="false"
-                                  DataField="Origin" HeaderText="Origin"></telerik:GridBoundColumn>
-
-                            <telerik:GridBoundColumn FilterDelay="2000" ShowFilterIcon="false" Exportable="false"
-                                  CurrentFilterFunction="EqualTo" AutoPostBackOnFilter="false" AllowFiltering="false"
-                                  DataField="AGW" HeaderText="AGW"></telerik:GridBoundColumn>   
+                             <telerik:GridBoundColumn DataField="NO" HeaderText="NO"  HeaderStyle-Width="20px"></telerik:GridBoundColumn>
+                             <telerik:GridBoundColumn DataField="AWB #" HeaderText="AWB #" FooterText="TOTAL:"></telerik:GridBoundColumn>
+                             <telerik:GridBoundColumn DataField="SACKNO" HeaderText="SACK #" Exportable="false"></telerik:GridBoundColumn>
+                             <telerik:GridBoundColumn DataField="SCANNED QTY" HeaderText="SCANNED QTY" ></telerik:GridBoundColumn>
+                             <telerik:GridBoundColumn DataField="DISCREPENCY QTY" HeaderText="DISCREPENCY QTY"></telerik:GridBoundColumn>                   
+                             <telerik:GridBoundColumn DataField="SUBTOTAL QTY" HeaderText="TOTAL QTY" FooterText=" " Aggregate="Sum"></telerik:GridBoundColumn>
+                             <telerik:GridBoundColumn DataField="SCANNEDBY" HeaderText="SCANNED BY"></telerik:GridBoundColumn>
                         </Columns>
+                        <HeaderStyle Font-Size="Smaller" Font-Bold="true" />
+                        <FooterStyle Font-Bold="true" />
+                        
                     </MasterTableView>
                 </telerik:RadGrid>
                 <br />
