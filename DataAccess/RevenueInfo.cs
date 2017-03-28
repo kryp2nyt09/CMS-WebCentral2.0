@@ -37,6 +37,22 @@ namespace DataAccess
             }
         }
 
+
+        public static DataSet GetRevenueByBCOCode(string conSTR, string BCOCode)
+        {
+            
+            using (SqlConnection con = new SqlConnection(conSTR))
+            {
+                SqlDataAdapter da = new SqlDataAdapter("sp_view_RevenueUnitByBCOCode", con);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.Parameters.Add("@BCOCODE", SqlDbType.VarChar).Value = BCOCode;
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                return ds;
+            }
+
+        }
+
         public static DataSet getRevenueUnitByBCO(Guid RevenueUnitType, Guid BCO, string conSTR)
         {
             using (SqlConnection con = new SqlConnection(conSTR))

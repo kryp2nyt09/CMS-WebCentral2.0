@@ -10,7 +10,7 @@ namespace DataAccess.Reports
 {
     public class Segregation
     {
-        public static DataSet GetSegregation(string conSTR,string DateStr ,string DriverStr,string CheckerStr,string PlateNoStr,string BCOStr)
+        public static DataSet GetSegregation(string conSTR,string DateStr ,string DriverStr,string CheckerStr,string PlateNoStr,string BCOStr , string City)
         {
             using (SqlConnection con = new SqlConnection(conSTR))
             {
@@ -21,6 +21,7 @@ namespace DataAccess.Reports
                 da.SelectCommand.Parameters.Add("@CHECKER", SqlDbType.VarChar).Value = CheckerStr;
                 da.SelectCommand.Parameters.Add("@PLATENO", SqlDbType.VarChar).Value = PlateNoStr;
                 da.SelectCommand.Parameters.Add("@BCO", SqlDbType.VarChar).Value = BCOStr;
+                da.SelectCommand.Parameters.Add("@CITY", SqlDbType.VarChar).Value = City;
                 DataSet ds = new DataSet();
                 da.Fill(ds);
                 return ds;

@@ -24,31 +24,43 @@
             <!--- PAGE BODY--->
             <div class="row">
                 <telerik:RadLabel runat="server" Text="Date:"></telerik:RadLabel>
-                <telerik:RadDatePicker ID="Date" runat="server" Skin="Glow"></telerik:RadDatePicker>
+                <telerik:RadDatePicker ID="Date" runat="server" Skin="Glow" AutoPostBack="true"></telerik:RadDatePicker>
                 &nbsp;&nbsp;
 
                 <telerik:RadLabel runat="server" Text="BCO:"></telerik:RadLabel>
-                <telerik:RadComboBox ID="BCO" runat="server" MarkFirstMatch="true" AllowCustomText="true" Width="250px"
-                    Skin="Glow" AppendDataBoundItems="true">
+                <telerik:RadComboBox ID="BCO" runat="server" MarkFirstMatch="true" 
+                    AllowCustomText="true" Width="250px"
+                    Skin="Glow" AppendDataBoundItems="true" AutoPostBack="true" OnSelectedIndexChanged="BCO_SelectedIndexChanged">
                     <Items>
-                        <telerik:RadComboBoxItem Text="All" Value="0" Selected="true" />
+                        <telerik:RadComboBoxItem Text="All" Value="All" Selected="true" />
                     </Items>
                 </telerik:RadComboBox>
                 &nbsp;&nbsp;
 
-
-                <telerik:RadLabel runat="server" Text="Driver:"></telerik:RadLabel>
-                <telerik:RadComboBox ID="Driver" runat="server" MarkFirstMatch="true" AllowCustomText="true" Width="150px"
-                    Skin="Glow" AppendDataBoundItems="true">
-                    <Items>
-                        <telerik:RadComboBoxItem Text="All" Value="0" Selected="true" />
-                    </Items>
-                </telerik:RadComboBox>
-                &nbsp;&nbsp;
-
-                <telerik:RadLabel runat="server" Text="Cheker:"></telerik:RadLabel>
-                 <telerik:RadComboBox ID="Checker" runat="server" MarkFirstMatch="true" AllowCustomText="true"
+                <telerik:RadLabel runat="server" Text="Destination(City):"></telerik:RadLabel>
+                 <telerik:RadComboBox ID="Destination" runat="server" MarkFirstMatch="true" 
+                     AllowCustomText="true"  AutoPostBack="true"
                      Skin="Glow" AppendDataBoundItems="true">
+                    <Items>
+                        <telerik:RadComboBoxItem Text="All" Value="All" Selected="true" />
+                    </Items>
+                </telerik:RadComboBox>
+                &nbsp;&nbsp;
+                </div>
+                <br />
+                <div class="row">
+                <telerik:RadLabel runat="server" Text="Driver:" AutoPostBack="true"></telerik:RadLabel>
+                <telerik:RadComboBox ID="Driver" runat="server" MarkFirstMatch="true" AllowCustomText="true" Width="150px"
+                    Skin="Glow" AppendDataBoundItems="true" AutoPostBack="true">
+                    <Items>
+                        <telerik:RadComboBoxItem Text="All" Value="0" Selected="true" />
+                    </Items>
+                </telerik:RadComboBox>
+                &nbsp;&nbsp;
+
+                <telerik:RadLabel runat="server" Text="Cheker:" AutoPostBack="true"></telerik:RadLabel>
+                 <telerik:RadComboBox ID="Checker" runat="server" MarkFirstMatch="true" AllowCustomText="true"
+                     Skin="Glow" AppendDataBoundItems="true" AutoPostBack="true">
                     <Items>
                         <telerik:RadComboBoxItem Text="All" Value="0" Selected="true" />
                     </Items>
@@ -73,7 +85,7 @@
                     AllowFilteringByColumn="false"
                     AutoGenerateColumns="false"
                     AllowSorting="true"
-                    PageSize="10" 
+                    PageSize="10"  OnPreRender="grid_Segregation_PreRender"
                     OnNeedDataSource="grid_Segregation_NeedDataSource">
                 <ExportSettings HideStructureColumns="true" FileName="Segregation" 
                     ExportOnlyData="true" IgnorePaging="true" UseItemStyles="true">
@@ -95,8 +107,8 @@
                              <telerik:GridBoundColumn DataField="PlateNo" HeaderText="Plate #" Exportable="false"></telerik:GridBoundColumn>
                              <telerik:GridBoundColumn DataField="BatchName" HeaderText="Batch" Exportable="false"></telerik:GridBoundColumn> 
                              <telerik:GridBoundColumn DataField="Qty" HeaderText="Qty" FooterText=" " Aggregate="Sum"></telerik:GridBoundColumn>
-                             <telerik:GridBoundColumn DataField="Area" HeaderText="Area"></telerik:GridBoundColumn>
-                             <telerik:GridBoundColumn DataField="SCANNEDBY" HeaderText="SCANNED BY"></telerik:GridBoundColumn>
+                             <telerik:GridBoundColumn DataField="Area" HeaderText="Area(City)"></telerik:GridBoundColumn>
+                             <telerik:GridBoundColumn DataField="SCANNEDBY" HeaderText="Scanned By"></telerik:GridBoundColumn>
 
                         </Columns>
                         <HeaderStyle Font-Size="Smaller" Font-Bold="true" />

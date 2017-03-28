@@ -15,12 +15,16 @@ public partial class portal_Operation_Manifest_SegregationReport : System.Web.UI
     {
         if (!IsPostBack)
         {
-            Driver.DataSource = getSegregationData();
+
+
+            DataView view = new DataView(getSegregationData());
+            DataTable distinctValuesDriver = view.ToTable(true, "Driver");
+            Driver.DataSource = distinctValuesDriver;
             Driver.DataTextField = "Driver";
             Driver.DataValueField = "Driver";
             Driver.DataBind();
-
-            Checker.DataSource = getSegregationData();
+            DataTable distinctValuesChecker = view.ToTable(true, "Checker");
+            Checker.DataSource = distinctValuesChecker;
             Checker.DataTextField = "Checker";
             Checker.DataValueField = "Checker";
             Checker.DataBind();
@@ -32,10 +36,29 @@ public partial class portal_Operation_Manifest_SegregationReport : System.Web.UI
 
             BCO.DataSource = getBranchCorpOffice();
             BCO.DataTextField = "BranchCorpOfficeName";
-            BCO.DataValueField = "BranchCorpOfficeName";
+            BCO.DataValueField = "BranchCorpOfficeCode";
             BCO.DataBind();
 
+            Destination.DataSource = getCityBCO();
+            Destination.DataTextField = "CityName";
+            Destination.DataValueField = "CityName";
+            Destination.DataBind();
+
         }
+    }
+
+    public DataTable getCityBCO()
+    {
+        string bco = "All";
+        try
+        {
+            bco = BCO.SelectedValue;
+        }
+        catch (Exception) { }
+        DataSet data = BLL.City.GetCityByBCO(getConstr.ConStrCMS, bco);
+        DataTable dt = new DataTable();
+        dt = data.Tables[0];
+        return dt;
     }
 
     public DataTable getBranchCorpOffice() {
@@ -53,19 +76,21 @@ public partial class portal_Operation_Manifest_SegregationReport : System.Web.UI
         string CheckerStr = "All";
         string PlateNoStr = "All";
         string BCOStr = "All";
+        string CityStr = "All";
         try
         {
             DriverStr = Driver.SelectedItem.Text.ToString();
             CheckerStr = Checker.SelectedItem.Text.ToString();
             PlateNoStr = PlateNo.SelectedItem.Text.ToString();
             BCOStr = BCO.SelectedItem.Text.ToString();
+            CityStr = Destination.SelectedItem.Text.ToString();
             DateStr = Date.SelectedDate.Value.ToString("dd MMM yyyy");
         }
         catch (Exception)
         {
             DateStr = "";
         }
-        DataSet data = BLL.Report.SegregationReport.GetSegregation(getConstr.ConStrCMS , DateStr , DriverStr, CheckerStr, PlateNoStr, BCOStr);
+        DataSet data = BLL.Report.SegregationReport.GetSegregation(getConstr.ConStrCMS , DateStr , DriverStr, CheckerStr, PlateNoStr, BCOStr , CityStr);
         DataTable dt = new DataTable();
         dt = data.Tables[0];
         return dt;
@@ -80,5 +105,23 @@ public partial class portal_Operation_Manifest_SegregationReport : System.Web.UI
     {
         grid_Segregation.DataSource = getSegregationData();
         grid_Segregation.Rebind();
+    }
+
+    protected void grid_Segregation_PreRender(object sender, EventArgs e)
+    {
+        grid_Segregation.Rebind();
+    }
+
+    protected void BCO_SelectedIndexChanged(object sender, Telerik.Web.UI.RadComboBoxSelectedIndexChangedEventArgs e)
+    {
+        Destination.Text = "";
+        Destination.Items.Clear();
+        Destination.AppendDataBoundItems = true;
+        Destination.Items.Add("All");
+        Destination.SelectedIndex = 0;
+        Destination.DataSource = getCityBCO();
+        Destination.DataTextField = "CityName";
+        Destination.DataValueField = "CityName";
+        Destination.DataBind();
     }
 }

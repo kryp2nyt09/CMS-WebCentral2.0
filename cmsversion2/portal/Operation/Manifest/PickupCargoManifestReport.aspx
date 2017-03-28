@@ -24,23 +24,34 @@
             <div class="row">
 
                 <telerik:RadLabel runat="server" Text="Date:"></telerik:RadLabel>
-                <telerik:RadDatePicker ID="Date" runat="server" Skin="Glow" DateInput-DateFormat="MM/dd/yyyy">
+                <telerik:RadDatePicker ID="Date" runat="server" AutoPostBack="true" Skin="Glow" DateInput-DateFormat="MM/dd/yyyy">
                 </telerik:RadDatePicker>                
                 &nbsp;&nbsp;
 
                 <telerik:RadLabel runat="server" Text="AWB #:"></telerik:RadLabel>
-                <telerik:RadComboBox ID="AWB" runat="server" Skin="Glow" 
+                <telerik:RadComboBox ID="AWB" runat="server" Skin="Glow" AutoPostBack="true"
                     AutoCompleteSeparator="None" AllowCustomText="true" MarkFirstMatch="true"
                     AppendDataBoundItems="true">
                 </telerik:RadComboBox>
 
                 &nbsp;&nbsp;
-                <telerik:RadLabel runat="server" Text="Area:"></telerik:RadLabel>
-                <telerik:RadComboBox ID="Area" runat="server" Skin="Glow" 
-                    AppendDataBoundItems="true"
-                    AutoCompleteSeparator="None" AllowCustomText="true" MarkFirstMatch="true">
+
+                <telerik:RadLabel runat="server" Text="BCO:"></telerik:RadLabel>
+                <telerik:RadComboBox ID="BCO" runat="server" Skin="Glow" Width="250px" 
+                    AppendDataBoundItems="true" EnableTextSelection="true" 
+                    AutoCompleteSeparator="None" AllowCustomText="true" MarkFirstMatch="true" AutoPostBack="true" OnSelectedIndexChanged="BCO_SelectedIndexChanged">
                     <Items>
-                        <telerik:RadComboBoxItem Text="All" Value="0" Selected="true" />
+                        <telerik:RadComboBoxItem Text="All" Value="All" Selected="true" />
+                    </Items>
+                </telerik:RadComboBox>
+                &nbsp;&nbsp;
+
+                <telerik:RadLabel runat="server" Text="Area:"></telerik:RadLabel>
+                <telerik:RadComboBox ID="Area" runat="server" Skin="Glow" EnableTextSelection="true"
+                    AppendDataBoundItems="true" AutoPostBack="true" MarkFirstMatch="true"    
+                    AutoCompleteSeparator="" AllowCustomText="true">
+                    <Items>
+                        <telerik:RadComboBoxItem Text="All" Value="All" Selected="true" />
                     </Items>
                 </telerik:RadComboBox>
                 &nbsp;&nbsp;

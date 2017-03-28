@@ -74,18 +74,18 @@ namespace DataAccess
 
         public static DataSet GetBatchByBatchCode(string conStr, string Code)
         {
-            using (SqlConnection con = new SqlConnection(conStr))
-            {
-                using (SqlCommand cmd = new SqlCommand("sp_view_BatchByBatchCode", con))
+                using (SqlConnection con = new SqlConnection(conStr))
                 {
-                    SqlDataAdapter da = new SqlDataAdapter("sp_view_BatchByBatchCode", con);
-                    da.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    da.SelectCommand.Parameters.Add("@BatchCode", SqlDbType.VarChar).Value = Code;
-                    DataSet ds = new DataSet();
-                    da.Fill(ds);
-                    return ds;
+                    using (SqlCommand cmd = new SqlCommand("sp_view_BatchByBatchCode", con))
+                    {
+                        SqlDataAdapter da = new SqlDataAdapter("sp_view_BatchByBatchCode", con);
+                        da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                        da.SelectCommand.Parameters.Add("@BatchCode", SqlDbType.VarChar).Value = Code;
+                        DataSet ds = new DataSet();
+                        da.Fill(ds);
+                        return ds;
+                    }
                 }
-            }
         }
     }
 }

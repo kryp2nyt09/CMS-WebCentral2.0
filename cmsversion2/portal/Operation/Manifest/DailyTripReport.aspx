@@ -24,12 +24,23 @@
             <div class="row">
 
                 <telerik:RadLabel runat="server" Text="Date:"></telerik:RadLabel>
-                <telerik:RadDatePicker ID="Date" runat="server" Skin="Glow"></telerik:RadDatePicker>
+                <telerik:RadDatePicker ID="Date" runat="server" Skin="Glow" AutoPostBack="true"></telerik:RadDatePicker>
                 &nbsp;&nbsp;
 
-                <telerik:RadLabel runat="server" Text="Area:"></telerik:RadLabel>
+                
+                <telerik:RadLabel runat="server" Text="BCO:"></telerik:RadLabel>
+                <telerik:RadComboBox ID="BCO" runat="server" MarkFirstMatch="true" 
+                    AllowCustomText="true" Width="250px"
+                    Skin="Glow" AppendDataBoundItems="true" AutoPostBack="true" OnSelectedIndexChanged="BCO_SelectedIndexChanged">
+                    <Items>
+                        <telerik:RadComboBoxItem Text="All" Value="All" Selected="true" />
+                    </Items>
+                </telerik:RadComboBox>
+                &nbsp;&nbsp;
+
+                <telerik:RadLabel runat="server" Text="Area(City):"></telerik:RadLabel>
                 <telerik:RadComboBox ID="Area" runat="server" Skin="Glow" AllowCustomText="true" MarkFirstMatch="true"
-                    AppendDataBoundItems="true">
+                    AppendDataBoundItems="true" AutoPostBack="true">
                     <Items>
                         <telerik:RadComboBoxItem Text="All" Value="0" Selected="true" />
                     </Items>
@@ -42,7 +53,7 @@
             <div class="row">
                 <telerik:RadGrid ID="grid_DailyTripReport" runat="server" Skin="Glow" 
                     OnNeedDataSource="grid_DailyTripReport_NeedDataSource"
-                    AllowPaging="True" ShowFooter="false"
+                    AllowPaging="True" ShowFooter="false" OnPreRender="grid_DailyTripReport_PreRender"
                     AllowFilteringByColumn="false"
                     AutoGenerateColumns="false"
                     AllowSorting="true" 

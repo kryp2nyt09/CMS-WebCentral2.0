@@ -22,22 +22,22 @@
             <!--- PAGE BODY--->
             <div class="row">
                 <telerik:RadLabel runat="server" Text="Date:"></telerik:RadLabel>
-                <telerik:RadDatePicker ID="Date" runat="server" Skin="Glow">
+                <telerik:RadDatePicker ID="Date" runat="server" Skin="Glow" AutoPostBack="true">
                 </telerik:RadDatePicker>
 
                 &nbsp;&nbsp;
                 <telerik:RadLabel runat="server" Text="BCO:"></telerik:RadLabel>
                 <telerik:RadComboBox ID="BCO" runat="server" Skin="Glow" AllowCustomText="true" MarkFirstMatch="true" 
-                    AppendDataBoundItems="true" Width="300px">
+                    AppendDataBoundItems="true" Width="300px" AutoPostBack="true" OnSelectedIndexChanged="BCO_SelectedIndexChanged">
                     <Items>
-                        <telerik:RadComboBoxItem Text="All" Value="0" Selected="true" />
+                        <telerik:RadComboBoxItem Text="All" Value="All" Selected="true" />
                     </Items>
                 </telerik:RadComboBox>
                 &nbsp;&nbsp;
 
                 <telerik:RadLabel runat="server" Text="Area:"></telerik:RadLabel>
                 <telerik:RadComboBox ID="Area" runat="server" Skin="Glow" AllowCustomText="true" MarkFirstMatch="true"
-                    AppendDataBoundItems="true">
+                    AppendDataBoundItems="true" AutoPostBack="true">
                     <Items>
                         <telerik:RadComboBoxItem Text="All" Value="0" Selected="true" />
                     </Items>
@@ -46,7 +46,7 @@
 
                 <telerik:RadLabel runat="server" Text="Batch:"></telerik:RadLabel>
                 <telerik:RadComboBox ID="Batch" runat="server" Skin="Glow" AllowCustomText="true" MarkFirstMatch="true" 
-                    AppendDataBoundItems="true">
+                    AppendDataBoundItems="true" AutoPostBack="true">
                     <Items>
                         <telerik:RadComboBoxItem Text="All" Value="All" Selected="true" />
                     </Items>
@@ -61,9 +61,9 @@
                 
                 <telerik:RadGrid ID="grid_BranchAcceptance" runat="server"  Skin="Glow"
                     AllowPaging="True" ShowFooter="true"
-                    PageSize="10"  
+                    PageSize="10" OnPreRender="grid_BranchAcceptance_PreRender"
                     AllowFilteringByColumn="false" 
-                    AutoGenerateColumns="false"
+                    AutoGenerateColumns="false" OnInfrastructureExporting="grid_BranchAcceptance_InfrastructureExporting"
                     AllowSorting="true" OnNeedDataSource="grid_BranchAcceptance_NeedDataSource">
                     
                     <ExportSettings HideStructureColumns="true" ExportOnlyData="true" FileName="Branch_Acceptance" 
@@ -76,7 +76,6 @@
                               <MiddleCell  Text="<img src='../../../images/APCARGO-Logo.jpg' width='100%' height='100%'/>"/>
                           </PageHeader>
                         </Pdf>
-
                     </ExportSettings>          
                     <MasterTableView CommandItemDisplay="Top" FilterItemStyle-VerticalAlign="Top" Font-Size="Smaller">
                         <CommandItemSettings ShowExportToExcelButton="true" ShowExportToPdfButton="true" ExportToPdfText="PDF" ShowExportToWordButton="false" ShowExportToCsvButton="false" ShowAddNewRecordButton="false"  ShowRefreshButton="false" />

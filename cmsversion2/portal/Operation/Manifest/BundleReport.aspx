@@ -15,14 +15,14 @@
                 <h3>BUNDLE</h3>
                 <ol class="breadcrumb">
                     <li>Operation</li>
-                    <li>Manifest</li>
+                    <li>Manifest</li>   
                     <li>Bundle</li>
                 </ol>
             </div>
             <!--- PAGE BODY--->
             <div class="row">
                 <telerik:RadLabel runat="server" Text="Date:"></telerik:RadLabel>
-                <telerik:RadDatePicker ID="Date" runat="server" Skin="Glow"></telerik:RadDatePicker>
+                <telerik:RadDatePicker ID="Date" runat="server" Skin="Glow" AutoPostBack="true"></telerik:RadDatePicker>
                 &nbsp;&nbsp;
 
                 <telerik:RadLabel runat="server" Text="Sack #:"></telerik:RadLabel>
@@ -34,11 +34,22 @@
                 </telerik:RadComboBox>
                 &nbsp;&nbsp;
 
-                <telerik:RadLabel runat="server" Text="Destination:"></telerik:RadLabel>
-                 <telerik:RadComboBox ID="Destination" runat="server" MarkFirstMatch="true" AllowCustomText="true"
+                <telerik:RadLabel runat="server" Text="BCO:"></telerik:RadLabel>
+                <telerik:RadComboBox ID="BCO" runat="server" Skin="Glow" Width="250px" 
+                    AppendDataBoundItems="true" EnableTextSelection="true" 
+                    AutoCompleteSeparator="None" AllowCustomText="true" MarkFirstMatch="true" 
+                    AutoPostBack="true" OnSelectedIndexChanged="BCO_SelectedIndexChanged">
+                    <Items>
+                        <telerik:RadComboBoxItem Text="All" Value="All" Selected="true" />
+                    </Items>
+                </telerik:RadComboBox>
+                &nbsp;&nbsp;
+
+                <telerik:RadLabel runat="server" Text="Destination(City):"></telerik:RadLabel>
+                 <telerik:RadComboBox ID="Destination" runat="server" MarkFirstMatch="true" AllowCustomText="true"  AutoPostBack="true"
                      Skin="Glow" AppendDataBoundItems="true">
                     <Items>
-                        <telerik:RadComboBoxItem Text="All" Value="0" Selected="true" />
+                        <telerik:RadComboBoxItem Text="All" Value="All" Selected="true" />
                     </Items>
                 </telerik:RadComboBox>
                 &nbsp;&nbsp;

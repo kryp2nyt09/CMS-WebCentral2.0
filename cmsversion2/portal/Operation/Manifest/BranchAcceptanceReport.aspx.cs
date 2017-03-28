@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+using Telerik.Web.UI.ExportInfrastructure;
 using BLL = BusinessLogic;
 using Tools = utilities;
 
@@ -24,7 +24,7 @@ public partial class portal_Operation_Manifest_BranchAcceptanceReport : System.W
 
             BCO.DataSource = getBranchCorpOffice();
             BCO.DataTextField = "BranchCorpOfficeName";
-            BCO.DataValueField = "BranchCorpOfficeName";
+            BCO.DataValueField = "BranchCorpOfficeCode";
             BCO.DataBind();
 
             Area.DataSource = getArea();
@@ -44,7 +44,13 @@ public partial class portal_Operation_Manifest_BranchAcceptanceReport : System.W
 
     public DataTable getArea()
     {
-        DataSet data = BLL.Area.GetArea(getConstr.ConStrCMS);
+        string bco = "All";
+        try
+        {
+            bco = BCO.SelectedValue;
+        }
+        catch(Exception) { }
+        DataSet data = BLL.Revenue_Info.GetRevenueByBCOCode(getConstr.ConStrCMS, bco);
         DataTable dt = new DataTable();
         dt = data.Tables[0];
         return dt;
@@ -75,6 +81,7 @@ public partial class portal_Operation_Manifest_BranchAcceptanceReport : System.W
         {
             DateStr = "";
         }
+
         DataSet data = BLL.Report.BranchAcceptanceReport.GetBranchAcceptance(getConstr.ConStrCMS, DateStr ,AreaStr , BatchStr , BCOStr );
         DataTable dt = new DataTable();
         dt = data.Tables[0];
@@ -91,5 +98,34 @@ public partial class portal_Operation_Manifest_BranchAcceptanceReport : System.W
     {
         grid_BranchAcceptance.DataSource = getBranchAcceptance();
         grid_BranchAcceptance.Rebind();
+    }
+
+    protected void BCO_SelectedIndexChanged(object sender, Telerik.Web.UI.RadComboBoxSelectedIndexChangedEventArgs e)
+    {
+        Area.Text = "";
+        Area.Items.Clear();
+        Area.AppendDataBoundItems = true;
+        Area.Items.Add("All");
+        Area.SelectedIndex = 0;
+        Area.DataSource = getArea();
+        Area.DataTextField = "RevenueUnitName";
+        Area.DataValueField = "RevenueUnitName";
+        Area.DataBind();
+    }
+
+    protected void grid_BranchAcceptance_PreRender(object sender, EventArgs e)
+    {
+        grid_BranchAcceptance.Rebind();
+    }
+
+    protected void grid_BranchAcceptance_InfrastructureExporting(object sender, Telerik.Web.UI.GridInfrastructureExportingEventArgs e)
+    {
+        //Telerik.Web.UI.ExportInfrastructure.ExportStructure structure2 = new Telerik.Web.UI.ExportInfrastructure.ExportStructure();
+        //Telerik.Web.UI.ExportInfrastructure.Table table2 = new Telerik.Web.UI.ExportInfrastructure.Table("S1");
+        //table2.Cells["A1"].Value = "Wine";
+        //Telerik.Web.UI.ExportInfrastructure.Cell b2Cell = table2.Cells["B2"];
+        //b2Cell.Value = "White";
+        //b2Cell.Style.BackColor = System.Drawing.Color.Blue;
+        //structure2.Tables.Add(table2);
     }
 }

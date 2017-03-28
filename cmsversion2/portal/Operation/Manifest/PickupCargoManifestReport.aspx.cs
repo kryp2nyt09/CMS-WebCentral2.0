@@ -20,6 +20,12 @@ public partial class portal_Operation_Manifest_PickupCargoManifestReport : Syste
     {
         if (!IsPostBack)
         {
+
+            BCO.DataSource = getBranchCorpOffice();
+            BCO.DataTextField = "BranchCorpOfficeName";
+            BCO.DataValueField = "BranchCorpOfficeCode";
+            BCO.DataBind();
+
             Area.DataSource = getArea();
             Area.DataTextField = "RevenueUnitName";
             Area.DataValueField = "RevenueUnitName";
@@ -31,6 +37,15 @@ public partial class portal_Operation_Manifest_PickupCargoManifestReport : Syste
         }
     }
 
+    public DataTable getBranchCorpOffice()
+    {
+        DataSet data = BLL.BranchCorpOffice.GetBranchCorpOffice(getConstr.ConStrCMS);
+        DataTable dt = new DataTable();
+        dt = data.Tables[0];
+        return dt;
+    }
+
+
     public void setAWB()
     {
         AWB.DataSource = getPickUpCargoData();
@@ -41,19 +56,28 @@ public partial class portal_Operation_Manifest_PickupCargoManifestReport : Syste
 
     public DataTable getArea()
     {
-        DataSet data = BLL.Area.GetArea(getConstr.ConStrCMS);
+        string bco = "All";
+        try
+        {
+            bco = BCO.SelectedValue;
+        }
+        catch (Exception) { }
+        DataSet data = BLL.Revenue_Info.GetRevenueByBCOCode(getConstr.ConStrCMS, bco);
         DataTable dt = new DataTable();
         dt = data.Tables[0];
         return dt;
     }
+
 
     public DataTable getPickUpCargoData()
     {
         string AreaStr = "All";
         string AWBStr = "";
         string DateStr = "";
+        string BCOStr = "All";
         try
         {
+            BCOStr = BCO.SelectedItem.Text;
             AreaStr = Area.SelectedItem.Text.ToString();
             AWBStr = AWB.Text.ToString();
             DateStr = Date.SelectedDate.Value.ToString("dd MMM yyyy");
@@ -61,7 +85,7 @@ public partial class portal_Operation_Manifest_PickupCargoManifestReport : Syste
         catch (Exception) {
             DateStr = "";           
         }
-        DataSet data = BLL.Report.PickupCargoManifestReport.GetPickupCargoManifest(getConstr.ConStrCMS , AreaStr, AWBStr , DateStr);
+        DataSet data = BLL.Report.PickupCargoManifestReport.GetPickupCargoManifest(getConstr.ConStrCMS , AreaStr, AWBStr , DateStr , BCOStr);
         DataTable dt = new DataTable();
         dt = data.Tables[0];
         return dt;
@@ -88,13 +112,16 @@ public partial class portal_Operation_Manifest_PickupCargoManifestReport : Syste
         gridPickupCargo.Rebind();
     }
 
-    protected void AWB_ItemDataBound(object sender, RadComboBoxItemEventArgs e)
+    protected void BCO_SelectedIndexChanged(object sender, RadComboBoxSelectedIndexChangedEventArgs e)
     {
-        //e.Item.Text = string.Concat(e.Item.Text.ToLower().Split(' ')[0]);
-    }
-
-    protected void Area_ItemDataBound(object sender, RadComboBoxItemEventArgs e)
-    {
-       // e.Item.Text = string.Concat(e.Item.Text.ToString()[0]);
+        Area.Text = "";
+        Area.Items.Clear();
+        Area.AppendDataBoundItems = true;
+        Area.Items.Add("All");
+        Area.SelectedIndex = 0;
+        Area.DataSource = getArea();
+        Area.DataTextField = "RevenueUnitName";
+        Area.DataValueField = "RevenueUnitName";
+        Area.DataBind();
     }
 }

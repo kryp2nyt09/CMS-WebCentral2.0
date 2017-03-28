@@ -66,5 +66,10 @@ namespace BusinessLogic
         {
             DAL.RevenueInfo.DeleteRevenueType(revenuetypeid, Flag, conStr);
         }
+
+        public static DataSet GetRevenueByBCOCode( string conStr , string BCOCode)
+        {
+            return DAL.RevenueInfo.GetRevenueByBCOCode(conStr, BCOCode);
+        }
     }
 }

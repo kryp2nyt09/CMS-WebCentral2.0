@@ -25,6 +25,20 @@ namespace DataAccess
 
         }
 
+        public static DataSet GetCityByBCO(string conSTR , string BCO)
+        {
+            using (SqlConnection con = new SqlConnection(conSTR))
+            {
+                SqlDataAdapter da = new SqlDataAdapter("sp_view_CityByBCO", con);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.Parameters.Add("@BCO", SqlDbType.VarChar).Value = BCO;
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                return ds;
+            }
+
+        }
+
         public static DataSet GetCityByID(Guid CityId, string conSTR)
         {
             using (SqlConnection con = new SqlConnection(conSTR))

@@ -20,66 +20,78 @@
                     <li>Master Sales Report</li>
                 </ol>
             </div>
-           <%-- <div class="row">
+           			<div class="row">
                 <telerik:RadLabel runat="server" Text="Date   :"></telerik:RadLabel>
-                <telerik:RadDatePicker ID="RadDatePicker1" runat="server" Skin="Glow"></telerik:RadDatePicker>
+                <telerik:RadDatePicker ID="Date1" runat="server" Skin="Glow"></telerik:RadDatePicker>
                 <telerik:RadLabel runat="server" Text="-"></telerik:RadLabel>
-                <telerik:RadDatePicker ID="Date" runat="server" Skin="Glow"></telerik:RadDatePicker>
+                <telerik:RadDatePicker ID="Date2" runat="server" Skin="Glow"></telerik:RadDatePicker>
                 &nbsp;&nbsp;
+                <telerik:RadLabel runat="server" Text="BCO Shipper:"></telerik:RadLabel>
+                <telerik:RadComboBox ID="BCOShipper" runat="server" MarkFirstMatch="true" AllowCustomText="true"
+                    Skin="Glow" AppendDataBoundItems="true" Width="200px">
+                    <Items>
+                        <telerik:RadComboBoxItem Text="All" Value="0" Selected="true" />
+                    </Items>
+                </telerik:RadComboBox>
+               &nbsp;&nbsp;
+                <telerik:RadLabel runat="server" Text="BCO Consignee:"></telerik:RadLabel>
+                <telerik:RadComboBox ID="BCOConsignee" runat="server" MarkFirstMatch="true" AllowCustomText="true"
+                    Skin="Glow" AppendDataBoundItems="true" Width="300px">
+                    <Items>
+                        <telerik:RadComboBoxItem Text="All" Value="0" Selected="true" />
+                    </Items>
+                </telerik:RadComboBox>
             </div>
             <br />
             <div class="row">
-                <div class="form-horizontal">
-                    <div class="form-group">
-                            <label class="col-md-1"><telerik:RadLabel runat="server" Text="BCO Shipper:"></telerik:RadLabel></label>
-                            <div class="col-sm-10">
-                            <telerik:RadComboBox ID="BCOShipper" runat="server" MarkFirstMatch="true" AllowCustomText="true"
-                                Skin="Glow" AppendDataBoundItems="true" Width="300px">
-                                <Items>
-                                    <telerik:RadComboBoxItem Text="All" Value="0" Selected="true" />
-                                </Items>
-                            </telerik:RadComboBox>
-                            </div>
-                    </div>
-                    <div class="form-group">
-                            <label class="col-md-1"><telerik:RadLabel runat="server" Text="BCO Consignee:"></telerik:RadLabel></label>
-                            <div class="col-sm-10">
-                            <telerik:RadComboBox ID="RadComboBox1" runat="server" MarkFirstMatch="true" AllowCustomText="true"
-                                Skin="Glow" AppendDataBoundItems="true" Width="300px">
-                                <Items>
-                                    <telerik:RadComboBoxItem Text="All" Value="0" Selected="true" />
-                                </Items>
-                            </telerik:RadComboBox>
-                            </div>
-                    </div>
-
-                    <div class="form-group">
-                            <label class="col-md-1"><telerik:RadLabel runat="server" Text="Shipmode:"></telerik:RadLabel></label>
-                            <div class="col-sm-10">
-                            <telerik:RadComboBox ID="RadComboBox2" runat="server" MarkFirstMatch="true" AllowCustomText="true"
-                                Skin="Glow" AppendDataBoundItems="true" Width="300px">
-                                <Items>
-                                    <telerik:RadComboBoxItem Text="All" Value="0" Selected="true" />
-                                </Items>
-                            </telerik:RadComboBox>
-                            </div>
-                    </div>
-
-                    <div class="form-group">
-                            <label class="col-md-1"><telerik:RadLabel runat="server" Text="Commodity Type:"></telerik:RadLabel></label>
-                            <div class="col-sm-10">
-                            <telerik:RadComboBox ID="RadComboBox3" runat="server" MarkFirstMatch="true" AllowCustomText="true"
-                                Skin="Glow" AppendDataBoundItems="true" Width="300px">
-                                <Items>
-                                    <telerik:RadComboBoxItem Text="All" Value="0" Selected="true" />
-                                </Items>
-                            </telerik:RadComboBox>
-                            </div>
-                    </div>
-                </div>
-            </div>--%>
+                <telerik:RadLabel runat="server" Text="Shipmode:"></telerik:RadLabel>
+                <telerik:RadComboBox ID="Shipmode" runat="server" MarkFirstMatch="true" AllowCustomText="true"
+                    Skin="Glow" AppendDataBoundItems="true" Width="138px">
+                    <Items>
+                        <telerik:RadComboBoxItem Text="All" Value="0" Selected="true" />
+                    </Items>
+                </telerik:RadComboBox>
+                 &nbsp;&nbsp;
+                <telerik:RadLabel runat="server" Text="Commodity Type:"></telerik:RadLabel>
+                <telerik:RadComboBox ID="CommodityType" runat="server" MarkFirstMatch="true" AllowCustomText="true"
+                    Skin="Glow" AppendDataBoundItems="true" Width="365px">
+                    <Items>
+                        <telerik:RadComboBoxItem Text="All" Value="0" Selected="true" />
+                    </Items>
+                </telerik:RadComboBox>
+                 &nbsp;&nbsp;
+                <telerik:RadLabel runat="server" Text="Service Mode:"></telerik:RadLabel>&nbsp;&nbsp;&nbsp;&nbsp;
+                <telerik:RadComboBox ID="ServiceMode" runat="server" MarkFirstMatch="true" AllowCustomText="true"
+                    Skin="Glow" AppendDataBoundItems="true" Width="300px">
+                    <Items>
+                        <telerik:RadComboBoxItem Text="All" Value="0" Selected="true" />
+                    </Items>
+                </telerik:RadComboBox>
+                 &nbsp;&nbsp;
+            </div>
+            <br />
+            <div class="row">
+                <telerik:RadLabel runat="server" Text="Paymode:"></telerik:RadLabel>&nbsp;
+                <telerik:RadComboBox ID="Paymode" runat="server" MarkFirstMatch="true" AllowCustomText="true"
+                    Skin="Glow" AppendDataBoundItems="true" Width="138px">
+                    <Items>
+                        <telerik:RadComboBoxItem Text="All" Value="0" Selected="true" />
+                    </Items>
+                </telerik:RadComboBox>
+                 &nbsp;&nbsp;
+                <telerik:RadLabel runat="server" Text="User:"></telerik:RadLabel>
+                <telerik:RadComboBox ID="User" runat="server" MarkFirstMatch="true" AllowCustomText="true"
+                    Skin="Glow" AppendDataBoundItems="true" Width="300px">
+                    <Items>
+                        <telerik:RadComboBoxItem Text="All" Value="0" Selected="true" />
+                    </Items>
+                </telerik:RadComboBox>
+                 &nbsp;&nbsp;
+                <telerik:RadButton ID="Search" Text="Search" runat="server" Skin="Glow" AutoPostBack="true" OnClick="Search_Click"></telerik:RadButton>   
+            </div>
+            <br />
             <!--- PAGE BODY--->
-          
+            <br />
             <div class="row">
 
                  <telerik:RadGrid ID="grid_MasterSales" runat="server"  Skin="Glow"

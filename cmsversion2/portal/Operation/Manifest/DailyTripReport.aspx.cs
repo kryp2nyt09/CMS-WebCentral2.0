@@ -16,16 +16,28 @@ public partial class portal_Operation_Manifest_DailyTripReport : System.Web.UI.P
     {
         if (!IsPostBack)
         {
-            Area.DataSource = getCity();
+
+            BCO.DataSource = getBranchCorpOffice();
+            BCO.DataTextField = "BranchCorpOfficeName";
+            BCO.DataValueField = "BranchCorpOfficeCode";
+            BCO.DataBind();
+
+            Area.DataSource = getCityBCO();
             Area.DataTextField = "CityName";
             Area.DataValueField = "CityName";
             Area.DataBind();
         }
     }
 
-    public DataTable getCity()
+    public DataTable getCityBCO()
     {
-        DataSet data = BLL.City.GetCity(getConstr.ConStrCMS);
+        string bco = "All";
+        try
+        {
+            bco = BCO.SelectedValue;
+        }
+        catch (Exception) { }
+        DataSet data = BLL.City.GetCityByBCO(getConstr.ConStrCMS, bco);
         DataTable dt = new DataTable();
         dt = data.Tables[0];
         return dt;
@@ -34,21 +46,30 @@ public partial class portal_Operation_Manifest_DailyTripReport : System.Web.UI.P
     public DataTable getDailyTripData()
     {
         string DateStr = "";
+        string BCOStr = "All";
         string AreaStr = "All";
         try
         {
+            BCOStr = BCO.SelectedItem.Text;
             AreaStr = Area.SelectedItem.Text.ToString();
             DateStr = Date.SelectedDate.Value.ToString("dd MMM yyyy");
         }
         catch(Exception) {
             DateStr = "";
         }
-        DataSet data = BLL.Report.DailyTripReport.GetDailyTrip(getConstr.ConStrCMS , DateStr , AreaStr );
+        DataSet data = BLL.Report.DailyTripReport.GetDailyTrip(getConstr.ConStrCMS , DateStr , AreaStr , BCOStr);
         DataTable dt = new DataTable();
         dt = data.Tables[0];
         return dt;
     }
 
+    public DataTable getBranchCorpOffice()
+    {
+        DataSet data = BLL.BranchCorpOffice.GetBranchCorpOffice(getConstr.ConStrCMS);
+        DataTable dt = new DataTable();
+        dt = data.Tables[0];
+        return dt;
+    }
 
     protected void grid_DailyTripReport_NeedDataSource(object sender, Telerik.Web.UI.GridNeedDataSourceEventArgs e)
     {
@@ -58,6 +79,24 @@ public partial class portal_Operation_Manifest_DailyTripReport : System.Web.UI.P
     protected void Search_Click(object sender, EventArgs e)
     {
         grid_DailyTripReport.DataSource = getDailyTripData();
+        grid_DailyTripReport.Rebind();
+    }
+
+    protected void BCO_SelectedIndexChanged(object sender, Telerik.Web.UI.RadComboBoxSelectedIndexChangedEventArgs e)
+    {
+        Area.Text = "";
+        Area.Items.Clear();
+        Area.AppendDataBoundItems = true;
+        Area.Items.Add("All");
+        Area.SelectedIndex = 0;
+        Area.DataSource = getCityBCO();
+        Area.DataTextField = "CityName";
+        Area.DataValueField = "CityName";
+        Area.DataBind();
+    }
+
+    protected void grid_DailyTripReport_PreRender(object sender, EventArgs e)
+    {
         grid_DailyTripReport.Rebind();
     }
 }

@@ -24,10 +24,10 @@
             <div class="row">
 
                 <telerik:RadLabel runat="server" Text="Date:"></telerik:RadLabel>
-                <telerik:RadDatePicker ID="Date" runat="server" Skin="Glow"></telerik:RadDatePicker>
+                <telerik:RadDatePicker ID="Date" runat="server" Skin="Glow" AutoPostBack="true"></telerik:RadDatePicker>
                 &nbsp;&nbsp;
                  
-                <telerik:RadLabel runat="server" Text="Sack #::"></telerik:RadLabel>
+                <telerik:RadLabel runat="server" Text="Sack #:"></telerik:RadLabel>
                  <telerik:RadComboBox ID="SackNumber" runat="server" Skin="Glow" MarkFirstMatch="true" AllowCustomText="true" 
                      AppendDataBoundItems="true">
                     <Items>
@@ -36,9 +36,21 @@
                 </telerik:RadComboBox>
                 &nbsp;&nbsp;
 
-                <telerik:RadLabel runat="server" Text="Origin:"></telerik:RadLabel>
+                <telerik:RadLabel runat="server" Text="BCO:"></telerik:RadLabel>
+                <telerik:RadComboBox ID="BCO" runat="server" Skin="Glow" Width="250px" 
+                    AppendDataBoundItems="true" EnableTextSelection="true" 
+                    AutoCompleteSeparator="None" AllowCustomText="true" MarkFirstMatch="true" 
+                    AutoPostBack="true" OnSelectedIndexChanged="BCO_SelectedIndexChanged">
+                    <Items>
+                        <telerik:RadComboBoxItem Text="All" Value="All" Selected="true" />
+                    </Items>
+                </telerik:RadComboBox>
+                &nbsp;&nbsp;
+
+
+                <telerik:RadLabel runat="server" Text="Origin(City):"></telerik:RadLabel>
                  <telerik:RadComboBox ID="Origin" runat="server" Skin="Glow" MarkFirstMatch="true" AllowCustomText="true"
-                     AppendDataBoundItems="true">
+                     AppendDataBoundItems="true" AutoPostBack="true">
                     <Items>
                         <telerik:RadComboBoxItem Text="All" Value="0" Selected="true" />
                     </Items>
@@ -54,7 +66,7 @@
                     PageSize="10"  
                     AllowFilteringByColumn="false"
                     AutoGenerateColumns="false"
-                    AllowSorting="true" 
+                    AllowSorting="true" OnPreRender="grid_Unbundle_PreRender"
                     OnNeedDataSource="grid_Unbundle_NeedDataSource">    
                 <ExportSettings  HideStructureColumns="true" FileName="Unbundle"
                      ExportOnlyData="true" IgnorePaging="true" UseItemStyles="true">
