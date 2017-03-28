@@ -9,15 +9,12 @@ using BAL = BusinessLogic;
 
 namespace CMS2.API.Controllers
 {
-    public class CmsApiController : ApiController
+    public class ShipmentController : ApiController
     {
         string connectionString = ConfigurationManager.ConnectionStrings["Shipment"].ConnectionString;
-        
-        // GET: api/CmsApi/5
-        public List<BusinessLogic.Invoice> GetInvoices(DateTime start, DateTime end)
+        public List<BusinessLogic.Invoice> getinvoices([FromUri] DateTime start, [FromUri] DateTime end)
         {
-             return BAL.Invoice.GetInvoices(start, end, connectionString);
+            return BAL.Invoice.GetInvoices(start, end, connectionString);
         }
-
     }
 }
