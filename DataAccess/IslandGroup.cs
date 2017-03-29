@@ -70,7 +70,6 @@ namespace DataAccess
             }
         }
 
-
         public static DataSet GetGroupIslandByID(string conStr, Guid Id)
         {
             using (SqlConnection con = new SqlConnection(conStr))

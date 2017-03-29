@@ -17,9 +17,7 @@ public partial class portal_Editform_csharp : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
-        {
-           
-
+        {       
             if (Request.QueryString["UserId"] == null)
             {
 
