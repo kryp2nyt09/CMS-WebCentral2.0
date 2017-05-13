@@ -136,6 +136,12 @@
   <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\ManageUsers.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\ManageUsers.aspx" />
   <event action="Analyze" type="Success" name="ManageUsers.aspx" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\ManageUsers.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Operation\CargoTransfer\CargoMonitoringHold.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Operation\CargoTransfer\CargoMonitoringHold.aspx" />
+  <event action="Analyze" type="Success" name="CargoMonitoringHold.aspx" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Operation\CargoTransfer\CargoMonitoringHold.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Operation\FlightLoadManagement\GatewayOffloadReport.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Operation\FlightLoadManagement\GatewayOffloadReport.aspx" />
+  <event action="Analyze" type="Success" name="GatewayOffloadReport.aspx" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Operation\FlightLoadManagement\GatewayOffloadReport.aspx" />
   <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Operation\Manifest\BranchAcceptanceReport.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Operation\Manifest\BranchAcceptanceReport.aspx" />
   <event action="Analyze" type="Success" name="BranchAcceptanceReport.aspx" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Operation\Manifest\BranchAcceptanceReport.aspx" />
@@ -178,6 +184,9 @@
   <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Reports\UserExportPreview.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Reports\UserExportPreview.aspx" />
   <event action="Analyze" type="Success" name="UserExportPreview.aspx" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\Reports\UserExportPreview.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\StatementOfAccount.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\StatementOfAccount.aspx" />
+  <event action="Analyze" type="Success" name="StatementOfAccount.aspx" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\StatementOfAccount.aspx" />
   <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\UnderMaintenancePage.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\UnderMaintenancePage.aspx" />
   <event action="Analyze" type="Success" name="UnderMaintenancePage.aspx" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\UnderMaintenancePage.aspx" />
@@ -454,6 +463,12 @@
   <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ShipMode\EditShipMode.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ShipMode\EditShipMode.aspx" />
   <event action="Analyze" type="Success" name="EditShipMode.aspx" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\UserModal\ShipMode\EditShipMode.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\UserModal\StatementOfAccount\AddAdjustment.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\UserModal\StatementOfAccount\AddAdjustment.aspx" />
+  <event action="Analyze" type="Success" name="AddAdjustment.aspx" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\UserModal\StatementOfAccount\AddAdjustment.aspx" />
+  <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\UserModal\StatementOfAccount\StatementOfAccountDetails.aspx" />
+  <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\UserModal\StatementOfAccount\StatementOfAccountDetails.aspx" />
+  <event action="Analyze" type="Success" name="StatementOfAccountDetails.aspx" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\UserModal\StatementOfAccount\StatementOfAccountDetails.aspx" />
   <event action="Analyze" type="Success" name="Register Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Status\AddStatus.aspx" />
   <event action="Analyze" type="Success" name="Assembly Directives" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Status\AddStatus.aspx" />
   <event action="Analyze" type="Success" name="AddStatus.aspx" path="C:\Users\DomesticCMS\Desktop\CmsWeb\CMS-WebCentral2.0\cmsversion2\portal\UserModal\Status\AddStatus.aspx" />

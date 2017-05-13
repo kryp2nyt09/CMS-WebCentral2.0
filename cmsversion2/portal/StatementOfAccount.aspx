@@ -1,8 +1,28 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/cmsversion.master" AutoEventWireup="true" CodeFile="StatementOfAccount.aspx.cs" Inherits="portal_StatementOfAccount" %>
+﻿<%@ Page Title="Statement Of Account" Language="C#" MasterPageFile="~/cmsversion.master" AutoEventWireup="true" CodeFile="StatementOfAccount.aspx.cs" Inherits="portal_StatementOfAccount" %>
+
+<%@ MasterType VirtualPath="~/cmsversion.master" %>
+<%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
+
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <link href="../styles/default.css" rel="stylesheet" />
+      <style type="text/css">
+        .alink{
+            text-decoration:none !important;
+            color:#c1c7ca !important;
+        }
+
+        .alink:hover{
+            text-decoration:none !important;
+            color:#c1c7ca !important;
+        }
+        .center {
+            text-align: center;
+        }
+          </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="Server">
+
 
     <div id="wrapper">
         <div id="page-wrapper">
@@ -49,11 +69,6 @@
                                         <telerik:AjaxUpdatedControl ControlID="RadGrid2" LoadingPanelID="gridLoadingPanel"></telerik:AjaxUpdatedControl>
                                     </UpdatedControls>
                                 </telerik:AjaxSetting>
-                                <telerik:AjaxSetting AjaxControlID="radgrid2">
-                                    <UpdatedControls>
-                                        <telerik:AjaxUpdatedControl ControlID="RadGrid2" LoadingPanelID="gridLoadingPanel"></telerik:AjaxUpdatedControl>
-                                    </UpdatedControls>
-                                </telerik:AjaxSetting>
                             </AjaxSettings>
                         </telerik:RadAjaxManager>
                         <telerik:RadAjaxLoadingPanel runat="server" ID="gridLoadingPanel"></telerik:RadAjaxLoadingPanel>
@@ -87,7 +102,6 @@
                                         <HeaderStyle />
                                     </telerik:GridBoundColumn>
 
-
                                     <telerik:GridBoundColumn DataField="BillingPeriodName" HeaderText="Billing Period" SortExpression="BillingPeriodName"
                                         UniqueName="BillingPeriod" FilterDelay="2000" ShowFilterIcon="false" FilterControlWidth="120px"
                                         CurrentFilterFunction="Contains" AutoPostBackOnFilter="false" HeaderStyle-Font-Bold="true">
@@ -106,25 +120,27 @@
                                         HeaderStyle-Font-Bold="true" AllowFiltering="true" FilterListOptions="VaryByDataType">
                                     </telerik:GridDateTimeColumn>
 
-                                    <telerik:GridTemplateColumn UniqueName="TemplateEditColumn" AllowFiltering="false">
+                                    <telerik:GridTemplateColumn UniqueName="Details" AllowFiltering="false">
                                         <ItemTemplate>
-                                            <asp:HyperLink ID="DetailsLink" runat="server" NavigateUrl= '<%# Eval("StatementOfAccountId", "~/portal/UserModal/StatementOfAccount/StatementOfAccountDetails.aspx?StatementOfAccountId={0}") %>' Text="Details"></asp:HyperLink>
+                                            <asp:HyperLink ID="DetailsLink" runat="server" NavigateUrl='<%# Eval("StatementOfAccountId", "~/portal/UserModal/StatementOfAccount/StatementOfAccountDetails.aspx?StatementOfAccountId={0}") %>' Text="Details"></asp:HyperLink>
                                         </ItemTemplate>
                                     </telerik:GridTemplateColumn>
-                                    
-                                    <telerik:GridButtonColumn ButtonType="LinkButton"
-                                        CommandName="Adjust" Text="Adjust" UniqueName="Adjust" HeaderText="">
-                                        <HeaderStyle />
-                                    </telerik:GridButtonColumn>
+
+                                    <telerik:GridTemplateColumn UniqueName="Adjustment" AllowFiltering="false">
+                                        <ItemTemplate>
+                                            <asp:HyperLink ID="AdjustmentLink" runat="server" Text="Make Adjustment"></asp:HyperLink>
+                                        </ItemTemplate>
+                                    </telerik:GridTemplateColumn>
+
                                 </Columns>
 
                                 <CommandItemTemplate>
-                                    <div class="center">
+                                    <div class="center" style="align-content: center; text-align: center">
                                         |
 
                                          <a href="#" onclick="return ShowInsertForm();" class="alink">
                                              <img src="../images/emblem.png" alt="Add New User" width="20">
-                                             Add new user
+                                             Generate New SOA
                                          </a>
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|    
                                         
@@ -185,20 +201,21 @@
 
 
                         <script type="text/javascript">
-                            function ShowEditForm(id, rowIndex) {
-                                var grid = $find("<%= RadGrid2.ClientID %>");
-
+                            function ShowAdjustmentForm(id, rowIndex) {
+                                <%--var grid = $find("<%= RadGrid2.ClientID %>");
                                 var rowControl = grid.get_masterTableView().get_dataItems()[rowIndex].get_element();
-                                grid.get_masterTableView().selectItem(rowControl, true);
-                                window.Location.href = "~/UserModal/EditForm_csharp.aspx?StatementOfAccountId=" + id;
+                                grid.get_masterTableView().selectItem(rowControl, true);--%>
+                                window.radopen("UserModal/StatementOfAccount/AddApprovingAuthority.aspx?StatementOfAccountId=" + id, "AdjustmentForm");
+                                //window.radopen("UserModal/ApprovingAuthority/AddApprovingAuthority.aspx", "AddUser");
+                                return false;
                             }
                             function ShowInsertForm() {
-                                window.radopen("UserModal/AddNewUser.aspx", "AddUser");
+                                window.radopen("UserModal/ApprovingAuthority/AddApprovingAuthority.aspx", "AddUser");
                                 return false;
                             }
 
                             function ShowExportForm() {
-                                window.radopen("Reports/UserExportPreview.aspx", "ShowExport");
+                                window.radopen("/StatementOfAccount.aspx/#", "ShowExport");
                                 return false;
                             }
 
@@ -206,12 +223,12 @@
                             function refreshGrid(arg) {
                                 if (!arg) {
                                     $find("<%= RadAjaxManager1.ClientID %>").ajaxRequest("Rebind");
-                                    }
-                                    else {
-                                        $find("<%= RadAjaxManager1.ClientID %>").ajaxRequest("RebindAndNavigate");
-                                    }
                                 }
-                                function RowDblClick(sender, eventArgs) {
+                                else {
+                                    $find("<%= RadAjaxManager1.ClientID %>").ajaxRequest("RebindAndNavigate");
+                                }
+                            }
+                            function RowDblClick(sender, eventArgs) {
 
                                     <%--<%--    //changed code here 
                                     var grid = $find("<%= RadGrid2.ClientID %>");
@@ -221,18 +238,19 @@
                                     var ID = key.innerHTML;        
                                     MasterTable.fireCommand("MyClick2",ID);        
                                 --%>
-                                    //ShowEditForm();
-                                    window.radopen("UserModal/EditForm_csharp.aspx?StatementOfAccountId=" + eventArgs.getDataKeyValue("StatementOfAccountId"), "UserListDialog");
-                                }
+                                //ShowEditForm();
+                                window.radopen("UserModal/EditForm_csharp.aspx?StatementOfAccountId=" + eventArgs.getDataKeyValue("StatementOfAccountId"), "UserListDialog");
+                            }
 
-                                function LoadRadGrid() {
-                                    document.getElementById("btnSubmit").click();
-                                }
+                            function LoadRadGrid() {
+                                document.getElementById("btnSubmit").click();
+                            }
                         </script>
                     </telerik:RadCodeBlock>
                 </telerik:LayoutColumn>
             </div>
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </asp:Content>
 

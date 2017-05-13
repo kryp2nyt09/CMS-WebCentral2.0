@@ -149,7 +149,8 @@
                         <Excel  Format="Xlsx"/>
                     </ExportSettings>      
 
-                        <MasterTableView CommandItemDisplay="Top" Font-Size="Smaller"
+                        <MasterTableView CommandItemDisplay="Top" 
+                            Font-Size="Smaller"
                             DataKeyNames="Id"
                             ClientDataKeyNames="Id">
                             <CommandItemSettings ShowExportToExcelButton="false" ShowExportToPdfButton="false" ShowExportToWordButton="false" ShowExportToCsvButton="false" ShowAddNewRecordButton="false"  ShowRefreshButton="false"/>

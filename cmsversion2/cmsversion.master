@@ -54,7 +54,7 @@
                                 <li class="message-footer"><a runat="server" href="~/portal/ManageCompany.aspx">Company</a></li>
                                 <li class="message-footer"><a runat="server" href="~/portal/ManageRepresentatives.aspx">Representatives</a></li>
                                 <li class="message-footer"><a runat="server" href="~/portal/ManageApprovingAuthority.aspx">Approving Authority</a></li>
-                                <li class="message-footer"><a runat="server" href="#">Statement of Account</a></li>
+                                <li class="message-footer"><a runat="server" href="~/portal/StatementOfAccount.aspx">Statement of Account</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
@@ -80,21 +80,34 @@
                                                 <li><a runat="server" href="~/portal/Operation/Manifest/BranchAcceptanceReport.aspx">Branch Acceptance</a></li>
                                                 <li><a runat="server" href="~/portal/Operation/Manifest/BundleReport.aspx">Bundle</a></li>
                                                 <li><a runat="server" href="~/portal/Operation/Manifest/UnbundleReport.aspx">Unbundle</a></li>
-                                                <%--<li><a runat="server" href="#">Gateway Transmital</a></li>
-                                                <li><a runat="server" href="#">Gateway Outbound</a></li>
-                                                <li><a runat="server" href="#">Gateway Inbound</a></li>
-                                                <li><a runat="server" href="#">Cargo Transfer</a></li>--%>
                                                 <li><a runat="server" href="~/portal/Operation/Manifest/SegregationReport.aspx">Segregation</a></li>
-                                                <li><a runat="server" href="~/portal/Operation/Manifest/DailyTripReport.aspx">Daily Trip</a></li>
-                                                <%--<li><a runat="server" href="#">Hold Cargo</a></li>--%>
+                                                <li><a runat="server" href="~/portal/Operation/Manifest/DailyTripReport.aspx">Daily Trip</a></li>                                                
                                             </ul>
                                         </li>
                                         <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Grand Manifest</a></li>
                                         <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Transport</a></li>
-                                        <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Flight Load Monitoring</a></li>
+                                       <%-- <li class="dropdown dropdown-submenu">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Flight Load Management</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a runat="server" href="#">Gateway Offload</a></li>
+                                                <li><a runat="server" href="#">Loading Management</a></li>
+                                                <li><a runat="server" href="#">Trans Shipment via HUB</a></li>
+                                                <li><a runat="server" href="#">Transport</a></li>
+                                            </ul>
+                                        </li>--%>
                                         <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Offloaded</a></li>
                                         <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Trans Shipment Monitoring</a></li>
-                                        
+                                        <li class="dropdown dropdown-submenu">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cargo Monitoring</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a runat="server" href="~/portal/Operation/CargoTransfer/CargoMonitoringDelivered.aspx">Delivered</a></li>
+                                                <li><a runat="server" href="~/portal/Operation/CargoTransfer/CargoMonitoringHold.aspx">Hold</a></li>
+                                                <li><a runat="server" href="#">Mistrouted</a></li>
+                                                <li><a runat="server" href="#">Offloaded</a></li>
+                                                <li><a runat="server" href="#">Pending</a></li>
+                                                <li><a runat="server" href="#">RUD</a></li>
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </li>
                                 <li class="dropdown dropdown-submenu">
@@ -111,22 +124,9 @@
                                                 <li><a runat="server" href="~/portal/Finance/Sales/SalesPerUserLevel.aspx">Sales Per User Level</a></li>
                                             </ul>
                                          </li>
-                                       <%-- <li class="dropdown dropdown-submenu">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Revenue</a>
-                                            <ul class="dropdown-menu">
-                                                <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Summary</a></li>
-                                                <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Branch Corporate Office</a></li>
-                                                <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">CLuster</a></li>
-                                                <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Revenue Unit</a></li>
-                                                <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">User</a></li>
-                                                <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Client</a></li>
-                                                <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Ship Mode</a></li>
-                                                <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Commodity Type</a></li>
-                                            </ul>
-                                        </li>--%>
                                         <li><a runat="server" href="~/portal/Finance/CollectionReport.aspx">Collection</a></li>
                                         <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Transport</a></li>
-                                        <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Flight Load Monitoring</a></li>
+                                        <%--<li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Flight Load Monitoring</a></li>--%>
                                         <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Offloaded</a></li>
                                         <li><a runat="server" href="~/portal/UnderMaintenancePage.aspx">Trans Shipment Monitoring</a></li>
                                         

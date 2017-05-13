@@ -74,6 +74,7 @@
     <Compile Include="Report\BCOSalesSummaryReport.cs" />
     <Compile Include="Report\BranchAcceptanceReport.cs" />
     <Compile Include="Report\BundleReport.cs" />
+    <Compile Include="Report\CargoMonitoring.cs" />
     <Compile Include="Report\CollectionReport.cs" />
     <Compile Include="Report\DailyTripReport.cs" />
     <Compile Include="Report\MasterSalesReport.cs" />
@@ -84,12 +85,14 @@
     <Compile Include="Report\SalesPerUserLevelReport.cs" />
     <Compile Include="Report\SegregationReport.cs" />
     <Compile Include="Report\UnbundleReport.cs" />
+    <Compile Include="Shipment.cs" />
     <Compile Include="ShipMode.cs" />
     <Compile Include="PaymentTerm.cs" />
     <Compile Include="PaymentMode.cs" />
     <Compile Include="ServiceMode.cs" />
     <Compile Include="ServiceType.cs" />
     <Compile Include="StatementOfAccount.cs" />
+    <Compile Include="StatementOfAccountAdjusment.cs" />
     <Compile Include="Status.cs" />
     <Compile Include="TransShipmentRoutes.cs" />
     <Compile Include="Packaging.cs" />

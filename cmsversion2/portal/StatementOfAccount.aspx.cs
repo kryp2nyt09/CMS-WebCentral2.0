@@ -50,8 +50,10 @@ public partial class portal_StatementOfAccount : System.Web.UI.Page
     {
         if (e.Item is GridDataItem)
         {
-            HyperLink editLink = (HyperLink)e.Item.FindControl("DetailsLink");
-            editLink.Attributes["onclick"] = String.Format("return ShowEditForm('{0}','{1}');", e.Item.OwnerTableView.DataKeyValues[e.Item.ItemIndex]["StatementOfAccountId"], e.Item.ItemIndex);
+            HyperLink adjustLink = (HyperLink)e.Item.FindControl("AdjustmentLink");
+            adjustLink.Attributes["href"] = "javascript:void(0);";
+            adjustLink.Attributes["onclick"] = String.Format("return ShowAdjustmentForm('{0}','{1}');", e.Item.OwnerTableView.DataKeyValues[e.Item.ItemIndex]["StatementOfAccountId"], e.Item.ItemIndex);
+
         }
     }
     protected void RadAjaxManager1_AjaxRequest(object sender, AjaxRequestEventArgs e)
@@ -116,12 +118,7 @@ public partial class portal_StatementOfAccount : System.Web.UI.Page
     }
     protected void RadGrid2_ItemCommand1(object sender, GridCommandEventArgs e)
     {
-        if (e.CommandName == "Delete")
-        {
-            string statementOfaccountId = e.Item.OwnerTableView.DataKeyValues[e.Item.ItemIndex]["StatementOfAccountId"].ToString();
-            BLL.Users_Info.UpdateUserProfile(new Guid(statementOfaccountId), 3, getConstr.ConStrCMS);
-            //3 for delete flagging
-        }
+        
     }
     protected void btnSubmit_Click(object sender, EventArgs e)
     {
@@ -130,4 +127,8 @@ public partial class portal_StatementOfAccount : System.Web.UI.Page
     }
     #endregion
 
+    protected void RadGrid2_ItemCreated2(object sender, GridItemEventArgs e)
+    {
+
+    }
 }
